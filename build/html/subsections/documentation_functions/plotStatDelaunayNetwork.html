@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Plot Network Statistics for Delaunay Network &mdash; Giotto 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/GiottoLogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../giottoworkflowanalyses.html">Giotto Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets.html">Dataset Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../documentation.html">Giotto Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tipsandtricks.html">Tips and Tricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../trygiotto.html">Try Giotto</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Supplemental Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../errorsfaqsandtips.html">Errors and FAQS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../additionalinformation.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RubD/Giotto/">Browse Source Code</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RubD/Giotto/issues">Report a Bug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">Contribute</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Giotto</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Plot Network Statistics for Delaunay Network</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/subsections/documentation_functions/plotStatDelaunayNetwork.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="plot-network-statistics-for-delaunay-network">
+<span id="plotstatdelaunaynetwork"></span><h1>Plot Network Statistics for Delaunay Network<a class="headerlink" href="#plot-network-statistics-for-delaunay-network" title="Permalink to this headline">¶</a></h1>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">plotStatDelaunayNetwork()</span></span></dt>
+<dd></dd></dl>
+
+<p><em>Plots network statistics for a Delaunay network.</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotStatDelaunayNetwork</span><span class="p">(</span>
+        <span class="n">gobject</span><span class="p">,</span>
+        <span class="n">method</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;deldir&quot;</span><span class="p">,</span> <span class="s2">&quot;delaunayn_geometry&quot;</span><span class="p">,</span> <span class="s2">&quot;RTriangle&quot;</span><span class="p">),</span>
+        <span class="n">dimensions</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span><span class="p">,</span>
+        <span class="n">maximum_distance</span> <span class="o">=</span> <span class="s2">&quot;auto&quot;</span><span class="p">,</span>
+        <span class="n">minimum_k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">options</span> <span class="o">=</span> <span class="s2">&quot;Pp&quot;</span><span class="p">,</span>
+        <span class="n">Y</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">S</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">show_plot</span> <span class="o">=</span> <span class="n">NA</span><span class="p">,</span>
+        <span class="n">return_plot</span> <span class="o">=</span> <span class="n">NA</span><span class="p">,</span>
+        <span class="n">save_plot</span> <span class="o">=</span> <span class="n">NA</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(),</span>
+        <span class="n">default_save_name</span> <span class="o">=</span> <span class="s2">&quot;plotStatDelaunayNetwork&quot;</span><span class="p">,</span>
+        <span class="o">...</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>gobject</strong></p></td>
+<td><p>giotto object</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>method</strong></p></td>
+<td><p>package to use to create a Delaunay network</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>dimensions</strong></p></td>
+<td><p>which spatial dimensions to use (maximum 2 dimensions)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>maximum_distance</strong></p></td>
+<td><p>distance cuttof for Delaunay neighbors to consider</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>minimum_k</strong></p></td>
+<td><p>minimum neigbhours if maximum_distance != NULL</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>options</strong></p></td>
+<td><p>(geometry) String containing extra control options for the underlying Qhull command; see the Qhull documentation (../doc/qhull/html/qdelaun.html) for the available options. (default = ‘Pp’, do not report precision problems)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Y</strong></p></td>
+<td><p>(RTriangle) If TRUE prohibits the insertion of Steiner points on the mesh boundary.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>j</strong></p></td>
+<td><p>(RTriangle) If TRUE jettisons vertices that are not part of the final triangulation from the output.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>S</strong></p></td>
+<td><p>(RTriangle) Specifies the maximum number of added Steiner points.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>show_plot</strong></p></td>
+<td><p>show plots</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>return_plot</strong></p></td>
+<td><p>return ggplot object</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>save_plot</strong></p></td>
+<td><p>directly save the plot [boolean]</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>save_param</strong></p></td>
+<td><p>list of saving parameters, see <a class="reference external" href="showSaveParameters">showSaveParameters()</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>default_save_name</strong></p></td>
+<td><p>default save name for saving, don’t change, change save_name in save_param</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>…</strong></p></td>
+<td><p>Other parameters</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="value">
+<h2>Value<a class="headerlink" href="#value" title="Permalink to this headline">¶</a></h2>
+<p>A Giotto object with updated spatial network slot.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Ruben Dries, Qian Zhu, Huipeng Li, Rui Dong, Guo-Cheng Yuan.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
