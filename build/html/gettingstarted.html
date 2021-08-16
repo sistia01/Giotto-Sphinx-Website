@@ -1,0 +1,524 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Getting Started &mdash; Giotto 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme_edits.css" type="text/css" />
+  <link rel="stylesheet" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Giotto Workflow" href="giottoworkflowanalyses.html" />
+    <link rel="prev" title="Giotto" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/GiottoLogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#giotto-installation-workflow">Giotto Installation Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#r-installation">R Installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#first-time-r-package-installation">First Time R Package Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#first-time-giotto-installation">First Time Giotto Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#python-installation">Python Installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#required-modules">Required Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#first-time-python-module-installation">First Time Python Module Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#manual-installation">Manual Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#specify-python-path-after-manual-installation">Specify Python Path After Manual Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#automaticinstallation">Automatic Installation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#howtos">HowTos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#giotto-workflow-analyses-steps"><span class="xref std std-doc">Giotto Workflow Analyses Steps</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#giotto-analyzer-and-viewer-interaction-work-in-progress">Giotto Analyzer and Viewer interaction [work in progress]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="giottoworkflowanalyses.html">Giotto Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets.html">Dataset Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation.html">Giotto Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tipsandtricks.html">Tips and Tricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trygiotto.html">Try Giotto</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Supplemental Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="errorsfaqsandtips.html">Errors and FAQS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additionalinformation.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RubD/Giotto/">Browse Source Code</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RubD/Giotto/issues">Report a Bug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">Contribute</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Giotto</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Getting Started</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/gettingstarted.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-started">
+<span id="gettingstartedpage"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Giotto provides a flexible framework for common single-cell processing steps such as:</p>
+<ul>
+<li><p>Quality control</p></li>
+<li><p>Normalization</p></li>
+<li><p>Dimension reduction</p></li>
+<li><p>Clustering and cell type annotation</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>To facilitate the analysis of recently emerging high-throughput, but lower-resolution spatial transcriptomic technologies, such as 10X Genomics Visium and Slide-seq, Giotto has 3 implemented algorithms for estimating the spatial enrichment of different cell types by integration of known gene signatures or single-cell RNAseq expression and annotation data.</p></li>
+<li><p>Spatial information is retained through the formation of a spatial grid and/or a spatial proximity network, which is used to:</p>
+<ul>
+<li><p>Identify spatial genes</p></li>
+<li><p>Extract continuous spatial-expression patterns</p></li>
+<li><p>Identify discrete spatial domains using HMRF</p></li>
+<li><p>Explore cell-type/cell-type spatial interaction enrichment or depletion</p></li>
+<li><p>Calculate spatially increased ligand-receptor expression in cells of interacting cell type pairs</p></li>
+<li><p>Find interaction changed genes (ICG): genes that change expression in one cell type due to interaction with a neighboring cell type</p></li>
+</ul>
+</li>
+<li><p>Giotto provides a number of options to visualize both 2D and 3D data and the outcome of Giotto can be interactively explored using <a class="reference external" href="http://spatial.rc.fas.harvard.edu/spatialgiotto/giotto.install.native.html">Giotto Viewer</a>, which allows you to overlay the obtained results with raw or additional images of the profiled tissue section(s).</p></li>
+</ul>
+<p>Make sure to check out the <a class="reference external" href="datasets">Datasets</a> section to see examples of the Giotto workflow.</p>
+</div>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>R (&gt;= 3.5.1)</p></li>
+<li><p>Python (&gt;= 3.0)</p></li>
+<li><p><a class="reference external" href="https://support.rstudio.com/hc/en-us/articles/200486498-Package-Development-Prerequisites">Windows, MacOS or Linux specific installation tools.</a></p></li>
+</ul>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Giotto must be installed in both Python and R. Below, you will find the instructions for both <a class="reference external" href="R_Installation">R Installation</a> and <a class="reference external" href="Python_Installation">Python Installation</a>. Please make sure that your system has satisfied all of the requirements needed to sucessfully install Giotto.
+In addition, we have provided a way for users to automatically install all of the necessary python modules via R (see: <a class="reference external" href="AutomaticInstallation">Automatic Installation</a>).
+Checkout our <a class="reference external" href="faqs">Errors and FAQs Section</a> for more information and troubleshooting tips on some common installation issues.</p>
+<div class="section" id="giotto-installation-workflow">
+<h3>Giotto Installation Workflow<a class="headerlink" href="#giotto-installation-workflow" title="Permalink to this headline">¶</a></h3>
+<p>This workflow image is designed to help with Giotto Installation. Users should follow any of the three potential paths aimed to guide them through the installation process.</p>
+<a class="reference internal image-reference" href="_images/Giotto_Installation_Workflow.png"><img alt="Image of Giotto Installation Workflow" class="align-center" src="_images/Giotto_Installation_Workflow.png" style="width: 600px;" /></a>
+</div>
+<div class="section" id="r-installation">
+<span id="id1"></span><h3>R Installation<a class="headerlink" href="#r-installation" title="Permalink to this headline">¶</a></h3>
+<p>If this is your first time installing an R Package please proceed to <a class="reference external" href="FirstTimeR">First Time R Package Installation</a>. If you are already familiar with installing R packages please proceed to <a class="reference external" href="FirstTimeGiotto">First Time Giotto Installation</a>.</p>
+<div class="section" id="first-time-r-package-installation">
+<span id="firsttimer"></span><h4>First Time R Package Installation<a class="headerlink" href="#first-time-r-package-installation" title="Permalink to this headline">¶</a></h4>
+<p><em>Package Development Requirements</em></p>
+<p>If this is the first time you build and install an R package you can follow <a class="reference external" href="https://support.rstudio.com/hc/en-us/articles/200486498-Package-Development-Prerequisites">this link</a>, which has simple installation instructions for Windows, Mac OSX and Linux.</p>
+<p>To specifically install the command-line tools of Xcode for Mac OSX you might also need to run this line <strong>in terminal</strong>:</p>
+</div>
+<div class="section" id="first-time-giotto-installation">
+<span id="firsttimegiotto"></span><h4>First Time Giotto Installation<a class="headerlink" href="#first-time-giotto-installation" title="Permalink to this headline">¶</a></h4>
+<p>You can install Giotto with (~1-5 mins)</p>
+<p><strong>This version requires C Compilation</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">devtools</span><span class="p">)</span> <span class="c1"># If not installed: install.packages(&#39;devtools&#39;)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">remotes</span><span class="p">)</span>  <span class="c1">#If not installed: install.packages(&#39;remotes&#39;)</span>
+<span class="n">remotes</span><span class="p">::</span><span class="n">install_github</span><span class="p">(</span><span class="s2">&quot;RubD/Giotto&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you are having compilation (gfortran) problems check goftran.</p>
+</div>
+<p><strong>This version does not require C Compliation</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">remotes</span><span class="p">::</span><span class="n">install_github</span><span class="p">(</span><span class="s2">&quot;RubD/Giotto@cless&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="python-installation">
+<span id="id2"></span><h3>Python Installation<a class="headerlink" href="#python-installation" title="Permalink to this headline">¶</a></h3>
+<p>To perform all potential steps and analysis in the Giotto spatial toolbox the user needs to have a number of python modules installed.
+To make this process as flexible and easy as possible two different strategies can be used</p>
+<div class="section" id="required-modules">
+<h4>Required Modules<a class="headerlink" href="#required-modules" title="Permalink to this headline">¶</a></h4>
+<p>These are necessary to run all available analyses, but can be installed automatically (see <a class="reference external" href="automaticinstallation">Automatic Installation</a>) or manually (see <a class="reference external" href="maualinstallation">Manual Installation</a>):</p>
+<ul class="simple">
+<li><p>pandas</p></li>
+<li><p>python-igraph (igraph)</p></li>
+<li><p>networkx</p></li>
+<li><p>leidenalg</p></li>
+<li><p>python-louvain (community)</p></li>
+<li><p>smfishHmrf</p></li>
+<li><p>python.app (<strong>OSX only</strong>)</p></li>
+<li><p>scikit-learn</p></li>
+</ul>
+</div>
+<div class="section" id="first-time-python-module-installation">
+<h4>First Time Python Module Installation<a class="headerlink" href="#first-time-python-module-installation" title="Permalink to this headline">¶</a></h4>
+<p>Information on how to install a Python package can be found <a class="reference external" href="https://packaging.python.org/tutorials/installing-packages/">here</a>.</p>
+</div>
+<div class="section" id="manual-installation">
+<span id="manualinstallation"></span><h4>Manual Installation<a class="headerlink" href="#manual-installation" title="Permalink to this headline">¶</a></h4>
+<p>There are two methods thorugh which users can install the necessary Python modules manually:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="InstallWithPip">Install with Pip in Python3</a></p></li>
+<li><p><a class="reference external" href="InstallWithConda">Install with Conda</a></p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>With either of the <a class="reference external" href="manualinstallation">Manual Installation</a> options (<a class="reference external" href="InstallWithPip">Install with Pip in Python3</a> or <a class="reference external" href="InstallWithConda">Install with Conda</a>) the user will have to provide the python path to <a class="reference external" href="createGiottoInstructions">createGiottoInstructions</a>.
+If this is not done, Giotto will not be able to use the installed python modules.</p>
+</div>
+<div class="section" id="install-with-pip">
+<span id="installwithpip"></span><h5>Install with Pip<a class="headerlink" href="#install-with-pip" title="Permalink to this headline">¶</a></h5>
+<p><strong>Install with pip in python3</strong></p>
+<p><em>For OSX, Windows, or Linux:</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">pandas</span> <span class="n">python</span><span class="o">-</span><span class="n">igraph</span> <span class="n">networkx</span> <span class="n">python</span><span class="o">-</span><span class="n">louvain</span> <span class="n">leidenalg</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span> <span class="n">smfishHmrf</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-with-conda">
+<span id="installwithconda"></span><h5>Install with Conda<a class="headerlink" href="#install-with-conda" title="Permalink to this headline">¶</a></h5>
+<p>If pip install does not work, try installing them within a <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands">conda environment</a>. Something like this might work, see also this <a class="reference external" href="https://heartbeat.fritz.ai/creating-python-virtual-environments-with-conda-why-and-how-180ebd02d1db">link</a>.</p>
+<ol class="arabic simple">
+<li><p>Create yaml file (e.g. environment.yml) with the following information:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>name: giotto_env
+channels:
+  — defaults
+dependencies:
+ — pip=3.4
+ — pandas
+ — networkx
+ - python-igraph
+ - leidenalg
+ - python-louvain
+ - python.app (!!only for OSX!!)
+ - scikit-learn
+prefix: /Users/your_username/anaconda3/envs/giotto_env
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Create Conda Environment Based on yaml File:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Use the path to this environment when you create the Giotto instructions or Giotto object</p></li>
+</ol>
+<p><em>For OSX:</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">your_username</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">giotto_env</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">pythonw</span>
+</pre></div>
+</div>
+<p><em>For Linux:</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">your_username</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">giotto_env</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python</span>
+</pre></div>
+</div>
+<p><em>For Windows:</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">your_username</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">giotto_env</span><span class="o">/</span><span class="n">python</span><span class="o">.</span><span class="n">exe</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="specify-python-path-after-manual-installation">
+<h4>Specify Python Path After Manual Installation<a class="headerlink" href="#specify-python-path-after-manual-installation" title="Permalink to this headline">¶</a></h4>
+<p>With this option, once the user has installed all of the necessary modules, via either of the methods above (e.g. <a class="reference external" href="InstallWithConda">Conda</a>), the path to their python environment can be provided as an instruction in R.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Within R</span>
+
+<span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
+<span class="n">my_instructions</span> <span class="o">=</span> <span class="n">createGiottoInstructions</span><span class="p">(</span><span class="n">python_path</span> <span class="o">=</span> <span class="s1">&#39;your/python/path&#39;</span><span class="p">)</span>
+<span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">createGiottoObject</span><span class="p">(</span>
+        <span class="n">raw_exprs</span> <span class="o">=</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span>
+        <span class="n">spatial_locs</span> <span class="o">=</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span>
+        <span class="n">instructions</span> <span class="o">=</span> <span class="n">my_instructions</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="automaticinstallation">
+<span id="id3"></span><h4>Automatic Installation<a class="headerlink" href="#automaticinstallation" title="Permalink to this headline">¶</a></h4>
+<p>The python modules will be installed automatically in a miniconda environment when installing Giotto. However, it will ask you whether you want to install them and you can opt out and select your preferred python path. In that case you need to do a manual installation of the python modules.</p>
+<p>To perform all potential steps and analysis in the Giotto spatial toolbox the user needs to have a number of python modules installed. <a class="reference external" href="InstallGiottoEnvironment">Installation of the Giotto Environment</a>  allows users to install the required Python environment via MiniConda without specifying their python path.</p>
+<div class="section" id="installation-of-giotto-environment">
+<span id="installgiottoenvironment"></span><h5>Installation of Giotto Environment<a class="headerlink" href="#installation-of-giotto-environment" title="Permalink to this headline">¶</a></h5>
+<p>With this option, the user can just install a Giotto python environment using r-miniconda</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Install Giotto Environment</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">installGiottoEnvironmnt</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Re-Install the Giotto environment</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">installGiottoEnvironment</span><span class="p">(</span><span class="n">force_environment</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Re-install mini-conda and environment</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">installGiottoEnvironment</span><span class="p">(</span><span class="n">force_miniconda</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Remove Giotto Environment</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">removeGiottoEnvironment</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>With the automatic installation option, the user <strong>WILL NOT</strong> have to specify a python path.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="howtos">
+<span id="howtolabel"></span><h2>HowTos<a class="headerlink" href="#howtos" title="Permalink to this headline">¶</a></h2>
+<p>Giotto provides a lot of analyses, visualizations and other options to facilitate your spatial dataset analysis. We are working on providing easy-to-understand examples or tutorials, but if anything is not clear or if there is something you would like to see in particular, then do not hesitate to <a class="reference external" href="https://github.com/RubD/Giotto/issues">contact us.</a>
+In addition to our HowTos we have also created a way for users to test out Giotto via <a class="reference external" href="BinderInformation">Binder</a> and <a class="reference external" href="DockerInformation">Docker</a> (see: <a class="reference external" href="TryGiotto">Try Giotto</a>)</p>
+<div class="section" id="giotto-workflow-analyses-steps">
+<h3><a class="reference internal" href="giottoworkflowanalyses.html"><span class="doc">Giotto Workflow Analyses Steps</span></a><a class="headerlink" href="#giotto-workflow-analyses-steps" title="Permalink to this headline">¶</a></h3>
+<p><em>Optional</em>: Install a Giotto Environment</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="giottoworkflowanalyses.html#create-a-giotto-object"><span class="std std-ref">Create a Giotto Object</span></a></p></li>
+<li><p><a class="reference internal" href="giottoworkflowanalyses.html#process-and-filter-a-giotto-object"><span class="std std-ref">Process and Filter a Giotto Object</span></a></p></li>
+<li><p><a class="reference internal" href="giottoworkflowanalyses.html#dimension-reduction"><span class="std std-ref">Dimension Reduction</span></a></p></li>
+<li><p><a class="reference internal" href="giottoworkflowanalyses.html#cluster-cells-or-spots"><span class="std std-ref">Cluster cells or spots</span></a></p></li>
+<li><p><a class="reference internal" href="giottoworkflowanalyses.html#identify-differentially-expressed-genes"><span class="std std-ref">Identify differentially expressed genes</span></a></p></li>
+<li><p><a class="reference internal" href="giottoworkflowanalyses.html#annotate-clusters"><span class="std std-ref">Annotate clusters</span></a></p></li>
+<li><p><a class="reference internal" href="giottoworkflowanalyses.html#cell-type-enrichment-or-deconvolution-per-spot"><span class="std std-ref">Cell-type enrichment or deconvolution per spot</span></a></p></li>
+<li><p><a class="reference internal" href="giottoworkflowanalyses.html#spatial-grid-or-network"><span class="std std-ref">Create a Spatial grid or Network</span></a></p></li>
+<li><p><a class="reference internal" href="giottoworkflowanalyses.html#spatially-coherent-gene-expression-pattern"><span class="std std-ref">Find genes with a spatially coherent gene expression pattern</span></a></p></li>
+<li><p><a class="reference internal" href="giottoworkflowanalyses.html#spatially-coexpressed-genes"><span class="std std-ref">Identify genes that are spatially co-expressed</span></a></p></li>
+<li><p><a class="reference internal" href="giottoworkflowanalyses.html#spatial-domains-with-hmrf"><span class="std std-ref">Explore spatial domains with HMRF</span></a></p></li>
+<li><p><a class="reference internal" href="giottoworkflowanalyses.html#calculate-spatial-cell-cell-interaction"><span class="std std-ref">Calculate spatial cell-cell interaction enrichment</span></a></p></li>
+<li><p><a class="reference internal" href="giottoworkflowanalyses.html#find-cell-cell-interactions-changed-genes"><span class="std std-ref">Find cell-cell interaction changed genes (ICG)</span></a></p></li>
+<li><p><a class="reference internal" href="giottoworkflowanalyses.html#enriched-or-depleted-ligand-receptor-interactions"><span class="std std-ref">Identify enriched or depleted ligand-receptor interactions in hetero and homo-typic cell interactions</span></a></p></li>
+<li><p><a class="reference internal" href="giottoworkflowanalyses.html#giotto-viewer-export"><span class="std std-ref">Export Giotto results to use in Giotto viewer</span></a></p></li>
+</ol>
+</div>
+<div class="section" id="giotto-analyzer-and-viewer-interaction-work-in-progress">
+<h3>Giotto Analyzer and Viewer interaction [work in progress]<a class="headerlink" href="#giotto-analyzer-and-viewer-interaction-work-in-progress" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>How to switch between Giotto Analyzer and Viewer?</p></li>
+</ul>
+</div>
+<div class="section" id="tips-and-tricks">
+<h3>Tips and Tricks<a class="headerlink" href="#tips-and-tricks" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="subsections/tipsandtricks/howtosubsetgiottoobject.html#ways-of-subsetting"><span class="std std-ref">Different ways of subsetting Giotto results?</span></a></p></li>
+<li><p><a class="reference internal" href="subsections/tipsandtricks/waystovisualizespatialdata.html#global-instructions-and-save-plots"><span class="std std-ref">How to create global instructions and show or save your created plots?</span></a></p></li>
+<li><p><a class="reference internal" href="subsections/tipsandtricks/howtovisualizeandsaveplots.html#visualize-data"><span class="std std-ref">Different ways to visualize your spatial data?</span></a></p></li>
+<li><p><a class="reference internal" href="subsections/tipsandtricks/testandstoremultipleanayses.html#test-and-store"><span class="std std-ref">How to test and store multiple parameters or analyses?</span></a></p></li>
+<li><p><a class="reference internal" href="subsections/tipsandtricks/visualizewithvoronoiplots.html#voronoi-plots"><span class="std std-ref">Visualize spatial data with voronoi plots</span></a></p></li>
+<li><p><a class="reference internal" href="subsections/tipsandtricks/giottoclass.html#giotto-class"><span class="std std-ref">Working with the Giotto class</span></a></p></li>
+<li><p><a class="reference internal" href="subsections/tipsandtricks/workingwithimages.html#working-with-giotto-images"><span class="std std-ref">Adding and Working with Images in Giotto</span></a></p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="faqs">FAQs</a> for more information</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="giottoworkflowanalyses.html" class="btn btn-neutral float-right" title="Giotto Workflow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Giotto" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Ruben Dries, Qian Zhu, Huipeng Li, Rui Dong, Guo-Cheng Yuan.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

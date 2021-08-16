@@ -1,0 +1,349 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Identify Cell-Cell Interaction Changed Genes (ICGs) &mdash; Giotto 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/GiottoLogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../giottoworkflowanalyses.html">Giotto Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets.html">Dataset Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../documentation.html">Giotto Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tipsandtricks.html">Tips and Tricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../trygiotto.html">Try Giotto</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Supplemental Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../errorsfaqsandtips.html">Errors and FAQS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../additionalinformation.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RubD/Giotto/">Browse Source Code</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RubD/Giotto/issues">Report a Bug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">Contribute</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Giotto</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Identify Cell-Cell Interaction Changed Genes (ICGs)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/subsections/documentation_functions/findICG.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="findicg">
+<span id="identify-cell-cell-interaction-changed-genes-icgs"></span><h1>Identify Cell-Cell Interaction Changed Genes (ICGs)<a class="headerlink" href="#findicg" title="Permalink to this headline">¶</a></h1>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">findICG()</span></span></dt>
+<dd></dd></dl>
+
+<p><em>Identifies cell-to-cell Interaction Changed Genes (ICG), i.e. genes that are differentially expressed due to proximity to other cell types.</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">findICG</span><span class="p">(</span>
+        <span class="n">gobject</span><span class="p">,</span>
+        <span class="n">expression_values</span> <span class="o">=</span> <span class="s2">&quot;normalized&quot;</span><span class="p">,</span>
+        <span class="n">selected_genes</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+        <span class="n">cluster_column</span><span class="p">,</span>
+        <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s2">&quot;Delaunay_network&quot;</span><span class="p">,</span>
+        <span class="n">minimum_unique_cells</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">minimum_unique_int_cells</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">diff_test</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;permutation&quot;</span><span class="p">,</span> <span class="s2">&quot;limma&quot;</span><span class="p">,</span> <span class="s2">&quot;t.test&quot;</span><span class="p">,</span> <span class="s2">&quot;wilcox&quot;</span><span class="p">),</span>
+        <span class="n">mean_method</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;arithmic&quot;</span><span class="p">,</span> <span class="s2">&quot;geometric&quot;</span><span class="p">),</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="n">adjust_method</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;bonferroni&quot;</span><span class="p">,</span> <span class="s2">&quot;BH&quot;</span><span class="p">,</span> <span class="s2">&quot;holm&quot;</span><span class="p">,</span> <span class="s2">&quot;hochberg&quot;</span><span class="p">,</span> <span class="s2">&quot;hommel&quot;</span><span class="p">,</span> <span class="s2">&quot;BY&quot;</span><span class="p">,</span> <span class="s2">&quot;fdr&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;none&quot;</span><span class="p">),</span>
+        <span class="n">nr_permutations</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+        <span class="n">exclude_selected_cells_from_test</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+        <span class="n">do_parallel</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">cores</span> <span class="o">=</span> <span class="n">NA</span><span class="p">,</span>
+        <span class="n">set_seed</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">seed_number</span> <span class="o">=</span> <span class="mi">1234</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>gobject</strong></p></td>
+<td><p>giotto object</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>expression_values</strong></p></td>
+<td><p>expression values to use</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>selected_genes</strong></p></td>
+<td><p>subset of selected genes (optional)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>cluster_column</strong></p></td>
+<td><p>name of column to use for cell types</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>spatial_network_name</strong></p></td>
+<td><p>name of spatial network to use</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>minimum_unique_cells</strong></p></td>
+<td><p>minimum number of target cells required</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>minimum_unique_int_cells</strong></p></td>
+<td><p>minimum number of interacting cells required</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>diff_test</strong></p></td>
+<td><p>which differential expression test</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>mean_method</strong></p></td>
+<td><p>method to use to calculate the mean</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>offset</strong></p></td>
+<td><p>offset value to use when calculating log2 ratio</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>adjust_method</strong></p></td>
+<td><p>which method to adjust p-values</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>nr_permutations</strong></p></td>
+<td><p>number of permutations if diff_test = permutation</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>exclude_selected_cells_from_test</strong></p></td>
+<td><p>exclude interacting cells other cells</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>do_parallel</strong></p></td>
+<td><p>run calculations in parallel with mclapply</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>cores</strong></p></td>
+<td><p>number of cores to use if do_parallel = TRUE</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>set_seed</strong></p></td>
+<td><p>set a seed for reproducibility</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>seed_number</strong></p></td>
+<td><p>seed number</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="value">
+<h2>Value<a class="headerlink" href="#value" title="Permalink to this headline">¶</a></h2>
+<p>A cpgObject that contains the Interaction Changed Genes’ differential scores.</p>
+</div>
+<div class="section" id="details">
+<h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
+<p>Function to calculate if genes are differentially expressed in cell types when they interact (approximated by physical proximity) with other cell types. The results <code class="docutils literal notranslate"><span class="pre">data.table</span></code> in the cpgObject contains - at least - the following columns:</p>
+<ul class="simple">
+<li><p><strong>genes</strong>: All or selected list of tested genes</p></li>
+<li><p><strong>sel</strong>: average gene expression in the interacting cells from the target cell type</p></li>
+<li><p><strong>other</strong>: average gene expression in the NOT-interacting cells from the target cell type</p></li>
+<li><p><strong>log2fc</strong>: log2 fold-change between sel and other</p></li>
+<li><p><strong>diff</strong>: spatial expression difference between sel and other</p></li>
+<li><p><strong>p.value</strong>: associated p-value</p></li>
+<li><p><strong>p.adj</strong>: adjusted p-value</p></li>
+<li><p><strong>cell_type</strong>: target cell type</p></li>
+<li><p><strong>int_cell_type</strong>: interacting cell type</p></li>
+<li><p><strong>nr_select</strong>: number of cells for selected target cell type</p></li>
+<li><p><strong>int_nr_select</strong>: number of cells for interacting cell type</p></li>
+<li><p><strong>nr_other</strong>: number of other cells of selected target cell type</p></li>
+<li><p><strong>int_nr_other</strong>: number of other cells for interacting cell type</p></li>
+<li><p><strong>unif_int</strong>: cell-cell interaction</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Ruben Dries, Qian Zhu, Huipeng Li, Rui Dong, Guo-Cheng Yuan.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
