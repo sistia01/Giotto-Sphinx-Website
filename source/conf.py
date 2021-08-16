@@ -37,7 +37,7 @@ extensions = ['sphinx.ext.autosectionlabel',
 #'sphinx_panels',
 #'sphinx_togglebutton',
 'sphinx_rtd_theme',
-'sphinx_tabs'
+#'sphinx_tabs'
 ]
 
 
