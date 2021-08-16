@@ -34,11 +34,12 @@ import sphinx_rtd_theme
 
 extensions = ['sphinx.ext.autosectionlabel', 
 'sphinx.ext.autodoc',
-'sphinx-panls',
+#'sphinx_panels',
 'sphinx_togglebutton',
 'sphinx_rtd_theme',
 'sphinx_tabs'
 ]
+
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
