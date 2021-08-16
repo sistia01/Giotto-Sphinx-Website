@@ -34,7 +34,6 @@ import sphinx_rtd_theme
 
 extensions = ['sphinx.ext.autosectionlabel', 
 'sphinx.ext.autodoc',
-'sphinx_autodoc_typehints', 
 'sphinx_panels', 
 'sphinx_togglebutton',
 'sphinx_rtd_theme',
