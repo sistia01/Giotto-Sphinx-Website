@@ -33,7 +33,6 @@ release = '1.0'
 import sphinx_rtd_theme
 
 extensions = ['sphinx.ext.autosectionlabel', 
-'sphinxcontrib.images', 
 'sphinx.ext.autodoc',
 'sphinx_autodoc_typehints', 
 'sphinx_panels', 
