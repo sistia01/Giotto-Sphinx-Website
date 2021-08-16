@@ -1,0 +1,39 @@
+##########################
+HowTos
+##########################
+This section has various tips and tricks that aim to spotlight some of the ways in which Giotto can be used. 
+
+.. toctree::
+    :maxdepth: 1
+    :caption: HowTos
+    :hidden:
+
+    How To Work With The Giotto Class <subsections/tipsandtricks/giottoclass.rst>
+    How To Subset Giotto <subsections/tipsandtricks/howtosubsetgiottoobject.rst>
+    How To Visualize Giotto Object <subsections/tipsandtricks/howtovisualizeandsaveplots.rst>
+    How To Test and Store Multiple Objects <subsections/tipsandtricks/testandstoremultipleanayses.rst>
+    How To Visualize A Giotto Object <subsections/tipsandtricks/waystovisualizespatialdata.rst>
+    How To Work With Images <subsections/tipsandtricks/workingwithimages.rst>
+    How To Visulize Voronoi <subsections/tipsandtricks/visualizewithvoronoiplots.rst>
+    
+.. tabbed:: Working With The Giotto Class
+
+    Tab 1
+
+.. tabbed:: Subsetting Giotto Objects
+
+    There are several ways to subset a Giotto object or visualize a subset of the data. Here we will use the already analyzed Visium 10X brain dataset object to:
+
+    * Show how to visualize a subset of cells
+    * Show how to visualize data by group (example clustering, layers in 3D images, …)
+    * Subset the dataset based on cell IDs (cluster name(s) or individual cell IDs)
+    * Subset the dataset based on spatial locations/coordinates
+
+    .. link-button:: subsections/tipsandtricks/giottoclass.rst
+        :text: Click here to learn more!
+        :classes: btn-primary
+
+
+
+
+

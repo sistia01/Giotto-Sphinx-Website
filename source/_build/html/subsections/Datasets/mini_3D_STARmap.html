@@ -1,0 +1,835 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>mini3D STARmap &mdash; Giotto 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="seqFISh+ Cortex" href="seqFISH_cortex.html" />
+    <link rel="prev" title="mini Visium" href="mini_visium.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/GiottoLogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../giottoworkflowanalyses.html">Giotto Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets.html">Dataset Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../documentation.html">Giotto Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tipsandtricks.html">Tips and Tricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../trygiotto.html">Try Giotto</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Supplemental Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../errorsfaqsandtips.html">Errors and FAQS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../additionalinformation.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RubD/Giotto/">Browse Source Code</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RubD/Giotto/issues">Report a Bug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">Contribute</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Giotto</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../datasets.html">Dataset Information</a> &raquo;</li>
+        
+      <li>mini3D STARmap</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/subsections/datasets/mini_3D_STARmap.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mini3d-starmap">
+<span id="mini-3d-starmap"></span><h1>mini3D STARmap<a class="headerlink" href="#mini3d-starmap" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="install-python-modules">
+<h2>Install Python Modules<a class="headerlink" href="#install-python-modules" title="Permalink to this headline">¶</a></h2>
+<p>To run this vignette you need to install all the necessary Python modules. This can be done either (1) manually or (2) via our Installation Tool (from within R).</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="../../gettingstarted.html#manualinstallation"><span class="std std-ref">Click here for manual installation instructions</span></a></p></li>
+<li><p><a class="reference internal" href="../../gettingstarted.html#automaticinstallation"><span class="std std-ref">Click here for our automatic installation tool instructions</span></a></p></li>
+</ol>
+</div>
+<div class="section" id="optional-set-giotto-instructions">
+<h2><em>Optional: Set Giotto Instructions</em><a class="headerlink" href="#optional-set-giotto-instructions" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># to automatically save figures in save_dir set save_plot to TRUE</span>
+<span class="n">temp_dir</span> <span class="o">=</span> <span class="n">getwd</span><span class="p">()</span>
+<span class="n">temp_dir</span> <span class="o">=</span> <span class="s1">&#39;~/Temp/&#39;</span>
+<span class="n">myinstructions</span> <span class="o">=</span> <span class="n">createGiottoInstructions</span><span class="p">(</span><span class="n">save_dir</span> <span class="o">=</span> <span class="n">temp_dir</span><span class="p">,</span>
+                                      <span class="n">save_plot</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
+                                      <span class="n">show_plot</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="giotto-object">
+<h2>1. Giotto Object<a class="headerlink" href="#giotto-object" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="minimum-requirements">
+<h3>Minimum Requirements:<a class="headerlink" href="#minimum-requirements" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Matrix with expression information (or path to)</p></li>
+<li><p>x,y(,z) coordinates for cells or spots (or path to)</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># giotto object</span>
+<span class="n">expr_path</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;starmap_expr.txt.gz&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
+<span class="n">loc_path</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;starmap_cell_loc.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
+<span class="n">starmap_mini</span> <span class="o">&lt;-</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="n">expr_path</span><span class="p">,</span>
+                                <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">loc_path</span><span class="p">,</span>
+                                <span class="n">instructions</span> <span class="o">=</span> <span class="n">myinstructions</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>How to work with Giotto instructions that are part of your Giotto object:</p>
+<ul class="simple">
+<li><p>Show the instructions associated with your Giotto object with <strong>showGiottoInstructions</strong></p></li>
+<li><p>Change one or more instructions with <strong>changeGiottoInstructions</strong></p></li>
+<li><p>Replace all instructions at once with <strong>replaceGiottoInstructions</strong></p></li>
+<li><p>Read or get a specific giotto instruction with <strong>readGiottoInstructions</strong></p></li>
+</ul>
+<p><em>Note: The python path can only be set once in an R session. See the **reticulate package*</em> for more information.*</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># show instructions associated with giotto object (starmap_mini)</span>
+<span class="n">showGiottoInstructions</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="processing-steps">
+<h2>2. Processing Steps<a class="headerlink" href="#processing-steps" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Filter genes and cells based on detection frequencies</p></li>
+<li><p>Normalize expression matrix (log transformation, scaling factor and/or z-scores)</p></li>
+<li><p>Add cell and gene statistics (optional)</p></li>
+<li><p>Adjust expression matrix for technical covariates or batches (optional). These results will be stored in the custom slot.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">filterDistributions</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span> <span class="n">detection</span> <span class="o">=</span> <span class="s1">&#39;genes&#39;</span><span class="p">,</span>
+            <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;2_a_filtergenes&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/2_a_filtergenes.png"><img alt="2_a_filtergenes" src="../../_images/2_a_filtergenes.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">filterDistributions</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span> <span class="n">detection</span> <span class="o">=</span> <span class="s1">&#39;cells&#39;</span><span class="p">,</span>
+            <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;2_b_filtercells&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/2_b_filtercells.png"><img alt="2_b_filtercells.png" src="../../_images/2_b_filtercells.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">filterCombinations</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span>
+           <span class="n">expression_thresholds</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+           <span class="n">gene_det_in_min_cells</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span>
+           <span class="n">min_det_genes_per_cell</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">),</span>
+           <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;2_c_filtercombos&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/2_c_filtercombos.png"><img alt="2_c_filtercombos.png" src="../../_images/2_c_filtercombos.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">starmap_mini</span> <span class="o">&lt;-</span> <span class="n">filterGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span>
+                   <span class="n">expression_threshold</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                   <span class="n">gene_det_in_min_cells</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+                   <span class="n">min_det_genes_per_cell</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+                   <span class="n">expression_values</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;raw&#39;</span><span class="p">),</span>
+                   <span class="n">verbose</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span>
+<span class="n">starmap_mini</span> <span class="o">&lt;-</span> <span class="n">normalizeGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span>
+                        <span class="n">scalefactor</span> <span class="o">=</span> <span class="mi">6000</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span>
+<span class="n">starmap_mini</span> <span class="o">&lt;-</span> <span class="n">addStatistics</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dimension-reduction">
+<h2>3. Dimension Reduction<a class="headerlink" href="#dimension-reduction" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Identify highly variable genes (HVG)</p></li>
+<li><p>Perform PCA</p></li>
+<li><p>Identify number of significant prinicipal components (PCs)</p></li>
+<li><p>Run UMAP and/or TSNE on PCs (or directly on matrix)</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">starmap_mini</span> <span class="o">&lt;-</span> <span class="n">runPCA</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;factominer&#39;</span><span class="p">)</span>
+<span class="n">screePlot</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span> <span class="n">ncp</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
+  <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_a_screeplot&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/3_a_screeplot1.png"><img alt="3_a_screeplot.png" src="../../_images/3_a_screeplot1.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotPCA</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_b_PCA&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/3_b_PCA.png"><img alt="3_b_PCA.png" src="../../_images/3_b_PCA.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2D umap</span>
+<span class="n">starmap_mini</span> <span class="o">&lt;-</span> <span class="n">runUMAP</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span> <span class="n">dimensions_to_use</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">plotUMAP</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_c_UMAP&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/2_c_filtercombos.png"><img alt="2_c_filtercombos.png" src="../../_images/2_c_filtercombos.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3D umap</span>
+<span class="n">starmap_mini</span> <span class="o">&lt;-</span> <span class="n">runUMAP</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span> <span class="n">dimensions_to_use</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;3D_umap&#39;</span><span class="p">,</span> <span class="n">n_components</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">plotUMAP_3D</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span> <span class="n">dim_reduction_name</span> <span class="o">=</span> <span class="s1">&#39;3D_umap&#39;</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_d_UMAP_3D&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/3_d_UMAP_3D.png"><img alt="3_d_UMAP_3D.png" src="../../_images/3_d_UMAP_3D.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2D tsne</span>
+<span class="n">starmap_mini</span> <span class="o">&lt;-</span> <span class="n">runtSNE</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span> <span class="n">dimensions_to_use</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">plotTSNE</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_e_TSNE&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/3_e_TSNE.png"><img alt="3_e_TSNE.png" src="../../_images/3_e_TSNE.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="clustering">
+<h2>4. Clustering<a class="headerlink" href="#clustering" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Create a shared (default) nearest network in PCA space (or directly on matrix)</p></li>
+<li><p>Cluster on nearest network with Leiden or Louvan (kmeans and hclust are alternatives)</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">starmap_mini</span> <span class="o">&lt;-</span> <span class="n">createNearestNetwork</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span> <span class="n">dimensions_to_use</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">starmap_mini</span> <span class="o">&lt;-</span> <span class="n">doLeidenCluster</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span> <span class="n">resolution</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">n_iterations</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># 2D umap</span>
+<span class="n">plotUMAP</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span>
+        <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span> <span class="n">show_NN_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_a_UMAP&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/4_a_UMAP1.png"><img alt="4_a_UMAP.png" src="../../_images/4_a_UMAP1.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3D umap</span>
+<span class="n">plotUMAP_3D</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span> <span class="n">dim_reduction_name</span> <span class="o">=</span> <span class="s1">&#39;3D_umap&#39;</span><span class="p">,</span>
+        <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_b_UMAP_3D&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/4_b_UMAP_3D.png"><img alt="4_b_UMAP_3D.png" src="../../_images/4_b_UMAP_3D.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2D umap + coordinates</span>
+<span class="n">spatDimPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
+        <span class="n">dim_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">spat_point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_c_spatdimplot&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/4_c_spatdimplot.png"><img alt="4_c_spatdimplot.png" src="../../_images/4_c_spatdimplot.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3D umap + coordinates</span>
+<span class="n">spatDimPlot3D</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span>
+        <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span> <span class="n">dim_reduction_name</span> <span class="o">=</span> <span class="s1">&#39;3D_umap&#39;</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_d_spatdimplot3D&#39;</span><span class="p">))</span>
+
+
+<span class="c1"># heatmap and dendrogram</span>
+<span class="n">showClusterHeatmap</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span> <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
+           <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_e_clusterheatmap&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/4_e_clusterheatmap.png"><img alt="4_e_clusterheatmap.png" src="../../_images/4_e_clusterheatmap.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">showClusterDendrogram</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">rotate</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+              <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
+              <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_f_clusterdendrogram&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/4_f_clusterdendrogram.png"><img alt="4_f_clusterdendrogram.png" src="../../_images/4_f_clusterdendrogram.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="differential-expression">
+<h2>5. Differential Expression<a class="headerlink" href="#differential-expression" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>gini_markers = findMarkers_one_vs_all(gobject = starmap_mini,
+                                          method = &#39;gini&#39;,
+                                          expression_values = &#39;normalized&#39;,
+                                          cluster_column = &#39;leiden_clus&#39;,
+                                          min_genes = 20,
+                                          min_expr_gini_score = 0.5,
+                                          min_det_gini_score = 0.5)
+
+# get top 2 genes per cluster and visualize with violinplot
+topgenes_gini = gini_markers[, head(.SD, 2), by = &#39;cluster&#39;]
+violinPlot(starmap_mini, genes = topgenes_gini$genes,
+        cluster_column = &#39;leiden_clus&#39;,
+        save_param = list(save_name = &#39;5_a_violinplot&#39;))
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/5_a_violinplot.png"><img alt="5_a_violinplot.png" src="../../_images/5_a_violinplot.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># get top 6 genes per cluster and visualize with heatmap
+topgenes_gini2 = gini_markers[, head(.SD, 6), by = &#39;cluster&#39;]
+plotMetaDataHeatmap(starmap_mini, selected_genes = topgenes_gini2$genes,
+                metadata_cols = c(&#39;leiden_clus&#39;),
+                save_param = list(save_name = &#39;5_b_metaheatmap&#39;))
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/5_b_metaheatmap.png"><img alt="5_b_metaheatmap.png" src="../../_images/5_b_metaheatmap.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="cell-type">
+<h2>6. Cell Type<a class="headerlink" href="#cell-type" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cell-type-annotation">
+<h3>6.1 Cell Type Annotation<a class="headerlink" href="#cell-type-annotation" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clusters_cell_types</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;cell A&#39;</span><span class="p">,</span> <span class="s1">&#39;cell B&#39;</span><span class="p">,</span> <span class="s1">&#39;cell C&#39;</span><span class="p">,</span> <span class="s1">&#39;cell D&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;cell E&#39;</span><span class="p">,</span> <span class="s1">&#39;cell F&#39;</span><span class="p">,</span> <span class="s1">&#39;cell G&#39;</span><span class="p">,</span> <span class="s1">&#39;cell H&#39;</span><span class="p">)</span>
+<span class="n">names</span><span class="p">(</span><span class="n">clusters_cell_types</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">8</span>
+<span class="n">starmap_mini</span> <span class="o">=</span> <span class="n">annotateGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span>
+                      <span class="n">annotation_vector</span> <span class="o">=</span> <span class="n">clusters_cell_types</span><span class="p">,</span>
+                      <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
+                      <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">)</span>
+<span class="c1"># check new cell metadata</span>
+<span class="n">pDataDT</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">)</span>
+
+<span class="c1"># visualize annotations</span>
+<span class="n">spatDimPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
+        <span class="n">spat_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">dim_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;6_a_spatdimplot&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/6_a_spatdimplot.png"><img alt="6_a_spatdimplot.png" src="../../_images/6_a_spatdimplot.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="cell-type-gene-expression">
+<h3>6.2 Cell Type Gene Expression<a class="headerlink" href="#cell-type-gene-expression" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dimGenePlot3D</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span>
+      <span class="n">dim_reduction_name</span> <span class="o">=</span> <span class="s1">&#39;3D_umap&#39;</span><span class="p">,</span>
+      <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span>
+      <span class="n">genes</span> <span class="o">=</span> <span class="s2">&quot;Pcp4&quot;</span><span class="p">,</span>
+      <span class="n">genes_high_color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">genes_mid_color</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">genes_low_color</span> <span class="o">=</span> <span class="s1">&#39;darkblue&#39;</span><span class="p">,</span>
+      <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;6_b_dimgeneplot&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/6_b_dimgeneplot.png"><img alt="6_b_dimgeneplot.png" src="../../_images/6_b_dimgeneplot.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatGenePlot3D</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span>
+       <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span>
+       <span class="n">genes</span> <span class="o">=</span> <span class="s2">&quot;Pcp4&quot;</span><span class="p">,</span>
+       <span class="n">show_other_cells</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
+       <span class="n">genes_high_color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">genes_mid_color</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">genes_low_color</span> <span class="o">=</span> <span class="s1">&#39;darkblue&#39;</span><span class="p">,</span>
+       <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;6_c_spatgeneplot&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/6_c_spatgeneplot.png"><img alt="6_c_spatgeneplot.png" src="../../_images/6_c_spatgeneplot.png" style="width: 400px;" /></a>
+</div>
+</div>
+<div class="section" id="spatial-grid">
+<h2>7. Spatial Grid<a class="headerlink" href="#spatial-grid" title="Permalink to this headline">¶</a></h2>
+<p><em>Create a grid based on defined stepsizes in the x,y(,z) axes.</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">starmap_mini</span> <span class="o">&lt;-</span> <span class="n">createSpatialGrid</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span>
+                      <span class="n">sdimx_stepsize</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span>
+                      <span class="n">sdimy_stepsize</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span>
+                      <span class="n">sdimz_stepsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+                      <span class="n">minimum_padding</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">showGrids</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">)</span>
+
+<span class="c1"># visualize grid</span>
+<span class="n">spatPlot2D</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span> <span class="n">show_grid</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;7_a_spatplot&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/7_a_spatplot.png"><img alt="7_a_spatplot.png" src="../../_images/7_a_spatplot.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="spatial-network">
+<h2>8. Spatial Network<a class="headerlink" href="#spatial-network" title="Permalink to this headline">¶</a></h2>
+<p>Only the <strong>method = delaunayn_geometry</strong> can make 3D Delaunay networks. This requires the package geometry to be installed.</p>
+<ul class="simple">
+<li><p>Visualize information about the default Delaunay network</p></li>
+<li><p>Create a spatial Delaunay network (default)</p></li>
+<li><p>Create a spatial kNN network</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotStatDelaunayNetwork</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span> <span class="n">maximum_distance</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span>
+                <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;delaunayn_geometry&#39;</span><span class="p">,</span>
+                <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;8_aa_delnetwork&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/8_a_plotStatDelaunayNetwork.png"><img alt="8_a_plotStatDelaunayNetwork.png" src="../../_images/8_a_plotStatDelaunayNetwork.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">starmap_mini</span> <span class="o">=</span> <span class="n">createSpatialNetwork</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span> <span class="n">minimum_k</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                            <span class="n">maximum_distance_delaunay</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span>
+                            <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Delaunay&#39;</span><span class="p">,</span>
+                            <span class="n">delaunay_method</span> <span class="o">=</span> <span class="s1">&#39;delaunayn_geometry&#39;</span><span class="p">)</span>
+<span class="n">starmap_mini</span> <span class="o">=</span> <span class="n">createSpatialNetwork</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span> <span class="n">minimum_k</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                            <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;kNN&#39;</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">showNetworks</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">)</span>
+
+<span class="c1"># visualize the two different spatial networks</span>
+<span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span> <span class="n">show_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+        <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;Delaunay_network&#39;</span><span class="p">,</span>
+        <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;8_a_spatplot&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/8_b_spatplot.png"><img alt="8_b_spatplot.png" src="../../_images/8_b_spatplot.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span> <span class="n">show_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+        <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;kNN_network&#39;</span><span class="p">,</span>
+        <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;8_b_spatplot&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/8_c_spatplot.png"><img alt="8_c_spatplot.png" src="../../_images/8_c_spatplot.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="spatial-genes">
+<h2>9. Spatial Genes<a class="headerlink" href="#spatial-genes" title="Permalink to this headline">¶</a></h2>
+<p>Identify spatial genes with 3 different methods:</p>
+<ul class="simple">
+<li><p>binSpect with kmeans binarization (default)</p></li>
+<li><p>binSpect with rank binarization</p></li>
+<li><p>silhouetteRank</p></li>
+</ul>
+<p>Visualize top 4 genes per method.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>km_spatialgenes = binSpect(starmap_mini)
+spatGenePlot(starmap_mini, expression_values = &#39;scaled&#39;,
+        genes = km_spatialgenes[1:4]$genes,
+        point_shape = &#39;border&#39;, point_border_stroke = 0.1,
+        show_network = F, network_color = &#39;lightgrey&#39;, point_size = 2.5,
+        cow_n_col = 2,
+        save_param = list(save_name = &#39;9_a_spatgeneplot&#39;))
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/9_a_spatgeneplot.png"><img alt="9_a_spatgeneplot.png" src="../../_images/9_a_spatgeneplot.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>rank_spatialgenes = binSpect(starmap_mini, bin_method = &#39;rank&#39;)
+spatGenePlot(starmap_mini, expression_values = &#39;scaled&#39;,
+        genes = rank_spatialgenes[1:4]$genes,
+        point_shape = &#39;border&#39;, point_border_stroke = 0.1,
+        show_network = F, network_color = &#39;lightgrey&#39;, point_size = 2.5,
+        cow_n_col = 2,
+        save_param = list(save_name = &#39;9_b_spatgeneplot&#39;))
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/9_b_spatgeneplot.png"><img alt="9_b_spatgeneplot.png" src="../../_images/9_b_spatgeneplot.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>silh_spatialgenes = silhouetteRank(gobject = starmap_mini) # TODO: suppress print output
+spatGenePlot(starmap_mini, expression_values = &#39;scaled&#39;,
+        genes = silh_spatialgenes[1:4]$genes,
+        point_shape = &#39;border&#39;, point_border_stroke = 0.1,
+        show_network = F, network_color = &#39;lightgrey&#39;, point_size = 2.5,
+        cow_n_col = 2,
+        save_param = list(save_name = &#39;9_c_spatgeneplot&#39;))
+</pre></div>
+</div>
+</div>
+<div class="section" id="spatial-co-expression-patterns">
+<h2>10. Spatial Co-Expression Patterns<a class="headerlink" href="#spatial-co-expression-patterns" title="Permalink to this headline">¶</a></h2>
+<p>Identify robust spatial co-expression patterns using the spatial network or grid and a subset of individual spatial genes.</p>
+<div class="section" id="calculate-spatial-correlation-scores">
+<h3>10.1 Calculate spatial correlation scores<a class="headerlink" href="#calculate-spatial-correlation-scores" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 1. calculate spatial correlation scores
+ext_spatial_genes = km_spatialgenes[1:20]$genes
+spat_cor_netw_DT = detectSpatialCorGenes(starmap_mini,
+                                 method = &#39;network&#39;,
+                                 spatial_network_name = &#39;Delaunay_network&#39;,
+                                 subset_genes = ext_spatial_genes)
+</pre></div>
+</div>
+</div>
+<div class="section" id="cluster-correlation-scores">
+<h3>10.2. Cluster correlation scores<a class="headerlink" href="#cluster-correlation-scores" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2. cluster correlation scores</span>
+<span class="n">spat_cor_netw_DT</span> <span class="o">=</span> <span class="n">clusterSpatialCorGenes</span><span class="p">(</span><span class="n">spat_cor_netw_DT</span><span class="p">,</span>
+                                  <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;spat_netw_clus&#39;</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">heatmSpatialCorGenes</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span> <span class="n">spatCorObject</span> <span class="o">=</span> <span class="n">spat_cor_netw_DT</span><span class="p">,</span>
+             <span class="n">use_clus_name</span> <span class="o">=</span> <span class="s1">&#39;spat_netw_clus&#39;</span><span class="p">,</span>
+             <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;10_a_heatmspatcor&#39;</span><span class="p">,</span> <span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;in&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/10_a_heatmspatcor.png"><img alt="10_a_heatmspatcor.png" src="../../_images/10_a_heatmspatcor.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">netw_ranks</span> <span class="o">=</span> <span class="n">rankSpatialCorGroups</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span>
+                          <span class="n">spatCorObject</span> <span class="o">=</span> <span class="n">spat_cor_netw_DT</span><span class="p">,</span>
+                          <span class="n">use_clus_name</span> <span class="o">=</span> <span class="s1">&#39;spat_netw_clus&#39;</span><span class="p">,</span>
+                          <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;10_b_rankcorgroup&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/10_b_rankcorgroup.png"><img alt="10_b_rankcorgroup.png" src="../../_images/10_b_rankcorgroup.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>top_netw_spat_cluster = showSpatialCorGenes(spat_cor_netw_DT,
+                                    use_clus_name = &#39;spat_netw_clus&#39;,
+                                    selected_clusters = 6,
+                                    show_top_genes = 1)
+
+cluster_genes_DT = showSpatialCorGenes(spat_cor_netw_DT,
+                               use_clus_name = &#39;spat_netw_clus&#39;,
+                               show_top_genes = 1)
+cluster_genes = cluster_genes_DT$clus; names(cluster_genes) = cluster_genes_DT$gene_ID
+
+
+starmap_mini = createMetagenes(starmap_mini,
+                       gene_clusters = cluster_genes,
+                       name = &#39;cluster_metagene&#39;)
+spatCellPlot(starmap_mini,
+        spat_enr_names = &#39;cluster_metagene&#39;,
+        cell_annotation_values = netw_ranks$clusters,
+        point_size = 1.5, cow_n_col = 3,
+        save_param = list(save_name = &#39;10_c_spatcellplot&#39;))
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/10_c_spatcellplot.png"><img alt="10_c_spatcellplot.png" src="../../_images/10_c_spatcellplot.png" style="width: 400px;" /></a>
+</div>
+</div>
+<div class="section" id="spatial-hmrf-domains">
+<h2>11. Spatial HMRF Domains<a class="headerlink" href="#spatial-hmrf-domains" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>hmrf_folder = paste0(temp_dir,&#39;/&#39;,&#39;11_HMRF/&#39;)
+if(!file.exists(hmrf_folder)) dir.create(hmrf_folder, recursive = T)
+
+# perform hmrf
+my_spatial_genes = km_spatialgenes[1:20]$genes
+HMRF_spatial_genes = doHMRF(gobject = starmap_mini,
+                    expression_values = &#39;scaled&#39;,
+                    spatial_genes = my_spatial_genes,
+                    spatial_network_name = &#39;Delaunay_network&#39;,
+                    k = 6,
+                    betas = c(10,2,2),
+                    output_folder = paste0(hmrf_folder, &#39;/&#39;, &#39;Spatial_genes/SG_top20_k6_scaled&#39;))
+
+# check and select hmrf
+for(i in seq(10, 14, by = 2)) {
+viewHMRFresults2D(gobject = starmap_mini,
+                HMRFoutput = HMRF_spatial_genes,
+                k = 6, betas_to_view = i,
+                point_size = 2)
+}
+
+starmap_mini = addHMRF(gobject = starmap_mini,
+                HMRFoutput = HMRF_spatial_genes,
+                k = 6, betas_to_add = c(12),
+                hmrf_name = &#39;HMRF&#39;)
+
+# visualize selected hmrf result
+giotto_colors = Giotto:::getDistinctColors(6)
+names(giotto_colors) = 1:6
+spatPlot(gobject = starmap_mini, cell_color = &#39;HMRF_k6_b.12&#39;,
+        point_size = 3, coord_fix_ratio = 1, cell_color_code = giotto_colors,
+        save_param = list(save_name = &#39;11_a_spatplot&#39;))
+</pre></div>
+</div>
+</div>
+<div class="section" id="cell-neighborhood-cell-type-cell-type-interactions">
+<h2>12. Cell Neighborhood: Cell-Type / Cell-Type Interactions<a class="headerlink" href="#cell-neighborhood-cell-type-cell-type-interactions" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span> <span class="o">=</span> <span class="mi">2841</span><span class="p">)</span>
+<span class="n">cell_proximities</span> <span class="o">=</span> <span class="n">cellProximityEnrichment</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span>
+                                   <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
+                                   <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;Delaunay_network&#39;</span><span class="p">,</span>
+                                   <span class="n">adjust_method</span> <span class="o">=</span> <span class="s1">&#39;fdr&#39;</span><span class="p">,</span>
+                                   <span class="n">number_of_simulations</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="c1"># barplot</span>
+<span class="n">cellProximityBarplot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span>
+             <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span>
+             <span class="n">min_orig_ints</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">min_sim_ints</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">p_val</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+             <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_a_barplot&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/12_a_barplot.png"><img alt="12_a_barplot.png" src="../../_images/12_a_barplot.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## heatmap</span>
+<span class="n">cellProximityHeatmap</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span> <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span>
+             <span class="n">order_cell_types</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+             <span class="n">color_breaks</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">),</span>
+             <span class="n">color_names</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">),</span>
+             <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_b_heatmap&#39;</span><span class="p">,</span> <span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;in&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/12_b_heatmap.png"><img alt="12_b_heatmap.png" src="../../_images/12_b_heatmap.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># network</span>
+<span class="n">cellProximityNetwork</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span> <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span>
+             <span class="n">remove_self_edges</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">only_show_enrichment_edges</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+             <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_c_network&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/12_c_network.png"><img alt="12_c_network.png" src="../../_images/12_c_network.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># network with self-edges</span>
+<span class="n">cellProximityNetwork</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span> <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span>
+                <span class="n">remove_self_edges</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span> <span class="n">self_loop_strength</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span>
+                <span class="n">only_show_enrichment_edges</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
+                <span class="n">rescale_edge_weights</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+                <span class="n">node_size</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+                <span class="n">edge_weight_range_depletion</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+                <span class="n">edge_weight_range_enrichment</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span>
+                <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_d_network&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/12_d_network.png"><img alt="12_d_network.png" src="../../_images/12_d_network.png" style="width: 400px;" /></a>
+<div class="section" id="visualization-of-specific-cell-types">
+<h3>12.1 Visualization of Specific Cell Types<a class="headerlink" href="#visualization-of-specific-cell-types" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="option-1">
+<h4>Option 1<a class="headerlink" href="#option-1" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pDataDT</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">)</span>
+<span class="c1"># Option 1</span>
+<span class="n">spec_interaction</span> <span class="o">=</span> <span class="s2">&quot;cell D--cell H&quot;</span> <span class="c1"># needs to be in alphabetic order! first D, then H</span>
+<span class="n">cellProximitySpatPlot2D</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span>
+                        <span class="n">interaction_name</span> <span class="o">=</span> <span class="n">spec_interaction</span><span class="p">,</span>
+                        <span class="n">show_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+                        <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
+                        <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
+                        <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;cell H&#39;</span> <span class="o">=</span> <span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="s1">&#39;cell D&#39;</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">),</span>
+                        <span class="n">point_size_select</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">point_size_other</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_e_cellproximity&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/12_e_spatplot.png"><img alt="12_e_spatplot.png" src="../../_images/12_e_spatplot.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="option-2">
+<h4>Option 2<a class="headerlink" href="#option-2" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Option 2: create additional metadata</span>
+<span class="n">starmap_mini</span> <span class="o">=</span> <span class="n">addCellIntMetadata</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span>
+                     <span class="n">spatial_network</span> <span class="o">=</span> <span class="s1">&#39;Delaunay_network&#39;</span><span class="p">,</span>
+                     <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
+                     <span class="n">cell_interaction</span> <span class="o">=</span> <span class="n">spec_interaction</span><span class="p">,</span>
+                     <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;D_H_interactions&#39;</span><span class="p">)</span>
+<span class="n">spatPlot</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;D_H_interactions&#39;</span><span class="p">,</span> <span class="n">legend_symbol_size</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="n">select_cell_groups</span> <span class="o">=</span>  <span class="n">c</span><span class="p">(</span><span class="s1">&#39;other_cell D&#39;</span><span class="p">,</span> <span class="s1">&#39;other_cell H&#39;</span><span class="p">,</span> <span class="s1">&#39;select_cell D&#39;</span><span class="p">,</span> <span class="s1">&#39;select_cell H&#39;</span><span class="p">),</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_e_spatplot&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/12_e_cellproximity.png"><img alt="12_e_cellproximity.png" src="../../_images/12_e_cellproximity.png" style="width: 400px;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="d-cross-sections-from-3d-object">
+<h2>13. 2D cross sections from 3D object<a class="headerlink" href="#d-cross-sections-from-3d-object" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># create cross section</span>
+<span class="n">starmap_mini</span> <span class="o">=</span> <span class="n">createCrossSection</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span>
+                        <span class="n">method</span><span class="o">=</span><span class="s2">&quot;equation&quot;</span><span class="p">,</span>
+                        <span class="n">equation</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">600</span><span class="p">),</span>
+                        <span class="n">extend_ratio</span> <span class="o">=</span> <span class="mf">0.6</span><span class="p">)</span>
+
+<span class="c1"># show cross section</span>
+<span class="n">insertCrossSectionSpatPlot3D</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
+                     <span class="n">axis_scale</span> <span class="o">=</span> <span class="s1">&#39;cube&#39;</span><span class="p">,</span>
+                     <span class="n">point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                     <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;13_a_insertcross&#39;</span><span class="p">))</span>
+
+<span class="n">insertCrossSectionGenePlot3D</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span> <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span>
+                     <span class="n">axis_scale</span> <span class="o">=</span> <span class="s2">&quot;cube&quot;</span><span class="p">,</span>
+                     <span class="n">genes</span> <span class="o">=</span> <span class="s2">&quot;Slc17a7&quot;</span><span class="p">,</span>
+                     <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;13_b_insertcrossgene&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/13_a_insert.png"><img alt="13_a_insert.png" src="../../_images/13_a_insert.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># for cell annotation</span>
+<span class="n">crossSectionPlot</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span>
+                <span class="n">point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">point_shape</span> <span class="o">=</span> <span class="s2">&quot;border&quot;</span><span class="p">,</span>
+                <span class="n">cell_color</span> <span class="o">=</span> <span class="s2">&quot;leiden_clus&quot;</span><span class="p">,</span>
+                <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;13_c_crossplot&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/13_b_crossplot.png"><img alt="13_b_crossplot.png" src="../../_images/13_b_crossplot.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">crossSectionPlot3D</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span>
+           <span class="n">point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s2">&quot;leiden_clus&quot;</span><span class="p">,</span>
+           <span class="n">axis_scale</span> <span class="o">=</span> <span class="s2">&quot;cube&quot;</span><span class="p">,</span>
+           <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;13_c_crossplot3D&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/13_c_cross.png"><img alt="13_c_cross.png" src="../../_images/13_c_cross.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># for gene expression</span>
+<span class="n">crossSectionGenePlot</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span>
+                <span class="n">genes</span> <span class="o">=</span> <span class="s2">&quot;Slc17a7&quot;</span><span class="p">,</span>
+                <span class="n">point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="n">point_shape</span> <span class="o">=</span> <span class="s2">&quot;border&quot;</span><span class="p">,</span>
+                <span class="n">cow_n_col</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span>
+                <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span>
+                <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;13_d_crossgeneplot&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/13_d_crossgeneplot.png"><img alt="13_d_crossgeneplot.png" src="../../_images/13_d_crossgeneplot.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">crossSectionGenePlot3D</span><span class="p">(</span><span class="n">starmap_mini</span><span class="p">,</span>
+               <span class="n">point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+               <span class="n">genes</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;Slc17a7&quot;</span><span class="p">),</span>
+               <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span>
+               <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;13_e_crossgeneplot3D&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/13_e_crossgene.png"><img alt="13_e_crossgene.png" src="../../_images/13_e_crossgene.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="export-giotto-analyzer-to-viewer">
+<h2>14. Export Giotto Analyzer to Viewer<a class="headerlink" href="#export-giotto-analyzer-to-viewer" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">viewer_folder</span> <span class="o">=</span> <span class="n">paste0</span><span class="p">(</span><span class="n">temp_dir</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;Mouse_cortex_viewer&#39;</span><span class="p">)</span>
+
+<span class="c1"># select annotations, reductions and expression values to view in Giotto Viewer</span>
+<span class="n">exportGiottoViewer</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">starmap_mini</span><span class="p">,</span> <span class="n">output_directory</span> <span class="o">=</span> <span class="n">viewer_folder</span><span class="p">,</span>
+           <span class="n">factor_annotations</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
+                                  <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
+                                  <span class="s1">&#39;HMRF_k6_b.12&#39;</span><span class="p">),</span>
+           <span class="n">numeric_annotations</span> <span class="o">=</span> <span class="s1">&#39;total_expr&#39;</span><span class="p">,</span>
+           <span class="n">dim_reductions</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;umap&#39;</span><span class="p">),</span>
+           <span class="n">dim_reduction_names</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;umap&#39;</span><span class="p">),</span>
+           <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span>
+           <span class="n">expression_rounding</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+           <span class="n">overwrite_dir</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="seqFISH_cortex.html" class="btn btn-neutral float-right" title="seqFISh+ Cortex" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mini_visium.html" class="btn btn-neutral float-left" title="mini Visium" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Ruben Dries, Qian Zhu, Huipeng Li, Rui Dong, Guo-Cheng Yuan.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,2 +1,1 @@
-# Giotto-Sphinx_Website
- 
+# giotto-sphinx

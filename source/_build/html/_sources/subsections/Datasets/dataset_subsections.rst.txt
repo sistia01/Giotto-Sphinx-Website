@@ -1,0 +1,23 @@
+#################################
+*Datasets: Work in Progress*
+#################################
+See `Spatial Datasets <https://github.com/RubD/spatial-datasets>`_ to find raw and pre-processed input data and Giotto scripts (*work in progress*).
+
+The typical run time range for the different datasets on a personal computer is around 10~45 minutes. 
+All of the examples are gradually updated to the latest Giotto version! You can click on the imagees below to try out some of the example datasets. 
+
+.. toctree::
+	:maxdepth: 2
+    :caption: Mini Datasets
+
+
+	Mini SeqFISH <subsections/datasets/mini_seqFISH.rst>
+    Mini Visium <subsections/datasets/mini_visium.rst>
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Cortex
+    :hidden:
+
+    Mini Visium <subsections/datasets/mini_visium.rst>
