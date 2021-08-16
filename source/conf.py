@@ -34,7 +34,7 @@ import sphinx_rtd_theme
 
 extensions = ['sphinx.ext.autosectionlabel', 
 'sphinx.ext.autodoc',
-'sphinx-panls'
+'sphinx-panls',
 'sphinx_togglebutton',
 'sphinx_rtd_theme',
 'sphinx_tabs'
