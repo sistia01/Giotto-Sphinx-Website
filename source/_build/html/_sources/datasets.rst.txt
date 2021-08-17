@@ -46,7 +46,6 @@ merFISH Example
 Examples
 ##################################
 
-
 Mini Datasets
 ==================
 
