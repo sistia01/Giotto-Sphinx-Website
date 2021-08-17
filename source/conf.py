@@ -10,9 +10,9 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+#import os
+#import sys
+#sys.path.insert(0, os.path.abspath('.'))
 
 
 # -- Project information -----------------------------------------------------
@@ -34,10 +34,10 @@ import sphinx_rtd_theme
 
 extensions = ['sphinx.ext.autosectionlabel', 
 'sphinx.ext.autodoc',
-#'sphinx_panels',
-#'sphinx_togglebutton',
+'sphinx_panels',
+'sphinx_togglebutton',
 'sphinx_rtd_theme',
-#'sphinx_tabs'
+'sphinx_tabs'
 ]
 
 
@@ -76,13 +76,7 @@ html_sidebars = { '**': ['globaltoc.html', 'relations.html', 'sourcelink.html', 
 html_css_files = ["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"]
 panels_add_fontawesome_latex = True
 panels_add_bootstrap_css = True
-panels_css_variables = {
-    "tabs-color-label-active": "hsla(231, 99%, 66%, 1)",
-    "tabs-color-label-inactive": "rgba(178, 206, 245, 0.62)",
-    "tabs-color-overline": "rgb(207, 236, 238)",
-    "tabs-color-underline": "rgb(207, 236, 238)",
-    "tabs-size-label": "1rem",
-}
+
 # Toc Tree options
 navtree_root_links = True
 navtree_shift = False
