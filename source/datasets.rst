@@ -46,7 +46,6 @@ merFISH Example
 Examples
 ##################################
 
-
 Mini Datasets
 ==================
 
@@ -59,40 +58,45 @@ Mini Datasets
     Mini Visium </subsections/datasets/mini_visium.rst>
     Mini 3D STARmap </subsections/datasets/mini_3D_STARmap.rst>
 
+.. information on the button-link directive: https://sphinx-design.readthedocs.io/en/latest/badges_buttons.html#buttons
 
-.. panels::
-    :body: text-center
-    :container: container-md pb-4
-    :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2
+.. grid:: 
 
-    .. image:: images/dataset_page/mini_seqFISH.png
-        :target: subsections/datasets/mini_visium.rst
+    .. grid-item-card::
 
-    .. link-button:: /subsections/datasets/seqFISH_cortex.rst
-        :type: ref
-        :text: Mini SeqFish
-        :classes: btn-outline-primary btn-block stretched-link
+        .. image:: images/dataset_page/mini_seqFISH.png
+            :target: /subsections/datasets/mini_seqFISH.rst
+
+        .. button-link:: /subsections/datasets/mini_seqFISH.rst
+            :color: dark
+            :shadow:
+            :expand:
+            
+            Mini seqFISH
+
+    .. grid-item-card::
+
+        .. image:: images/dataset_page/mini_STARmap.png  
+            :target: subsections/datasets/mini_3D_STARmap.rst 
+
+        .. button-link:: subsections/datasets/mini_3D_STARmap.rst 
+            :color: dark
+            :shadow:
+            :expand:
+        
+            Mini 3D STARmap
+
+    .. grid-item-card::
+        
+        .. image:: images/dataset_page/mini_visium.png  
+            :target: subsections/datasets/mini_3D_STARmap.rst 
     
-    ---
-
-    .. image:: images/dataset_page/mini_STARmap.png
-        :target: ../../build/html/subsections/datasets/mini_visium.html
-
-    .. link-button:: subsections/datasets/human_CyCIF_PDAC.rst
-        :type: ref
-        :text: Mini STARmap
-        :classes: btn-outline-primary btn-block stretched-link
-    
-    ---
-    
-    .. image:: images/dataset_page/mini_visium.png
-        :target: ../../build/html/subsections/datasets/mini_visium.html
-
-    .. link-button:: ../../build/html/subsections/datasets/mini_visium.html
-        :type: ref
-        :text: Mini Visium
-        :classes: btn-outline-primary btn-block stretched-link 
-
+        .. button-link:: subsections/datasets/mini_visium.rst 
+            :color: dark
+            :shadow:
+            :expand:
+        
+            Mini Visium
 
 Full Datasets
 ====================
@@ -103,75 +107,102 @@ Full Datasets
     :hidden:
 
 	Mouse seqFISH Cortex </subsections/datasets/seqFISH_cortex.rst>
-    Mouse merFISH Hypoth. Preopt. Region </subsections/datasets/mini_visium.rst>
-    Mouse STARmap Cortex </subsections/datasets/mini_3D_STARmap.rst>
-	Mouse Visium Brain </subsections/datasets/mini_3D_STARmap.rst> 
-	Mouse Visium Kidney </subsections/datasets/mini_3D_STARmap.rst>
-	Mouse CODEX Spleen </subsections/datasets/mini_3D_STARmap.rst>
-	Mouse osmFISH SScortex </subsections/datasets/mini_3D_STARmap.rst>
-	Human CyCIF PDAC </subsections/datasets/mini_3D_STARmap.rst>
-	
+    Mouse merFISH Hypoth. Preopt. Region </subsections/datasets/merFISH_hypot_preopt_region.rst>
+    Mouse STARmap Cortex </subsections/datasets/STARmap_mouse_cortex.rst>
+	Mouse Visium Brain </subsections/datasets/mouse_visium_brain.rst> 
+	Mouse Visium Kidney </subsections/datasets/mouse_visium_kidney.rst>
+	Mouse CODEX Spleen </subsections/datasets/mouse_CODEX_spleen.rst>
+	Mouse osmFISH SScortex </subsections/datasets/osmFISH_mouse_SS_cortex.rst>
+	Human CyCIF PDAC </subsections/datasets/human_CyCIF_PDAC.rst>
 
-.. panels::
-    :body: text-center
-    :container: container-md pb-3
-    :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2
 
-    .. image:: images/dataset_page/human_cyCIF_PDAC_image_summary.png
+.. grid::
 
-    .. link-button:: /subsections/datasets/human_CyCIF_PDAC.rst
-        :type: ref
-        :text: Human CyCIF PDAC
-        :classes: btn-outline-primary btn-block stretched-link
-    
-    ---
-
-    .. image:: images/dataset_page/merFISH_hypoth_image_summary.png
-
-    .. link-button:: subsections/datasets/merFISH_hypot_preopt_region.rst
-        :type: ref
-        :text: MerFISH Hypot. Preopt. Region
-        :classes: btn-outline-primary btn-block stretched-link
-    
-    ---
-    
-    .. image:: images/dataset_page/CODEX_spleen_image_summary.png
-
-    .. link-button:: subsections/datasets/mouse_CODEX_spleen.rst
-        :type: ref
-        :text: Mouse CODEX Spleen
-        :classes: btn-outline-primary btn-block stretched-link 
-    ---
-    
-    .. image:: images/dataset_page/visium_brain_image_summary.png
-    
-    .. link-button:: subsections/datasets/mouse_visium_brain.rst
-        :type: ref
-        :text: Mouse Visium Brain 
-        :classes: btn-outline-primary btn-block stretched-link
+    .. grid-item-card::
         
-    ---
-    
-    .. image:: images/dataset_page/visium_kidney_image_summary.png
+        .. image:: images/dataset_page/human_cyCIF_PDAC_image_summary.png
+            :target: subsections/datasets/human_cyCIF_PDAC_image_summary.rst 
 
-    .. link-button:: subsections/datasets/mouse_visium_kidney.rst
-        :type: ref
-        :text: Mouse Visium Kidney
-        :classes: btn-outline-primary btn-block stretched-link 
-    ---
+        .. button-link:: /subsections/datasets/human_CyCIF_PDAC.rst 
+            :color: dark
+            :shadow:
+            :expand:
     
-    .. image:: images/dataset_page/osmFISH_SS_cortex_image_summary.png
+            Human CyCIF PDAC
+
+    .. grid-item-card::
+
+        .. image:: images/dataset_page/merFISH_hypoth_image_summary.png 
+            :target: subsections/datasets/merFISH_hypot_preopt_region.rst
     
-    .. link-button:: subsections/datasets/osmFISH_mouse_SS_cortex.rst
-        :type: ref
-        :text: Mouse osmFISH SS Cortex
-        :classes: btn-outline-primary btn-block stretched-link
+        .. button-link:: subsections/datasets/merFISH_hypot_preopt_region.rst
+            :color: dark
+            :shadow:
+            :expand:
         
-    ---
+            merFISH Hypot Preopt Region
     
-    .. image:: images/dataset_page/mouse_SS_cortex_and_subventricular.png
+    .. grid-item-card::
+        
+        .. image:: images/dataset_page/CODEX_spleen_image_summary.png 
+            :target: subsections/datasets/mouse_CODEX_spleen.rst
     
-    .. link-button:: subsections/datasets/seqFISH_cortex.rst
-        :type: ref
-        :text: seqFISH Cortex
-        :classes: btn-outline-primary btn-block stretched-link 
+        .. button-link:: subsections/datasets/mouse_CODEX_spleen.rst
+            :color: dark
+            :shadow:
+            :expand:
+        
+            Mouse Codex Spleen
+
+.. grid:: 
+
+    .. grid-item-card::
+        
+        .. image:: images/dataset_page/visium_brain_image_summary.png 
+            :target: subsections/datasets/mouse_visium_brain.rst
+
+        .. button-link:: subsections/datasets/mouse_visium_brain.rst
+            :color: dark
+            :shadow:
+            :expand:
+    
+            Mouse Visium Brain 
+
+    .. grid-item-card::
+        
+        .. image:: images/dataset_page/visium_kidney_image_summary.png 
+            :target: subsections/datasets/mouse_visium_kidney.rst
+
+        .. button-link:: subsections/datasets/mouse_visium_kidney.rst
+            :color: dark
+            :shadow:
+            :expand:
+    
+            Mouse Visium Kidney
+       
+    .. grid-item-card::
+        
+        .. image:: images/dataset_page/osmFISH_SS_cortex_image_summary.png 
+            :target: subsections/datasets/osmFISH_mouse_SS_cortex.rst
+
+        .. button-link:: subsections/datasets/osmFISH_mouse_SS_cortex.rst
+            :color: dark
+            :shadow:
+            :expand:
+    
+            Mouse osmFISH SS Cortex  
+    
+.. grid:: 
+
+    .. grid-item-card::
+        :columns: 4
+        
+        .. image:: images/dataset_page/mouse_SS_cortex_and_subventricular.png 
+            :target: subsections/datasets/seqFISH_cortex.rst
+
+        .. button-link:: subsections/datasets/seqFISH_cortex.rst
+            :color: dark
+            :shadow:
+            :expand:
+
+            Mouse osmFISH SS Cortex  

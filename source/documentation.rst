@@ -7,6 +7,16 @@ Giotto Object
 *************************
 *Create and operate on Giotto Object*
 
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	createGiottoObject </subsections/documentation_functions/createGiottoObject.rst>
+	createGiottoVisiumObject </subsections/documentation_functions/createGiottoVisiumObject.rst>
+	filterGiotto </subsections/documentation_functions/filterGiotto.rst>
+	subsetGiotto </subsections/documentation_functions/subsetGiotto.rst>
+	subsetGiottoLocs </subsections/documentation_functions/subsetGiottoLocs.rst>
+
 .. list-table::
 	:widths: 100 100 
 	:header-rows: 1
@@ -29,6 +39,13 @@ Giotto Environment
 *************************
 *Work with Giotto Python Environment*
 
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	installGiottoEnvironment </subsections/documentation_functions/installGiottoEnvironment.rst>
+	removeGiottoEnvironment </subsections/documentation_functions/removeGiottoEnvironment.rst>
+	checkGiottoEnvironment </subsections/documentation_functions/checkGiottoEnvironment.rst>
 
 .. list-table::
 	:widths: 100 100 
@@ -48,6 +65,17 @@ Giotto Environment
 Import Raw Data
 ***************************
 *Functions to help to import raw spatial data.*
+
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	getSpatialDataset </subsections/documentation_functions/getSpatialDataset.rst>
+	readExprMatrix </subsections/documentation_functions/readExprMatrix.rst>
+	get10Xmatrix </subsections/documentation_functions/get10Xmatrix.rst>
+	get10Xmatrix_h5 </subsections/documentation_functions/get10Xmatrix_h5.rst>
+	stitchFieldCoordinates </subsections/documentation_functions/stitchFieldCoordinates.rst>
+	stitchTileCoordinates </subsections/documentation_functions/stitchTileCoordinates.rst>
 
 .. list-table:: 
 	:widths: 100 100 
@@ -72,6 +100,21 @@ Import Raw Data
 Add Images
 ***************************
 *Functions to work with images for a Giotto object.*
+
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	estimateImageBg </subsections/documentation_functions/estimateImageBg.rst>
+	changeImageBg </subsections/documentation_functions/changeImageBg.rst>
+	createGiottoImage </subsections/documentation_functions/createGiottoImage.rst>
+	addGiottoImage </subsections/documentation_functions/addGiottoImage.rst>
+	addGiottoImageToSpatPlot </subsections/documentation_functions/addGiottoImageToSpatPlot.rst>
+	showGiottoImageNames </subsections/documentation_functions/showGiottoImageNames.rst>
+	updateGiottoImage </subsections/documentation_functions/updateGiottoImage.rst>
+	getGiottoImage </subsections/documentation_functions/getGiottoImage.rst>
+	plotGiottoImage </subsections/documentation_functions/plotGiottoImage.rst>
+
 
 .. list-table:: 
 	:widths: 100 100 
@@ -98,11 +141,22 @@ Add Images
 	* - :ref:`plotGiottoImage() <plotGiottoImage>`
 	  - Plot A Giotto Image From A Giotto Object
 
-
 **************************	  
 Giotto Instructions 
 **************************
+
 *Create or change Giotto instructions (e.g. defaults, plotting, saving, etc.)*
+
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	createGiottoInstructions </subsections/documentation_functions/createGiottoInstructions.rst>
+	readGiottoInstructions </subsections/documentation_functions/readGiottoInstructions.rst>
+	showGiottoInstructions </subsections/documentation_functions/showGiottoInstructions.rst>
+	changeGiottoInstructions </subsections/documentation_functions/changeGiottoInstructions.rst>
+	replaceGiottoInstructions </subsections/documentation_functions/replaceGiottoInstructions.rst>
+
 
 .. list-table:: 
 	:widths: 100 100 
@@ -125,6 +179,19 @@ Giotto Instructions
 Giotto Helper Functions 
 **************************
 *Common functions to help working with Giotto objects*
+
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	pDataDT </subsections/documentation_functions/pDataDT.rst>
+	fDataDT </subsections/documentation_functions/fDataDT.rst>
+	showProcessingSteps </subsections/documentation_functions/showProcessingSteps.rst>
+	calculateMetaTable </subsections/documentation_functions/calculateMetaTable.rst>
+	calculateMetaTableCells </subsections/documentation_functions/calculateMetaTableCells.rst>
+	combineMetadata </subsections/documentation_functions/combineMetadata.rst>
+	createMetagenes </subsections/documentation_functions/createMetagenes.rst>
+	findNetworkNeighbors </subsections/documentation_functions/findNetworkNeighbors.rst>
 
 .. list-table:: 
 	:widths: 100 100 
@@ -153,6 +220,25 @@ Giotto Helper Functions
 Giotto Processing Functions 
 *************************************
 *Functions that will (help to) add, update or change the Giotto object when processing spatial data.*
+
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	filterDistributions </subsections/documentation_functions/filterDistributions.rst>
+	filterCombinations </subsections/documentation_functions/filterCombinations.rst>
+	normalizeGiotto </subsections/documentation_functions/normalizeGiotto.rst>
+	adjustGiottoMatrix </subsections/documentation_functions/adjustGiottoMatrix.rst>
+	annotateGiotto </subsections/documentation_functions/annotateGiotto.rst>
+	removeCellAnnotation </subsections/documentation_functions/removeCellAnnotation.rst>
+	removeGeneAnnotation </subsections/documentation_functions/removeGeneAnnotation.rst>
+	addCellMetadata </subsections/documentation_functions/addCellMetadata.rst>
+	addGeneMetadata </subsections/documentation_functions/addGeneMetadata.rst>
+	addGeneStatistics </subsections/documentation_functions/addGeneStatistics.rst>
+	addCellStatistics </subsections/documentation_functions/addCellStatistics.rst>
+	addStatistics </subsections/documentation_functions/addStatistics.rst>
+	addGenesPerc </subsections/documentation_functions/addGenesPerc.rst>
+	addCellIntMetadata </subsections/documentation_functions/addCellIntMetadata.rst>
 
 .. list-table:: 
 	:widths: 100 100 
@@ -194,6 +280,19 @@ Dimension Reduction
 ******************************************
 *Functions to reduce dimensions.*
 
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	calculateHVG </subsections/documentation_functions/calculateHVG.rst>
+	signPCA </subsections/documentation_functions/signPCA.rst>
+	screePlot </subsections/documentation_functions/screePlot.rst>
+	jackstrawPlot </subsections/documentation_functions/jackstrawPlot.rst>
+	runPCA </subsections/documentation_functions/runPCA.rst>
+	runUMAP </subsections/documentation_functions/runUMAP.rst>
+	runtSNE </subsections/documentation_functions/runtSNE.rst>
+
+
 .. list-table:: 
 	:widths: 100 100 
 	:header-rows: 1
@@ -219,6 +318,27 @@ Dimension Reduction
 Clustering
 *************************
 *Functions to cluster cells.*
+
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	createNearestNetwork </subsections/documentation_functions/createNearestNetwork.rst>
+	addNetworkLayout </subsections/documentation_functions/addNetworkLayout.rst>
+	extractNearestNetwork </subsections/documentation_functions/extractNearestNetwork.rst>
+	clusterCells </subsections/documentation_functions/clusterCells.rst>
+	doLeidenCluster </subsections/documentation_functions/doLeidenCluster.rst>
+	doLouvainCluster </subsections/documentation_functions/doLouvainCluster.rst>
+	doKmeans </subsections/documentation_functions/doKmeans.rst>
+	doHclust </subsections/documentation_functions/doHclust.rst>
+	subClusterCells </subsections/documentation_functions/subClusterCells.rst>
+	extractNearestNetwork </subsections/documentation_functions/extractNearestNetwork.rst>
+	clusterCells </subsections/documentation_functions/clusterCells.rst>
+	doLeidenSubCluster </subsections/documentation_functions/doLeidenSubCluster.rst>
+	doLouvainSubCluster </subsections/documentation_functions/doLouvainSubCluster.rst>
+	getClusterSimilarity </subsections/documentation_functions/getClusterSimilarity.rst>
+	mergeClusters </subsections/documentation_functions/mergeClusters.rst>
+	getDendrogramSplits </subsections/documentation_functions/getDendrogramSplits.rst>
 
 .. list-table:: 
 	:widths: 100 100 
@@ -260,6 +380,19 @@ Marker Genes
 *************************
 *Functions to detect cell type / cluster specific marker genes.*
 
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	findMarkers </subsections/documentation_functions/findMarkers.rst>
+	findMarkers_one_vs_all </subsections/documentation_functions/findMarkers_one_vs_all.rst>
+	findGiniMarkers </subsections/documentation_functions/findGiniMarkers.rst>
+	findGiniMarkers_one_vs_all </subsections/documentation_functions/findGiniMarkers_one_vs_all.rst>
+	findScranMarkers </subsections/documentation_functions/findScranMarkers.rst>
+	findScranMarkers_one_vs_all </subsections/documentation_functions/findScranMarkers_one_vs_all.rst>
+	findMastMarkers </subsections/documentation_functions/findMastMarkers.rst>
+	findMastMarkers_one_vs_all </subsections/documentation_functions/findMastMarkers_one_vs_all.rst>
+
 .. list-table:: 
 	:widths: 100 100 
 	:header-rows: 1
@@ -290,6 +423,17 @@ Auxiliary Visualizations
 *************************
 *Functions for different visualization options to explore gene, cell or cluster characteristics.*
 
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	showClusterHeatmap </subsections/documentation_functions/showClusterHeatmap.rst>
+	showClusterDendrogram </subsections/documentation_functions/showClusterDendrogram.rst>
+	plotHeatmap </subsections/documentation_functions/plotHeatmap.rst>
+	plotMetaDataHeatmap </subsections/documentation_functions/plotMetaDataHeatmap.rst>
+	plotMetaDataCellsHeatmap </subsections/documentation_functions/plotMetaDataCellsHeatmap.rst>
+	violinPlot </subsections/documentation_functions/violinPlot.rst>
+
 .. list-table:: 
 	:widths: 100 100 
 	:header-rows: 1
@@ -313,6 +457,23 @@ Auxiliary Visualizations
 Spatial Enrichment & Deconvolution
 ***************************************
 *Functions for algorithms to compute spatial enrichment of gene signatures or single-cell RNA-seq annotation.*
+
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	makeSignMatrixPAGE </subsections/documentation_functions/makeSignMatrixPAGE.rst>
+	makeSignMatrixRank </subsections/documentation_functions/makeSignMatrixRank.rst>
+	runSpatialEnrich </subsections/documentation_functions/runSpatialEnrich.rst>
+	createSpatialEnrich </subsections/documentation_functions/createSpatialEnrich.rst>
+	runPAGEEnrich </subsections/documentation_functions/runPAGEEnrich.rst>
+	PAGEEnrich </subsections/documentation_functions/PAGEEnrich.rst>
+	runRankEnrich </subsections/documentation_functions/runRankEnrich.rst>
+	rankEnrich </subsections/documentation_functions/rankEnrich.rst>
+	runHyperGeometricEnrich </subsections/documentation_functions/runHyperGeometricEnrich.rst>
+	hyperGeometricEnrich </subsections/documentation_functions/hyperGeometricEnrich.rst>
+	runSpatialDeconv </subsections/documentation_functions/runSpatialDeconv.rst>
+	runDWLSDeconv </subsections/documentation_functions/runDWLSDeconv.rst>
 
 .. list-table:: 
 	:widths: 100 100 
@@ -350,6 +511,24 @@ Spatial Network Or Grid
 ***************************************
 *Function to (help) create a spatial network or grid.*
 
+
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	spatNetwDistributionsDistance </subsections/documentation_functions/spatNetwDistributionsDistance.rst>
+	spatNetwDistributionsKneighbors </subsections/documentation_functions/spatNetwDistributionsKneighbors.rst>
+	spatNetwDistributions </subsections/documentation_functions/spatNetwDistributions.rst>
+	createSpatialDelaunayNetwork </subsections/documentation_functions/createSpatialDelaunayNetwork.rst>
+	plotStatDelaunayNetwork </subsections/documentation_functions/plotStatDelaunayNetwork.rst>
+	createSpatialKNNnetwork </subsections/documentation_functions/createSpatialKNNnetwork.rst>
+	createSpatialNetwork </subsections/documentation_functions/createSpatialNetwork.rst>
+	annotateSpatialNetwork </subsections/documentation_functions/annotateSpatialNetwork.rst>
+	annotateSpatialGrid </subsections/documentation_functions/annotateSpatialGrid.rst>
+	createSpatialGrid </subsections/documentation_functions/createSpatialGrid.rst>
+	showNetworks </subsections/documentation_functions/showNetworks.rst>
+	showGrids </subsections/documentation_functions/showGrids.rst>
+
 .. list-table:: 
 	:widths: 100 100 
 	:header-rows: 1
@@ -386,6 +565,20 @@ Spatial Genes
 ***************************************
 *Functions to identify spatial genes.*
 
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	binSpect </subsections/documentation_functions/binSpect.rst>
+	binSpectSingle </subsections/documentation_functions/binSpectSingle.rst>
+	binSpectMulti </subsections/documentation_functions/binSpectMulti.rst>
+	silhouetteRank </subsections/documentation_functions/silhouetteRank.rst>
+	spatialDE </subsections/documentation_functions/spatialDE.rst>
+	spatialDE </subsections/documentation_functions/spatialDE.rst>
+	spatialAEH </subsections/documentation_functions/spatialAEH.rst>
+	trendSceek </subsections/documentation_functions/trendSceek.rst>
+	spark </subsections/documentation_functions/spark.rst>
+
 .. list-table:: 
 	:widths: 100 100 
 	:header-rows: 1
@@ -414,6 +607,14 @@ Spatial Gene Simulation
 ***************************************
 *Functions to simulate a gene expression pattern.*
 
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	simulateOneGenePatternGiottoObject </subsections/documentation_functions/simulateOneGenePatternGiottoObject.rst>
+	runPatternSimulation </subsections/documentation_functions/runPatternSimulation.rst>
+
+
 .. list-table:: 
 	:widths: 100 100 
 	:header-rows: 1
@@ -429,6 +630,17 @@ Spatial Gene Simulation
 Spatial Co-Expression Patterns/Modules
 ***************************************
 *Functions to identify spatial co-expression patterns.*
+
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	clusterSpatialCorGenes </subsections/documentation_functions/clusterSpatialCorGenes.rst>
+	detectSpatialCorGenes </subsections/documentation_functions/detectSpatialCorGenes.rst>
+	heatmSpatialCorGenes </subsections/documentation_functions/heatmSpatialCorGenes.rst>
+	showSpatialCorGenes </subsections/documentation_functions/showSpatialCorGenes.rst>
+	rankSpatialCorGroups </subsections/documentation_functions/rankSpatialCorGroups.rst>
+
 
 .. list-table:: 
 	:widths: 100 100 
@@ -451,6 +663,18 @@ Spatial Co-Expression Patterns/Modules
 Hidden Markov Random Field (HMRF) 
 ***************************************
 *Functions to identify spatial domains with HMRF.*
+
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	doHMRF </subsections/documentation_functions/doHMRF.rst>
+	loadHMRF </subsections/documentation_functions/loadHMRF.rst>
+	viewHMRFresults </subsections/documentation_functions/viewHMRFresults.rst>
+	writeHMRFresults </subsections/documentation_functions/writeHMRFresults.rst>
+	addHMRF </subsections/documentation_functions/addHMRF.rst>
+	viewHMRFresults2D </subsections/documentation_functions/viewHMRFresults2D.rst>
+	viewHMRFresults3D </subsections/documentation_functions/viewHMRFresults3D.rst>
 
 .. list-table:: 
 	:widths: 100 100 
@@ -478,6 +702,17 @@ Hidden Markov Random Field (HMRF)
 ***************************************
 *Visualization of expression space (e.g. UMAP) in 2D.*
 
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	dimPlot </subsections/documentation_functions/dimPlot.rst>
+	plotUMAP </subsections/documentation_functions/plotUMAP.rst>
+	plotTSNE </subsections/documentation_functions/plotTSNE.rst>
+	plotPCA </subsections/documentation_functions/plotPCA.rst>
+	dimGenePlot </subsections/documentation_functions/dimGenePlot.rst>
+	dimCellPlot </subsections/documentation_functions/dimCellPlot.rst>
+
 .. list-table:: 
 	:widths: 100 100 
 	:header-rows: 1
@@ -502,6 +737,14 @@ Hidden Markov Random Field (HMRF)
 ***************************************
 *Visualization of expression space (e.g. UMAP) in 2D.*
 
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	spatPlot </subsections/documentation_functions/spatPlot.rst>
+	spatGenePlot </subsections/documentation_functions/spatGenePlot.rst>
+	spatCellPlot </subsections/documentation_functions/spatCellPlot.rst>
+
 .. list-table:: 
 	:widths: 100 100 
 	:header-rows: 1
@@ -520,6 +763,14 @@ Hidden Markov Random Field (HMRF)
 ****************************************************
 *Visualization in both 2D spatial and expression space.*
 
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	spatDimPlot </subsections/documentation_functions/spatDimPlot.rst>
+	spatDimGenePlot </subsections/documentation_functions/spatDimGenePlot.rst>
+	spatDimCellPlot </subsections/documentation_functions/spatDimCellPlot.rst>
+
 .. list-table:: 
 	:widths: 100 100 
 	:header-rows: 1
@@ -537,6 +788,16 @@ Hidden Markov Random Field (HMRF)
 3D Dimension Reduction Visualization
 ****************************************************
 *Visualization in both 2D spatial and expression space.*
+
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	dimPlot3D </subsections/documentation_functions/dimPlot3D.rst>
+	plotUMAP_3D </subsections/documentation_functions/plotUMAP_3D.rst>
+	plotTSNE_3D </subsections/documentation_functions/plotTSNE_3D.rst>
+	plotPCA_3D </subsections/documentation_functions/plotPCA_3D.rst>
+	dimGenePlot3D </subsections/documentation_functions/dimGenePlot3D.rst>
 
 .. list-table:: 
 	:widths: 100 100 
@@ -560,6 +821,13 @@ Hidden Markov Random Field (HMRF)
 ****************************************************
 *Visualization in both 2D spatial and expression space.*
 
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	spatPlot3D </subsections/documentation_functions/spatPlot3D.rst>
+	spatDimGenePlot3D </subsections/documentation_functions/spatDimGenePlot3D.rst>
+
 .. list-table:: 
 	:widths: 100 100 
 	:header-rows: 1
@@ -575,6 +843,18 @@ Hidden Markov Random Field (HMRF)
 In Silico Cross Sections
 ****************************************************
 *Functions to create an in silico 2D cross sections from 3D data.*
+
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	createCrossSection </subsections/documentation_functions/createCrossSection.rst>
+	crossSectionGenePlot </subsections/documentation_functions/crossSectionGenePlot.rst>
+	crossSectionPlot </subsections/documentation_functions/crossSectionPlot.rst>
+	crossSectionGenePlot3D </subsections/documentation_functions/crossSectionGenePlot3D.rst>
+	crossSectionPlot3D </subsections/documentation_functions/crossSectionPlot3D.rst>
+	insertCrossSectionSpatPlot3D </subsections/documentation_functions/insertCrossSectionSpatPlot3D.rst>
+	insertCrossSectionGenePlot3D </subsections/documentation_functions/insertCrossSectionGenePlot3D.rst>
 
 .. list-table:: 
 	:widths: 100 100 
@@ -602,6 +882,17 @@ Cell Neighborhood: Cell-Type/Cell-Type Enrichment
 **************************************************************
 *Functions to calculate and visualize cell-type/cell-type spatial enrichment or depletion.*
 
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	cellProximityEnrichment </subsections/documentation_functions/cellProximityEnrichment.rst>
+	cellProximityBarplot </subsections/documentation_functions/cellProximityBarplot.rst>
+	cellProximityHeatmap </subsections/documentation_functions/cellProximityHeatmap.rst>
+	cellProximityNetwork </subsections/documentation_functions/cellProximityNetwork.rst>
+	cellProximitySpatPlot </subsections/documentation_functions/cellProximitySpatPlot.rst>
+	cellProximitySpatPlot3D </subsections/documentation_functions/cellProximitySpatPlot3D.rst>
+
 .. list-table:: 
 	:widths: 100 100 
 	:header-rows: 1
@@ -626,6 +917,31 @@ Cell Neighborhood: Spatial Interaction Changed Genes (ICG)
 **************************************************************
 *Identify and visualize genes that change in a source cell type due to interaction with another neighboring cell type.*
 
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	findInteractionChangedGenes </subsections/documentation_functions/findInteractionChangedGenes.rst>
+	findICG </subsections/documentation_functions/findICG.rst>
+	findCellProximityGenes </subsections/documentation_functions/findCellProximityGenes.rst>
+	findCPG </subsections/documentation_functions/findCPG.rst>
+	filterCellProximityGenes </subsections/documentation_functions/filterCellProximityGenes.rst>
+	filterInteractionChangedGenes </subsections/documentation_functions/filterInteractionChangedGenes.rst>
+	filterICG </subsections/documentation_functions/filterICG.rst>
+	filterCPG </subsections/documentation_functions/filterCPG.rst>
+	combineInteractionChangedGenes </subsections/documentation_functions/combineInteractionChangedGenes.rst>
+	combineICG </subsections/documentation_functions/combineICG.rst>
+	combineCellProximityGenes </subsections/documentation_functions/combineCellProximityGenes.rst>
+	combineCPG </subsections/documentation_functions/combineCPG.rst>
+	plotInteractionChangedGenes </subsections/documentation_functions/plotInteractionChangedGenes.rst>
+	plotICG </subsections/documentation_functions/plotICG.rst>
+	plotCellProximityGenes </subsections/documentation_functions/plotCellProximityGenes.rst>
+	plotCPG </subsections/documentation_functions/plotCPG.rst>
+	plotCombineInteractionChangedGenes </subsections/documentation_functions/plotCombineInteractionChangedGenes.rst>
+	plotCombineICG </subsections/documentation_functions/plotCombineICG.rst>
+	plotCombineCellProximityGenes </subsections/documentation_functions/plotCombineCellProximityGenes.rst>
+	plotCombineCPG </subsections/documentation_functions/plotCombineCPG.rst>
+
 .. list-table:: 
 	:widths: 100 100 
 	:header-rows: 1
@@ -643,9 +959,7 @@ Cell Neighborhood: Spatial Interaction Changed Genes (ICG)
 	* - :ref:`filterCellProximityGenes() <filterCellProximityGenes>`
 	  - Identify Cell-Cell Interaction Changed Genes (ICGs)
 	* - :ref:`filterInteractionChangedGenes() <filterInteractionChangedGenes>`
-	  - Filter ICGs
-	* - :ref:`findInteractionChangedGenes() <findInteractionChangedGenes>`
-	  - Identify Cell-Cell Interaction Changed Genes (ICGs)
+	  - Filter The Identified Cell-Cell Interaction Changed Genes (ICGs)
 	* - :ref:`filterICG() <filterICG>`
 	  - Filter ICGs
 	* - :ref:`filterCPG() <filterCPG>`
@@ -680,6 +994,17 @@ Cell Neighborhood: Ligand-Receptor Cell Communication
 ******************************************************
 *Functions to calculate and visualize cell-type/cell-type spatial enrichment or depletion.*
 
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	exprCellCellcom </subsections/documentation_functions/exprCellCellcom.rst>
+	spatCellCellcom </subsections/documentation_functions/spatCellCellcom.rst>
+	plotCCcomDotplot </subsections/documentation_functions/plotCCcomDotplot.rst>
+	plotRankSpatvsExpr </subsections/documentation_functions/plotRankSpatvsExpr.rst>
+	plotRecovery </subsections/documentation_functions/plotRecovery.rst>
+
+
 .. list-table:: 
 	:widths: 100 100 
 	:header-rows: 1
@@ -702,6 +1027,12 @@ Export From Giotto Analyzer To Viewer
 ****************************************************
 *Export selected annotations to a folder that can be used as input for Giotto Viewer.*
 
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	exportGiottoViewer </subsections/documentation_functions/exportGiottoViewer.rst>
+
 .. list-table:: 
 	:widths: 100 100 
 	:header-rows: 1
@@ -715,6 +1046,12 @@ Export From Giotto Analyzer To Viewer
 Interoperability
 ****************************************************
 *Convert other type of objects into a Giotto object.*
+
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	anndataToGiotto </subsections/documentation_functions/anndataToGiotto.rst>
 
 .. list-table:: 
 	:widths: 100 100 
