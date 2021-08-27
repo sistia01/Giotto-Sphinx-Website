@@ -34,10 +34,11 @@ import sphinx_rtd_theme
 
 extensions = ['sphinx.ext.autosectionlabel', 
 'sphinx.ext.autodoc',
-'sphinx_panels',
+#'sphinx_panels',
 'sphinx_togglebutton',
 'sphinx_rtd_theme',
-'sphinx_tabs'
+#'sphinx_tabs',
+'sphinx-desing'
 ]
 
 
