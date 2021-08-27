@@ -5,6 +5,7 @@ Function Documentation
 *************************
 Giotto Object 
 *************************
+
 *Create and operate on Giotto Object*
 
 .. toctree::
@@ -33,10 +34,12 @@ Giotto Object
 	  - Subset Giotto 
 	* - :ref:`subsetGiottoLocs() <subsetGiottoLocs>`
 	  - Subset Giotto Locs
-  
-*************************  
-Giotto Environment 
+ 
+	  
 *************************
+Giotto Environment  
+*************************
+
 *Work with Giotto Python Environment*
 
 .. toctree::
@@ -64,6 +67,7 @@ Giotto Environment
 ***************************
 Import Raw Data
 ***************************
+
 *Functions to help to import raw spatial data.*
 
 .. toctree::
@@ -72,8 +76,8 @@ Import Raw Data
 
 	getSpatialDataset </subsections/documentation_functions/getSpatialDataset.rst>
 	readExprMatrix </subsections/documentation_functions/readExprMatrix.rst>
-	get10Xmatrix </subsections/documentation_functions/get10Xmatrix.rst>
-	get10Xmatrix_h5 </subsections/documentation_functions/get10Xmatrix_h5.rst>
+	get10Xmatrix </subsections/documentation_functions/get10XMatrix.rst>
+	get10Xmatrix_h5 </subsections/documentation_functions/get10XMatrix_h5.rst>
 	stitchFieldCoordinates </subsections/documentation_functions/stitchFieldCoordinates.rst>
 	stitchTileCoordinates </subsections/documentation_functions/stitchTileCoordinates.rst>
 
@@ -87,9 +91,9 @@ Import Raw Data
 	  - Get The Spatial Data
 	* - :ref:`readExprMatrix() <readExprMatrix>`
 	  - Read The Expression Matrix
-	* - :ref:`get10Xmatrix() <get10Xmatrix>`
+	* - :ref:`get10Xmatrix() <get10XMatrix>`
 	  - Get An Expression Matrix From 10X Structure
-	* - :ref:`get10Xmatrix_h5() <get10Xmatrix_h5>`
+	* - :ref:`get10Xmatrix_h5() <get10XMatrix_h5>`
 	  - Get An Expression Matrix From 10X h5 Path 
 	* - :ref:`stitchFieldCoordinates() <stitchFieldCoordinates>`
 	  - Stitch Field Coordinates Together 
@@ -99,6 +103,7 @@ Import Raw Data
 ***************************
 Add Images
 ***************************
+
 *Functions to work with images for a Giotto object.*
 
 .. toctree::
@@ -141,7 +146,8 @@ Add Images
 	* - :ref:`plotGiottoImage() <plotGiottoImage>`
 	  - Plot A Giotto Image From A Giotto Object
 
-**************************	  
+
+**************************
 Giotto Instructions 
 **************************
 
@@ -332,8 +338,6 @@ Clustering
 	doKmeans </subsections/documentation_functions/doKmeans.rst>
 	doHclust </subsections/documentation_functions/doHclust.rst>
 	subClusterCells </subsections/documentation_functions/subClusterCells.rst>
-	extractNearestNetwork </subsections/documentation_functions/extractNearestNetwork.rst>
-	clusterCells </subsections/documentation_functions/clusterCells.rst>
 	doLeidenSubCluster </subsections/documentation_functions/doLeidenSubCluster.rst>
 	doLouvainSubCluster </subsections/documentation_functions/doLouvainSubCluster.rst>
 	getClusterSimilarity </subsections/documentation_functions/getClusterSimilarity.rst>
@@ -572,8 +576,7 @@ Spatial Genes
 	binSpect </subsections/documentation_functions/binSpect.rst>
 	binSpectSingle </subsections/documentation_functions/binSpectSingle.rst>
 	binSpectMulti </subsections/documentation_functions/binSpectMulti.rst>
-	silhouetteRank </subsections/documentation_functions/silhouetteRank.rst>
-	spatialDE </subsections/documentation_functions/spatialDE.rst>
+	silhouetteRank </subsections/documentation_functions/silhouetteRank.rst
 	spatialDE </subsections/documentation_functions/spatialDE.rst>
 	spatialAEH </subsections/documentation_functions/spatialAEH.rst>
 	trendSceek </subsections/documentation_functions/trendSceek.rst>

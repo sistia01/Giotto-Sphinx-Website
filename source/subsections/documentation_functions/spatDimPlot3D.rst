@@ -87,11 +87,11 @@ Arguments
 	* - dim3_to_use	
 	  - dimension to use on z-axis
 	* - sdimx	
-	  - = spatial dimension to use on x-axis
+	  - spatial dimension to use on x-axis
 	* - sdimy	
-	  - = spatial dimension to use on y-axis
+	  - spatial dimension to use on y-axis
 	* - sdimz	
-	  - = spatial dimension to use on z-axis
+	  - spatial dimension to use on z-axis
 	* - spat_enr_names	
 	  - names of spatial enrichment results to include
 	* - show_NN_network	
@@ -164,7 +164,7 @@ Arguments
 	  - show plot
 	* - return_plot	
 	  - return ggplot object
-	* save_plot	
+	* - save_plot	
 	  - directly save the plot [boolean]
 	* - save_param	
 	  - list of saving parameters, see showSaveParameters

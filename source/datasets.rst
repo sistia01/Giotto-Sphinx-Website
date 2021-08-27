@@ -58,8 +58,6 @@ Mini Datasets
     Mini Visium </subsections/datasets/mini_visium.rst>
     Mini 3D STARmap </subsections/datasets/mini_3D_STARmap.rst>
 
-.. information on the button-link directive: https://sphinx-design.readthedocs.io/en/latest/badges_buttons.html#buttons
-
 .. grid:: 
 
     .. grid-item-card::
@@ -114,7 +112,6 @@ Full Datasets
 	Mouse CODEX Spleen </subsections/datasets/mouse_CODEX_spleen.rst>
 	Mouse osmFISH SScortex </subsections/datasets/osmFISH_mouse_SS_cortex.rst>
 	Human CyCIF PDAC </subsections/datasets/human_CyCIF_PDAC.rst>
-
 
 .. grid::
 

@@ -525,40 +525,6 @@ Visually inspect the spatial distribution of different clusters
 .. image:: /images/other/human_cycif_PDAC/vignette_200916/7_g_spatplot_2.png
 			:width: 30%
 			:alt: 7_g_spatplot_2.png
-.. image:: /images/other/human_cycif_PDAC/vignette_200916/7_g_spatplot_3.png
-			:width: 30%
-			:alt: 7_g_spatplot_3.png
-.. image:: /images/other/human_cycif_PDAC/vignette_200916/7_g_spatplot_4.png
-			:width: 30%
-			:alt: 7_g_spatplot_4.png
-.. image:: /images/other/human_cycif_PDAC/vignette_200916/7_g_spatplot_5.png
-			:width: 30%
-			:alt: 7_g_spatplot_5.png
-.. image:: /images/other/human_cycif_PDAC/vignette_200916/7_g_spatplot_6.png
-			:width: 30%
-			:alt: 7_g_spatplot_6.png
-.. image:: /images/other/human_cycif_PDAC/vignette_200916/7_g_spatplot_7.png
-			:width: 30%
-			:alt: 7_g_spatplot_7.png
-.. image:: /images/other/human_cycif_PDAC/vignette_200916/7_g_spatplot_8.png
-			:width: 30%
-			:alt: 7_g_spatplot_8.png
-.. image:: /images/other/human_cycif_PDAC/vignette_200916/7_g_spatplot_9.png
-			:width: 30%
-			:alt: 7_g_spatplot_9.png
-.. image:: /images/other/human_cycif_PDAC/vignette_200916/7_g_spatplot_10.png
-			:width: 30%
-			:alt: 7_g_spatplot_10.png
-.. image:: /images/other/human_cycif_PDAC/vignette_200916/7_g_spatplot_11.png
-			:width: 30%
-			:alt: 7_g_spatplot_11.png
-.. image:: /images/other/human_cycif_PDAC/vignette_200916/7_g_spatplot_12.png
-			:width: 30%
-			:alt: 7_g_spatplot_10.png
-.. image:: /images/other/human_cycif_PDAC/vignette_200916/7_g_spatplot_13.png
-			:width: 30%
-			:alt: 7_g_spatplot_13.png
-
 
 7.4 Annotate Clusters by Position and Expression 
 ===================================================
@@ -627,7 +593,7 @@ Annotate clusters based on spatial position and dominant expression patterns
 			:alt: 7_j_umap.png
 
 *************************
-8. Spatial Grid
+1. Spatial Grid
 *************************
 
 .. code-block::

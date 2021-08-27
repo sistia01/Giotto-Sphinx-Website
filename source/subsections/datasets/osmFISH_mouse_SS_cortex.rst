@@ -182,9 +182,9 @@ Dataset Explanation
 	plotUMAP(gobject = osm_test,
          	save_param = list(save_name = '3_c_UMAP_reduction.png'))
 
-.. image:: /images/other/mouse_osmfish_ss_cortex/vignette_200915/3_c_UMAP_reduction.png.png
+.. image:: /images/other/mouse_osmfish_ss_cortex/vignette_200915/3_c_UMAP_reduction.png
 		:width: 400	
-		:alt: 3_c_UMAP_reduction.png.png
+		:alt: 3_c_UMAP_reduction.png
 
 .. code-block::
 
@@ -192,9 +192,9 @@ Dataset Explanation
          	cell_color = 'total_expr', color_as_factor = F, gradient_midpoint = 180, gradient_limits = c(120, 220),
          	save_param = list(save_name = '3_d_UMAP_reduction_expression.png'))
 
-.. image:: /images/other/mouse_osmfish_ss_cortex/vignette_200915/3_d_UMAP_reduction_expression.png.png
+.. image:: /images/other/mouse_osmfish_ss_cortex/vignette_200915/3_d_UMAP_reduction_expression.png
 		:width: 400	
-		:alt: 3_d_UMAP_reduction_expression.png.png
+		:alt: 3_d_UMAP_reduction_expression.png
 
 .. code-block::
 
