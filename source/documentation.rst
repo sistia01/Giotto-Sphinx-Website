@@ -576,7 +576,7 @@ Spatial Genes
 	binSpect </subsections/documentation_functions/binSpect.rst>
 	binSpectSingle </subsections/documentation_functions/binSpectSingle.rst>
 	binSpectMulti </subsections/documentation_functions/binSpectMulti.rst>
-	silhouetteRank </subsections/documentation_functions/silhouetteRank.rst
+	silhouetteRank </subsections/documentation_functions/silhouetteRank.rst>
 	spatialDE </subsections/documentation_functions/spatialDE.rst>
 	spatialAEH </subsections/documentation_functions/spatialAEH.rst>
 	trendSceek </subsections/documentation_functions/trendSceek.rst>
@@ -746,6 +746,7 @@ Hidden Markov Random Field (HMRF)
 
 	spatPlot </subsections/documentation_functions/spatPlot.rst>
 	spatGenePlot </subsections/documentation_functions/spatGenePlot.rst>
+	spatGenePlot3D </subsections/documentation_functions/spatGenePlot3D.rst>
 	spatCellPlot </subsections/documentation_functions/spatCellPlot.rst>
 
 .. list-table:: 
@@ -771,8 +772,10 @@ Hidden Markov Random Field (HMRF)
 	:hidden:
 
 	spatDimPlot </subsections/documentation_functions/spatDimPlot.rst>
+	spatDimPlot3D </subsections/documentation_functions/spatDimPlot3D.rst>
 	spatDimGenePlot </subsections/documentation_functions/spatDimGenePlot.rst>
 	spatDimCellPlot </subsections/documentation_functions/spatDimCellPlot.rst>
+	spatDimCellPlot2D </subsections/documentation_functions/spatDimCellPlot2D.rst>
 
 .. list-table:: 
 	:widths: 100 100 

@@ -50,7 +50,7 @@ Mini Datasets
 ==================
 
 .. toctree::
-	:maxdepth: 2
+    :maxdepth: 2
     :caption: Mini Datasets
     :hidden:
 
