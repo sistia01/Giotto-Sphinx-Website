@@ -32,4 +32,3 @@ A matrix value.
 
 .. seealso::
 	`PAGEEnrich() <PAGEEnrich>_.
-

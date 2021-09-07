@@ -46,7 +46,7 @@ Giotto Environment
 	:maxdepth: 2
 	:hidden:
 
-	installGiottoEnvironment </subsections/documentation_functions/installGiottoEnvironment.rst>
+	installGiottoEnvironment </subsections/documentation_functions/installGiottoEnvironmentFunction.rst>
 	removeGiottoEnvironment </subsections/documentation_functions/removeGiottoEnvironment.rst>
 	checkGiottoEnvironment </subsections/documentation_functions/checkGiottoEnvironment.rst>
 
@@ -56,7 +56,7 @@ Giotto Environment
 
 	* - Function
 	  - Description 
-	* - :ref:`installGiottoEnvironment() <installGiottoEnvironment>`
+	* - :ref:`installGiottoEnvironment() <installGiottoEnvironmentFunction>`
 	  - Install Giotto Environment 
 	* - :ref:`removeGiottoEnvironment() <removeGiottoEnvironment>`
 	  - Remove Giotto Environment 
@@ -404,7 +404,7 @@ Marker Genes
 
 	* - Function
 	  - Description 
-	* - :ref:`findMarkers() <findMarkers>`
+	* - :ref:`findMarkers() <findMarkersFunction>`
 	  - Find Marker Genes
 	* - :ref:`findMarkers_one_vs_all() <findMarkers_one_vs_all>`
 	  - Find Marker Genes At Once
@@ -745,6 +745,7 @@ Hidden Markov Random Field (HMRF)
 	:hidden:
 
 	spatPlot </subsections/documentation_functions/spatPlot.rst>
+	spatPlot2D </subsections/documentation_functions/spatPlot2D.rst>
 	spatGenePlot </subsections/documentation_functions/spatGenePlot.rst>
 	spatGenePlot3D </subsections/documentation_functions/spatGenePlot3D.rst>
 	spatCellPlot </subsections/documentation_functions/spatCellPlot.rst>
@@ -799,6 +800,7 @@ Hidden Markov Random Field (HMRF)
 	:maxdepth: 2
 	:hidden:
 
+	dimPlot2D </subsections/documentation_functions/dimPlot2D.rst>
 	dimPlot3D </subsections/documentation_functions/dimPlot3D.rst>
 	plotUMAP_3D </subsections/documentation_functions/plotUMAP_3D.rst>
 	plotTSNE_3D </subsections/documentation_functions/plotTSNE_3D.rst>
@@ -810,7 +812,9 @@ Hidden Markov Random Field (HMRF)
 	:header-rows: 1
 
 	* - Function
-	  - Description 
+	  - Description
+  	* - :ref:`dimPlot2D() <dimPlot2D>`
+	  - Visualize Cells By Spatial Coordinates in 2D 
 	* - :ref:`dimPlot3D() <dimPlot3D>`
 	  - Visualize Cells By Spatial Coordinates in 3D
 	* - :ref:`plotUMAP_3D() <plotUMAP_3D>`

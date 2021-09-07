@@ -41,4 +41,3 @@ A matrix value.
 
 .. seealso::
 	`rankEnrich() <rankEnrich>_.
-

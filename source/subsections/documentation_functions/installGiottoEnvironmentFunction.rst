@@ -1,4 +1,4 @@
-.. _installGiottoEnvironment: 
+.. _installGiottoEnvironmentFunction: 
 
 #############################
 Install Giotto Environment

@@ -16,8 +16,7 @@ Calculate Gene Signature  Enrichment With PAGE
 Arguments
 **********************
 .. note:: 
-	Arguments passed on to `runPAGEEnrich() <runPAGEEnrich> `_
-
+	Arguments passed on to `runPAGEEnrich() <runPAGEEnrich>`_
 
 .. list-table::
 	:widths: 100 100 

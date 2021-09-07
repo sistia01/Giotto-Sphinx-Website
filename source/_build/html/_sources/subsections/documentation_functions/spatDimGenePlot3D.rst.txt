@@ -70,7 +70,6 @@ Arguments
 	:widths: 100 100 
 	:header-rows: 0 
 
-
 	* - gobject	
 	  - giotto object
 	* - expression_values	

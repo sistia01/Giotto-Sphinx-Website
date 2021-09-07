@@ -1,16 +1,69 @@
-.. _dimPlot: 
+.. _dimPlot2D: 
 
 ####################################################
 Visualize Cells By Coordinates
 ####################################################
 
-.. describe:: dimPlot()
+.. describe:: dimPlot2D()
 
 *Visualize cells according to dimension reduction coordinates.*
 
 .. code-block::
 
-	dimPlot(...)
+	dimPlot2D(
+  		gobject,
+  		group_by = NULL,
+  		group_by_subset = NULL,
+  		dim_reduction_to_use = "umap",
+  		dim_reduction_name = "umap",
+  		dim1_to_use = 1,
+  		dim2_to_use = 2,
+  		spat_enr_names = NULL,
+  		show_NN_network = F,
+  		nn_network_to_use = "sNN",
+  		network_name = "sNN.pca",
+		cell_color = NULL,
+  		color_as_factor = T,
+ 	 	cell_color_code = NULL,
+  		cell_color_gradient = c("blue", "white", "red"),
+  		gradient_midpoint = NULL,
+  		gradient_limits = NULL,
+  		select_cell_groups = NULL,
+  		select_cells = NULL,
+  		show_other_cells = T,
+  		other_cell_color = "lightgrey",
+  		other_point_size = 0.5,
+  		show_cluster_center = F,
+  		show_center_label = T,
+  		center_point_size = 4,
+  		center_point_border_col = "black",
+  		center_point_border_stroke = 0.1,
+  		label_size = 4,
+  		label_fontface = "bold",
+  		edge_alpha = NULL,
+  		point_shape = c("border", "no_border"),
+  		point_size = 1,
+  		point_alpha = 1,
+  		point_border_col = "black",
+  		point_border_stroke = 0.1,
+  		title = NULL,
+  		show_legend = T,
+  		legend_text = 8,
+  		legend_symbol_size = 1,
+  		background_color = "white",
+  		axis_text = 8,
+  		axis_title = 8,
+  		cow_n_col = 2,
+  		cow_rel_h = 1,
+  		cow_rel_w = 1,
+  		cow_align = "h",
+  		show_plot = NA,
+  		return_plot = NA,
+  		save_plot = NA,
+  		save_param = list(),
+  		default_save_name = "dimPlot2D"
+	)
+
 
 **********************
 Arguments
@@ -20,8 +73,7 @@ Arguments
 	:widths: 100 100 
 	:header-rows: 1 
 
-	* - ... 
-	  - Arguments passed on to `dimPlot2D() <dimPlot2D>`_
+
 	* - **gobject**
 	  - giotto object
 	* - **group_by**
@@ -133,6 +185,7 @@ A ggplot.
 ******************
 Details 
 ******************
+
 Description of parameters ... 
 
 See `dimPlot2D() <dimPlot2D>`_ and `dimPlot3D() <dimPlot3D>`_ for 3D plot information. 
@@ -148,7 +201,7 @@ Examples
 .. code:: 
 
 	data(mini_giotto_single_cell)
-	dimPlot(mini_giotto_single_cell)
+	dimPlot2D(mini_giotto_single_cell)
 
 .. image:: /images/documentation/dimPlot2D-1.png
 	:width: 500

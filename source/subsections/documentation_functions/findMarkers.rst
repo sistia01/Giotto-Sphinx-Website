@@ -1,4 +1,4 @@
-.. _findMarkers: 
+.. _findMarkersFunction: 
 
 #########################################################################
 Find Marker Genes
@@ -69,7 +69,7 @@ Arguments
 	* - adjust_columns	
 	  - mast: column in pDataDT to adjust for (e.g. detection rate)
 	* - ...	
-	  - additional parameters for the `findMarkers <findMarkers>`_ function in scran or zlm function in MAST
+	  - additional parameters for the `findMarkers <findMarkersFunction>`__ function in *scran* or *zlm* function in **MAST**
 
 *******************
 Value

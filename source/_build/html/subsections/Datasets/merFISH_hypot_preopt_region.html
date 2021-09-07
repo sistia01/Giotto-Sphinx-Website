@@ -15,11 +15,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
 
   
@@ -41,14 +38,15 @@
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/togglebutton.js"></script>
-        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../../_static/design-tabs.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="STARmap Mouse Cortex" href="STARmap_mouse_cortex.html" />
+    <link rel="prev" title="seqFISh+ Cortex" href="seqFISH_cortex.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -97,11 +95,39 @@
             
             
               <p class="caption" role="heading"><span class="caption-text">General</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../giottoworkflowanalyses.html">Giotto Workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../datasets.html">Dataset Information</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../datasets.html#examples">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../datasets.html#examples">Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../datasets.html#mini-datasets">Mini Datasets</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../datasets.html#full-datasets">Full Datasets</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="seqFISH_cortex.html">    Mouse seqFISH Cortex</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Mouse merFISH Hypoth. Preopt. Region</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#install-python-modules">Install Python Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dataset-explanation">Dataset Explanation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dataset-download">Dataset Download</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-global-instructions-and-preparations">1. Giotto Global Instructions and Preparations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#optional-set-giotto-instructions">1.1 <em>Optional: Set Giotto Instructions</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-object">1.2 Giotto Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-giotto-object-and-process-the-data">2. Create Giotto Object and Process The Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dimension-reduction">3. Dimension Reduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clustering">4. Clustering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#co-visualization">5. Co-Visualization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cell-type-marker-gene-detection">6. Cell-Type Marker Gene Detection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cell-type-annotation-and-visualization">7. Cell-Type Annotation and Visualization</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="STARmap_mouse_cortex.html">Mouse STARmap Cortex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mouse_visium_brain.html">    Mouse Visium Brain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mouse_visium_kidney.html">    Mouse Visium Kidney</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mouse_CODEX_spleen.html">    Mouse CODEX Spleen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osmFISH_mouse_SS_cortex.html">    Mouse osmFISH SScortex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="human_CyCIF_PDAC.html">    Human CyCIF PDAC</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../documentation.html">Giotto Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tipsandtricks.html">Tips and Tricks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../trygiotto.html">Try Giotto</a></li>
@@ -160,6 +186,8 @@
   <ul class="wy-breadcrumbs">
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../datasets.html">Dataset Information</a> &raquo;</li>
         
       <li>merFISH Mouse Hypothalamus Preoptic Region</li>
     
@@ -511,6 +539,10 @@ plotMetaDataHeatmap(merFISH_test, expression_values = &#39;scaled&#39;,
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="STARmap_mouse_cortex.html" class="btn btn-neutral float-right" title="STARmap Mouse Cortex" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="seqFISH_cortex.html" class="btn btn-neutral float-left" title="seqFISh+ Cortex" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 

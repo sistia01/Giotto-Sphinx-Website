@@ -15,11 +15,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
 
   
@@ -41,8 +38,7 @@
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/togglebutton.js"></script>
-        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../../_static/design-tabs.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -228,51 +224,51 @@
 <span id="working-with-giotto-images"></span><h1>Adding and Working with Images in Giotto: <em>How to Work with Background Images?</em><a class="headerlink" href="#adding-and-working-with-images-in-giotto-how-to-work-with-background-images" title="Permalink to this headline">¶</a></h1>
 <p>All spatial visualization functions in the Giotto toolbox can be overlaid on a background image. This allows you to visualize your results on top of the original tissue image. We provide multiple ways of adding and modifying figures in Giotto.</p>
 <p><strong>There are 3 things to consider:</strong></p>
-<details class="sphinx-bs dropdown card mb-3 fade-in">
-<summary class="summary-title card-header">
-<strong>1. How to add an image to a Giotto object?</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
+<summary class="sd-summary-title sd-card-header">
+<strong>1. How to add an image to a Giotto object?</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="card-text"><strong>createGiottoVisiumObject</strong> can be used directly for a visium 10X dataset</p></li>
-<li><p class="card-text"><strong>createGiottoImage</strong> can be used to create a Giotto image object from a magick image object</p></li>
-<li><p class="card-text"><strong>addGiottoImage</strong> this add a Giotto image to your Giotto object</p></li>
-<li><p class="card-text"><strong>updateGiottoImage</strong> this helps to adjust the alignment of your image with your results</p></li>
+<li><p class="sd-card-text"><strong>createGiottoVisiumObject</strong> can be used directly for a visium 10X dataset</p></li>
+<li><p class="sd-card-text"><strong>createGiottoImage</strong> can be used to create a Giotto image object from a magick image object</p></li>
+<li><p class="sd-card-text"><strong>addGiottoImage</strong> this add a Giotto image to your Giotto object</p></li>
+<li><p class="sd-card-text"><strong>updateGiottoImage</strong> this helps to adjust the alignment of your image with your results</p></li>
 </ul>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3 fade-in">
-<summary class="summary-title card-header">
-<strong>2. How to modify an image (i.e. change the background color)?</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
+<summary class="sd-summary-title sd-card-header">
+<strong>2. How to modify an image (i.e. change the background color)?</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="card-text"><strong>estimateImageBg</strong> function to estimage the background color of your Giotto or magick image</p></li>
-<li><p class="card-text"><strong>changeImageBg</strong> function to change the background color of your image</p></li>
-<li><p class="card-text"><strong>plotGiottoImage</strong> function to plot an image by itself</p></li>
+<li><p class="sd-card-text"><strong>estimateImageBg</strong> function to estimage the background color of your Giotto or magick image</p></li>
+<li><p class="sd-card-text"><strong>changeImageBg</strong> function to change the background color of your image</p></li>
+<li><p class="sd-card-text"><strong>plotGiottoImage</strong> function to plot an image by itself</p></li>
 </ul>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3 fade-in">
-<summary class="summary-title card-header">
-<strong>3. How to show these images with your spatial plots?</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
+<summary class="sd-summary-title sd-card-header">
+<strong>3. How to show these images with your spatial plots?</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="card-text"><strong>showGiottoImageNames:</strong> this tells you which giotto image(s) are part of your giotto object</p></li>
-<li><p class="card-text">Each spatial plotting function has the following 3 parameters:</p></li>
+<li><p class="sd-card-text"><strong>showGiottoImageNames:</strong> this tells you which giotto image(s) are part of your giotto object</p></li>
+<li><p class="sd-card-text">Each spatial plotting function has the following 3 parameters:</p></li>
 </ul>
 <ol class="arabic simple">
-<li><p class="card-text">show_image = TRUE or FALSE, to show a background image or not</p></li>
-<li><p class="card-text">image_name = name of associated Giotto image to use for the background image (option 1)</p></li>
-<li><p class="card-text">gimage = a giotto image object to use (option 2)</p></li>
+<li><p class="sd-card-text">show_image = TRUE or FALSE, to show a background image or not</p></li>
+<li><p class="sd-card-text">image_name = name of associated Giotto image to use for the background image (option 1)</p></li>
+<li><p class="sd-card-text">gimage = a giotto image object to use (option 2)</p></li>
 </ol>
 <ul class="simple">
-<li><p class="card-text"><strong>addGiottoImageToSpatPlot</strong> to test your giotto images you can use this function to them to spatPlot result</p></li>
+<li><p class="sd-card-text"><strong>addGiottoImageToSpatPlot</strong> to test your giotto images you can use this function to them to spatPlot result</p></li>
 </ul>
 </div>
 </details><p>Here we process the Visium Kidney dataset to illustrate all of the different and flexible ways to deal with images using Giotto:</p>

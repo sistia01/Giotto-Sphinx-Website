@@ -15,11 +15,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
 
   
@@ -41,14 +38,15 @@
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/togglebutton.js"></script>
-        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../../_static/design-tabs.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Convert Gene Signature List To Binary Matrix" href="makeSignMatrixPAGE.html" />
+    <link rel="prev" title="Plot Heatmap for Cell Metdata" href="plotMetaDataCellsHeatmap.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -97,12 +95,55 @@
             
             
               <p class="caption" role="heading"><span class="caption-text">General</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../giottoworkflowanalyses.html">Giotto Workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../datasets.html">Dataset Information</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../datasets.html#examples">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../documentation.html">Giotto Functions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../documentation.html">Giotto Functions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-object">Giotto Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-environment">Giotto Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#import-raw-data">Import Raw Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#add-images">Add Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-instructions">Giotto Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-helper-functions">Giotto Helper Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-processing-functions">Giotto Processing Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#dimension-reduction">Dimension Reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#clustering">Clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#marker-genes">Marker Genes</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../documentation.html#auxiliary-visualizations">Auxiliary Visualizations</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="showClusterHeatmap.html">showClusterHeatmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="showClusterDendrogram.html">showClusterDendrogram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plotHeatmap.html">plotHeatmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plotMetaDataHeatmap.html">plotMetaDataHeatmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plotMetaDataCellsHeatmap.html">plotMetaDataCellsHeatmap</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">violinPlot</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#arguments">Arguments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#value">Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#spatial-enrichment-deconvolution">Spatial Enrichment &amp; Deconvolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#spatial-network-or-grid">Spatial Network Or Grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#spatial-genes">Spatial Genes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#spatial-gene-simulation">Spatial Gene Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#spatial-co-expression-patterns-modules">Spatial Co-Expression Patterns/Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#hidden-markov-random-field-hmrf">Hidden Markov Random Field (HMRF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#d-visualization-in-expression-space">2D Visualization In Expression Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#d-visualization-in-spatial-space">2D Visualization In Spatial Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#d-visualization-in-spatial-and-expression-space">2D Visualization In Spatial And Expression Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#d-dimension-reduction-visualization">3D Dimension Reduction Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#id1">3D Visualization In Spatial Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#in-silico-cross-sections">In Silico Cross Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#cell-neighborhood-cell-type-cell-type-enrichment">Cell Neighborhood: Cell-Type/Cell-Type Enrichment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#cell-neighborhood-spatial-interaction-changed-genes-icg">Cell Neighborhood: Spatial Interaction Changed Genes (ICG)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#cell-neighborhood-ligand-receptor-cell-communication">Cell Neighborhood: Ligand-Receptor Cell Communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#export-from-giotto-analyzer-to-viewer">Export From Giotto Analyzer To Viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#interoperability">Interoperability</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../tipsandtricks.html">Tips and Tricks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../trygiotto.html">Try Giotto</a></li>
 </ul>
@@ -160,6 +201,8 @@
   <ul class="wy-breadcrumbs">
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../documentation.html">Function Documentation</a> &raquo;</li>
         
       <li>Create Violin Plot</li>
     
@@ -299,6 +342,10 @@
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="makeSignMatrixPAGE.html" class="btn btn-neutral float-right" title="Convert Gene Signature List To Binary Matrix" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="plotMetaDataCellsHeatmap.html" class="btn btn-neutral float-left" title="Plot Heatmap for Cell Metdata" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 

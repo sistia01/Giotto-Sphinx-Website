@@ -15,11 +15,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
 
   
@@ -41,14 +38,15 @@
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/togglebutton.js"></script>
-        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../../_static/design-tabs.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Function Documentation" href="../../documentation.html" />
+    <link rel="prev" title="Mouse osmFISH SS Cortex" href="osmFISH_mouse_SS_cortex.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -97,11 +95,43 @@
             
             
               <p class="caption" role="heading"><span class="caption-text">General</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../giottoworkflowanalyses.html">Giotto Workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../datasets.html">Dataset Information</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../datasets.html#examples">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../datasets.html#examples">Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../datasets.html#mini-datasets">Mini Datasets</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../datasets.html#full-datasets">Full Datasets</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="seqFISH_cortex.html">    Mouse seqFISH Cortex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="merFISH_hypot_preopt_region.html">Mouse merFISH Hypoth. Preopt. Region</a></li>
+<li class="toctree-l3"><a class="reference internal" href="STARmap_mouse_cortex.html">Mouse STARmap Cortex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mouse_visium_brain.html">    Mouse Visium Brain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mouse_visium_kidney.html">    Mouse Visium Kidney</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mouse_CODEX_spleen.html">    Mouse CODEX Spleen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osmFISH_mouse_SS_cortex.html">    Mouse osmFISH SScortex</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">    Human CyCIF PDAC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#install-python-modules">Install Python Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dataset-explanation">Dataset Explanation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dataset-download">Dataset Download</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-global-instructions-and-preparations">1. Giotto Global Instructions and Preparations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#optional-set-giotto-instructions">1.1 <em>Optional: Set Giotto Instructions</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-object">1.2 Giotto Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-giotto-object-and-process-the-data">2. Create Giotto Object and Process The Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dimension-reduction">3. Dimension Reduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clustering">4. Clustering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#visualize-the-spatial-and-expression-space">5. Visualize the Spatial and Expression Space</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cell-type-marker-gene-detection">6. Cell-Type Marker Gene Detection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cell-type-annotation">7. Cell-Type Annotation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spatial-grid">1. Spatial Grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spatial-network">9. Spatial Network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cell-cell-preferential-proximity">10. Cell-Cell Preferential Proximity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#xx-analyses-for-paper">XX. Analyses for Paper</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../documentation.html">Giotto Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tipsandtricks.html">Tips and Tricks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../trygiotto.html">Try Giotto</a></li>
@@ -160,6 +190,8 @@
   <ul class="wy-breadcrumbs">
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../datasets.html">Dataset Information</a> &raquo;</li>
         
       <li>Human CyCIF PDAC</li>
     
@@ -271,7 +303,7 @@
         <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;2_c_spatPlot_row&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="images/other/human_cycif_PDAC/vignette_200916/2_c_spatPlot_row.png"><img alt="2_c_spatPlot_row.png" src="images/other/human_cycif_PDAC/vignette_200916/2_c_spatPlot_row.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/2_c_spatPlot_row.png"><img alt="2_c_spatPlot_row.png" src="../../_images/2_c_spatPlot_row.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>## add external histology information
 pdac_metadata = pDataDT(pdac_test)
 pancreas_frames = c(1:6, 27:31, 15:19, 40:44)
@@ -300,7 +332,7 @@ spatPlot(gobject = pdac_test, point_size = 0.3, coord_fix_ratio = 1, cell_color 
  save_param = list(save_name = &#39;2_e_spatPlot_hist2&#39;))
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="images/other/human_cycif_PDAC/vignette_200916/2_e_spatPlot_hist2.png"><img alt="2_e_spatPlot_hist2.png" src="images/other/human_cycif_PDAC/vignette_200916/2_e_spatPlot_hist2.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/2_e_spatPlot_hist2.png"><img alt="2_e_spatPlot_hist2.png" src="../../_images/2_e_spatPlot_hist2.png" style="width: 400px;" /></a>
 <div class="section" id="add-and-align-image">
 <h3>2.1 Add and Align Image<a class="headerlink" href="#add-and-align-image" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="read-image-with-magick">
@@ -401,7 +433,7 @@ plotUMAP(gobject = pdac_test, cell_color = &#39;leiden&#39;, point_shape = &#39;
         <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_b_UMAP&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="images/other/human_cycif_PDAC/vignette_200916/4_b_UMAP.png"><img alt="4_b_UMAP.png" src="images/other/human_cycif_PDAC/vignette_200916/4_b_UMAP.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/4_b_UMAP.png"><img alt="4_b_UMAP.png" src="../../_images/4_b_UMAP.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">pdac_test</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden&#39;</span><span class="p">,</span> <span class="n">point_shape</span> <span class="o">=</span> <span class="s1">&#39;no_border&#39;</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span>
         <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">leiden_colors</span><span class="p">,</span> <span class="n">coord_fix_ratio</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
         <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_c_spatplot&#39;</span><span class="p">))</span>
@@ -418,7 +450,7 @@ plotUMAP(gobject = pdac_test, cell_color = &#39;leiden&#39;, point_shape = &#39;
         <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_d_spatPlot&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="images/other/human_cycif_PDAC/vignette_200916/4_d_spatPlot.png"><img alt="4_d_spatPlot.png" src="images/other/human_cycif_PDAC/vignette_200916/4_d_spatPlot.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/4_d_spatPlot.png"><img alt="4_d_spatPlot.png" src="../../_images/4_d_spatPlot.png" style="width: 400px;" /></a>
 </div>
 </div>
 <div class="section" id="visualize-the-spatial-and-expression-space">
@@ -430,7 +462,7 @@ plotUMAP(gobject = pdac_test, cell_color = &#39;leiden&#39;, point_shape = &#39;
       <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;5_a_spatdimplot&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="images/other/human_cycif_PDAC/vignette_200916/5_a_spatdimplot.png"><img alt="5_a_spatdimplot.png" src="images/other/human_cycif_PDAC/vignette_200916/5_a_spatdimplot.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/5_a_spatdimplot1.png"><img alt="5_a_spatdimplot.png" src="../../_images/5_a_spatdimplot1.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatDimPlot2D</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">pdac_test</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden&#39;</span><span class="p">,</span>
       <span class="n">spat_point_shape</span> <span class="o">=</span> <span class="s1">&#39;border&#39;</span><span class="p">,</span>
       <span class="n">spat_point_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">spat_point_border_stroke</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">,</span>
@@ -545,18 +577,7 @@ for(group in unique(pDataDT(pdac_test)$leiden)) {
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/7_g_spatplot_1.png"><img alt="7_g_spatplot_1.png" src="../../_images/7_g_spatplot_1.png" style="width: 30%;" /></a>
-<a class="reference internal image-reference" href="images/other/human_cycif_PDAC/vignette_200916/7_g_spatplot_2.png"><img alt="7_g_spatplot_2.png" src="images/other/human_cycif_PDAC/vignette_200916/7_g_spatplot_2.png" style="width: 30%;" /></a>
-<a class="reference internal image-reference" href="../../_images/7_g_spatplot_3.png"><img alt="7_g_spatplot_3.png" src="../../_images/7_g_spatplot_3.png" style="width: 30%;" /></a>
-<a class="reference internal image-reference" href="../../_images/7_g_spatplot_4.png"><img alt="7_g_spatplot_4.png" src="../../_images/7_g_spatplot_4.png" style="width: 30%;" /></a>
-<a class="reference internal image-reference" href="../../_images/7_g_spatplot_5.png"><img alt="7_g_spatplot_5.png" src="../../_images/7_g_spatplot_5.png" style="width: 30%;" /></a>
-<a class="reference internal image-reference" href="../../_images/7_g_spatplot_6.png"><img alt="7_g_spatplot_6.png" src="../../_images/7_g_spatplot_6.png" style="width: 30%;" /></a>
-<a class="reference internal image-reference" href="../../_images/7_g_spatplot_7.png"><img alt="7_g_spatplot_7.png" src="../../_images/7_g_spatplot_7.png" style="width: 30%;" /></a>
-<a class="reference internal image-reference" href="../../_images/7_g_spatplot_8.png"><img alt="7_g_spatplot_8.png" src="../../_images/7_g_spatplot_8.png" style="width: 30%;" /></a>
-<a class="reference internal image-reference" href="../../_images/7_g_spatplot_9.png"><img alt="7_g_spatplot_9.png" src="../../_images/7_g_spatplot_9.png" style="width: 30%;" /></a>
-<a class="reference internal image-reference" href="../../_images/7_g_spatplot_10.png"><img alt="7_g_spatplot_10.png" src="../../_images/7_g_spatplot_10.png" style="width: 30%;" /></a>
-<a class="reference internal image-reference" href="../../_images/7_g_spatplot_11.png"><img alt="7_g_spatplot_11.png" src="../../_images/7_g_spatplot_11.png" style="width: 30%;" /></a>
-<a class="reference internal image-reference" href="images/other/human_cycif_PDAC/vignette_200916/7_g_spatplot_12.png"><img alt="7_g_spatplot_10.png" src="images/other/human_cycif_PDAC/vignette_200916/7_g_spatplot_12.png" style="width: 30%;" /></a>
-<a class="reference internal image-reference" href="../../_images/7_g_spatplot_13.png"><img alt="7_g_spatplot_13.png" src="../../_images/7_g_spatplot_13.png" style="width: 30%;" /></a>
+<a class="reference internal image-reference" href="../../_images/7_g_spatplot_2.png"><img alt="7_g_spatplot_2.png" src="../../_images/7_g_spatplot_2.png" style="width: 30%;" /></a>
 </div>
 <div class="section" id="annotate-clusters-by-position-and-expression">
 <h3>7.4 Annotate Clusters by Position and Expression<a class="headerlink" href="#annotate-clusters-by-position-and-expression" title="Permalink to this headline">¶</a></h3>
@@ -614,7 +635,7 @@ spatDimPlot(gobject = pdac_test, cell_color = &#39;cell_types&#39;, cell_color_c
 </div>
 </div>
 <div class="section" id="spatial-grid">
-<h2>8. Spatial Grid<a class="headerlink" href="#spatial-grid" title="Permalink to this headline">¶</a></h2>
+<h2>1. Spatial Grid<a class="headerlink" href="#spatial-grid" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pdac_test</span> <span class="o">&lt;-</span> <span class="n">createSpatialGrid</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">pdac_test</span><span class="p">,</span>
                        <span class="n">sdimx_stepsize</span> <span class="o">=</span> <span class="mi">150</span><span class="p">,</span>
                        <span class="n">sdimy_stepsize</span> <span class="o">=</span> <span class="mi">150</span><span class="p">,</span>
@@ -646,7 +667,7 @@ spatDimPlot(gobject = pdac_test, cell_color = &#39;cell_types&#39;, cell_color_c
              <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_a_barplot&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="images/other/human_cycif_PDAC/vignette_200916/12_a_barplot.png"><img alt="12_a_barplot.png" src="images/other/human_cycif_PDAC/vignette_200916/12_a_barplot.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/12_a_barplot1.png"><img alt="12_a_barplot.png" src="../../_images/12_a_barplot1.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## network</span>
 <span class="n">cellProximityNetwork</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">pdac_test</span><span class="p">,</span> <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span>
              <span class="n">remove_self_edges</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">only_show_enrichment_edges</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
@@ -664,7 +685,7 @@ spatDimPlot(gobject = pdac_test, cell_color = &#39;cell_types&#39;, cell_color_c
                 <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_c_proxspatplot&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="images/other/human_cycif_PDAC/vignette_200916/12_c_proxspatplot.png"><img alt="12_c_proxspatplot.png" src="images/other/human_cycif_PDAC/vignette_200916/12_c_proxspatplot.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/12_c_proxspatplot.png"><img alt="12_c_proxspatplot.png" src="../../_images/12_c_proxspatplot.png" style="width: 400px;" /></a>
 </div>
 <div class="section" id="xx-analyses-for-paper">
 <h2>XX. Analyses for Paper<a class="headerlink" href="#xx-analyses-for-paper" title="Permalink to this headline">¶</a></h2>
@@ -758,6 +779,10 @@ spatDimPlot(gobject = pdac_test, cell_color = &#39;cell_types&#39;, cell_color_c
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../../documentation.html" class="btn btn-neutral float-right" title="Function Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="osmFISH_mouse_SS_cortex.html" class="btn btn-neutral float-left" title="Mouse osmFISH SS Cortex" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 

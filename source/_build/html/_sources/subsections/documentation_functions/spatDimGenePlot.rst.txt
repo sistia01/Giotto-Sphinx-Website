@@ -177,7 +177,7 @@ Examples
 
 
 .. image:: /images/documentation/spatDimGenePlot-1.png
-	width: 500
+	:width: 500
 	:alt: spatDimGenePlot
 .. image:: /images/documentation/spatDimGenePlot-2.png
 	:width: 500

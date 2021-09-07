@@ -50,7 +50,7 @@ Value
 Reloads a previously run HMRF from `doHRMF(). <doHRMF>`_
 
 
-.. _viewHMRFresultsDeails::
+.. _viewHMRFresultsDeails:
 
 ******************
 Details 

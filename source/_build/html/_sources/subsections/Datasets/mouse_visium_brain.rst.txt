@@ -493,7 +493,7 @@ Cell type signatures are combination of all marker genes identified in `Zeisel e
              save_param = list(save_name="7_b_spatcellplot_1"))
 
 
-.. image:: /images/other/mouse_Visium_brain/vignette_201226/7_b_spatcellplot_1.png
+.. image:: /images/other/mouse_Visium_brain/vignette_201226/7_b_spatcellplot.png
 		:width: 400	
 		:alt: 7_b_spatcellplot_1.png
 
@@ -506,7 +506,7 @@ Cell type signatures are combination of all marker genes identified in `Zeisel e
              save_param = list(save_name="7_c_spatcellplot_2"))
 
 
-.. image:: /images/other/mouse_Visium_brain/vignette_201226/7_c_spatcellplot_2.png
+.. image:: /images/other/mouse_Visium_brain/vignette_201226/7_c_spatcellplot.png
 		:width: 400	
 		:alt: 7_c_spatcellplot_2.png
 

@@ -15,11 +15,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
 
   
@@ -41,8 +38,7 @@
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/togglebutton.js"></script>
-        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../../_static/design-tabs.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -99,11 +95,38 @@
             
             
               <p class="caption" role="heading"><span class="caption-text">General</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../giottoworkflowanalyses.html">Giotto Workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../datasets.html">Dataset Information</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../datasets.html#examples">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../datasets.html#examples">Examples</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../datasets.html#mini-datasets">Mini Datasets</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="mini_seqFISH.html">    Mini SeqFISH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mini_visium.html">Mini Visium</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Mini 3D STARmap</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#install-python-modules">Install Python Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#optional-set-giotto-instructions"><em>Optional: Set Giotto Instructions</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-object">1. Giotto Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#processing-steps">2. Processing Steps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dimension-reduction">3. Dimension Reduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clustering">4. Clustering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#differential-expression">5. Differential Expression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cell-type">6. Cell Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spatial-grid">7. Spatial Grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spatial-network">8. Spatial Network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spatial-genes">9. Spatial Genes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spatial-co-expression-patterns">10. Spatial Co-Expression Patterns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spatial-hmrf-domains">11. Spatial HMRF Domains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cell-neighborhood-cell-type-cell-type-interactions">12. Cell Neighborhood: Cell-Type / Cell-Type Interactions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#d-cross-sections-from-3d-object">13. 2D cross sections from 3D object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#export-giotto-analyzer-to-viewer">14. Export Giotto Analyzer to Viewer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../datasets.html#full-datasets">Full Datasets</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../documentation.html">Giotto Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tipsandtricks.html">Tips and Tricks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../trygiotto.html">Try Giotto</a></li>
