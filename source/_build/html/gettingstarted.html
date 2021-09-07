@@ -110,8 +110,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#required-modules">Required Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#first-time-python-module-installation">First Time Python Module Installation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#manual-installation">Manual Installation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#specify-python-path-after-manual-installation">Specify Python Path After Manual Installation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#automaticinstallation">Automatic Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#automatic-installation">Automatic Installation</a></li>
 </ul>
 </li>
 </ul>
@@ -245,9 +244,9 @@
 </div>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>Giotto must be installed in both Python and R. Below, you will find the instructions for both <a class="reference external" href="R_Installation">R Installation</a> and <a class="reference external" href="Python_Installation">Python Installation</a>. Please make sure that your system has satisfied all of the requirements needed to sucessfully install Giotto.
-In addition, we have provided a way for users to automatically install all of the necessary python modules via R (see: <a class="reference external" href="AutomaticInstallation">Automatic Installation</a>).
-Checkout our <a class="reference external" href="faqs">Errors and FAQs Section</a> for more information and troubleshooting tips on some common installation issues.</p>
+<p>Giotto must be installed in both Python and R. Below, you will find the instructions for both Giotto Installation (which is done in R) and installation of Python Modules. Please make sure that your system has satisfied all of the requirements needed to sucessfully install Giotto.
+In addition, we have provided a way for users to automatically install all of the necessary python modules via R (See: <strong>Automatic Installation</strong> below).
+Checkout our <a class="reference internal" href="errorsfaqsandtips.html#faqs"><span class="std std-ref">Errors and FAQs Section</span></a> for more information and troubleshooting tips on some common installation issues.</p>
 <div class="section" id="giotto-installation-workflow">
 <h3>Giotto Installation Workflow<a class="headerlink" href="#giotto-installation-workflow" title="Permalink to this headline">¶</a></h3>
 <p>This workflow image is designed to help with Giotto Installation. Users should follow any of the three potential paths aimed to guide them through the installation process.</p>
@@ -255,7 +254,7 @@ Checkout our <a class="reference external" href="faqs">Errors and FAQs Section</
 </div>
 <div class="section" id="r-installation">
 <span id="id1"></span><h3>R Installation<a class="headerlink" href="#r-installation" title="Permalink to this headline">¶</a></h3>
-<p>If this is your first time installing an R Package please proceed to <a class="reference external" href="FirstTimeR">First Time R Package Installation</a>. If you are already familiar with installing R packages please proceed to <a class="reference external" href="FirstTimeGiotto">First Time Giotto Installation</a>.</p>
+<p>If this is your first time installing an R Package please proceed to <strong>First Time R Package Installation.</strong> If you are already familiar with installing R packages please proceed to <strong>First Time Giotto Installation</strong>.</p>
 <div class="section" id="first-time-r-package-installation">
 <span id="firsttimer"></span><h4>First Time R Package Installation<a class="headerlink" href="#first-time-r-package-installation" title="Permalink to this headline">¶</a></h4>
 <p><em>Package Development Requirements</em></p>
@@ -287,7 +286,7 @@ Checkout our <a class="reference external" href="faqs">Errors and FAQs Section</
 To make this process as flexible and easy as possible two different strategies can be used</p>
 <div class="section" id="required-modules">
 <h4>Required Modules<a class="headerlink" href="#required-modules" title="Permalink to this headline">¶</a></h4>
-<p>These are necessary to run all available analyses, but can be installed automatically (see <a class="reference external" href="automaticinstallation">Automatic Installation</a>) or manually (see <a class="reference external" href="maualinstallation">Manual Installation</a>):</p>
+<p>These are necessary to run all available analyses, but can be installed automatically (see <strong>Automatic Installation</strong>) or manually (see <strong>Manual Installation</strong>):</p>
 <ul class="simple">
 <li><p>pandas</p></li>
 <li><p>python-igraph (igraph)</p></li>
@@ -305,71 +304,101 @@ To make this process as flexible and easy as possible two different strategies c
 </div>
 <div class="section" id="manual-installation">
 <span id="manualinstallation"></span><h4>Manual Installation<a class="headerlink" href="#manual-installation" title="Permalink to this headline">¶</a></h4>
-<p>There are two methods thorugh which users can install the necessary Python modules manually:</p>
-<ol class="arabic simple">
-<li><p><a class="reference external" href="InstallWithPip">Install with Pip in Python3</a></p></li>
-<li><p><a class="reference external" href="InstallWithConda">Install with Conda</a></p></li>
-</ol>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>With either of the <a class="reference external" href="manualinstallation">Manual Installation</a> options (<a class="reference external" href="InstallWithPip">Install with Pip in Python3</a> or <a class="reference external" href="InstallWithConda">Install with Conda</a>) the user will have to provide the python path to <a class="reference external" href="createGiottoInstructions">createGiottoInstructions</a>.
+<p>There are two methods thorugh which users can install the necessary Python modules manually with <strong>(1) Pip in Python3</strong> or <strong>(2) Conda</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>With either ONE of the <strong>Manual Installation</strong> options (<strong>Install with Pip in Python3</strong> or <strong>Install with Conda</strong>) the user will have to provide the python path to <a class="reference internal" href="subsections/documentation_functions/createGiottoInstructions.html#creategiottoinstructions"><span class="std std-ref">createGiottoInstructions</span></a>.
 If this is not done, Giotto will not be able to use the installed python modules.</p>
 </div>
-<div class="section" id="install-with-pip">
-<span id="installwithpip"></span><h5>Install with Pip<a class="headerlink" href="#install-with-pip" title="Permalink to this headline">¶</a></h5>
-<p><strong>Install with pip in python3</strong></p>
-<p><em>For OSX, Windows, or Linux:</em></p>
+<p><em>Note:</em> If pip install does not work, try installing the modules within a <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands">conda environment</a>. For more inforomation on vitual environments with conda visit this <a class="reference external" href="https://heartbeat.fritz.ai/creating-python-virtual-environments-with-conda-why-and-how-180ebd02d1db">page</a>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>1. Install with Pip in Python3</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><em>For OSX, Windows, or Linux:</em></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">pandas</span> <span class="n">python</span><span class="o">-</span><span class="n">igraph</span> <span class="n">networkx</span> <span class="n">python</span><span class="o">-</span><span class="n">louvain</span> <span class="n">leidenalg</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span> <span class="n">smfishHmrf</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="install-with-conda">
-<span id="installwithconda"></span><h5>Install with Conda<a class="headerlink" href="#install-with-conda" title="Permalink to this headline">¶</a></h5>
-<p>If pip install does not work, try installing them within a <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands">conda environment</a>. Something like this might work, see also this <a class="reference external" href="https://heartbeat.fritz.ai/creating-python-virtual-environments-with-conda-why-and-how-180ebd02d1db">link</a>.</p>
-<ol class="arabic simple">
-<li><p>Create yaml file (e.g. environment.yml) with the following information:</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>name: giotto_env
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>2. Install with Conda</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ol class="arabic">
+<li><p class="sd-card-text">Create yaml file (e.g. environment.yml) with the following information:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>name: giotto_env
 channels:
-  — defaults
+— defaults
 dependencies:
- — pip=3.4
- — pandas
- — networkx
- - python-igraph
- - leidenalg
- - python-louvain
- - python.app (!!only for OSX!!)
- - scikit-learn
+— pip=3.4
+— pandas
+— networkx
+- python-igraph
+- leidenalg
+- python-louvain
+- python.app (!!only for OSX!!)
+- scikit-learn
 prefix: /Users/your_username/anaconda3/envs/giotto_env
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li><p>Create Conda Environment Based on yaml File:</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
+</div></blockquote>
+</li>
+<li><p class="sd-card-text">Create Conda Environment Based on yaml File:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="3">
-<li><p>Use the path to this environment when you create the Giotto instructions or Giotto object</p></li>
-</ol>
-<p><em>For OSX:</em></p>
+</div></blockquote>
+</li>
+<li><p class="sd-card-text">Use the path to this environment when you create the Giotto instructions or Giotto object</p>
+<blockquote>
+<div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+For OSX<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">your_username</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">giotto_env</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">pythonw</span>
 </pre></div>
 </div>
-<p><em>For Linux:</em></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">your_username</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">giotto_env</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python</span>
-</pre></div>
 </div>
-<p><em>For Windows:</em></p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+For Windows<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">your_username</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">giotto_env</span><span class="o">/</span><span class="n">python</span><span class="o">.</span><span class="n">exe</span>
 </pre></div>
 </div>
 </div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+For Linux<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">your_username</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">giotto_env</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python</span>
+</pre></div>
 </div>
-<div class="section" id="specify-python-path-after-manual-installation">
-<h4>Specify Python Path After Manual Installation<a class="headerlink" href="#specify-python-path-after-manual-installation" title="Permalink to this headline">¶</a></h4>
-<p>With this option, once the user has installed all of the necessary modules, via either of the methods above (e.g. <a class="reference external" href="InstallWithConda">Conda</a>), the path to their python environment can be provided as an instruction in R.</p>
+</div>
+</details></div></blockquote>
+</li>
+</ol>
+</div>
+</details><div class="section" id="specify-python-path-after-manual-installation">
+<h5>Specify Python Path After Manual Installation<a class="headerlink" href="#specify-python-path-after-manual-installation" title="Permalink to this headline">¶</a></h5>
+<p>With the Manual Installation option, once the user has installed all of the necessary modules, via either of the methods above (e.g. <span class="xref std std-ref">Conda</span>), the path to their python environment can be provided as an instruction in R.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Within R</span>
 
 <span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
@@ -381,35 +410,64 @@ prefix: /Users/your_username/anaconda3/envs/giotto_env
 </pre></div>
 </div>
 </div>
-<div class="section" id="automaticinstallation">
-<span id="id3"></span><h4>Automatic Installation<a class="headerlink" href="#automaticinstallation" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="automatic-installation">
+<span id="automaticinstallation"></span><h4>Automatic Installation<a class="headerlink" href="#automatic-installation" title="Permalink to this headline">¶</a></h4>
 <p>The python modules will be installed automatically in a miniconda environment when installing Giotto. However, it will ask you whether you want to install them and you can opt out and select your preferred python path. In that case you need to do a manual installation of the python modules.</p>
 <p>To perform all potential steps and analysis in the Giotto spatial toolbox the user needs to have a number of python modules installed. <a class="reference external" href="InstallGiottoEnvironment">Installation of the Giotto Environment</a>  allows users to install the required Python environment via MiniConda without specifying their python path.</p>
 <div class="section" id="installation-of-giotto-environment">
 <span id="installgiottoenvironment"></span><h5>Installation of Giotto Environment<a class="headerlink" href="#installation-of-giotto-environment" title="Permalink to this headline">¶</a></h5>
-<p>With this option, the user can just install a Giotto python environment using r-miniconda</p>
+<p>With this option, the user can just install a Giotto python environment using r-miniconda. This is done after installatio of the Giotto package (via R).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Install Giotto Environment</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Install Giotto Environment<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">installGiottoEnvironmnt</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Re-Install the Giotto environment</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Re-Install the Giotto environment<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">installGiottoEnvironment</span><span class="p">(</span><span class="n">force_environment</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Re-install mini-conda and environment</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Re-install mini-conda and environment<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">installGiottoEnvironment</span><span class="p">(</span><span class="n">force_miniconda</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Remove Giotto Environment</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Remove Giotto Environment<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">removeGiottoEnvironment</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="admonition note">
+</div>
+</details><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>With the automatic installation option, the user <strong>WILL NOT</strong> have to specify a python path.</p>
+<p>With the automatic installation option, the user <strong>DOES NOT</strong> have to specify a python path.</p>
 </div>
 </div>
 </div>
@@ -459,7 +517,7 @@ In addition to our HowTos we have also created a way for users to test out Giott
 </ul>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference external" href="faqs">FAQs</a> for more information</p>
+<p><a class="reference internal" href="errorsfaqsandtips.html#faqs"><span class="std std-ref">FAQs</span></a> for more information</p>
 </div>
 </div>
 </div>

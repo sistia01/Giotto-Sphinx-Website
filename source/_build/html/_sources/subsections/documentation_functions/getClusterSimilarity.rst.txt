@@ -49,6 +49,7 @@ Examples
 *****************
 
 .. code-block::
+	
 	data("mini_giotto_single_cell")
 
 	cluster_similarities = getClusterSimilarity(mini_giotto_single_cell,

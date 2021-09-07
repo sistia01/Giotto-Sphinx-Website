@@ -164,7 +164,7 @@ See `dimPlot2D() <dimPlot2D>`_ and `dimPlot3D() <dimPlot3D>`_ for 3D plot inform
 
 
 .. seealso::
-	For further information see: spatPlot3D. For other spatial visualizations see: `spatPlot2D() <spatPlot2D.`_, `spatPlot3D() <spatPlot3D>`_.
+	For further information see: spatPlot3D. For other spatial visualizations see: `spatPlot2D() <spatPlot2D>`_, `spatPlot3D() <spatPlot3D>`_.
 
 ******************
 Examples 

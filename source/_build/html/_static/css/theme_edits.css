@@ -20,8 +20,14 @@ rBM816
 }
 
 .wy-menu-vertical p.caption {
-    color: #0c3c14;
+    color: #17d140;
 }
 a {
-    color: #0c3c14;
+    color: #17d140;
 }
+
+a:visited {
+  color: #17d140;
+}
+
+:link, :visited {cursor: pointer;

@@ -40,4 +40,4 @@ Value
 A matrix value. 
 
 .. seealso::
-	`rankEnrich() <rankEnrich>_.
+	`rankEnrich() <rankEnrich>`_.

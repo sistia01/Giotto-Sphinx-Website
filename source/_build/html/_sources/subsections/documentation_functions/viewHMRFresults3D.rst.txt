@@ -37,10 +37,7 @@ Arguments
 	* - betas_to_view	
 	  - results from different betas that you want to view
 	* - ...	
-	  - additional parameters to `spatPlot3D() <spatPlot3D>_
-
-
-
+	  - additional parameters to `spatPlot3D() <spatPlot3D>`_
 
 
 ******************

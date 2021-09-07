@@ -43,9 +43,9 @@ Requirements
 *************
 Installation
 *************
-Giotto must be installed in both Python and R. Below, you will find the instructions for both `R Installation <R_Installation>`__ and `Python Installation <Python_Installation>`__. Please make sure that your system has satisfied all of the requirements needed to sucessfully install Giotto.
-In addition, we have provided a way for users to automatically install all of the necessary python modules via R (see: `Automatic Installation <AutomaticInstallation>`__). 
-Checkout our `Errors and FAQs Section <faqs>`__ for more information and troubleshooting tips on some common installation issues.  
+Giotto must be installed in both Python and R. Below, you will find the instructions for both Giotto Installation (which is done in R) and installation of Python Modules. Please make sure that your system has satisfied all of the requirements needed to sucessfully install Giotto.
+In addition, we have provided a way for users to automatically install all of the necessary python modules via R (See: **Automatic Installation** below). 
+Checkout our :ref:`Errors and FAQs Section <faqs>` for more information and troubleshooting tips on some common installation issues.  
 
 Giotto Installation Workflow
 ==============================
@@ -60,7 +60,7 @@ This workflow image is designed to help with Giotto Installation. Users should f
 
 R Installation 
 ==================
-If this is your first time installing an R Package please proceed to `First Time R Package Installation <FirstTimeR>`__. If you are already familiar with installing R packages please proceed to `First Time Giotto Installation <FirstTimeGiotto>`__.
+If this is your first time installing an R Package please proceed to **First Time R Package Installation.** If you are already familiar with installing R packages please proceed to **First Time Giotto Installation**.
 
 .. _FirstTimeR:
 
@@ -109,7 +109,7 @@ To make this process as flexible and easy as possible two different strategies c
 
 Required Modules
 --------------------------
-These are necessary to run all available analyses, but can be installed automatically (see `Automatic Installation <automaticinstallation>`_) or manually (see `Manual Installation <maualinstallation>`__):
+These are necessary to run all available analyses, but can be installed automatically (see **Automatic Installation**) or manually (see **Manual Installation**):
 
 * pandas
 * python-igraph (igraph)
@@ -128,81 +128,74 @@ Information on how to install a Python package can be found `here <https://packa
 
 Manual Installation
 ---------------------
-There are two methods thorugh which users can install the necessary Python modules manually: 
+There are two methods thorugh which users can install the necessary Python modules manually with **(1) Pip in Python3** or **(2) Conda**.
 
-1. `Install with Pip in Python3 <InstallWithPip>`__
-2. `Install with Conda <InstallWithConda>`__
-
-.. important:: 
-	With either of the `Manual Installation <manualinstallation>`__ options (`Install with Pip in Python3 <InstallWithPip>`__ or `Install with Conda <InstallWithConda>`__) the user will have to provide the python path to `createGiottoInstructions <createGiottoInstructions>`_. 
+.. warning:: 
+	With either ONE of the **Manual Installation** options (**Install with Pip in Python3** or **Install with Conda**) the user will have to provide the python path to :ref:`createGiottoInstructions <createGiottoInstructions>`. 
 	If this is not done, Giotto will not be able to use the installed python modules.
 	
-.. _InstallWithPip:
+*Note:* If pip install does not work, try installing the modules within a `conda environment <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands>`_. For more inforomation on vitual environments with conda visit this `page <https://heartbeat.fritz.ai/creating-python-virtual-environments-with-conda-why-and-how-180ebd02d1db>`_.
 
-Install with Pip
-^^^^^^^^^^^^^^^^^^^^^
-**Install with pip in python3**
+.. dropdown:: **1. Install with Pip in Python3**
 
-*For OSX, Windows, or Linux:* 
+	*For OSX, Windows, or Linux:* 
 
-.. code-block:: 
+	.. code-block:: 
 
-	pip3 install pandas python-igraph networkx python-louvain leidenalg scikit-learn smfishHmrf
+		pip3 install pandas python-igraph networkx python-louvain leidenalg scikit-learn smfishHmrf
 
-.. _InstallWithConda:
+.. dropdown:: **2. Install with Conda**
 
-Install with Conda
-^^^^^^^^^^^^^^^^^^^^^^^^
+    1. Create yaml file (e.g. environment.yml) with the following information:
 
-If pip install does not work, try installing them within a `conda environment <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands>`_. Something like this might work, see also this `link <https://heartbeat.fritz.ai/creating-python-virtual-environments-with-conda-why-and-how-180ebd02d1db>`_.
+		.. code-block:: 
 
-1. Create yaml file (e.g. environment.yml) with the following information:
+			name: giotto_env
+			channels:
+			— defaults
+			dependencies:
+			— pip=3.4
+			— pandas
+			— networkx
+			- python-igraph
+			- leidenalg
+			- python-louvain
+			- python.app (!!only for OSX!!)
+			- scikit-learn
+			prefix: /Users/your_username/anaconda3/envs/giotto_env
 
-.. code-block:: 
+    2. Create Conda Environment Based on yaml File: 
 
-	name: giotto_env
-	channels:
-	  — defaults
-	dependencies:
-	 — pip=3.4
-	 — pandas
-	 — networkx
-	 - python-igraph
-	 - leidenalg
-	 - python-louvain
-	 - python.app (!!only for OSX!!)
-	 - scikit-learn
-	prefix: /Users/your_username/anaconda3/envs/giotto_env
+    	.. code-block:: 
 
-2. Create Conda Environment Based on yaml File: 
+    		conda env create -f environment.yml
+      
+    3. Use the path to this environment when you create the Giotto instructions or Giotto object
 
-.. code-block:: 
+		.. dropdown:: For OSX
+		
+			.. code-block::
+			
+				/Users/your_username/anaconda3/envs/giotto_env/bin/pythonw
 
-	conda env create -f environment.yml
-  
-3. Use the path to this environment when you create the Giotto instructions or Giotto object
 
-*For OSX:*
+		.. dropdown:: For Windows
+		
+			.. code-block:: 
+			
+				/Users/your_username/anaconda3/envs/giotto_env/python.exe
 
-.. code-block::
 
-	/Users/your_username/anaconda3/envs/giotto_env/bin/pythonw
+		.. dropdown:: For Linux
+		
+			.. code-block:: 
+			
+				/Users/your_username/anaconda3/envs/giotto_env/bin/python
 
-*For Linux:*
-
-.. code-block::
-	
-	/Users/your_username/anaconda3/envs/giotto_env/bin/python
-
-*For Windows:*
-
-.. code-block:: 
-
-	/Users/your_username/anaconda3/envs/giotto_env/python.exe
 
 Specify Python Path After Manual Installation 
-------------------------------------------------
-With this option, once the user has installed all of the necessary modules, via either of the methods above (e.g. `Conda <InstallWithConda>`_), the path to their python environment can be provided as an instruction in R.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+With the Manual Installation option, once the user has installed all of the necessary modules, via either of the methods above (e.g. :ref:`Conda <InstallWithConda>`), the path to their python environment can be provided as an instruction in R.
 
 .. code-block::
 		
@@ -227,39 +220,38 @@ To perform all potential steps and analysis in the Giotto spatial toolbox the us
 
 Installation of Giotto Environment 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-With this option, the user can just install a Giotto python environment using r-miniconda
+With this option, the user can just install a Giotto python environment using r-miniconda. This is done after installatio of the Giotto package (via R).  
 
 .. code-block::
 
 	library(Giotto)
 
-Install Giotto Environment 
+.. dropdown:: Install Giotto Environment 
 
-.. code-block::
+	.. code-block::
 
-	installGiottoEnvironmnt()
+		installGiottoEnvironmnt()
 
+.. dropdown:: Re-Install the Giotto environment
 
-Re-Install the Giotto environment
+	.. code-block::
 
-.. code-block::
+		installGiottoEnvironment(force_environment = TRUE)
 
-	installGiottoEnvironment(force_environment = TRUE)
+.. dropdown:: Re-install mini-conda and environment
 
-Re-install mini-conda and environment
-
-.. code-block::
+	.. code-block::
+		
+		installGiottoEnvironment(force_miniconda = TRUE)
 	
-	installGiottoEnvironment(force_miniconda = TRUE)
-	
-Remove Giotto Environment
+.. dropdown:: Remove Giotto Environment
 
-.. code-block::
+	.. code-block::
 
-	removeGiottoEnvironment()
+		removeGiottoEnvironment()
 
 .. note::
-	With the automatic installation option, the user **WILL NOT** have to specify a python path. 
+	With the automatic installation option, the user **DOES NOT** have to specify a python path. 
 
 .. _howtolabel:
 
@@ -310,4 +302,4 @@ Tips and Tricks
 
 
 .. seealso:: 
-	`FAQs <faqs>`_ for more information
+	:ref:`FAQs <faqs>` for more information
