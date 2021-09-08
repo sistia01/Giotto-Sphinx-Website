@@ -59,7 +59,7 @@ suppress_warnings = ["Unknown directive type dropdown",
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 html_theme = "sphinx_rtd_theme"
-html_static_path = ["_build/html/_static"]
+html_static_path = ["_static"]
 html_logo = "images/GiottoLogo.png"
 
 html_theme_options = {

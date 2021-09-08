@@ -1,0 +1,33 @@
+	/*
+ * This stylesheet is applied after the theme's default one,
+ * and thus any overrides or additions can be added here.
+ *
+ * More info:
+rBM6714
+ *		https://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.application.Sphinx.add_css_file
+rBM816
+ */
+ .wy-side-nav-search, .wy-nav-top {
+    background: #000000;
+}
+
+.wy-side-nav-search input[type="text"] {
+    border-radius: 10px!important;
+}
+
+.wy-nav-content {
+    max-width: 950px;
+}
+
+.wy-menu-vertical p.caption {
+    color: #17d140;
+}
+a {
+    color: #17d140;
+}
+
+a:visited {
+  color: #17d140;
+}
+
+:link, :visited {cursor: pointer;
