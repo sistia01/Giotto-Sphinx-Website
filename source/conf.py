@@ -72,7 +72,7 @@ html_theme_options = {
 }
 
 html_sidebars = { '**': ['globaltoc.html', 'relations.html', 'sourcelink.html', 'searchbox.html'] }
-html_css_files = ["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"]
+html_css_files = ["css/theme_edits.css"]
 panels_add_fontawesome_latex = True
 panels_add_bootstrap_css = True
 
