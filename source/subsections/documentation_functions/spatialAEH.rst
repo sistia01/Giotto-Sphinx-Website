@@ -53,13 +53,13 @@ Arguments
 Value 
 ******************
 
-An updated Giotto object
+An updated Giotto object that uses the SpatialDE resutlts. 
 
 
 ******************
 Details 
 ******************
 
-This function is a wrapper for the SpatialAEH method implemented in the ...
+This function is a wrapper for the SpatialAEH method implemented in the SpatialDE function. 
 
 

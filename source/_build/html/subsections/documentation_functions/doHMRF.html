@@ -122,6 +122,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#arguments">Arguments</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#value">Value</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#details">Details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="loadHMRF.html">loadHMRF</a></li>
@@ -321,11 +322,52 @@
 </div>
 <div class="section" id="value">
 <h2>Value<a class="headerlink" href="#value" title="Permalink to this headline">¶</a></h2>
-<p>Creates a directory with results that can be viewed with <a class="reference external" href="viewHMRFresults">viewHMRFresults()</a></p>
+<p>Creates a directory with results that can be viewed with <a class="reference external" href="viewHMRFresults">viewHMRFresults()</a>.</p>
+<p>Returns a list type object with the following fields:</p>
+<ul class="simple">
+<li><p>name: name used</p></li>
+<li><p>output_data: output path</p></li>
+<li><p>k: k used,</p></li>
+<li><p>betas: betas used,</p></li>
+<li><p>python_path: python_path_used</p></li>
+</ul>
 </div>
 <div class="section" id="details">
 <h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
-<p>Description of HMRF parameters …</p>
+<p>Previously we have published a paper that describes the hidden markov random field (HMRF) method for identifying spatial patterns from spatial gene expression data.
+Unlike typical clustering techniques, HMRF integrates both spatial locations and the gene expression to find groups of cells that are both spatially adjacent and which are similar to each other in expression space.</p>
+<p>A general guideline for choosing k is to use the gap-statistics by Tibshrani. The elbow point of the gap size vs. k plot usually indicates choices of k.
+To decide which beta one should use, the current state of algorithm repeats HMRF for a number of betas. Here are some guidelines:</p>
+<ul class="simple">
+<li><p>if the number of genes is from 10 to 50, the recommended range is 0 to 10 at increment of 0.5. E.g. c(0,0.5,20)</p></li>
+<li><p>if the number of genes is below 50, the recommended range is 0 to 15 at increment of 1. E.g. c(0,1,15)</p></li>
+<li><p>if the number of genes is between 50 to 100, the range is 0 to 50 at increment of 2. E.g. c(0, 2, 25)</p></li>
+<li><p>if the number of genes is between 100 and 500, the range is 0 to 100 at increment of 5. E.g. c(0, 5, 20)</p></li>
+</ul>
+<p>Within the range of beta, we recommend selecting the best beta by the Bayes information criterion.
+This requires first performing randomization of spatial positions to generate the null distribution of log-likelihood scores for randomly distributed cells for the same range of betas.
+Then find the beta where the difference between the observed and the null log-likelihood is maximized. See the HMRF tutorial from the Chapter.</p>
+<p>After running HMRF, one can further view the HMRF spatial clusters (viewHMRFresults2D), and add HMRF annotation to pDataDT table (addHMRF).</p>
+<p>The main steps are:</p>
+<ol class="arabic simple">
+<li><p>Create neighborhood network based on spatial positions</p></li>
+<li><p>Define genes of interest</p></li>
+<li><p>Call HMRF routine to find spatial clusters</p></li>
+</ol>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#from seqfish+ dataset</span>
+<span class="c1">#100 spatial genes</span>
+<span class="n">HMRF_spatial_genes</span> <span class="o">=</span> <span class="n">doHMRF</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">VC_test</span><span class="p">,</span> <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span> <span class="n">spatial_genes</span> <span class="o">=</span> <span class="n">my_spatial_genes</span><span class="p">,</span> <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;Delaunay_network&#39;</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">9</span><span class="p">,</span> <span class="n">betas</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">50</span><span class="p">),</span> <span class="n">output_folder</span> <span class="o">=</span> <span class="n">paste0</span><span class="p">(</span><span class="n">hmrf_folder</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;Spatial_genes/SG_top100_k9_scaled&#39;</span><span class="p">))</span>
+<span class="c1">## view results of HMRF</span>
+<span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="ow">in</span> <span class="n">seq</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="mi">1</span><span class="p">))</span> <span class="p">{</span>
+<span class="n">viewHMRFresults2D</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">VC_test</span><span class="p">,</span><span class="n">HMRFoutput</span> <span class="o">=</span> <span class="n">HMRF_spatial_genes</span><span class="p">,</span><span class="n">k</span> <span class="o">=</span> <span class="mi">9</span><span class="p">,</span> <span class="n">betas_to_view</span> <span class="o">=</span> <span class="n">i</span><span class="p">,</span><span class="n">point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">## add HMRF of interest to giotto object</span>
+<span class="n">VC_test</span> <span class="o">=</span> <span class="n">addHMRF</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">VC_test</span><span class="p">,</span><span class="n">HMRFoutput</span> <span class="o">=</span> <span class="n">HMRF_spatial_genes</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">9</span><span class="p">,</span> <span class="n">betas_to_add</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">28</span><span class="p">),</span> <span class="n">hmrf_name</span> <span class="o">=</span> <span class="s1">&#39;HMRF_2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </div>
 

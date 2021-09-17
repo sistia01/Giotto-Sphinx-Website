@@ -64,12 +64,20 @@ Arguments
 Value 
 ******************
 
-A list of data.frames with results and plot (optional)
+A list of data.frames with results and plot (optional). There are 3 fields reported per gene: LLR, pval, qval. LLR is log-likelihood of model, useful for creating a whole ranking of genes unambiguously. 
+P-val, Q-val are useful for cut-off based approach to filtering the spatial genes.
 
 ******************
 Details 
 ******************
 
-This function is a wrapper for the SpatialDE method implemented in the ...
+This is one of methods that Giotto supports to search for spatially variable genes. This function is a wrapper for the SpatialDE method implemented in the `SpatialDE function <https://www.nature.com/articles/nmeth.4636>`_. The input is a gene expression matrix. 
+There are 4 version of expression matrix (indicated by expression_values). 
+Raw version (in counts) is recommended. SpatialDE performs library size normalization (by default) if raw expression is used. Otherwise, one can also use “normalized” and skip SpatialDE normalization step.
+
+There are no other parameters required. The parameters color, sig_alpha, unsig_alpha are used for plotting the Fraction spatial variance vs Adj. P-value `https://github.com/Teichlab/SpatialDE`_ , and is optional. 
+To disable this FSV vs. Adj P-value plot, show_plot is set to NA (default). 
+The parameters return_plot, save_plot, save_param are for saving the results automatically to disk (default values are NA). They are attached to every function (see CreateGiottoInstructions()).
+
 
 

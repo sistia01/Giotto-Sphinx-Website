@@ -80,14 +80,60 @@ Arguments
 ******************
 Value 
 ******************
-Creates a directory with results that can be viewed with `viewHMRFresults() <viewHMRFresults>`_
+Creates a directory with results that can be viewed with `viewHMRFresults() <viewHMRFresults>`_.
+
+Returns a list type object with the following fields:
+
+* name: name used
+* output_data: output path
+* k: k used,
+* betas: betas used,
+* python_path: python_path_used
 
 
 ******************
 Details 
 ******************
-Description of HMRF parameters ...
+Previously we have published a paper that describes the hidden markov random field (HMRF) method for identifying spatial patterns from spatial gene expression data. 
+Unlike typical clustering techniques, HMRF integrates both spatial locations and the gene expression to find groups of cells that are both spatially adjacent and which are similar to each other in expression space.
 
+A general guideline for choosing k is to use the gap-statistics by Tibshrani. The elbow point of the gap size vs. k plot usually indicates choices of k. 
+To decide which beta one should use, the current state of algorithm repeats HMRF for a number of betas. Here are some guidelines:
+
+* if the number of genes is from 10 to 50, the recommended range is 0 to 10 at increment of 0.5. E.g. c(0,0.5,20)
+* if the number of genes is below 50, the recommended range is 0 to 15 at increment of 1. E.g. c(0,1,15)
+* if the number of genes is between 50 to 100, the range is 0 to 50 at increment of 2. E.g. c(0, 2, 25)
+* if the number of genes is between 100 and 500, the range is 0 to 100 at increment of 5. E.g. c(0, 5, 20)
+
+Within the range of beta, we recommend selecting the best beta by the Bayes information criterion. 
+This requires first performing randomization of spatial positions to generate the null distribution of log-likelihood scores for randomly distributed cells for the same range of betas. 
+Then find the beta where the difference between the observed and the null log-likelihood is maximized. See the HMRF tutorial from the Chapter.
+
+After running HMRF, one can further view the HMRF spatial clusters (viewHMRFresults2D), and add HMRF annotation to pDataDT table (addHMRF).
+
+
+The main steps are:
+
+1. Create neighborhood network based on spatial positions
+2. Define genes of interest
+3. Call HMRF routine to find spatial clusters
+
+
+******************
+Example
+******************
+
+.. code-block::
+	
+	#from seqfish+ dataset
+	#100 spatial genes
+	HMRF_spatial_genes = doHMRF(gobject = VC_test, expression_values = 'scaled', spatial_genes = my_spatial_genes, spatial_network_name = 'Delaunay_network', k = 9, betas = c(0,1,50), output_folder = paste0(hmrf_folder, '/', 'Spatial_genes/SG_top100_k9_scaled'))
+	## view results of HMRF
+	for(i in seq(0, 50, by = 1)) {
+	viewHMRFresults2D(gobject = VC_test,HMRFoutput = HMRF_spatial_genes,k = 9, betas_to_view = i,point_size = 2)
+	}
+	## add HMRF of interest to giotto object
+	VC_test = addHMRF(gobject = VC_test,HMRFoutput = HMRF_spatial_genes, k = 9, betas_to_add = c(28), hmrf_name = 'HMRF_2')
 
 
 

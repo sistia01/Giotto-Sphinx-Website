@@ -20,8 +20,6 @@ Compute Spatially Variable Genes With SPARK
   		return_object = c("data.table", "spark"),
   		...
 	)
-
-
 	
 **********************
 Arguments
@@ -55,8 +53,9 @@ Arguments
 Value 
 ******************
 
-A data.table with SPARK spatial genes results or the SPARK object.
+A data.table with SPARK spatial genes' results or the SPARK object.
 
+`More about SPARK <https://github.com/xzhoulab/SPARK>`_
 
 ******************
 Details 
@@ -76,3 +75,10 @@ This function is a wrapper for the method implemented in the SPARK package:
 	  - Tests multiple kernel matrices
 
 
+.. note:: 
+		SPARK is a method perceived as an extension of SpatialDE. SPARK models count data directly and employs properly calibrated p-values. 
+		Well-calibrated p-values allows this method to find more spatially variable genes at a given FDR cut-off. 
+		This is sometimes an improvement over SpatialDE which may produce overly conservative p-values. SPARK models expression levels across spatial locations using generalized linear spatial model (GLSM). 
+		It allows modeling the distribution of expression values through an overdispersed Poisson distribution (for count data) or Gaussian distribution (for normalized data). 
+		Notably, to make sure that the algorithm can discover various spatial patterns, SPARK employs ten different spatial kernels, including five periodic kernels with different periodicity 
+		parameters and five Gaussian kernels with different smoothness parameters.
