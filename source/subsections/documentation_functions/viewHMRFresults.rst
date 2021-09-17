@@ -47,8 +47,7 @@ Arguments
 Value 
 ******************
 
-Reloads a previously run HMRF from `doHRMF(). <doHRMF>`_
-
+Reloads a previously run HMRF from `doHRMF(). <doHRMF>`_ It has spatial plots with HMRF domains. 
 
 .. _viewHMRFresultsDeails:
 
@@ -56,10 +55,15 @@ Reloads a previously run HMRF from `doHRMF(). <doHRMF>`_
 Details 
 ******************
 
-TO BE DONE
+See `doHMRF <doHMRF>`__ for more information. 
 
 .. seealso::
 	`spatPlot2D() <spatPlot2D>`_ and `spatPlot3D() <spatPlot3D>`_.
 
+******************
+Examples 
+******************
 
+.. code-block::
 
+	viewHMRFresults(gobject)
