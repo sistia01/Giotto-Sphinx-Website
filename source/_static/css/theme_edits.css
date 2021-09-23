@@ -2,10 +2,9 @@
  * This stylesheet is applied after the theme's default one,
  * and thus any overrides or additions can be added here.
  *
- * More info:
-rBM6714
- *		https://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.application.Sphinx.add_css_file
-rBM816
+ * Notes:
+ * Order matters. If something is moved further down --> it gains
+ * priority.
  */
  .wy-side-nav-search, .wy-nav-top {
     background: #000000;
@@ -13,21 +12,47 @@ rBM816
 
 .wy-side-nav-search input[type="text"] {
     border-radius: 10px!important;
+    border-color: #000000;
+}
+
+/* header color above nav bar */
+.wy-side-nav-search, .wy-nav-top {
+    background: #000000;
+}
+
+/*navigation bar header color*/
+.wy-menu-vertical p.caption {
+    color: #0ad14d;
 }
 
 .wy-nav-content {
     max-width: 950px;
 }
 
-.wy-menu-vertical p.caption {
-    color: #17d140;
-}
+/* Color of links -- not clicked */
 a {
-    color: #17d140;
+    color: #185d1e;
 }
 
+/* Color of already clicked links */
 a:visited {
-  color: #17d140;
+  color: #60040e;
 }
 
+/*navigation bar (non header) text*/
+.wy-menu-vertical a {
+    color: #eceef4;
+}
+
+/* Type of cursor that hovers above links */
 :link, :visited {cursor: pointer;
+
+/* Changing the color of the rst file font*/
+.rst-content .viewcode-link {
+    color: #7013e1;
+}
+
+/* Changing the fontsize */
+.small {
+    font-size: 50%;
+}

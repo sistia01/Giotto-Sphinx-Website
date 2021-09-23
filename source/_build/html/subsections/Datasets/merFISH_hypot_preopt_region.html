@@ -278,12 +278,12 @@ filterDistributions(merFISH_test, detection = &#39;genes&#39;,
             save_param = list(save_name = &#39;2_a_distribution_genes&#39;))
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../../_images/2_a_distribution_genes.png"><img alt="2_a_distribution_genes.png" src="../../_images/2_a_distribution_genes.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/2_a_distribution_genes1.png"><img alt="2_a_distribution_genes.png" src="../../_images/2_a_distribution_genes1.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">filterDistributions</span><span class="p">(</span><span class="n">merFISH_test</span><span class="p">,</span> <span class="n">detection</span> <span class="o">=</span> <span class="s1">&#39;cells&#39;</span><span class="p">,</span>
             <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;2_b_distribution_cells&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../../_images/2_b_distribution_cells.png"><img alt="2_b_distribution_cells.png" src="../../_images/2_b_distribution_cells.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/2_b_distribution_cells1.png"><img alt="2_b_distribution_cells.png" src="../../_images/2_b_distribution_cells1.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">filterCombinations</span><span class="p">(</span><span class="n">merFISH_test</span><span class="p">,</span>
            <span class="n">expression_thresholds</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1e-6</span><span class="p">,</span><span class="mf">1e-5</span><span class="p">),</span>
            <span class="n">gene_det_in_min_cells</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">1500</span><span class="p">),</span>
@@ -377,7 +377,7 @@ violinPlot(merFISH_test, genes = topgini_genes, cluster_column = &#39;leiden_0.2
         save_param = c(save_name = &#39;6_a_violinplot&#39;))
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../../_images/6_a_violinplot.png"><img alt="6_a_violinplot.png" src="../../_images/6_a_violinplot.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/6_a_violinplot1.png"><img alt="6_a_violinplot.png" src="../../_images/6_a_violinplot1.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>topgini_genes = unique(markers[, head(.SD, 6), by = &#39;cluster&#39;]$genes)
 plotMetaDataHeatmap(merFISH_test, expression_values = &#39;scaled&#39;,
             metadata_cols = c(&#39;leiden_0.2&#39;),

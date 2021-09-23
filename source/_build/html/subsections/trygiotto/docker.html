@@ -104,7 +104,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tipsandtricks.html">Tips and Tricks</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../trygiotto.html">Try Giotto</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="binder.html">Binder</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Docker</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#instructions">Instructions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -187,6 +190,8 @@
   <div class="section" id="docker-image">
 <span id="dockerinformation"></span><h1>Docker Image<a class="headerlink" href="#docker-image" title="Permalink to this headline">¶</a></h1>
 <p>We have set up a <a class="reference external" href="https://hub.docker.com/r/delron01/giotto">Docker Image</a> linked to RStudio with Giotto pre-installed.</p>
+<div class="section" id="instructions">
+<h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h2>
 <p>Follow these instructions to create your own Docker container and run Giotto:</p>
 <ol class="arabic simple">
 <li><p>docker pull delron01/giotto:latest</p></li>
@@ -211,13 +216,13 @@
 </li>
 </ol>
 </li>
-<li><p>Run the following:</p>
-<ol class="arabic simple">
-<li><p>library(Giotto)</p></li>
+<li><p>Run the following in RStudio:</p></li>
 </ol>
-</li>
+<p><code class="docutils literal notranslate"><span class="pre">library(Giotto)</span></code></p>
+<ol class="arabic simple" start="6">
 <li><p>Now you can run any analysis with Giotto!</p></li>
 </ol>
+</div>
 </div>
 
 

@@ -35,7 +35,8 @@ import sphinx_rtd_theme
 extensions = ['sphinx.ext.autosectionlabel', 
 'sphinx.ext.autodoc',
 'sphinx_rtd_theme',
-'sphinx_design'
+'sphinx_design',
+#'sphinx_toolbox.github'
 ]
 
 
