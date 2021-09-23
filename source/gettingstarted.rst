@@ -43,7 +43,8 @@ Requirements
 *************
 Installation
 *************
-Giotto must be installed in both Python and R. Below, you will find the instructions for both Giotto Installation (which is done in R) and installation of Python Modules. Please make sure that your system has satisfied all of the requirements needed to sucessfully install Giotto.
+Giotto is installed via R but there are are Python modules which are required in order for Giotto to function properly. Below, you will find the instructions for both Giotto Installation (in R) and installation of Prerequisite Python Modules. 
+Please make sure that your system has satisfied **all** of the requirements needed to sucessfully install Giotto.
 In addition, we have provided a way for users to automatically install all of the necessary python modules via R (See: **Automatic Installation** below). 
 Checkout our :ref:`Errors and FAQs Section <faqs>` for more information and troubleshooting tips on some common installation issues.  
 
@@ -60,7 +61,7 @@ This workflow image is designed to help with Giotto Installation. Users should f
 
 R Installation 
 ==================
-If this is your first time installing an R Package please proceed to **First Time R Package Installation.** If you are already familiar with installing R packages please proceed to **First Time Giotto Installation**.
+If this is your first time installing an R Package please proceed to `First Time R Package Installation <FirstTimeR>`_. If you are already familiar with installing R packages please proceed to **First Time Giotto Installation**.
 
 .. _FirstTimeR:
 
