@@ -61,7 +61,7 @@ This workflow image is designed to help with Giotto Installation. Users should f
 
 R Installation 
 ==================
-If this is your first time installing an R Package please proceed to `First Time R Package Installation <FirstTimeR>`_. If you are already familiar with installing R packages please proceed to **First Time Giotto Installation**.
+If this is your first time installing an R Package please proceed to `First Time R Package Installation <FirstTimeR>`__. If you are already familiar with installing R packages please proceed to **First Time Giotto Installation**.
 
 .. _FirstTimeR:
 
