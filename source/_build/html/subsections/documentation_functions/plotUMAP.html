@@ -410,7 +410,12 @@
 </div>
 <div class="section" id="details">
 <h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
-<p>Description of parameters …</p>
+<p>This is a wrapper function to generate a UMAP visualization from read depth normalized expression matrix.</p>
+<p>UMAP can accept as input the original gene expression matrix (set dim_reduction_to_use=NULL) or the dimension reduced matrix from PCA (default) (dim_reduction_to_use=”pca”).
+If principle components are analyzed, then one specifies the <code class="docutils literal notranslate"><span class="pre">dimensions_to_use</span></code>.</p>
+<p>It is possible to further define the number of neighbors (n_neighbors), number of epochs (n_epochs), and min_dist (see UMAP parameter guide <a class="reference external" href="https://umap-learn.readthedocs.io/en/latest/parameters.html">here</a>).
+The options set_seed and seed_number are helpful to fix the random number generation seed so that the same result is returned each time the function is run.</p>
+<p>A plot will be returned in the result.</p>
 <p>See <a class="reference external" href="dimPlot2D">dimPlot2D()</a> and <a class="reference external" href="dimPlot3D">dimPlot3D()</a> for 3D plot information.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>

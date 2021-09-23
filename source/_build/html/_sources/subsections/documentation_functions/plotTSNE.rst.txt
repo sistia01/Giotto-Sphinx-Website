@@ -136,7 +136,15 @@ A ggplot.
 ******************
 Details 
 ******************
-Description of parameters ... 
+This is a wrapper function for tSNE visualization. tSNE can accept as input the original gene expression matrix (set dim_reduction_to_use=NULL) or the dimension reduced matrix from PCA (default) (dim_reduction_to_use="pca"). 
+If principle components are analyzed, then one specifies the dimensions_to_use.
+
+For tSNE, one can further define perplexity and theta options (see tSNE guide `here <https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html>`__).
+The options set_seed and seed_number are helpful to fix the random number generation seed so that the same result is returned each time the function is run.
+
+A plot will be returned in the result.
+
+
 
 See `dimPlot2D() <dimPlot2D>`_ and `plotTSNE_3D() <plotTSNE_3D>`_ for 3D plot information. 
 

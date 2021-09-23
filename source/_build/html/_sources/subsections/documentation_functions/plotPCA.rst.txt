@@ -136,7 +136,7 @@ A ggplot.
 ******************
 Details 
 ******************
-Description of parameters ... 
+Short wrapper for PCA visualization. 
 
 See `dimPlot2D() <dimPlot2D>`_ and `plotPCA_3D() <plotPCA_3D>`_ for 3D plot information. 
 

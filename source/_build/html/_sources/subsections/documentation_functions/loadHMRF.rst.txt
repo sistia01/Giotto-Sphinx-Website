@@ -41,14 +41,19 @@ Arguments
 ******************
 Value 
 ******************
-Reloads a previously run HMRF from `doHRMF(). <doHRMF>`_
+Reloads a previously run HMRF from `doHRMF(). <doHRMF>`__
 
 
 ******************
 Details 
 ******************
-Description of HMRF parameters ...
 
+See `doHMRF <doHMRF>`__ for more information. 
 
+******************
+Examples 
+******************
 
+.. code-block::
 
+	loadHMRF(gobject)

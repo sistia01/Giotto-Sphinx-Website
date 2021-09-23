@@ -92,7 +92,15 @@ A plotly.
 ******************
 Details 
 ******************
-Description of parameters ... 
+Short wrapper for UMAP 3D visualization. 
+
+UMAP can accept as input the original gene expression matrix (set dim_reduction_to_use=NULL) or the dimension reduced matrix from PCA (default) (dim_reduction_to_use="pca"). 
+If principle components are analyzed, then one specifies the ``dimensions_to_use``.
+
+It is possible to further define the number of neighbors (n_neighbors), number of epochs (n_epochs), and min_dist (see UMAP parameter guide `here <https://umap-learn.readthedocs.io/en/latest/parameters.html>`__).
+The options set_seed and seed_number are helpful to fix the random number generation seed so that the same result is returned each time the function is run.
+
+A plot will be returned in the result.
 
 .. seealso::
 	Other reduced dimension visualizations: `dimPlot2D() <dimPlot2D>`_, `dimPlot() <dimPlot>`_, `plotPCA_2D() <plotPCA_2D>`_, `plotPCA_3D() <plotPCA_3D>`_, `plotPCA() <plotPCA>`_, `plotTSNE_2D() <plotTSNE_2D>`_, `plotTSNE_3D() <plotTSNE_3D>`_, `plotTSNE() <plotTSNE>`_, `plotUMAP_2D() <plotUMAP_2D>`_, `plotUMAP_3D() <plotUMAP_3D>`_, `plotUMAP() <plotUMAP>`_.

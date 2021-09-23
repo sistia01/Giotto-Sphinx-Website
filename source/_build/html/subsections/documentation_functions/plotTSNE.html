@@ -410,7 +410,11 @@
 </div>
 <div class="section" id="details">
 <h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
-<p>Description of parameters …</p>
+<p>This is a wrapper function for tSNE visualization. tSNE can accept as input the original gene expression matrix (set dim_reduction_to_use=NULL) or the dimension reduced matrix from PCA (default) (dim_reduction_to_use=”pca”).
+If principle components are analyzed, then one specifies the dimensions_to_use.</p>
+<p>For tSNE, one can further define perplexity and theta options (see tSNE guide <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html">here</a>).
+The options set_seed and seed_number are helpful to fix the random number generation seed so that the same result is returned each time the function is run.</p>
+<p>A plot will be returned in the result.</p>
 <p>See <a class="reference external" href="dimPlot2D">dimPlot2D()</a> and <a class="reference external" href="plotTSNE_3D">plotTSNE_3D()</a> for 3D plot information.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
