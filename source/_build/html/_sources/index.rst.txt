@@ -32,7 +32,7 @@ Relevant Links
 `Source code <https://github.com/RubD/Giotto/>`__ 
 ---------------------------------------------------------
 
-`Report a bug <https://github.com/RubD/Giotto/issues>`__
+`Report a bug <SubmittingGitHubIssues>`__
 ---------------------------------------------------------
 
 License
@@ -91,6 +91,6 @@ Authors and Developers
    Errors and FAQS <errorsfaqsandtips.rst>
    Changelog <additionalinformation.rst>
    Browse Source Code <https://github.com/RubD/Giotto/>
-   Report a Bug <https://github.com/RubD/Giotto/issues>
+   Report a Bug <github_issues.rst>
    Contribute <contribute.rst>
 

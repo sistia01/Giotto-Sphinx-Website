@@ -4,9 +4,10 @@
 How to Submit a GitHub Issue
 ################################
 
-.. code-block:: r
+.. .. code-block:: r
 
     knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+
 
 Github Issues Guidelines
 ==========================
@@ -135,7 +136,8 @@ Deprecation warning
     In createGiottoObject(raw_exprs = "/Users/username/path/to/data",  :
         raw_exprs argument is deprecated, use expression argument in the future 
 
-*Solution*: The code has still run and your object has been created, but in the future use the following command: 
+:octicon:`alert` 
+:strong:`Solution` The code has still run and your object has been created, but in the future use the following command: 
 
 .. code-block:: r
 
@@ -153,7 +155,8 @@ Is this an error from Giotto?
 
     Error in adjustGiottoMatrix(gobject = my_giotto_object, expression_values = c("normalized"): covariate column name(s) were not found in the cell metadata 
 
-*Solution*: In this case, you would need to check your cell metadata (`my_giotto_object@cell_metadata`) and make appropriate adjustments. 
+:octicon:`alert` 
+:strong:`Soltuion` In this case, you would need to check your cell metadata (``my_giotto_object@cell_metadata``) and make appropriate adjustments.
 
 Is this an error from an external package?
 ''''''''''''''''''''''''''''''''''''''''''''''''
@@ -163,7 +166,8 @@ Is this an error from an external package?
     Error in methods::as(as.matrix(x[, -1]), "Matrix") : 
     no method or default for coercing "matrix" to "Matrix"
 
-*Solution*: Ensure that the Matrix library is loaded:
+:octicon:`alert` 
+:strong:`Solution` Ensure that the Matrix library is loaded:
 
 .. code-block:: r
 
@@ -194,7 +198,7 @@ For more information on minimal reproducible examples check out `this link <http
 
 And to see what other people recommend, please check out `this forum <https://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example>`__.
 
-Good example of a GitHub issue
+Example of a Good GitHub issue
 ----------------------------------
 
 * Provide a code example
@@ -231,7 +235,10 @@ Good example of a GitHub issue
 
 > For more context, I am running R version 4.04 and Giotto version 2.0.0.9044. I can send you the data I used if necessary.
 
-Bad example of a GitHub issue
+Example of a Bad GitHub issue
 ----------------------------------
 
 > I am having trouble adjusting my Giotto matrix. My error says that the covariate column name(s) were not found in the cell meta data. What do I do?
+
+`Report Issue <https://github.com/RubD/Giotto/issues>`__
+================================================================

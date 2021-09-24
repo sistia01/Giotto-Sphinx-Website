@@ -47,7 +47,9 @@
 
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How to Contribute?" href="contribute.html" />
+    <link rel="prev" title="Changelog" href="additionalinformation.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -106,11 +108,41 @@
 <li class="toctree-l1"><a class="reference internal" href="trygiotto.html">Try Giotto</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Supplemental Information</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="errorsfaqsandtips.html">Errors and FAQS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="additionalinformation.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/RubD/Giotto/">Browse Source Code</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/RubD/Giotto/issues">Report a Bug</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Report a Bug</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#github-issues-guidelines">Github Issues Guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#some-useful-commands">Some Useful Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#what-version-of-r-are-you-using">What version of R are you using?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-version-of-giotto-are-you-using">What version of Giotto are you using?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#are-you-using-the-giotto-environment-or-your-own-python-path">Are you using the Giotto environment or your own python path?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#show-sequential-processing-steps-commands-in-the-giotto-object">Show sequential processing steps/commands in the Giotto object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#show-the-structure-of-the-giotto-object">Show the structure of the Giotto object</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#warning-messages">Warning Messages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#deprecation-warning">Deprecation warning</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#errors">Errors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#is-this-an-error-from-giotto">Is this an error from Giotto?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#is-this-an-error-from-an-external-package">Is this an error from an external package?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#some-steps-before-posting-an-issue">Some steps before posting an issue</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#required-information-to-provide">Required information to provide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-create-a-reproducible-example">How to create a reproducible example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-of-a-good-github-issue">Example of a Good GitHub issue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-of-a-bad-github-issue">Example of a Bad GitHub issue</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#report-issue">Report Issue</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="contribute.html">Contribute</a></li>
 </ul>
 
@@ -181,9 +213,6 @@
             
   <div class="section" id="how-to-submit-a-github-issue">
 <span id="submittinggithubissues"></span><h1>How to Submit a GitHub Issue<a class="headerlink" href="#how-to-submit-a-github-issue" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="o">$</span><span class="nf">set</span><span class="p">(</span><span class="n">echo</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">eval</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
-</pre></div>
-</div>
 <div class="section" id="github-issues-guidelines">
 <h2>Github Issues Guidelines<a class="headerlink" href="#github-issues-guidelines" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="some-useful-commands">
@@ -292,7 +321,8 @@ In createGiottoObject<span class="o">(</span><span class="nv">raw_exprs</span> <
     raw_exprs argument is deprecated, use expression argument in the future
 </pre></div>
 </div>
-<p><em>Solution</em>: The code has still run and your object has been created, but in the future use the following command:</p>
+<p><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg>
+<strong>Solution</strong> The code has still run and your object has been created, but in the future use the following command:</p>
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">my_giotto_object</span> <span class="o">&lt;-</span> <span class="nf">createGiottoObject</span><span class="p">(</span><span class="n">expression</span> <span class="o">=</span> <span class="s">&quot;path/to/expression/data&quot;</span><span class="p">,</span>
                                    <span class="n">spatial_locs</span> <span class="o">=</span> <span class="s">&quot;path/to/spatial/data&quot;</span><span class="p">)</span>
 </pre></div>
@@ -306,7 +336,8 @@ In createGiottoObject<span class="o">(</span><span class="nv">raw_exprs</span> <
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Error in adjustGiottoMatrix<span class="o">(</span><span class="nv">gobject</span> <span class="o">=</span> my_giotto_object, <span class="nv">expression_values</span> <span class="o">=</span> c<span class="o">(</span><span class="s2">&quot;normalized&quot;</span><span class="o">)</span>: covariate column name<span class="o">(</span>s<span class="o">)</span> were not found in the cell metadata
 </pre></div>
 </div>
-<p><em>Solution</em>: In this case, you would need to check your cell metadata (<cite>my_giotto_object&#64;cell_metadata</cite>) and make appropriate adjustments.</p>
+<p><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg>
+<strong>Soltuion</strong> In this case, you would need to check your cell metadata (<code class="docutils literal notranslate"><span class="pre">my_giotto_object&#64;cell_metadata</span></code>) and make appropriate adjustments.</p>
 </div>
 <div class="section" id="is-this-an-error-from-an-external-package">
 <h4>Is this an error from an external package?<a class="headerlink" href="#is-this-an-error-from-an-external-package" title="Permalink to this headline">¶</a></h4>
@@ -314,7 +345,8 @@ In createGiottoObject<span class="o">(</span><span class="nv">raw_exprs</span> <
 no method or default <span class="k">for</span> coercing <span class="s2">&quot;matrix&quot;</span> to <span class="s2">&quot;Matrix&quot;</span>
 </pre></div>
 </div>
-<p><em>Solution</em>: Ensure that the Matrix library is loaded:</p>
+<p><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg>
+<strong>Solution</strong> Ensure that the Matrix library is loaded:</p>
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">Matrix</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -345,8 +377,8 @@ no method or default <span class="k">for</span> coercing <span class="s2">&quot;
 <p>For more information on minimal reproducible examples check out <a class="reference external" href="https://stackoverflow.com/help/minimal-reproducible-example">this link</a>.</p>
 <p>And to see what other people recommend, please check out <a class="reference external" href="https://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example">this forum</a>.</p>
 </div>
-<div class="section" id="good-example-of-a-github-issue">
-<h3>Good example of a GitHub issue<a class="headerlink" href="#good-example-of-a-github-issue" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-of-a-good-github-issue">
+<h3>Example of a Good GitHub issue<a class="headerlink" href="#example-of-a-good-github-issue" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Provide a code example</p>
 <ul>
@@ -373,10 +405,13 @@ no method or default <span class="k">for</span> coercing <span class="s2">&quot;
 </div>
 <p>&gt; For more context, I am running R version 4.04 and Giotto version 2.0.0.9044. I can send you the data I used if necessary.</p>
 </div>
-<div class="section" id="bad-example-of-a-github-issue">
-<h3>Bad example of a GitHub issue<a class="headerlink" href="#bad-example-of-a-github-issue" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-of-a-bad-github-issue">
+<h3>Example of a Bad GitHub issue<a class="headerlink" href="#example-of-a-bad-github-issue" title="Permalink to this headline">¶</a></h3>
 <p>&gt; I am having trouble adjusting my Giotto matrix. My error says that the covariate column name(s) were not found in the cell meta data. What do I do?</p>
 </div>
+</div>
+<div class="section" id="report-issue">
+<h2><a class="reference external" href="https://github.com/RubD/Giotto/issues">Report Issue</a><a class="headerlink" href="#report-issue" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -385,6 +420,10 @@ no method or default <span class="k">for</span> coercing <span class="s2">&quot;
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="contribute.html" class="btn btn-neutral float-right" title="How to Contribute?" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="additionalinformation.html" class="btn btn-neutral float-left" title="Changelog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 
