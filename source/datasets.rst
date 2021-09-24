@@ -1,8 +1,10 @@
-.. _datasets:
+################################
+Examples
+################################
 
-##################################
+****************************
 Dataset Information
-##################################
+****************************
 
 See `Spatial Datasets <https://github.com/RubD/spatial-datasets>`_ to find raw and pre-processed input data and Giotto scripts (*work in progress*).
 
@@ -42,9 +44,9 @@ merFISH Example
     # see download.file for more options
     ?download.file
 
-##################################
+**************************
 Examples
-##################################
+**************************
 
 Mini Datasets
 ==================

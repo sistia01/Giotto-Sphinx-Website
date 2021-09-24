@@ -1,0 +1,6 @@
+.. toctree::
+   :maxdepth: 1
+   :caption: Examples
+
+   Information about Datasets <datasets.rst>
+   Examples <exampledatasets.rst>

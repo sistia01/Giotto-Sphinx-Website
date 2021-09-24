@@ -1,8 +1,43 @@
-#######################
-Giotto
-#######################
+.. toctree information below
 
-The Giotto package consists of two modules, Giotto Analyzer and  `Giotto Viewer <www.spatialgiotto.com>`_, which provide tools to process, analyze and visualize **single-cell spatial expression data**. The underlying framework is generalizable to virtually all currently available spatial datasets. We recently demonstrated the general applicability on 10 different datasets created by 9 different state-of-the-art spatial technologies, including in situ hybridization (seqFISH+, merFISH, osmFISH), sequencing (Slide-seq, Visium, STARmap) and imaging-based multiplexing/proteomics (CyCIF, MIBI, CODEX). These technologies differ in terms of resolution (single cell vs multiple cells), spatial dimension (2D vs 3D), molecular modality (protein vs RNA), and throughput (number of cells and genes). More information and documentation about the latest version of Giotto Analyzer can be found at https://rubd.github.io/Giotto_site/ (**URL CHANGE**).
+##########################################
+Welcome to the Giotto Website! 
+##########################################
+
+.. toctree::
+   :maxdepth: 2
+   :caption: General
+   :hidden:
+
+   About <introduction.rst>
+   Installation <gettingstarted.rst> 
+   Function Documentation <documentation.rst>
+   Development <development.rst> 
+   Giotto Viewer <http://spatial.rc.fas.harvard.edu/giotto-viewer/>
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Guides
+   :hidden:
+
+   Workflow <WorkflowAndHowTos.rst>
+   Examples <datasets.rst>  
+   Try Giotto <trygiotto.rst>
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Issues
+   :hidden:
+   
+   Common Error Solutions <errorsfaqsandtips.rst>
+   Report a Bug <github_issues.rst>
+
+Giotto is a comprehensive and open-source toolbox for spatial data analysis and visualization. 
+The analysis module provides end-to-end analysis by implementing a wide range of algorithms for 
+characterizing tissue composition, spatial expression patterns, and cellular interactions. 
+Furthermore, single-cell RNAseq data can be integrated for spatial cell-type enrichment analysis.
+The visualization module allows users to interactively visualize analysis outputs and imaging features. 
+Giotto is applicable to a wide range of spatial technologies and platforms.
 
 .. image:: images/overview_datasets.png
     :width: 400
@@ -35,6 +70,9 @@ Relevant Links
 `Report a bug <SubmittingGitHubIssues>`__
 ---------------------------------------------------------
 
+`Giotto Viewer <http://spatial.rc.fas.harvard.edu/giotto-viewer/>`__
+----------------------------------------------------------------------
+
 License
 =====================
 `MIT`_ | `File License`_ 
@@ -45,11 +83,7 @@ License
 How to Cite Giotto?
 ==========================================
 
-* `Dries et al. Giotto, a toolbox for integrative analysis and visualization of spatial expression data. bioRxiv (2020).`_
-* `Dries, R., Zhu, Q., Dong, R., Eng, C. H. L., Li, H., Liu, K., ... & Yuan, G. C. (2021). Giotto: a toolbox for integrative analysis and visualization of spatial expression data. Genome biology, 22(1), 1-31. <https://pubmed.ncbi.nlm.nih.gov/33685491/>`_
-
-
-.. _Dries et al. Giotto, a toolbox for integrative analysis and visualization of spatial expression data. bioRxiv (2020).: https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02286-2
+`Dries, R., Zhu, Q., Dong, R., Eng, C. H. L., Li, H., Liu, K., ... & Yuan, G. C. (2021). Giotto: a toolbox for integrative analysis and visualization of spatial expression data. Genome biology, 22(1), 1-31. <https://pubmed.ncbi.nlm.nih.gov/33685491/>`_
 
 ****************************
 Authors and Developers 
@@ -68,29 +102,3 @@ Authors and Developers
 +---------------+---------------------+
 
 .. _Ruben Dries: https://www.drieslab.com
-
-.. toctree information below
-
-.. toctree::
-   :maxdepth: 2
-   :caption: General 
-   :hidden:
-
-   Installation <gettingstarted.rst> 
-   Giotto Workflow <giottoworkflowanalyses.rst>
-   Example Datasets <datasets.rst>  
-   Giotto Functions <documentation.rst>
-   Tips and Tricks <tipsandtricks.rst>
-   Try Giotto <trygiotto.rst>
-   
-.. toctree::
-   :maxdepth: 1
-   :caption: Supplemental Information
-   :hidden:
-   
-   Errors and FAQS <errorsfaqsandtips.rst>
-   Changelog <additionalinformation.rst>
-   Browse Source Code <https://github.com/RubD/Giotto/>
-   Report a Bug <github_issues.rst>
-   Contribute <contribute.rst>
-
