@@ -184,6 +184,7 @@ Giotto Instructions
 **************************	  
 Giotto Helper Functions 
 **************************
+
 *Common functions to help working with Giotto objects*
 
 .. toctree::
@@ -458,8 +459,11 @@ Auxiliary Visualizations
 	  - Create Violin Plot 
 
 ***************************************
-Spatial Enrichment & Deconvolution
+Spatial
 ***************************************
+
+Enrichment & Deconvolution
+=============================
 *Functions for algorithms to compute spatial enrichment of gene signatures or single-cell RNA-seq annotation.*
 
 .. toctree::
@@ -510,9 +514,9 @@ Spatial Enrichment & Deconvolution
 	* - :ref:`runDWLSDeconv() <runDWLSDeconv>`
 	  - Perform DWLS Deconvolution 
 
-***************************************
+
 Spatial Network Or Grid
-***************************************
+=========================
 *Function to (help) create a spatial network or grid.*
 
 
@@ -564,9 +568,8 @@ Spatial Network Or Grid
 	* - :ref:`showGrids() <showGrids>`
 	  - Print Available Spatial Grids
 
-***************************************
 Spatial Genes
-***************************************
+======================
 *Functions to identify spatial genes.*
 
 .. toctree::
@@ -605,9 +608,9 @@ Spatial Genes
 	* - :ref:`spark() <spark>`
 	  - Compute Spatially Variable Genes With SPARK
 
-***************************************
+
 Spatial Gene Simulation
-***************************************
+=============================
 *Functions to simulate a gene expression pattern.*
 
 .. toctree::
@@ -629,9 +632,9 @@ Spatial Gene Simulation
 	* - :ref:`runPatternSimulation() <runPatternSimulation>`
 	  - Create Known Spatial Pattern for Selected Genes
 
-***************************************
+
 Spatial Co-Expression Patterns/Modules
-***************************************
+===========================================
 *Functions to identify spatial co-expression patterns.*
 
 .. toctree::
@@ -701,8 +704,11 @@ Hidden Markov Random Field (HMRF)
 	  - View HMRF Results
 
 ***************************************
-2D Visualization In Expression Space
+2D Visualization
 ***************************************
+
+In Expression Space
+=====================
 *Visualization of expression space (e.g. UMAP) in 2D.*
 
 .. toctree::
@@ -735,9 +741,9 @@ Hidden Markov Random Field (HMRF)
 	* - :ref:`dimCellPlot() <dimCellPlot>`
 	  - Visualize Cells Expression By Dimension Coordinates
 
-***************************************
-2D Visualization In Spatial Space
-***************************************
+
+In Spatial Space
+======================
 *Visualization of expression space (e.g. UMAP) in 2D.*
 
 .. toctree::
@@ -763,9 +769,9 @@ Hidden Markov Random Field (HMRF)
 	* - :ref:`spatCellPlot() <spatCellPlot>`
 	  - Visualize Cells By Spatial Coordinates
 
-****************************************************
-2D Visualization In Spatial And Expression Space
-****************************************************
+
+In Both Spatial And Expression Space
+========================================
 *Visualization in both 2D spatial and expression space.*
 
 .. toctree::
@@ -792,8 +798,12 @@ Hidden Markov Random Field (HMRF)
 	  - Visualize Cells By Spatial And Dimension Coordinates in 2D
 
 ****************************************************
-3D Dimension Reduction Visualization
+3D Visualization
 ****************************************************
+
+Dimension Reduction 
+======================
+
 *Visualization in both 2D spatial and expression space.*
 
 .. toctree::
@@ -826,9 +836,9 @@ Hidden Markov Random Field (HMRF)
 	* - :ref:`dimGenePlot3D() <dimGenePlot3D>`
 	  - Visualize Cells And Gene Expression By Dimension Reduction 
 
-****************************************************
-3D Visualization In Spatial Space
-****************************************************
+
+In Spatial Space
+=================
 *Visualization in both 2D spatial and expression space.*
 
 .. toctree::
@@ -888,8 +898,11 @@ In Silico Cross Sections
 	  - Visualize Cells And Gene Expression In A Virtual Cross Section 
 
 **************************************************************
-Cell Neighborhood: Cell-Type/Cell-Type Enrichment
+Cell Neighborhood
 **************************************************************
+
+Cell-Type/Cell-Type Enrichment
+==================================
 *Functions to calculate and visualize cell-type/cell-type spatial enrichment or depletion.*
 
 .. toctree::
@@ -922,9 +935,9 @@ Cell Neighborhood: Cell-Type/Cell-Type Enrichment
 	* - :ref:`cellProximitySpatPlot3D() <cellProximitySpatPlot3D>`
 	  - Visualize Cell-Cell Interactions (3D)
 
-**************************************************************
-Cell Neighborhood: Spatial Interaction Changed Genes (ICG)
-**************************************************************
+
+Spatial Interaction Changed Genes (ICG)
+============================================
 *Identify and visualize genes that change in a source cell type due to interaction with another neighboring cell type.*
 
 .. toctree::
@@ -999,9 +1012,9 @@ Cell Neighborhood: Spatial Interaction Changed Genes (ICG)
 	* - :ref:`plotCombineCPG() <plotCombineCPG>`
 	  - Visualize Combined ICG Scores 
 
-******************************************************
-Cell Neighborhood: Ligand-Receptor Cell Communication
-******************************************************
+
+Ligand-Receptor Cell Communication
+======================================
 *Functions to calculate and visualize cell-type/cell-type spatial enrichment or depletion.*
 
 .. toctree::
