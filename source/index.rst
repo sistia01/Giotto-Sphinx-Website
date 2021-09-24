@@ -1,7 +1,5 @@
-.. toctree information below
-
 ##########################################
-Welcome to the Giotto Website! 
+GIOTTO
 ##########################################
 
 .. toctree::
@@ -11,7 +9,7 @@ Welcome to the Giotto Website!
 
    About <introduction.rst>
    Installation <gettingstarted.rst> 
-   Function Documentation <documentation.rst>
+   Documentation <documentation.rst>
    Development <development.rst> 
    Giotto Viewer <http://spatial.rc.fas.harvard.edu/giotto-viewer/>
 
@@ -29,7 +27,7 @@ Welcome to the Giotto Website!
    :caption: Issues
    :hidden:
    
-   Common Error Solutions <errorsfaqsandtips.rst>
+   Common Errors and Solutions <errorsfaqsandtips.rst>
    Report a Bug <github_issues.rst>
 
 Giotto is a comprehensive and open-source toolbox for spatial data analysis and visualization. 
