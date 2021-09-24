@@ -29,6 +29,6 @@ Follow these instructions to create your own Docker container and run Giotto:
 
 5. Run the following in RStudio:
    
-``library(Giotto)``
-   
+   1. library(Giotto)
+
 6. Now you can run any analysis with Giotto!
