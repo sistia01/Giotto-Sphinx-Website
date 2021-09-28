@@ -45,7 +45,7 @@ merFISH Example
     ?download.file
 
 **************************
-Examples
+Example Datasets
 **************************
 
 Mini Datasets

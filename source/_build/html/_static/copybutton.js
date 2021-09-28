@@ -90,7 +90,7 @@ const temporarilyChangeTooltip = (el, oldText, newText) => {
 const temporarilyChangeIcon = (el) => {
   img = el.querySelector("img");
   img.setAttribute('src', `${path_static}check-solid.svg`)
-  setTimeout(() => img.setAttribute('src', `${path_static}_static/AdditionalImages/copyclipboard.png`), 2000)
+  setTimeout(() => img.setAttribute('src', `${path_static}copy-button.svg`), 2000)
 }
 
 const addCopyButtonToCodeCells = () => {
@@ -109,7 +109,7 @@ const addCopyButtonToCodeCells = () => {
 
     const clipboardButton = id =>
     `<button class="copybtn o-tooltip--left" data-tooltip="${messages[locale]['copy']}" data-clipboard-target="#${id}">
-      <img src="${path_static}_static/AdditionalImages/copyclipboard.png" alt="${messages[locale]['copy_to_clipboard']}">
+      <img src="${path_static}copy-button.svg" alt="${messages[locale]['copy_to_clipboard']}">
     </button>`
     codeCell.insertAdjacentHTML('afterend', clipboardButton(id))
   })

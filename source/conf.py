@@ -37,7 +37,7 @@ extensions = ['sphinx.ext.autosectionlabel',
 'sphinx_rtd_theme',
 'sphinx_design',
 #'sphinx_toolbox.github'
-'sphinx_copybutton'
+#'sphinx_copybutton'
 ]
 
 
@@ -96,4 +96,4 @@ def get_link_badge_inputs(link, text=None, type="link", cls: str = "", tooltip=N
 #To use a different image for your copy buttons, do the following:
 #Place the image in the _static/ folder of your site.
 #Set the copybutton_image_path variable in your conf.py to be the path to your image file, relative to _static/.
-copybutton_image_path = "_static/AdditionalImages/copyclipboard.png"
+#copybutton_image_path = "_static/AdditionalImages/copyclipboard.png"

@@ -1,5 +1,5 @@
 #######################
-Giotto
+What is Giotto?
 #######################
 
 Giotto is a comprehensive and open-source toolbox for spatial data analysis and visualization. 
@@ -34,7 +34,7 @@ Other Relevant information
 Relevant Links
 =======================================
 
-`Source code <https://github.com/RubD/Giotto/>`__ 
+`Source code <https://github.com/RubD/Giotto/>`__
 ---------------------------------------------------------
 
 `Report a bug <SubmittingGitHubIssues>`__
@@ -42,6 +42,14 @@ Relevant Links
 
 `Giotto Viewer <http://spatial.rc.fas.harvard.edu/giotto-viewer/>`__
 ----------------------------------------------------------------------
+
+.. button-link:: https://github.com/RubD/Giotto/ 
+    :ref-type: any
+    :color: light
+    :outline: success
+
+    Source Code
+
 
 License
 =====================

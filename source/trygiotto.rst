@@ -17,5 +17,9 @@ Click below to test it out either of the two methods!
 
 .. Sphinx-Design formatting: https://sphinx-design.readthedocs.io/en/latest/badges_buttons.html
 
-:bdg-link-success-line:`About Binder <BinderInformation>`
-:bdg-link-success-line:`About Docker <DockerInformation>`
+:bdg-link-success-line:`About Binder <subsections/trygiotto/binder.rst>`
+:bdg-link-success-line:`About Docker <subsections/trygiotto/docker.rst>`
+
+.. button-link:: 
+
+    About Binder

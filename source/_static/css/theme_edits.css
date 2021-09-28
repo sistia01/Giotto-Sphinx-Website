@@ -3,8 +3,7 @@
  * and thus any overrides or additions can be added here.
  *
  * Notes:
- * Order matters. If something is moved further down --> it gains
- * priority.
+ * Order matters. If something is moved further down --> it gains priority.
  */
  .wy-side-nav-search, .wy-nav-top {
     background: #000000;
@@ -22,11 +21,7 @@
 
 /*navigation bar header color*/
 .wy-menu-vertical p.caption {
-    color: #0ad14d;
-}
-
-.wy-nav-content {
-    max-width: 950px;
+    color: #185d1e;
 }
 
 /* Color of links -- not clicked */
@@ -45,12 +40,8 @@ a:visited {
 }
 
 /* Type of cursor that hovers above links */
-:link, :visited {cursor: pointer;
+:link, :visited {cursor: pointer;}
 
-/* Changing the fontsize */
-.small {
-    font-size: 50%;
-}
 
 
 /* Copy buttons -- COPIED FROM: https://github.com/executablebooks/sphinx-copybutton/blob/master/sphinx_copybutton/_static/copybutton.css */
