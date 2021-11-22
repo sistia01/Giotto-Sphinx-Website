@@ -43,13 +43,7 @@ Relevant Links
 `Giotto Viewer <http://spatial.rc.fas.harvard.edu/giotto-viewer/>`__
 ----------------------------------------------------------------------
 
-.. button-link:: https://github.com/RubD/Giotto/ 
-    :ref-type: any
-    :color: light
-    :outline: success
-
-    Source Code
-
+:bdg-link-success-line:`GitHub <https://github.com/RubD/Giotto/>`
 
 License
 =====================
