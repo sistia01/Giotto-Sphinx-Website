@@ -87,3 +87,8 @@ div.highlight  {
 .highlight button.copybtn:active {
     background-color: rgb(187, 187, 187);
 }
+
+/* change the width of the page */ 
+.wy-nav-content {
+    max-width: none;
+}
