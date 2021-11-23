@@ -13,11 +13,7 @@ Try Giotto
     Docker <subsections/trygiotto/docker.rst>
 
 There are two methods through which users may try Giotto, either via Docker or Binder. 
-Click the buttons below to test it out either one of the two methods! 
+Click the `About Docker </subsections/trygiotto/docker.rst>`_ or `About Binder </subsections/trygiotto/binder.rst>`_ test out either one of the two methods! 
 
 .. Sphinx-Design formatting: https://sphinx-design.readthedocs.io/en/latest/badges_buttons.html
-
-:bdg-link-success-line:`About Binder </ubsections/trygiotto/binder.rst>`
-
-:bdg-link-success-line:`About Docker </subsections/trygiotto/docker.rst>`
 
