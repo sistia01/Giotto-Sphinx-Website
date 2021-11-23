@@ -37,7 +37,8 @@ extensions = ['sphinx.ext.autosectionlabel',
 'sphinx_rtd_theme',
 'sphinx_design',
 #'sphinx_toolbox.github'
-'sphinx_copybutton'
+'sphinx_copybutton',
+'sphinx_toolbox.shields'
 ]
 
 
