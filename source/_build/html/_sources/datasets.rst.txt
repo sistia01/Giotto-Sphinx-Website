@@ -184,7 +184,7 @@ Full Datasets
         .. image:: images/dataset_page/osmFISH_SS_cortex_image_summary.png 
             :target: subsections/datasets/osmFISH_mouse_SS_cortex.rst
 
-        .. button-link:: subsections/datasets/osmFISH_mouse_SS_cortex.rst
+        .. button-link:: /subsections/datasets/osmFISH_mouse_SS_cortex.rst
             :color: dark
             :shadow:
             :expand:

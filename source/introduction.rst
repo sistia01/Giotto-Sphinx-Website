@@ -28,7 +28,7 @@ References
 .. _Lubeck E, Coskun AF, Zhiyentayev T, Ahmad M, Cai L. Single-cell in situ RNA profiling by sequential hybridization. Nat. Methods. 2014. p. 360–361.: https://www.nature.com/articles/nbt.4260
 
 *******************************
-Other Relevant information
+Other Information
 *******************************
 
 Relevant Links
