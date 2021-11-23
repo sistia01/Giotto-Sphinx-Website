@@ -36,11 +36,10 @@ extensions = ['sphinx.ext.autosectionlabel',
 'sphinx.ext.autodoc',
 'sphinx_rtd_theme',
 'sphinx_design',
-#'sphinx_toolbox.github'
-'sphinx_copybutton',
-#'sphinx_toolbox.shields' made the build fail
-'sphinx-toolbox',
-'sphinx_toolbox.shields'
+#'sphinx_toolbox.github',
+'sphinx_copybutton'
+#'sphinx_toolbox', #fatal error
+#'sphinx_toolbox.shields' #fatal error
 ]
 
 
