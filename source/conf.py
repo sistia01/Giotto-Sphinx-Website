@@ -39,6 +39,8 @@ extensions = ['sphinx.ext.autosectionlabel',
 #'sphinx_toolbox.github'
 'sphinx_copybutton',
 #'sphinx_toolbox.shields' made the build fail
+'sphinx-toolbox',
+'sphinx_toolbox.shields'
 ]
 
 
