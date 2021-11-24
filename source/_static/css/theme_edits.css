@@ -2,7 +2,7 @@
  * This stylesheet is applied after the theme's default one,
  * and thus any overrides or additions can be added here.
  *
- * Notes:
+ * !! NOTES !!
  * Order matters. If something is moved further down --> it gains priority.
  */
  .wy-side-nav-search, .wy-nav-top {
@@ -90,5 +90,5 @@ div.highlight  {
 
 /* change the width of the page */ 
 .wy-nav-content {
-    max-width: none;
+    max-width: 1200px !important;
 }
