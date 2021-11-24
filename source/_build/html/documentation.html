@@ -48,7 +48,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Create a Giotto Object" href="subsections/documentation_functions/createGiottoObject.html" />
+    <link rel="next" title="Create Giotto Instructions" href="subsections/documentation_functions/createGiottoInstructions.html" />
     <link rel="prev" title="Getting Started" href="gettingstarted.html" /> 
 </head>
 
@@ -102,18 +102,57 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Installation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#giotto-object">Giotto Object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/createGiottoObject.html">createGiottoObject</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/createGiottoVisiumObject.html">createGiottoVisiumObject</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/filterGiotto.html">filterGiotto</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/subsetGiotto.html">subsetGiotto</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/subsetGiottoLocs.html">subsetGiottoLocs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#giotto-handing-functions">Giotto Handing Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#giotto-instructions">Giotto Instructions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/createGiottoInstructions.html">createGiottoInstructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/readGiottoInstructions.html">readGiottoInstructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/showGiottoInstructions.html">showGiottoInstructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/changeGiottoInstructions.html">changeGiottoInstructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/replaceGiottoInstructions.html">replaceGiottoInstructions</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#giotto-environment">Giotto Environment</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/installGiottoEnvironmentFunction.html">installGiottoEnvironment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/removeGiottoEnvironment.html">removeGiottoEnvironment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/checkGiottoEnvironment.html">checkGiottoEnvironment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#giotto-object">Giotto Object</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/createGiottoObject.html">createGiottoObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/createGiottoVisiumObject.html">createGiottoVisiumObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/filterGiotto.html">filterGiotto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/subsetGiotto.html">subsetGiotto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/subsetGiottoLocs.html">subsetGiottoLocs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#giotto-environment">Giotto Environment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/installGiottoEnvironmentFunction.html">installGiottoEnvironment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/removeGiottoEnvironment.html">removeGiottoEnvironment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/checkGiottoEnvironment.html">checkGiottoEnvironment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#giotto-helper-functions">Giotto Helper Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/pDataDT.html">pDataDT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/fDataDT.html">fDataDT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/showProcessingSteps.html">showProcessingSteps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/calculateMetaTable.html">calculateMetaTable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/calculateMetaTableCells.html">calculateMetaTableCells</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/combineMetadata.html">combineMetadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/createMetagenes.html">createMetagenes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/findNetworkNeighbors.html">findNetworkNeighbors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#giotto-processing-functions">Giotto Processing Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/filterDistributions.html">filterDistributions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/filterCombinations.html">filterCombinations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/normalizeGiotto.html">normalizeGiotto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/adjustGiottoMatrix.html">adjustGiottoMatrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/annotateGiotto.html">annotateGiotto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/removeCellAnnotation.html">removeCellAnnotation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/removeGeneAnnotation.html">removeGeneAnnotation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/addCellMetadata.html">addCellMetadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/addGeneMetadata.html">addGeneMetadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/addGeneStatistics.html">addGeneStatistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/addCellStatistics.html">addCellStatistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/addStatistics.html">addStatistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/addGenesPerc.html">addGenesPerc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/addCellIntMetadata.html">addCellIntMetadata</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#import-raw-data">Import Raw Data</a><ul>
@@ -125,7 +164,7 @@
 <li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/stitchTileCoordinates.html">stitchTileCoordinates</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#add-images">Add Images</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#adding-images">Adding Images</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/estimateImageBg.html">estimateImageBg</a></li>
 <li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/changeImageBg.html">changeImageBg</a></li>
 <li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/createGiottoImage.html">createGiottoImage</a></li>
@@ -135,42 +174,6 @@
 <li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/updateGiottoImage.html">updateGiottoImage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/getGiottoImage.html">getGiottoImage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/plotGiottoImage.html">plotGiottoImage</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#giotto-instructions">Giotto Instructions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/createGiottoInstructions.html">createGiottoInstructions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/readGiottoInstructions.html">readGiottoInstructions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/showGiottoInstructions.html">showGiottoInstructions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/changeGiottoInstructions.html">changeGiottoInstructions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/replaceGiottoInstructions.html">replaceGiottoInstructions</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#giotto-helper-functions">Giotto Helper Functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/pDataDT.html">pDataDT</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/fDataDT.html">fDataDT</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/showProcessingSteps.html">showProcessingSteps</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/calculateMetaTable.html">calculateMetaTable</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/calculateMetaTableCells.html">calculateMetaTableCells</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/combineMetadata.html">combineMetadata</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/createMetagenes.html">createMetagenes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/findNetworkNeighbors.html">findNetworkNeighbors</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#giotto-processing-functions">Giotto Processing Functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/filterDistributions.html">filterDistributions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/filterCombinations.html">filterCombinations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/normalizeGiotto.html">normalizeGiotto</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/adjustGiottoMatrix.html">adjustGiottoMatrix</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/annotateGiotto.html">annotateGiotto</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/removeCellAnnotation.html">removeCellAnnotation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/removeGeneAnnotation.html">removeGeneAnnotation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/addCellMetadata.html">addCellMetadata</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/addGeneMetadata.html">addGeneMetadata</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/addGeneStatistics.html">addGeneStatistics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/addCellStatistics.html">addCellStatistics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/addStatistics.html">addStatistics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/addGenesPerc.html">addGenesPerc</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/addCellIntMetadata.html">addCellIntMetadata</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#dimension-reduction">Dimension Reduction</a><ul>
@@ -485,8 +488,44 @@
             
   <div class="section" id="function-documentation">
 <h1>Function Documentation<a class="headerlink" href="#function-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="giotto-handing-functions">
+<h2>Giotto Handing Functions<a class="headerlink" href="#giotto-handing-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="giotto-instructions">
+<h3>Giotto Instructions<a class="headerlink" href="#giotto-instructions" title="Permalink to this headline">¶</a></h3>
+<p><em>Create or change Giotto instructions (e.g. defaults, plotting, saving, etc.)</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/createGiottoInstructions.html#creategiottoinstructions"><span class="std std-ref">createGiottoInstructions()</span></a></p></td>
+<td><p>Create Giotto Instructions</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/readGiottoInstructions.html#readgiottoinstructions"><span class="std std-ref">readGiottoInstructions()</span></a></p></td>
+<td><p>Read Giotto Instructions</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/showGiottoInstructions.html#showgiottoinstructions"><span class="std std-ref">showGiottoInstructions()</span></a></p></td>
+<td><p>Show Giotto Instructions</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/changeGiottoInstructions.html#changegiottoinstructions"><span class="std std-ref">changeGiottoInstructions()</span></a></p></td>
+<td><p>Change Giotto Instructions</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/replaceGiottoInstructions.html#replacegiottoinstructions"><span class="std std-ref">replaceGiottoInstructions()</span></a></p></td>
+<td><p>Replace Giotto Instructions</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="giotto-object">
-<h2>Giotto Object<a class="headerlink" href="#giotto-object" title="Permalink to this headline">¶</a></h2>
+<h3>Giotto Object<a class="headerlink" href="#giotto-object" title="Permalink to this headline">¶</a></h3>
 <p><em>Create and operate on Giotto Object</em></p>
 <div class="toctree-wrapper compound">
 </div>
@@ -520,7 +559,7 @@
 </table>
 </div>
 <div class="section" id="giotto-environment">
-<h2>Giotto Environment<a class="headerlink" href="#giotto-environment" title="Permalink to this headline">¶</a></h2>
+<h3>Giotto Environment<a class="headerlink" href="#giotto-environment" title="Permalink to this headline">¶</a></h3>
 <p><em>Work with Giotto Python Environment</em></p>
 <div class="toctree-wrapper compound">
 </div>
@@ -547,125 +586,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="import-raw-data">
-<h2>Import Raw Data<a class="headerlink" href="#import-raw-data" title="Permalink to this headline">¶</a></h2>
-<p><em>Functions to help to import raw spatial data.</em></p>
-<div class="toctree-wrapper compound">
-</div>
-<table class="colwidths-given docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Function</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/getSpatialDataset.html#getspatialdataset"><span class="std std-ref">getSpatialDataset()</span></a></p></td>
-<td><p>Get The Spatial Data</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/readExprMatrix.html#readexprmatrix"><span class="std std-ref">readExprMatrix()</span></a></p></td>
-<td><p>Read The Expression Matrix</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/get10XMatrix.html#get10xmatrix"><span class="std std-ref">get10Xmatrix()</span></a></p></td>
-<td><p>Get An Expression Matrix From 10X Structure</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/get10XMatrix_h5.html#get10xmatrix-h5"><span class="std std-ref">get10Xmatrix_h5()</span></a></p></td>
-<td><p>Get An Expression Matrix From 10X h5 Path</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/stitchFieldCoordinates.html#stitchfieldcoordinates"><span class="std std-ref">stitchFieldCoordinates()</span></a></p></td>
-<td><p>Stitch Field Coordinates Together</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/stitchTileCoordinates.html#stitchtilecoordinates"><span class="std std-ref">stitchTileCoordinates()</span></a></p></td>
-<td><p>Stitch Tile Coordinates Together</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="add-images">
-<h2>Add Images<a class="headerlink" href="#add-images" title="Permalink to this headline">¶</a></h2>
-<p><em>Functions to work with images for a Giotto object.</em></p>
-<div class="toctree-wrapper compound">
-</div>
-<table class="colwidths-given docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Function</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/estimateImageBg.html#estimateimagebg"><span class="std std-ref">estimateImageBg()</span></a></p></td>
-<td><p>Estimate Background Color</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/changeImageBg.html#changeimagebg"><span class="std std-ref">changeImageBg()</span></a></p></td>
-<td><p>Change Background Color</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/createGiottoImage.html#creategiottoimage"><span class="std std-ref">createGiottoImage()</span></a></p></td>
-<td><p>Create a Giotto Image</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/addGiottoImage.html#addgiottoimage"><span class="std std-ref">addGiottoImage()</span></a></p></td>
-<td><p>Add a Giotto Image to Giotto Object</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/addGiottoImageToSpatPlot.html#addgiottoimagetospatplot"><span class="std std-ref">addGiottoImageToSpatPlot()</span></a></p></td>
-<td><p>Add Giotto Image to Spatial ggplot</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/showGiottoImageNames.html#showgiottoimagenames"><span class="std std-ref">showGiottoImageNames()</span></a></p></td>
-<td><p>Print Attached Giotto Image</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/updateGiottoImage.html#updategiottoimage"><span class="std std-ref">updateGiottoImage()</span></a></p></td>
-<td><p>Update Giotto Image Boundaries</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/getGiottoImage.html#getgiottoimage"><span class="std std-ref">getGiottoImage()</span></a></p></td>
-<td><p>Get Giotto Image From Giotto Object</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/plotGiottoImage.html#plotgiottoimage"><span class="std std-ref">plotGiottoImage()</span></a></p></td>
-<td><p>Plot A Giotto Image From A Giotto Object</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="giotto-instructions">
-<h2>Giotto Instructions<a class="headerlink" href="#giotto-instructions" title="Permalink to this headline">¶</a></h2>
-<p><em>Create or change Giotto instructions (e.g. defaults, plotting, saving, etc.)</em></p>
-<div class="toctree-wrapper compound">
-</div>
-<table class="colwidths-given docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Function</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/createGiottoInstructions.html#creategiottoinstructions"><span class="std std-ref">createGiottoInstructions()</span></a></p></td>
-<td><p>Create Giotto Instructions</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/readGiottoInstructions.html#readgiottoinstructions"><span class="std std-ref">readGiottoInstructions()</span></a></p></td>
-<td><p>Read Giotto Instructions</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/showGiottoInstructions.html#showgiottoinstructions"><span class="std std-ref">showGiottoInstructions()</span></a></p></td>
-<td><p>Show Giotto Instructions</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/changeGiottoInstructions.html#changegiottoinstructions"><span class="std std-ref">changeGiottoInstructions()</span></a></p></td>
-<td><p>Change Giotto Instructions</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/replaceGiottoInstructions.html#replacegiottoinstructions"><span class="std std-ref">replaceGiottoInstructions()</span></a></p></td>
-<td><p>Replace Giotto Instructions</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 <div class="section" id="giotto-helper-functions">
-<h2>Giotto Helper Functions<a class="headerlink" href="#giotto-helper-functions" title="Permalink to this headline">¶</a></h2>
+<h3>Giotto Helper Functions<a class="headerlink" href="#giotto-helper-functions" title="Permalink to this headline">¶</a></h3>
 <p><em>Common functions to help working with Giotto objects</em></p>
 <div class="toctree-wrapper compound">
 </div>
@@ -708,7 +630,7 @@
 </table>
 </div>
 <div class="section" id="giotto-processing-functions">
-<h2>Giotto Processing Functions<a class="headerlink" href="#giotto-processing-functions" title="Permalink to this headline">¶</a></h2>
+<h3>Giotto Processing Functions<a class="headerlink" href="#giotto-processing-functions" title="Permalink to this headline">¶</a></h3>
 <p><em>Functions that will (help to) add, update or change the Giotto object when processing spatial data.</em></p>
 <div class="toctree-wrapper compound">
 </div>
@@ -764,6 +686,90 @@
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/addCellIntMetadata.html#addcellintmetadata"><span class="std std-ref">addCellIntMetadata()</span></a></p></td>
 <td><p>Add Cell Metadata Information Column</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="import-raw-data">
+<h2>Import Raw Data<a class="headerlink" href="#import-raw-data" title="Permalink to this headline">¶</a></h2>
+<p><em>Functions to help to import raw spatial data.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/getSpatialDataset.html#getspatialdataset"><span class="std std-ref">getSpatialDataset()</span></a></p></td>
+<td><p>Get The Spatial Data</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/readExprMatrix.html#readexprmatrix"><span class="std std-ref">readExprMatrix()</span></a></p></td>
+<td><p>Read The Expression Matrix</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/get10XMatrix.html#get10xmatrix"><span class="std std-ref">get10Xmatrix()</span></a></p></td>
+<td><p>Get An Expression Matrix From 10X Structure</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/get10XMatrix_h5.html#get10xmatrix-h5"><span class="std std-ref">get10Xmatrix_h5()</span></a></p></td>
+<td><p>Get An Expression Matrix From 10X h5 Path</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/stitchFieldCoordinates.html#stitchfieldcoordinates"><span class="std std-ref">stitchFieldCoordinates()</span></a></p></td>
+<td><p>Stitch Field Coordinates Together</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/stitchTileCoordinates.html#stitchtilecoordinates"><span class="std std-ref">stitchTileCoordinates()</span></a></p></td>
+<td><p>Stitch Tile Coordinates Together</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="adding-images">
+<h2>Adding Images<a class="headerlink" href="#adding-images" title="Permalink to this headline">¶</a></h2>
+<p><em>Functions to work with images for a Giotto object.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/estimateImageBg.html#estimateimagebg"><span class="std std-ref">estimateImageBg()</span></a></p></td>
+<td><p>Estimate Background Color</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/changeImageBg.html#changeimagebg"><span class="std std-ref">changeImageBg()</span></a></p></td>
+<td><p>Change Background Color</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/createGiottoImage.html#creategiottoimage"><span class="std std-ref">createGiottoImage()</span></a></p></td>
+<td><p>Create a Giotto Image</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/addGiottoImage.html#addgiottoimage"><span class="std std-ref">addGiottoImage()</span></a></p></td>
+<td><p>Add a Giotto Image to Giotto Object</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/addGiottoImageToSpatPlot.html#addgiottoimagetospatplot"><span class="std std-ref">addGiottoImageToSpatPlot()</span></a></p></td>
+<td><p>Add Giotto Image to Spatial ggplot</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/showGiottoImageNames.html#showgiottoimagenames"><span class="std std-ref">showGiottoImageNames()</span></a></p></td>
+<td><p>Print Attached Giotto Image</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/updateGiottoImage.html#updategiottoimage"><span class="std std-ref">updateGiottoImage()</span></a></p></td>
+<td><p>Update Giotto Image Boundaries</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/getGiottoImage.html#getgiottoimage"><span class="std std-ref">getGiottoImage()</span></a></p></td>
+<td><p>Get Giotto Image From Giotto Object</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/plotGiottoImage.html#plotgiottoimage"><span class="std std-ref">plotGiottoImage()</span></a></p></td>
+<td><p>Plot A Giotto Image From A Giotto Object</p></td>
 </tr>
 </tbody>
 </table>
@@ -1610,7 +1616,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="subsections/documentation_functions/createGiottoObject.html" class="btn btn-neutral float-right" title="Create a Giotto Object" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="subsections/documentation_functions/createGiottoInstructions.html" class="btn btn-neutral float-right" title="Create Giotto Instructions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="gettingstarted.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

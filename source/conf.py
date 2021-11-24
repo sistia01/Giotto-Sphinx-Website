@@ -73,6 +73,7 @@ html_theme_options = {
     #Toc Tree Options
     'collapse_navigation': True,
     'sticky_navigation': True,
+    'body_max_width': 'none'
 }
 
 html_sidebars = { '**': ['globaltoc.html', 'relations.html', 'sourcelink.html', 'searchbox.html'] }

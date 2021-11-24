@@ -3,153 +3,11 @@ Function Documentation
 #########################
 
 *************************
-Giotto Object 
+Giotto Handing Functions
 *************************
 
-*Create and operate on Giotto Object*
-
-.. toctree::
-	:maxdepth: 2
-	:hidden:
-
-	createGiottoObject </subsections/documentation_functions/createGiottoObject.rst>
-	createGiottoVisiumObject </subsections/documentation_functions/createGiottoVisiumObject.rst>
-	filterGiotto </subsections/documentation_functions/filterGiotto.rst>
-	subsetGiotto </subsections/documentation_functions/subsetGiotto.rst>
-	subsetGiottoLocs </subsections/documentation_functions/subsetGiottoLocs.rst>
-
-.. list-table::
-	:widths: 100 100 
-	:header-rows: 1
-
-	* - Function
-	  - Description 
-	* - :ref:`createGiottoObject() <createGiottoObject>`
-	  - Create a Giotto object 
-	* - :ref:`createGiottoVisiumObject() <createGiottoVisiumObject>`
-	  - Create a Visium Object
-	* - :ref:`filterGiotto() <filterGiotto>`
-	  - Filter Giotto 
-	* - :ref:`subsetGiotto() <subsetGiotto>`
-	  - Subset Giotto 
-	* - :ref:`subsetGiottoLocs() <subsetGiottoLocs>`
-	  - Subset Giotto Locs
- 
-	  
-*************************
-Giotto Environment  
-*************************
-
-*Work with Giotto Python Environment*
-
-.. toctree::
-	:maxdepth: 2
-	:hidden:
-
-	installGiottoEnvironment </subsections/documentation_functions/installGiottoEnvironmentFunction.rst>
-	removeGiottoEnvironment </subsections/documentation_functions/removeGiottoEnvironment.rst>
-	checkGiottoEnvironment </subsections/documentation_functions/checkGiottoEnvironment.rst>
-
-.. list-table::
-	:widths: 100 100 
-	:header-rows: 1
-
-	* - Function
-	  - Description 
-	* - :ref:`installGiottoEnvironment() <installGiottoEnvironmentFunction>`
-	  - Install Giotto Environment 
-	* - :ref:`removeGiottoEnvironment() <removeGiottoEnvironment>`
-	  - Remove Giotto Environment 
-	* - :ref:`checkGiottoEnvironment() <checkGiottoEnvironment>`
-	  - Check Giotto Environment
-
-
-***************************
-Import Raw Data
-***************************
-
-*Functions to help to import raw spatial data.*
-
-.. toctree::
-	:maxdepth: 2
-	:hidden:
-
-	getSpatialDataset </subsections/documentation_functions/getSpatialDataset.rst>
-	readExprMatrix </subsections/documentation_functions/readExprMatrix.rst>
-	get10Xmatrix </subsections/documentation_functions/get10XMatrix.rst>
-	get10Xmatrix_h5 </subsections/documentation_functions/get10XMatrix_h5.rst>
-	stitchFieldCoordinates </subsections/documentation_functions/stitchFieldCoordinates.rst>
-	stitchTileCoordinates </subsections/documentation_functions/stitchTileCoordinates.rst>
-
-.. list-table:: 
-	:widths: 100 100 
-	:header-rows: 1
-
-	* - Function
-	  - Description
-	* - :ref:`getSpatialDataset() <getSpatialDataset>`
-	  - Get The Spatial Data
-	* - :ref:`readExprMatrix() <readExprMatrix>`
-	  - Read The Expression Matrix
-	* - :ref:`get10Xmatrix() <get10XMatrix>`
-	  - Get An Expression Matrix From 10X Structure
-	* - :ref:`get10Xmatrix_h5() <get10XMatrix_h5>`
-	  - Get An Expression Matrix From 10X h5 Path 
-	* - :ref:`stitchFieldCoordinates() <stitchFieldCoordinates>`
-	  - Stitch Field Coordinates Together 
-	* - :ref:`stitchTileCoordinates() <stitchTileCoordinates>`
-	  - Stitch Tile Coordinates Together
-
-***************************
-Add Images
-***************************
-
-*Functions to work with images for a Giotto object.*
-
-.. toctree::
-	:maxdepth: 2
-	:hidden:
-
-	estimateImageBg </subsections/documentation_functions/estimateImageBg.rst>
-	changeImageBg </subsections/documentation_functions/changeImageBg.rst>
-	createGiottoImage </subsections/documentation_functions/createGiottoImage.rst>
-	addGiottoImage </subsections/documentation_functions/addGiottoImage.rst>
-	addGiottoImageToSpatPlot </subsections/documentation_functions/addGiottoImageToSpatPlot.rst>
-	showGiottoImageNames </subsections/documentation_functions/showGiottoImageNames.rst>
-	updateGiottoImage </subsections/documentation_functions/updateGiottoImage.rst>
-	getGiottoImage </subsections/documentation_functions/getGiottoImage.rst>
-	plotGiottoImage </subsections/documentation_functions/plotGiottoImage.rst>
-
-
-.. list-table:: 
-	:widths: 100 100 
-	:header-rows: 1
-
-	* - Function 
-	  - Description
-	* - :ref:`estimateImageBg() <estimateImageBg>`
-	  - Estimate Background Color
-	* - :ref:`changeImageBg() <changeImageBg>`
-	  - Change Background Color
-	* - :ref:`createGiottoImage() <createGiottoImage>`
-	  - Create a Giotto Image
-	* - :ref:`addGiottoImage() <addGiottoImage>`
-	  - Add a Giotto Image to Giotto Object
-	* - :ref:`addGiottoImageToSpatPlot() <addGiottoImageToSpatPlot>`
-	  - Add Giotto Image to Spatial ggplot
-	* - :ref:`showGiottoImageNames() <showGiottoImageNames>`
-	  - Print Attached Giotto Image
-	* - :ref:`updateGiottoImage() <updateGiottoImage>`
-	  - Update Giotto Image Boundaries
-	* - :ref:`getGiottoImage() <getGiottoImage>`
-	  - Get Giotto Image From Giotto Object
-	* - :ref:`plotGiottoImage() <plotGiottoImage>`
-	  - Plot A Giotto Image From A Giotto Object
-
-
-**************************
 Giotto Instructions 
-**************************
+=======================
 
 *Create or change Giotto instructions (e.g. defaults, plotting, saving, etc.)*
 
@@ -181,9 +39,68 @@ Giotto Instructions
 	* - :ref:`replaceGiottoInstructions() <replaceGiottoInstructions>`
 	  - Replace Giotto Instructions 
 
-**************************	  
+
+Giotto Object 
+========================
+
+*Create and operate on Giotto Object*
+
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	createGiottoObject </subsections/documentation_functions/createGiottoObject.rst>
+	createGiottoVisiumObject </subsections/documentation_functions/createGiottoVisiumObject.rst>
+	filterGiotto </subsections/documentation_functions/filterGiotto.rst>
+	subsetGiotto </subsections/documentation_functions/subsetGiotto.rst>
+	subsetGiottoLocs </subsections/documentation_functions/subsetGiottoLocs.rst>
+
+.. list-table::
+	:widths: 100 100 
+	:header-rows: 1
+
+	* - Function
+	  - Description 
+	* - :ref:`createGiottoObject() <createGiottoObject>`
+	  - Create a Giotto object 
+	* - :ref:`createGiottoVisiumObject() <createGiottoVisiumObject>`
+	  - Create a Visium Object
+	* - :ref:`filterGiotto() <filterGiotto>`
+	  - Filter Giotto 
+	* - :ref:`subsetGiotto() <subsetGiotto>`
+	  - Subset Giotto 
+	* - :ref:`subsetGiottoLocs() <subsetGiottoLocs>`
+	  - Subset Giotto Locs
+ 
+	  
+Giotto Environment  
+=====================
+
+*Work with Giotto Python Environment*
+
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	installGiottoEnvironment </subsections/documentation_functions/installGiottoEnvironmentFunction.rst>
+	removeGiottoEnvironment </subsections/documentation_functions/removeGiottoEnvironment.rst>
+	checkGiottoEnvironment </subsections/documentation_functions/checkGiottoEnvironment.rst>
+
+.. list-table::
+	:widths: 100 100 
+	:header-rows: 1
+
+	* - Function
+	  - Description 
+	* - :ref:`installGiottoEnvironment() <installGiottoEnvironmentFunction>`
+	  - Install Giotto Environment 
+	* - :ref:`removeGiottoEnvironment() <removeGiottoEnvironment>`
+	  - Remove Giotto Environment 
+	* - :ref:`checkGiottoEnvironment() <checkGiottoEnvironment>`
+	  - Check Giotto Environment
+
 Giotto Helper Functions 
-**************************
+===========================
 
 *Common functions to help working with Giotto objects*
 
@@ -223,9 +140,10 @@ Giotto Helper Functions
 	* - :ref:`findNetworkNeighbors() <findNetworkNeighbors>`
 	  - Find Spatial Neighbors 
 
-*************************************	  
+  
 Giotto Processing Functions 
-*************************************
+=================================
+
 *Functions that will (help to) add, update or change the Giotto object when processing spatial data.*
 
 .. toctree::
@@ -281,6 +199,89 @@ Giotto Processing Functions
 	  - Calculate Percent Counts
 	* - :ref:`addCellIntMetadata() <addCellIntMetadata>`
 	  - Add Cell Metadata Information Column 
+
+***************************
+Import Raw Data
+***************************
+
+*Functions to help to import raw spatial data.*
+
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	getSpatialDataset </subsections/documentation_functions/getSpatialDataset.rst>
+	readExprMatrix </subsections/documentation_functions/readExprMatrix.rst>
+	get10Xmatrix </subsections/documentation_functions/get10XMatrix.rst>
+	get10Xmatrix_h5 </subsections/documentation_functions/get10XMatrix_h5.rst>
+	stitchFieldCoordinates </subsections/documentation_functions/stitchFieldCoordinates.rst>
+	stitchTileCoordinates </subsections/documentation_functions/stitchTileCoordinates.rst>
+
+.. list-table:: 
+	:widths: 100 100 
+	:header-rows: 1
+
+	* - Function
+	  - Description
+	* - :ref:`getSpatialDataset() <getSpatialDataset>`
+	  - Get The Spatial Data
+	* - :ref:`readExprMatrix() <readExprMatrix>`
+	  - Read The Expression Matrix
+	* - :ref:`get10Xmatrix() <get10XMatrix>`
+	  - Get An Expression Matrix From 10X Structure
+	* - :ref:`get10Xmatrix_h5() <get10XMatrix_h5>`
+	  - Get An Expression Matrix From 10X h5 Path 
+	* - :ref:`stitchFieldCoordinates() <stitchFieldCoordinates>`
+	  - Stitch Field Coordinates Together 
+	* - :ref:`stitchTileCoordinates() <stitchTileCoordinates>`
+	  - Stitch Tile Coordinates Together
+
+***************************
+Adding Images
+***************************
+
+*Functions to work with images for a Giotto object.*
+
+.. toctree::
+	:maxdepth: 2
+	:hidden:
+
+	estimateImageBg </subsections/documentation_functions/estimateImageBg.rst>
+	changeImageBg </subsections/documentation_functions/changeImageBg.rst>
+	createGiottoImage </subsections/documentation_functions/createGiottoImage.rst>
+	addGiottoImage </subsections/documentation_functions/addGiottoImage.rst>
+	addGiottoImageToSpatPlot </subsections/documentation_functions/addGiottoImageToSpatPlot.rst>
+	showGiottoImageNames </subsections/documentation_functions/showGiottoImageNames.rst>
+	updateGiottoImage </subsections/documentation_functions/updateGiottoImage.rst>
+	getGiottoImage </subsections/documentation_functions/getGiottoImage.rst>
+	plotGiottoImage </subsections/documentation_functions/plotGiottoImage.rst>
+
+
+.. list-table:: 
+	:widths: 100 100 
+	:header-rows: 1
+
+	* - Function 
+	  - Description
+	* - :ref:`estimateImageBg() <estimateImageBg>`
+	  - Estimate Background Color
+	* - :ref:`changeImageBg() <changeImageBg>`
+	  - Change Background Color
+	* - :ref:`createGiottoImage() <createGiottoImage>`
+	  - Create a Giotto Image
+	* - :ref:`addGiottoImage() <addGiottoImage>`
+	  - Add a Giotto Image to Giotto Object
+	* - :ref:`addGiottoImageToSpatPlot() <addGiottoImageToSpatPlot>`
+	  - Add Giotto Image to Spatial ggplot
+	* - :ref:`showGiottoImageNames() <showGiottoImageNames>`
+	  - Print Attached Giotto Image
+	* - :ref:`updateGiottoImage() <updateGiottoImage>`
+	  - Update Giotto Image Boundaries
+	* - :ref:`getGiottoImage() <getGiottoImage>`
+	  - Get Giotto Image From Giotto Object
+	* - :ref:`plotGiottoImage() <plotGiottoImage>`
+	  - Plot A Giotto Image From A Giotto Object
+
 
 ******************************************
 Dimension Reduction

@@ -49,6 +49,7 @@ Relevant Links
 
 :bdg-link-success-line:`GitHub <https://github.com/RubD/Giotto/>`
 
+.. !! GitHub Sheild Not Working !! 
 .. github-shield:: 
     :username: RubD
     :repository: Giotto
