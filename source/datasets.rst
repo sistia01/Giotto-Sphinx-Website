@@ -65,10 +65,10 @@ Mini Datasets
     .. grid-item-card::
 
         .. image:: images/dataset_page/mini_seqFISH.png
-            :target: /subsections/datasets/mini_seqFISH.rst
+            :target: `mini_seqFISH`_ 
 
-        .. button-ref:: /subsections/datasets/mini_seqFISH.rst
-            :ref-type: ref
+        .. button-ref:: `mini_seqFISH`_
+            :ref-type: any
             :color: dark
             :shadow:
             :expand:
@@ -98,6 +98,9 @@ Mini Datasets
             :expand:
         
             Mini Visium
+
+.. LINKS 
+.. _mini_seqFISH: /subsections/datasets/mini_seqFISH.rst
 
 Full Datasets
 ====================
