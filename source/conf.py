@@ -43,7 +43,7 @@ extensions = ['sphinx.ext.autosectionlabel',
 ]
 
 # Configuration for sphinx_toolbox
-github_repo = "Giotto"
+github_repository = "Giotto"
 github_username = "RubD" 
 
 # Add any paths that contain templates here, relative to this directory.
