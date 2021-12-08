@@ -36,12 +36,15 @@ extensions = ['sphinx.ext.autosectionlabel',
 'sphinx.ext.autodoc',
 'sphinx_rtd_theme',
 'sphinx_design',
-#'sphinx_toolbox.github',
 'sphinx_copybutton',
 'sphinx_toolbox', #fatal error
-#'sphinx_toolbox.shields' #fatal error
+'sphinx_toolbox.shields', #fatal error
+'sphinx_toolbox.github'
 ]
 
+# Configuration for sphinx_toolbox
+github_repo = "Giotto"
+github_username = "RubD" 
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
