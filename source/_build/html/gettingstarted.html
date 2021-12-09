@@ -16,7 +16,11 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx-toolbox-code.css" type="text/css" />
+  <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/sphinx-toolbox.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme_edits.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_toolbox_installation.css" type="text/css" />
   <link rel="stylesheet" href="_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme_edits.css" type="text/css" />
 
@@ -41,6 +45,7 @@
         <script src="_static/doctools.js"></script>
         <script src="_static/clipboard.min.js"></script>
         <script src="_static/copybutton.js"></script>
+        <script src="_static/sphinx_toolbox_installation.js"></script>
         <script src="_static/design-tabs.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
@@ -247,7 +252,7 @@
 </ul>
 </div>
 <div class="section" id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<span id="installation-section"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>Giotto is installed via R but there are required Python which must be installed in order for Giotto to function properly.
 Below are instructions for both <a class="reference external" href="GiottoInstallationWorkflow">Giotto installation (in R)</a> and <a class="reference external" href="Python_Installation">installation of Prerequisite Python Modules</a>.</p>
 <p>For ease of acces, there is a method which allows users to automatically install all of the necessary python modules from within R (See <a class="reference external" href="automaticinstallation">Automatic Installation</a>).
@@ -409,9 +414,9 @@ For Linux<div class="sd-summary-down docutils">
 <span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
 <span class="n">my_instructions</span> <span class="o">=</span> <span class="n">createGiottoInstructions</span><span class="p">(</span><span class="n">python_path</span> <span class="o">=</span> <span class="s1">&#39;your/python/path&#39;</span><span class="p">)</span>
 <span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">createGiottoObject</span><span class="p">(</span>
-        <span class="n">raw_exprs</span> <span class="o">=</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span>
-        <span class="n">spatial_locs</span> <span class="o">=</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span>
-        <span class="n">instructions</span> <span class="o">=</span> <span class="n">my_instructions</span><span class="p">)</span>
+    <span class="n">raw_exprs</span> <span class="o">=</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span>
+    <span class="n">spatial_locs</span> <span class="o">=</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span>
+    <span class="n">instructions</span> <span class="o">=</span> <span class="n">my_instructions</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

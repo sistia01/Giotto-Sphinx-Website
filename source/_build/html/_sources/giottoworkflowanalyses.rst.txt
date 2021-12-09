@@ -9,7 +9,7 @@ Workflow Diagram
 ***************************
 
 .. image:: images/diagram_giotto_workflow.png
-   :width: 400
+   :width: 600
    :alt: Diagram of Giotto Workflow
    :align: center
 
@@ -19,9 +19,14 @@ Workflow Diagram
 Workflow Analyses
 ***************************
 
-*Optional:* Install a Giotto Environment
+********************************
+0. Install a Giotto Environment 
+********************************
+*Optional*
 
-To perform all potential steps and analysis in the Giotto spatial toolbox the user needs to have a number of python modules installed. To make this process as flexible and easy as possible **two different strategies can be used:**
+To perform all potential steps and analysis in the Giotto spatial toolbox the user needs to have a number of python modules installed. 
+To make this process as flexible and easy as possible **two different strategies can be used.** See the `Installation <Installation_Section>`_ Section for more detailed information on installing Giotto and all of the 
+required modules needed to use Giotto succesffully.
 
 The user can install all the necessary modules themself and then the path to their python or environment (e.g. Conda) can be provided as an instruction.
 

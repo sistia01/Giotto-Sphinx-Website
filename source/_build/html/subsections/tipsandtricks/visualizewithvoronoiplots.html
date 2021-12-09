@@ -16,7 +16,11 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx-toolbox-code.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/sphinx-toolbox.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_toolbox_installation.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
 
@@ -41,6 +45,7 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/sphinx_toolbox_installation.js"></script>
         <script src="../../_static/design-tabs.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -269,12 +274,12 @@ VC_small = createSpatialGrid(gobject = VC_small, sdimx_stepsize = 500, sdimy_ste
 <div class="section" id="creating-and-showing-neighbors">
 <h2>3. Creating and Showing Neighbors<a class="headerlink" href="#creating-and-showing-neighbors" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nb_annot</span> <span class="o">=</span> <span class="n">findNetworkNeighbors</span><span class="p">(</span><span class="n">VC_small</span><span class="p">,</span>
-                            <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;Delaunay_network&#39;</span><span class="p">,</span>
-                            <span class="n">source_cell_ids</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;cell_1&#39;</span><span class="p">,</span> <span class="s1">&#39;cell_6&#39;</span><span class="p">,</span> <span class="s1">&#39;cell_10&#39;</span><span class="p">,</span> <span class="s1">&#39;cell_91&#39;</span><span class="p">,</span> <span class="s1">&#39;cell_92&#39;</span><span class="p">,</span> <span class="s1">&#39;cell_93&#39;</span><span class="p">))</span>
+                <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;Delaunay_network&#39;</span><span class="p">,</span>
+                <span class="n">source_cell_ids</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;cell_1&#39;</span><span class="p">,</span> <span class="s1">&#39;cell_6&#39;</span><span class="p">,</span> <span class="s1">&#39;cell_10&#39;</span><span class="p">,</span> <span class="s1">&#39;cell_91&#39;</span><span class="p">,</span> <span class="s1">&#39;cell_92&#39;</span><span class="p">,</span> <span class="s1">&#39;cell_93&#39;</span><span class="p">))</span>
 <span class="n">VC_small</span> <span class="o">=</span> <span class="n">addCellMetadata</span><span class="p">(</span><span class="n">VC_small</span><span class="p">,</span> <span class="n">new_metadata</span> <span class="o">=</span> <span class="n">nb_annot</span><span class="p">,</span> <span class="n">by_column</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">column_cell_ID</span> <span class="o">=</span> <span class="s1">&#39;cell_ID&#39;</span><span class="p">)</span>
 
 <span class="n">spatPlot</span><span class="p">(</span><span class="n">VC_small</span><span class="p">,</span> <span class="n">point_shape</span> <span class="o">=</span> <span class="s1">&#39;voronoi&#39;</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span><span class="s1">&#39;nb_cells&#39;</span><span class="p">,</span>
-         <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">source</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">target</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">both</span> <span class="o">=</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">others</span> <span class="o">=</span> <span class="s1">&#39;lightgrey&#39;</span><span class="p">))</span>
+     <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">source</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">target</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">both</span> <span class="o">=</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">others</span> <span class="o">=</span> <span class="s1">&#39;lightgrey&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/5_voronoi_neighbors.png"><img alt="voronoi plots" src="../../_images/5_voronoi_neighbors.png" style="width: 400px;" /></a>
@@ -291,14 +296,14 @@ VC_small = createSpatialGrid(gobject = VC_small, sdimx_stepsize = 500, sdimy_ste
 <a class="reference internal image-reference" href="../../_images/6_original_points.png"><img alt="voronoi plots" src="../../_images/6_original_points.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># selected genes voronoi</span>
 <span class="n">spatGenePlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">VC_small</span><span class="p">,</span> <span class="n">genes</span> <span class="o">=</span> <span class="n">selected_genes</span><span class="p">,</span> <span class="n">point_shape</span> <span class="o">=</span> <span class="s1">&#39;voronoi&#39;</span><span class="p">,</span>
-             <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span> <span class="n">vor_border_color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+         <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span> <span class="n">vor_border_color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/7_voronoi_genes.png"><img alt="voronoi plots" src="../../_images/7_voronoi_genes.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># one gene + black background and white borders</span>
 <span class="n">spatGenePlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">VC_small</span><span class="p">,</span> <span class="n">genes</span> <span class="o">=</span> <span class="s1">&#39;Cldn5&#39;</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">point_shape</span> <span class="o">=</span> <span class="s1">&#39;voronoi&#39;</span><span class="p">,</span>
-             <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span> <span class="n">vor_border_color</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">show_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span>
-             <span class="n">background_color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">cell_color_gradient</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">),</span> <span class="n">gradient_midpoint</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">cow_n_col</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+         <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span> <span class="n">vor_border_color</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">show_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span>
+         <span class="n">background_color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">cell_color_gradient</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">),</span> <span class="n">gradient_midpoint</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">cow_n_col</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/8_voronoi_gene_black_bg.png"><img alt="voronoi plots" src="../../_images/8_voronoi_gene_black_bg.png" style="width: 400px;" /></a>

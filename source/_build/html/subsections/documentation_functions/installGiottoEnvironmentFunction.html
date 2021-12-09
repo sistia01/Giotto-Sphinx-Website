@@ -16,7 +16,11 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx-toolbox-code.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/sphinx-toolbox.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_toolbox_installation.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
 
@@ -41,6 +45,7 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/sphinx_toolbox_installation.js"></script>
         <script src="../../_static/design-tabs.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -102,24 +107,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../../introduction.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Installation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../documentation.html">Documentation</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-object">Giotto Object</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../documentation.html#giotto-environment">Giotto Environment</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">installGiottoEnvironment</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#arguments">Arguments</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#value">Value</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#details">Details</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../documentation.html#giotto-handing-functions">Giotto Handing Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../documentation.html#giotto-instructions">Giotto Instructions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../documentation.html#giotto-object">Giotto Object</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../documentation.html#giotto-environment">Giotto Environment</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">installGiottoEnvironment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="removeGiottoEnvironment.html">removeGiottoEnvironment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="checkGiottoEnvironment.html">checkGiottoEnvironment</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="removeGiottoEnvironment.html">removeGiottoEnvironment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="checkGiottoEnvironment.html">checkGiottoEnvironment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../documentation.html#giotto-helper-functions">Giotto Helper Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../documentation.html#giotto-processing-functions">Giotto Processing Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../documentation.html#import-raw-data">Import Raw Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#add-images">Add Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-instructions">Giotto Instructions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-helper-functions">Giotto Helper Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-processing-functions">Giotto Processing Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#adding-images">Adding Images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../documentation.html#dimension-reduction">Dimension Reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../documentation.html#clustering">Clustering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../documentation.html#marker-genes">Marker Genes</a></li>
@@ -225,11 +227,11 @@
 
 <p><em>Installs a Giotto environment</em></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">installGiottoEnvironment</span><span class="p">(</span>
-        <span class="n">packages_to_install</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;pandas&quot;</span><span class="p">,</span> <span class="s2">&quot;networkx&quot;</span><span class="p">,</span> <span class="s2">&quot;python-igraph&quot;</span><span class="p">,</span> <span class="s2">&quot;leidenalg&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;python-louvain&quot;</span><span class="p">,</span> <span class="s2">&quot;python.app&quot;</span><span class="p">,</span> <span class="s2">&quot;scikit-learn&quot;</span><span class="p">),</span>
-        <span class="n">force_miniconda</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span>
-        <span class="n">force_environment</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span>
-        <span class="n">verbose</span> <span class="o">=</span> <span class="n">TRUE</span>
+    <span class="n">packages_to_install</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;pandas&quot;</span><span class="p">,</span> <span class="s2">&quot;networkx&quot;</span><span class="p">,</span> <span class="s2">&quot;python-igraph&quot;</span><span class="p">,</span> <span class="s2">&quot;leidenalg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;python-louvain&quot;</span><span class="p">,</span> <span class="s2">&quot;python.app&quot;</span><span class="p">,</span> <span class="s2">&quot;scikit-learn&quot;</span><span class="p">),</span>
+    <span class="n">force_miniconda</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span>
+    <span class="n">force_environment</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span>
+    <span class="n">verbose</span> <span class="o">=</span> <span class="n">TRUE</span>
 <span class="p">)</span>
 </pre></div>
 </div>

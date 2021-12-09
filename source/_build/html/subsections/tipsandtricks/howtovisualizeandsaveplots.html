@@ -16,7 +16,11 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx-toolbox-code.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/sphinx-toolbox.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_toolbox_installation.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
 
@@ -41,6 +45,7 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/sphinx_toolbox_installation.js"></script>
         <script src="../../_static/design-tabs.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -241,14 +246,14 @@
 <span class="n">my_python_path</span> <span class="o">=</span> <span class="s2">&quot;/your/python/path/&quot;</span> <span class="c1"># set to NULL to use previously installed giotto environment</span>
 <span class="n">results_folder</span> <span class="o">=</span> <span class="s1">&#39;/path/to/your/results/&#39;</span>
 <span class="n">instrs</span> <span class="o">=</span> <span class="n">createGiottoInstructions</span><span class="p">(</span><span class="n">python_path</span> <span class="o">=</span> <span class="n">my_python_path</span><span class="p">,</span>
-                              <span class="n">show_plot</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span>
-                              <span class="n">return_plot</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
-                              <span class="n">save_plot</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
-                              <span class="n">save_dir</span> <span class="o">=</span> <span class="n">results_folder</span><span class="p">,</span>
-                              <span class="n">plot_format</span> <span class="o">=</span> <span class="s1">&#39;png&#39;</span><span class="p">,</span>
-                              <span class="n">dpi</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span>
-                              <span class="n">height</span> <span class="o">=</span> <span class="mi">9</span><span class="p">,</span>
-                              <span class="n">width</span> <span class="o">=</span> <span class="mi">9</span><span class="p">)</span>
+                  <span class="n">show_plot</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span>
+                  <span class="n">return_plot</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
+                  <span class="n">save_plot</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
+                  <span class="n">save_dir</span> <span class="o">=</span> <span class="n">results_folder</span><span class="p">,</span>
+                  <span class="n">plot_format</span> <span class="o">=</span> <span class="s1">&#39;png&#39;</span><span class="p">,</span>
+                  <span class="n">dpi</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span>
+                  <span class="n">height</span> <span class="o">=</span> <span class="mi">9</span><span class="p">,</span>
+                  <span class="n">width</span> <span class="o">=</span> <span class="mi">9</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -271,13 +276,13 @@
 
 <span class="c1">## CREATE GIOTTO OBJECT with expression data, location data and instructions</span>
   <span class="n">osm_test</span> <span class="o">&lt;-</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="n">osm_exprs</span><span class="p">,</span>
-                                 <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">osm_locs</span><span class="p">,</span>
-                                 <span class="n">instructions</span> <span class="o">=</span> <span class="n">instrs</span><span class="p">)</span>
+                 <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">osm_locs</span><span class="p">,</span>
+                 <span class="n">instructions</span> <span class="o">=</span> <span class="n">instrs</span><span class="p">)</span>
 
 <span class="c1">## add field annotation</span>
   <span class="n">metadata</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">table</span><span class="p">::</span><span class="n">fread</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="n">meta_path</span><span class="p">)</span>
   <span class="n">osm_test</span> <span class="o">=</span> <span class="n">addCellMetadata</span><span class="p">(</span><span class="n">osm_test</span><span class="p">,</span> <span class="n">new_metadata</span> <span class="o">=</span> <span class="n">metadata</span><span class="p">,</span>
-                             <span class="n">by_column</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">column_cell_ID</span> <span class="o">=</span> <span class="s1">&#39;CellID&#39;</span><span class="p">)</span>
+                 <span class="n">by_column</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">column_cell_ID</span> <span class="o">=</span> <span class="s1">&#39;CellID&#39;</span><span class="p">)</span>
 
   <span class="n">osm_test</span> <span class="o">&lt;-</span> <span class="n">filterGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">)</span>
   <span class="n">osm_test</span> <span class="o">&lt;-</span> <span class="n">normalizeGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">)</span>
@@ -311,7 +316,7 @@ spatPlot(gobject = osm_test, cell_color = &#39;ClusterName&#39;, save_param = li
 # 3. overwrite save_name instruction and add specific subfolder
 # save_folder creates a specific subfolder in the provided directory
 spatPlot(gobject = osm_test, cell_color = &#39;ClusterName&#39;, point_size = 1.5,
-         save_param = list(save_folder = &#39;2_Gobject&#39;, save_name = &#39;original_clusters&#39;, units = &#39;in&#39;, base_height = 6, base_width = 6))
+     save_param = list(save_folder = &#39;2_Gobject&#39;, save_name = &#39;original_clusters&#39;, units = &#39;in&#39;, base_height = 6, base_width = 6))
 
 # 4. do not save, but return as object, modify and save
 # for example to create a black background:
@@ -320,7 +325,7 @@ spatPlot(gobject = osm_test, cell_color = &#39;ClusterName&#39;, point_size = 1.
 
 mypl = spatPlot(gobject = osm_test, cell_color = &#39;ClusterName&#39;, save_plot = F)
 mypl = mypl + theme(panel.background = element_rect(fill =&#39;black&#39;),
-                    panel.grid = element_blank())
+            panel.grid = element_blank())
 mypl = mypl + guides(fill = guide_legend(override.aes = list(size=5)))
 mypl
 
@@ -328,9 +333,9 @@ mypl
 gobject_folder = paste0(results_folder,&#39;/&#39;,&#39;2_Gobject/&#39;)
 if(!file.exists(gobject_folder)) dir.create(gobject_folder, recursive = T)
 cowplot::save_plot(plot = mypl,
-                   filename = &#39;original_clusters_black.png&#39;, path = gobject_folder,
-                   device = png(),
-                   dpi = 300, base_height = 10, base_width = 10)
+           filename = &#39;original_clusters_black.png&#39;, path = gobject_folder,
+           device = png(),
+           dpi = 300, base_height = 10, base_width = 10)
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/original_clusters_black.png"><img alt="Instructions for plotting" src="../../_images/original_clusters_black.png" style="width: 400px;" /></a>

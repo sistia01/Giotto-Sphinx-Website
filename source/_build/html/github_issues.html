@@ -16,7 +16,11 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx-toolbox-code.css" type="text/css" />
+  <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/sphinx-toolbox.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme_edits.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_toolbox_installation.css" type="text/css" />
   <link rel="stylesheet" href="_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme_edits.css" type="text/css" />
 
@@ -41,6 +45,7 @@
         <script src="_static/doctools.js"></script>
         <script src="_static/clipboard.min.js"></script>
         <script src="_static/copybutton.js"></script>
+        <script src="_static/sphinx_toolbox_installation.js"></script>
         <script src="_static/design-tabs.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
@@ -313,7 +318,7 @@
 <div class="section" id="deprecation-warning">
 <h4>Deprecation warning<a class="headerlink" href="#deprecation-warning" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">my_giotto_object</span> <span class="o">&lt;-</span> <span class="nf">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="s">&quot;path/to/expression/data&quot;</span><span class="p">,</span>
-                                   <span class="n">spatial_locs</span> <span class="o">=</span> <span class="s">&quot;path/to/spatial/data&quot;</span><span class="p">)</span>
+                   <span class="n">spatial_locs</span> <span class="o">=</span> <span class="s">&quot;path/to/spatial/data&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Warning message:
@@ -324,7 +329,7 @@ In createGiottoObject<span class="o">(</span><span class="nv">raw_exprs</span> <
 <p><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg>
 <strong>Solution</strong> The code has still run and your object has been created, but in the future use the following command:</p>
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">my_giotto_object</span> <span class="o">&lt;-</span> <span class="nf">createGiottoObject</span><span class="p">(</span><span class="n">expression</span> <span class="o">=</span> <span class="s">&quot;path/to/expression/data&quot;</span><span class="p">,</span>
-                                   <span class="n">spatial_locs</span> <span class="o">=</span> <span class="s">&quot;path/to/spatial/data&quot;</span><span class="p">)</span>
+                   <span class="n">spatial_locs</span> <span class="o">=</span> <span class="s">&quot;path/to/spatial/data&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -394,9 +399,9 @@ no method or default <span class="k">for</span> coercing <span class="s2">&quot;
 <p><em>If applicable, provide a screenshot of the issue</em></p>
 <p>&gt; I am having trouble adjusting my Giotto matix. I have inputted the following code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_giotto_object</span> <span class="o">&lt;-</span> <span class="n">adjustGiottoMatrix</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">,</span>
-                                    <span class="n">expression_values</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;normalized&#39;</span><span class="p">),</span>
-                                    <span class="n">covariate_columns</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;nr_genes&#39;</span><span class="p">,</span>
-                                                            <span class="s1">&#39;total_expr&#39;</span><span class="p">))</span>
+                    <span class="n">expression_values</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;normalized&#39;</span><span class="p">),</span>
+                    <span class="n">covariate_columns</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;nr_genes&#39;</span><span class="p">,</span>
+                                <span class="s1">&#39;total_expr&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>&gt; I expected that my matrix would be appropriately adjusted, but I got the following error:</p>

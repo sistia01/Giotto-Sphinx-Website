@@ -16,7 +16,11 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx-toolbox-code.css" type="text/css" />
+  <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/sphinx-toolbox.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme_edits.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_toolbox_installation.css" type="text/css" />
   <link rel="stylesheet" href="_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme_edits.css" type="text/css" />
 
@@ -41,6 +45,7 @@
         <script src="_static/doctools.js"></script>
         <script src="_static/clipboard.min.js"></script>
         <script src="_static/copybutton.js"></script>
+        <script src="_static/sphinx_toolbox_installation.js"></script>
         <script src="_static/design-tabs.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
@@ -332,12 +337,12 @@ algorithm.</p>
 <p><a class="reference external" href="doLeidenCLuster">doLeidenCLuster</a> for more detailed information.</p>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pyth_leid_result</span> <span class="o">=</span> <span class="n">python_leiden</span><span class="p">(</span><span class="n">df</span> <span class="o">=</span> <span class="n">network_edge_dt</span><span class="p">,</span>
-                                  <span class="n">partition_type</span> <span class="o">=</span> <span class="n">partition_type</span><span class="p">,</span>
-                                  <span class="n">initial_membership</span> <span class="o">=</span> <span class="n">init_membership</span><span class="p">,</span>
-                                  <span class="n">weights</span> <span class="o">=</span> <span class="s1">&#39;weight&#39;</span><span class="p">,</span>
-                                  <span class="n">n_iterations</span> <span class="o">=</span> <span class="n">n_iterations</span><span class="p">,</span>
-                                  <span class="n">seed</span> <span class="o">=</span> <span class="n">seed_number</span><span class="p">,</span>
-                                  <span class="n">resolution_parameter</span> <span class="o">=</span> <span class="n">resolution</span><span class="p">)</span>
+                  <span class="n">partition_type</span> <span class="o">=</span> <span class="n">partition_type</span><span class="p">,</span>
+                  <span class="n">initial_membership</span> <span class="o">=</span> <span class="n">init_membership</span><span class="p">,</span>
+                  <span class="n">weights</span> <span class="o">=</span> <span class="s1">&#39;weight&#39;</span><span class="p">,</span>
+                  <span class="n">n_iterations</span> <span class="o">=</span> <span class="n">n_iterations</span><span class="p">,</span>
+                  <span class="n">seed</span> <span class="o">=</span> <span class="n">seed_number</span><span class="p">,</span>
+                  <span class="n">resolution_parameter</span> <span class="o">=</span> <span class="n">resolution</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -347,13 +352,13 @@ algorithm.</p>
 method developed by <a class="reference external" href="https://doi.org/10.1038/s41592-019-0701-7">Sun et al.</a> and provide some
 comments within the code.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>spark = function(gobject,
-               percentage = 0.1,
-               min_count = 10,
-               expression_values = &#39;raw&#39;,
-               num_core = 5,
-               covariates = NULL,
-               return_object = &#39;data.table&#39;,
-               ...) {
+           percentage = 0.1,
+           min_count = 10,
+           expression_values = &#39;raw&#39;,
+           num_core = 5,
+           covariates = NULL,
+           return_object = &#39;data.table&#39;,
+           ...) {
 
 # data.table variables; this is necessary when setting new variables within a data.table
 genes =  adjusted_pvalue = combined_pvalue = NULL
@@ -361,14 +366,14 @@ genes =  adjusted_pvalue = combined_pvalue = NULL
 # test if SPARK is installed
 # if false, it will suggest how to install SPARK
 package_check(pkg_name = &#39;SPARK&#39;,
-              repository = c(&#39;github&#39;),
-              github_repo = &#39;xzhoulab/SPARK&#39;)
+          repository = c(&#39;github&#39;),
+          github_repo = &#39;xzhoulab/SPARK&#39;)
 
 
 # print message with information and encouraging users to cite the authors their work
 message(&quot;using &#39;SPARK&#39; for spatial gene/pattern detection. If used in published research, please cite:
 Sun, Shiquan, Jiaqiang Zhu, and Xiang Zhou. “Statistical Analysis of Spatial Expression Pattern for Spatially Resolved Transcriptomic Studies.”
-        BioRxiv, October 21, 2019, 810903. https://doi.org/10.1101/810903.&quot;)
+    BioRxiv, October 21, 2019, 810903. https://doi.org/10.1101/810903.&quot;)
 
 
 # extract expression values from gobject using one of the accessors
@@ -384,9 +389,9 @@ rownames(locs) = colnames(expr)
 
 # create SPARK object for analysis and filter out lowly expressed genes
 sobject = SPARK::CreateSPARKObject(counts = expr,
-                                   location = locs[,1:2],
-                                   percentage = percentage,
-                                   min_total_counts = min_count)
+                   location = locs[,1:2],
+                   percentage = percentage,
+                   min_total_counts = min_count)
 
 # total counts for each cell
 sobject@lib_size = apply(sobject@counts, 2, sum)
@@ -411,17 +416,17 @@ if(!is.null(covariates)) {
 
 # Fit statistical model under null hypothesis
 sobject = SPARK::spark.vc(sobject,
-                          covariates = covariates,
-                          lib_size = sobject@lib_size,
-                          num_core = num_core,
-                          verbose = F,
-                          ...)
+              covariates = covariates,
+              lib_size = sobject@lib_size,
+              num_core = num_core,
+              verbose = F,
+              ...)
 
 # test spatially expressed pattern genes
 # calculating pval
 sobject = SPARK::spark.test(sobject,
-                            check_positive = T,
-                            verbose = F)
+                check_positive = T,
+                verbose = F)
 
 # return results
 # return full output or a simple data.table format with the essental information

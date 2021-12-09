@@ -16,7 +16,11 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx-toolbox-code.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/sphinx-toolbox.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_toolbox_installation.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
 
@@ -41,6 +45,7 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/sphinx_toolbox_installation.js"></script>
         <script src="../../_static/design-tabs.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -102,13 +107,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../introduction.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Installation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../documentation.html">Documentation</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-object">Giotto Object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-environment">Giotto Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-handing-functions">Giotto Handing Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../documentation.html#import-raw-data">Import Raw Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#add-images">Add Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-instructions">Giotto Instructions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-helper-functions">Giotto Helper Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-processing-functions">Giotto Processing Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#adding-images">Adding Images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../documentation.html#dimension-reduction">Dimension Reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../documentation.html#clustering">Clustering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../documentation.html#marker-genes">Marker Genes</a></li>
@@ -231,31 +232,31 @@
 
 <p><em>binSpect for a single spatial network.</em></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">binSpectSingle</span><span class="p">(</span>
-        <span class="n">gobject</span><span class="p">,</span>
-        <span class="n">bin_method</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;kmeans&quot;</span><span class="p">,</span> <span class="s2">&quot;rank&quot;</span><span class="p">),</span>
-        <span class="n">expression_values</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;normalized&quot;</span><span class="p">,</span> <span class="s2">&quot;scaled&quot;</span><span class="p">,</span> <span class="s2">&quot;custom&quot;</span><span class="p">),</span>
-        <span class="n">subset_genes</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
-        <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s2">&quot;Delaunay_network&quot;</span><span class="p">,</span>
-        <span class="n">reduce_network</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span>
-        <span class="n">kmeans_algo</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;kmeans&quot;</span><span class="p">,</span> <span class="s2">&quot;kmeans_arma&quot;</span><span class="p">,</span> <span class="s2">&quot;kmeans_arma_subset&quot;</span><span class="p">),</span>
-        <span class="n">nstart</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
-        <span class="n">iter_max</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-        <span class="n">extreme_nr</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
-        <span class="n">sample_nr</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
-        <span class="n">percentage_rank</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
-        <span class="n">do_fisher_test</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">adjust_method</span> <span class="o">=</span> <span class="s2">&quot;fdr&quot;</span><span class="p">,</span>
-        <span class="n">calc_hub</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span>
-        <span class="n">hub_min_int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
-        <span class="n">get_av_expr</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">get_high_expr</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">implementation</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;data.table&quot;</span><span class="p">,</span> <span class="s2">&quot;simple&quot;</span><span class="p">,</span> <span class="s2">&quot;matrix&quot;</span><span class="p">),</span>
-        <span class="n">group_size</span> <span class="o">=</span> <span class="s2">&quot;automatic&quot;</span><span class="p">,</span>
-        <span class="n">do_parallel</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">cores</span> <span class="o">=</span> <span class="n">NA</span><span class="p">,</span>
-        <span class="n">verbose</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
-        <span class="nb">set</span><span class="o">.</span><span class="n">seed</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
-        <span class="n">bin_matrix</span> <span class="o">=</span> <span class="n">NULL</span>
+    <span class="n">gobject</span><span class="p">,</span>
+    <span class="n">bin_method</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;kmeans&quot;</span><span class="p">,</span> <span class="s2">&quot;rank&quot;</span><span class="p">),</span>
+    <span class="n">expression_values</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;normalized&quot;</span><span class="p">,</span> <span class="s2">&quot;scaled&quot;</span><span class="p">,</span> <span class="s2">&quot;custom&quot;</span><span class="p">),</span>
+    <span class="n">subset_genes</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s2">&quot;Delaunay_network&quot;</span><span class="p">,</span>
+    <span class="n">reduce_network</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span>
+    <span class="n">kmeans_algo</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;kmeans&quot;</span><span class="p">,</span> <span class="s2">&quot;kmeans_arma&quot;</span><span class="p">,</span> <span class="s2">&quot;kmeans_arma_subset&quot;</span><span class="p">),</span>
+    <span class="n">nstart</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="n">iter_max</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="n">extreme_nr</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+    <span class="n">sample_nr</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+    <span class="n">percentage_rank</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="n">do_fisher_test</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">adjust_method</span> <span class="o">=</span> <span class="s2">&quot;fdr&quot;</span><span class="p">,</span>
+    <span class="n">calc_hub</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span>
+    <span class="n">hub_min_int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="n">get_av_expr</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">get_high_expr</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">implementation</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;data.table&quot;</span><span class="p">,</span> <span class="s2">&quot;simple&quot;</span><span class="p">,</span> <span class="s2">&quot;matrix&quot;</span><span class="p">),</span>
+    <span class="n">group_size</span> <span class="o">=</span> <span class="s2">&quot;automatic&quot;</span><span class="p">,</span>
+    <span class="n">do_parallel</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">cores</span> <span class="o">=</span> <span class="n">NA</span><span class="p">,</span>
+    <span class="n">verbose</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+    <span class="nb">set</span><span class="o">.</span><span class="n">seed</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">bin_matrix</span> <span class="o">=</span> <span class="n">NULL</span>
 <span class="p">)</span>
 </pre></div>
 </div>

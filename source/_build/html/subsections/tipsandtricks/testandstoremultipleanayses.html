@@ -16,7 +16,11 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx-toolbox-code.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/sphinx-toolbox.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_toolbox_installation.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
 
@@ -41,6 +45,7 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/sphinx_toolbox_installation.js"></script>
         <script src="../../_static/design-tabs.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -221,15 +226,15 @@
 <h2>1. Calculate Highly Variable Genes <em>(2 Methods)</em><a class="headerlink" href="#calculate-highly-variable-genes-2-methods" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># using the loess method</span>
 <span class="n">VC_test</span> <span class="o">&lt;-</span> <span class="n">calculateHVG</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">VC_test</span><span class="p">,</span>
-                    <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;cov_loess&#39;</span><span class="p">,</span> <span class="n">difference_in_cov</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
-                    <span class="n">HVGname</span> <span class="o">=</span> <span class="s1">&#39;loess_hvg&#39;</span><span class="p">)</span>
+            <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;cov_loess&#39;</span><span class="p">,</span> <span class="n">difference_in_cov</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+            <span class="n">HVGname</span> <span class="o">=</span> <span class="s1">&#39;loess_hvg&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/1_loess_hvg.png"><img alt="Loess" src="../../_images/1_loess_hvg.png" style="width: 300px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># using the expression groups method</span>
 <span class="n">VC_test</span> <span class="o">&lt;-</span> <span class="n">calculateHVG</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">VC_test</span>
-                    <span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;cov_group&#39;</span><span class="p">,</span> <span class="n">zscore_threshold</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-                    <span class="n">HVGname</span> <span class="o">=</span> <span class="s1">&#39;group_hvg&#39;</span><span class="p">)</span>
+            <span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;cov_group&#39;</span><span class="p">,</span> <span class="n">zscore_threshold</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="n">HVGname</span> <span class="o">=</span> <span class="s1">&#39;group_hvg&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/1_group_hvg.png"><img alt="Group" src="../../_images/1_group_hvg.png" style="width: 300px;" /></a>
@@ -272,13 +277,13 @@ plotPCA(gobject = VC_test, dim_reduction_name = &#39;pca_group&#39;)
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## 3. UMAP ##</span>
   <span class="n">VC_test</span> <span class="o">&lt;-</span> <span class="n">runUMAP</span><span class="p">(</span><span class="n">VC_test</span><span class="p">,</span> <span class="n">dim_reduction_to_use</span> <span class="o">=</span> <span class="s1">&#39;pca&#39;</span><span class="p">,</span> <span class="n">dim_reduction_name</span> <span class="o">=</span> <span class="s1">&#39;pca_loess&#39;</span><span class="p">,</span>
-                 <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;umap_loess&#39;</span><span class="p">,</span> <span class="n">dimensions_to_use</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">30</span><span class="p">)</span>
+         <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;umap_loess&#39;</span><span class="p">,</span> <span class="n">dimensions_to_use</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">30</span><span class="p">)</span>
   <span class="n">plotUMAP</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">VC_test</span><span class="p">,</span> <span class="n">dim_reduction_name</span> <span class="o">=</span> <span class="s1">&#39;umap_loess&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/3_loess_umap.png"><img alt="Group" src="../../_images/3_loess_umap.png" style="width: 300px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VC_test</span> <span class="o">&lt;-</span> <span class="n">runUMAP</span><span class="p">(</span><span class="n">VC_test</span><span class="p">,</span> <span class="n">dim_reduction_to_use</span> <span class="o">=</span> <span class="s1">&#39;pca&#39;</span><span class="p">,</span> <span class="n">dim_reduction_name</span> <span class="o">=</span> <span class="s1">&#39;pca_group&#39;</span><span class="p">,</span>
-               <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;umap_group&#39;</span><span class="p">,</span> <span class="n">dimensions_to_use</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">30</span><span class="p">)</span>
+           <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;umap_group&#39;</span><span class="p">,</span> <span class="n">dimensions_to_use</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">30</span><span class="p">)</span>
 <span class="n">plotUMAP</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">VC_test</span><span class="p">,</span> <span class="n">dim_reduction_name</span> <span class="o">=</span> <span class="s1">&#39;umap_group&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -303,7 +308,7 @@ field1_ids = cell_metadata[Field_of_View == 0]$cell_ID
 subVC_test = subsetGiotto(VC_test, cell_ids = field1_ids)
 
 spatPlot(gobject = subVC_test, show_network = T,
-         network_color = &#39;blue&#39;, spatial_network_name = &#39;spatial_network&#39;)
+     network_color = &#39;blue&#39;, spatial_network_name = &#39;spatial_network&#39;)
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/4_spatial_network.png"><img alt="Group" src="../../_images/4_spatial_network.png" style="width: 300px;" /></a>
@@ -311,7 +316,7 @@ spatPlot(gobject = subVC_test, show_network = T,
 <div class="section" id="large-network">
 <h3><em>Large Network</em><a class="headerlink" href="#large-network" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">subVC_test</span><span class="p">,</span> <span class="n">show_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
-         <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;large_network&#39;</span><span class="p">)</span>
+     <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;large_network&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/4_large_network.png"><img alt="Group" src="../../_images/4_large_network.png" style="width: 300px;" /></a>
@@ -319,7 +324,7 @@ spatPlot(gobject = subVC_test, show_network = T,
 <div class="section" id="distance-network">
 <h3><em>Distance Network</em><a class="headerlink" href="#distance-network" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">subVC_test</span><span class="p">,</span> <span class="n">show_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
-         <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;distance_network&#39;</span><span class="p">)</span>
+     <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;distance_network&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/4_distance_network.png"><img alt="Group" src="../../_images/4_distance_network.png" style="width: 300px;" /></a>
@@ -338,15 +343,15 @@ spatPlot(gobject = subVC_test, show_network = T,
 
  # spatial genes based on large network
  ranktest_large = binSpect(VC_test,
-                           subset_genes = loess_genes,
-                           bin_method = &#39;rank&#39;,
-                           spatial_network_name = &#39;large_network&#39;)
+               subset_genes = loess_genes,
+               bin_method = &#39;rank&#39;,
+               spatial_network_name = &#39;large_network&#39;)
 
 
  spatGenePlot(VC_test,
-              expression_values = &#39;scaled&#39;,
-              genes = ranktest_large$genes[1:6], cow_n_col = 2, point_size = 1,
-              genes_high_color = &#39;red&#39;, genes_mid_color = &#39;white&#39;, genes_low_color = &#39;darkblue&#39;, midpoint = 0)
+          expression_values = &#39;scaled&#39;,
+          genes = ranktest_large$genes[1:6], cow_n_col = 2, point_size = 1,
+          genes_high_color = &#39;red&#39;, genes_mid_color = &#39;white&#39;, genes_low_color = &#39;darkblue&#39;, midpoint = 0)
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/5_large_network_genes.png"><img alt="Group" src="../../_images/5_large_network_genes.png" style="width: 300px;" /></a>
@@ -355,13 +360,13 @@ spatPlot(gobject = subVC_test, show_network = T,
 <h3><em>Distance Network Spatial Genes</em><a class="headerlink" href="#distance-network-spatial-genes" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># spatial genes based on distance network
 ranktest_dist = binSpect(VC_test,
-                         subset_genes = loess_genes,
-                         bin_method = &#39;rank&#39;,
-                         spatial_network_name = &#39;distance_network&#39;)
+             subset_genes = loess_genes,
+             bin_method = &#39;rank&#39;,
+             spatial_network_name = &#39;distance_network&#39;)
 spatGenePlot(VC_test,
-             expression_values = &#39;scaled&#39;,
-             genes = ranktest_dist$genes[1:6], cow_n_col = 2, point_size = 1,
-             genes_high_color = &#39;red&#39;, genes_mid_color = &#39;white&#39;, genes_low_color = &#39;darkblue&#39;, midpoint = 0)
+         expression_values = &#39;scaled&#39;,
+         genes = ranktest_dist$genes[1:6], cow_n_col = 2, point_size = 1,
+         genes_high_color = &#39;red&#39;, genes_mid_color = &#39;white&#39;, genes_low_color = &#39;darkblue&#39;, midpoint = 0)
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/5_large_distance_network_genes.png"><img alt="Group" src="../../_images/5_large_distance_network_genes.png" style="width: 300px;" /></a>

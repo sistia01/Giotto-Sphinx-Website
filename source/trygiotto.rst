@@ -12,8 +12,8 @@ Try Giotto
     Binder <subsections/trygiotto/binder.rst>
     Docker <subsections/trygiotto/docker.rst>
 
-There are two methods through which users may try Giotto, either via :ref:`Docker <DockerInformation>` or :ref:`Binder. <BinderInformation>` 
-Click the :ref:`About Docker <DockerInformation>` or :ref:`About Binder <BinderInformation>` to test out or learn more either one of the two methods! 
+There are two methods through which users may try Giotto, either via :bdg-ref-warning-line:`Docker <DockerInformation>` or :bdg-ref-primary-line:`Binder. <BinderInformation>`. 
 
+Click the buttons above to learn more about the models or test them out!
 .. Sphinx-Design formatting: https://sphinx-design.readthedocs.io/en/latest/badges_buttons.html
 

@@ -16,7 +16,11 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx-toolbox-code.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/sphinx-toolbox.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_toolbox_installation.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
 
@@ -41,6 +45,7 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/sphinx_toolbox_installation.js"></script>
         <script src="../../_static/design-tabs.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -102,13 +107,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../introduction.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Installation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../documentation.html">Documentation</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-object">Giotto Object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-environment">Giotto Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-handing-functions">Giotto Handing Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../documentation.html#import-raw-data">Import Raw Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#add-images">Add Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-instructions">Giotto Instructions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-helper-functions">Giotto Helper Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-processing-functions">Giotto Processing Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#adding-images">Adding Images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../documentation.html#dimension-reduction">Dimension Reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../documentation.html#clustering">Clustering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../documentation.html#marker-genes">Marker Genes</a></li>
@@ -226,19 +227,19 @@
 
 <p><em>Cell-Cell communication scores based only on expression.</em></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exprCellCellcom</span><span class="p">(</span>
-        <span class="n">gobject</span><span class="p">,</span>
-        <span class="n">cluster_column</span> <span class="o">=</span> <span class="s2">&quot;cell_types&quot;</span><span class="p">,</span>
-        <span class="n">random_iter</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
-        <span class="n">gene_set_1</span><span class="p">,</span>
-        <span class="n">gene_set_2</span><span class="p">,</span>
-        <span class="n">log2FC_addendum</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
-        <span class="n">detailed</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span>
-        <span class="n">adjust_method</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;fdr&quot;</span><span class="p">,</span> <span class="s2">&quot;bonferroni&quot;</span><span class="p">,</span> <span class="s2">&quot;BH&quot;</span><span class="p">,</span> <span class="s2">&quot;holm&quot;</span><span class="p">,</span> <span class="s2">&quot;hochberg&quot;</span><span class="p">,</span> <span class="s2">&quot;hommel&quot;</span><span class="p">,</span> <span class="s2">&quot;BY&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;none&quot;</span><span class="p">),</span>
-        <span class="n">adjust_target</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;genes&quot;</span><span class="p">,</span> <span class="s2">&quot;cells&quot;</span><span class="p">),</span>
-        <span class="n">set_seed</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">seed_number</span> <span class="o">=</span> <span class="mi">1234</span><span class="p">,</span>
-        <span class="n">verbose</span> <span class="o">=</span> <span class="n">T</span>
+    <span class="n">gobject</span><span class="p">,</span>
+    <span class="n">cluster_column</span> <span class="o">=</span> <span class="s2">&quot;cell_types&quot;</span><span class="p">,</span>
+    <span class="n">random_iter</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+    <span class="n">gene_set_1</span><span class="p">,</span>
+    <span class="n">gene_set_2</span><span class="p">,</span>
+    <span class="n">log2FC_addendum</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+    <span class="n">detailed</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span>
+    <span class="n">adjust_method</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;fdr&quot;</span><span class="p">,</span> <span class="s2">&quot;bonferroni&quot;</span><span class="p">,</span> <span class="s2">&quot;BH&quot;</span><span class="p">,</span> <span class="s2">&quot;holm&quot;</span><span class="p">,</span> <span class="s2">&quot;hochberg&quot;</span><span class="p">,</span> <span class="s2">&quot;hommel&quot;</span><span class="p">,</span> <span class="s2">&quot;BY&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;none&quot;</span><span class="p">),</span>
+    <span class="n">adjust_target</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;genes&quot;</span><span class="p">,</span> <span class="s2">&quot;cells&quot;</span><span class="p">),</span>
+    <span class="n">set_seed</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">seed_number</span> <span class="o">=</span> <span class="mi">1234</span><span class="p">,</span>
+    <span class="n">verbose</span> <span class="o">=</span> <span class="n">T</span>
 <span class="p">)</span>
 </pre></div>
 </div>

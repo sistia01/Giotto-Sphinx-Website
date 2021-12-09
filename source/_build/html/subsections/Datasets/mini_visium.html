@@ -16,7 +16,11 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx-toolbox-code.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/sphinx-toolbox.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_toolbox_installation.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
 
@@ -41,6 +45,7 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/sphinx_toolbox_installation.js"></script>
         <script src="../../_static/design-tabs.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -216,8 +221,8 @@
 <span class="n">temp_dir</span> <span class="o">=</span> <span class="n">getwd</span><span class="p">()</span>
 <span class="n">temp_dir</span> <span class="o">=</span> <span class="s1">&#39;~/Temp/&#39;</span>
 <span class="n">myinstructions</span> <span class="o">=</span> <span class="n">createGiottoInstructions</span><span class="p">(</span><span class="n">save_dir</span> <span class="o">=</span> <span class="n">temp_dir</span><span class="p">,</span>
-                                      <span class="n">save_plot</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
-                                      <span class="n">show_plot</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">)</span>
+                      <span class="n">save_plot</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
+                      <span class="n">show_plot</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -235,8 +240,8 @@
     <span class="n">expr_path</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;visium_DG_expr.txt.gz&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
     <span class="n">loc_path</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;visium_DG_locs.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
     <span class="n">mini_visium</span> <span class="o">&lt;-</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="n">expr_path</span><span class="p">,</span>
-                                    <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">loc_path</span><span class="p">,</span>
-                                    <span class="n">instructions</span> <span class="o">=</span> <span class="n">myinstructions</span><span class="p">)</span>
+                    <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">loc_path</span><span class="p">,</span>
+                    <span class="n">instructions</span> <span class="o">=</span> <span class="n">myinstructions</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>How to work with Giotto instructions that are part of your Giotto object:</p>
@@ -262,15 +267,15 @@
 <span class="c1">## 2. test and modify image alignment</span>
 <span class="n">mypl</span> <span class="o">=</span> <span class="n">spatPlot</span><span class="p">(</span><span class="n">mini_visium</span><span class="p">,</span> <span class="n">return_plot</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">point_alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span>
 <span class="n">orig_png</span> <span class="o">=</span> <span class="n">createGiottoImage</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_visium</span><span class="p">,</span> <span class="n">mg_object</span> <span class="o">=</span> <span class="n">mg_img</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;image&#39;</span><span class="p">,</span>
-                        <span class="n">xmax_adj</span> <span class="o">=</span> <span class="mi">450</span><span class="p">,</span> <span class="n">xmin_adj</span> <span class="o">=</span> <span class="mi">550</span><span class="p">,</span>
-                        <span class="n">ymax_adj</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">ymin_adj</span> <span class="o">=</span> <span class="mi">200</span><span class="p">)</span>
+            <span class="n">xmax_adj</span> <span class="o">=</span> <span class="mi">450</span><span class="p">,</span> <span class="n">xmin_adj</span> <span class="o">=</span> <span class="mi">550</span><span class="p">,</span>
+            <span class="n">ymax_adj</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">ymin_adj</span> <span class="o">=</span> <span class="mi">200</span><span class="p">)</span>
 <span class="n">mypl_image</span> <span class="o">=</span> <span class="n">addGiottoImageToSpatPlot</span><span class="p">(</span><span class="n">mypl</span><span class="p">,</span> <span class="n">orig_png</span><span class="p">)</span>
 <span class="n">mypl_image</span>
 
 <span class="c1">## 3. add images to Giotto object ##</span>
 <span class="n">image_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">orig_png</span><span class="p">)</span>
 <span class="n">mini_visium</span> <span class="o">=</span> <span class="n">addGiottoImage</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_visium</span><span class="p">,</span>
-                        <span class="n">images</span> <span class="o">=</span> <span class="n">image_list</span><span class="p">)</span>
+            <span class="n">images</span> <span class="o">=</span> <span class="n">image_list</span><span class="p">)</span>
 <span class="n">showGiottoImageNames</span><span class="p">(</span><span class="n">mini_visium</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -288,17 +293,17 @@
 <span class="n">filterDistributions</span><span class="p">(</span><span class="n">mini_visium</span><span class="p">,</span> <span class="n">detection</span> <span class="o">=</span> <span class="s1">&#39;genes&#39;</span><span class="p">)</span>
 <span class="n">filterDistributions</span><span class="p">(</span><span class="n">mini_visium</span><span class="p">,</span> <span class="n">detection</span> <span class="o">=</span> <span class="s1">&#39;cells&#39;</span><span class="p">)</span>
 <span class="n">filterCombinations</span><span class="p">(</span><span class="n">mini_visium</span><span class="p">,</span>
-                <span class="n">expression_thresholds</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
-                <span class="n">gene_det_in_min_cells</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span>
-                <span class="n">min_det_genes_per_cell</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
+        <span class="n">expression_thresholds</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+        <span class="n">gene_det_in_min_cells</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span>
+        <span class="n">min_det_genes_per_cell</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
 
 <span class="c1"># filter and normalize</span>
 <span class="n">mini_visium</span> <span class="o">&lt;-</span> <span class="n">filterGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_visium</span><span class="p">,</span>
-                        <span class="n">expression_threshold</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-                        <span class="n">gene_det_in_min_cells</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
-                        <span class="n">min_det_genes_per_cell</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
-                        <span class="n">expression_values</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;raw&#39;</span><span class="p">),</span>
-                        <span class="n">verbose</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span>
+            <span class="n">expression_threshold</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="n">gene_det_in_min_cells</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+            <span class="n">min_det_genes_per_cell</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="n">expression_values</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;raw&#39;</span><span class="p">),</span>
+            <span class="n">verbose</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span>
 <span class="n">mini_visium</span> <span class="o">&lt;-</span> <span class="n">normalizeGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_visium</span><span class="p">,</span> <span class="n">scalefactor</span> <span class="o">=</span> <span class="mi">6000</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span>
 <span class="n">mini_visium</span> <span class="o">&lt;-</span> <span class="n">addStatistics</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_visium</span><span class="p">)</span>
 </pre></div>
@@ -351,18 +356,18 @@
 <div class="section" id="differential-expression">
 <h2>5. Differential Expression<a class="headerlink" href="#differential-expression" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>scran_markers = findMarkers_one_vs_all(gobject = mini_visium,
-                                method = &#39;scran&#39;,
-                                expression_values = &#39;normalized&#39;,
-                                cluster_column = &#39;leiden_clus&#39;)
+                method = &#39;scran&#39;,
+                expression_values = &#39;normalized&#39;,
+                cluster_column = &#39;leiden_clus&#39;)
 # violinplot
 topgenes_scran = scran_markers[, head(.SD, 2), by = &#39;cluster&#39;]$genes
 violinPlot(mini_visium, genes = topgenes_scran, cluster_column = &#39;leiden_clus&#39;,
-        strip_text = 10, strip_position = &#39;right&#39;)
+    strip_text = 10, strip_position = &#39;right&#39;)
 
 # metadata heatmap
 topgenes_scran = scran_markers[, head(.SD, 6), by = &#39;cluster&#39;]$genes
 plotMetaDataHeatmap(mini_visium, selected_genes = topgenes_scran,
-                metadata_cols = c(&#39;leiden_clus&#39;))
+        metadata_cols = c(&#39;leiden_clus&#39;))
 </pre></div>
 </div>
 </div>
@@ -371,7 +376,7 @@ plotMetaDataHeatmap(mini_visium, selected_genes = topgenes_scran,
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clusters_cell_types</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;Gfap_cells&#39;</span><span class="p">,</span> <span class="s1">&#39;Tbr1_cells&#39;</span><span class="p">,</span> <span class="s1">&#39;Tcf7l2_cells&#39;</span><span class="p">,</span> <span class="s1">&#39;Wfs1_cells&#39;</span><span class="p">,</span> <span class="s1">&#39;Nptxr_cells&#39;</span><span class="p">)</span>
 <span class="n">names</span><span class="p">(</span><span class="n">clusters_cell_types</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">5</span>
 <span class="n">mini_visium</span> <span class="o">=</span> <span class="n">annotateGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_visium</span><span class="p">,</span> <span class="n">annotation_vector</span> <span class="o">=</span> <span class="n">clusters_cell_types</span><span class="p">,</span>
-                        <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">)</span>
+            <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">)</span>
 
 <span class="c1"># check new cell metadata</span>
 <span class="n">pDataDT</span><span class="p">(</span><span class="n">mini_visium</span><span class="p">)</span>
@@ -387,16 +392,16 @@ plotMetaDataHeatmap(mini_visium, selected_genes = topgenes_scran,
 <h3>7.1 Create a Spatial Grid<a class="headerlink" href="#create-a-spatial-grid" title="Permalink to this headline">¶</a></h3>
 <p>Create a grid based on defined stepsizes in the x,y(,z) axes.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mini_visium</span> <span class="o">&lt;-</span> <span class="n">createSpatialGrid</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_visium</span><span class="p">,</span>
-                         <span class="n">sdimx_stepsize</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span>
-                         <span class="n">sdimy_stepsize</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span>
-                         <span class="n">minimum_padding</span> <span class="o">=</span> <span class="mi">50</span><span class="p">)</span>
+             <span class="n">sdimx_stepsize</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span>
+             <span class="n">sdimy_stepsize</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span>
+             <span class="n">minimum_padding</span> <span class="o">=</span> <span class="mi">50</span><span class="p">)</span>
 <span class="n">showGrids</span><span class="p">(</span><span class="n">mini_visium</span><span class="p">)</span>
 <span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_visium</span><span class="p">,</span> <span class="n">show_grid</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">)</span>
 
 <span class="c1"># extract grid and associated metadata spots</span>
 <span class="n">annotated_grid</span> <span class="o">=</span> <span class="n">annotateSpatialGrid</span><span class="p">(</span><span class="n">mini_visium</span><span class="p">)</span>
 <span class="n">annotated_grid_metadata</span> <span class="o">=</span> <span class="n">annotateSpatialGrid</span><span class="p">(</span><span class="n">mini_visium</span><span class="p">,</span>
-                                      <span class="n">cluster_columns</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span> <span class="s1">&#39;nr_genes&#39;</span><span class="p">))</span>
+                      <span class="n">cluster_columns</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span> <span class="s1">&#39;nr_genes&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -412,16 +417,16 @@ sig_matrix = as.matrix(brain_sc_markers[,-1]); rownames(sig_matrix) = brain_sc_m
 
 ## enrichment tests
 mini_visium = runSpatialEnrich(mini_visium,
-                        sign_matrix = sig_matrix,
-                        enrich_method = &#39;PAGE&#39;) #default = &#39;PAGE&#39;
+            sign_matrix = sig_matrix,
+            enrich_method = &#39;PAGE&#39;) #default = &#39;PAGE&#39;
 
 ## heatmap of enrichment versus annotation (e.g. clustering result)
 cell_types = colnames(sig_matrix)
 plotMetaDataCellsHeatmap(gobject = mini_visium,
-                        metadata_cols = &#39;leiden_clus&#39;,
-                        value_cols = cell_types,
-                        spat_enr_names = &#39;PAGE&#39;,
-                        x_text_size = 8, y_text_size = 8)
+            metadata_cols = &#39;leiden_clus&#39;,
+            value_cols = cell_types,
+            spat_enr_names = &#39;PAGE&#39;,
+            x_text_size = 8, y_text_size = 8)
 
 
 enrichment_results = mini_visium@spatial_enrichment$PAGE
@@ -430,8 +435,8 @@ enrich_cell_types = enrich_cell_types[enrich_cell_types != &#39;cell_ID&#39;]
 
 ## spatplot
 spatCellPlot(gobject = mini_visium, spat_enr_names = &#39;PAGE&#39;,
-        cell_annotation_values = enrich_cell_types,
-        cow_n_col = 3,coord_fix_ratio = NULL, point_size = 1)
+    cell_annotation_values = enrich_cell_types,
+    cow_n_col = 3,coord_fix_ratio = NULL, point_size = 1)
 </pre></div>
 </div>
 </div>
@@ -450,12 +455,12 @@ spatCellPlot(gobject = mini_visium, spat_enr_names = &#39;PAGE&#39;,
 
 <span class="c1"># visualize the two different spatial networks</span>
 <span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_visium</span><span class="p">,</span> <span class="n">show_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
-        <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;Delaunay_network&#39;</span><span class="p">,</span>
-        <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">)</span>
+    <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;Delaunay_network&#39;</span><span class="p">,</span>
+    <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">)</span>
 
 <span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_visium</span><span class="p">,</span> <span class="n">show_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
-        <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;kNN_network&#39;</span><span class="p">,</span>
-        <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">)</span>
+    <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;kNN_network&#39;</span><span class="p">,</span>
+    <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -470,25 +475,25 @@ spatCellPlot(gobject = mini_visium, spat_enr_names = &#39;PAGE&#39;,
 <p>Visualize top 4 genes per method.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>km_spatialgenes = binSpect(mini_visium)
 spatGenePlot(mini_visium, expression_values = &#39;scaled&#39;,
-        genes = km_spatialgenes[1:4]$genes,
-        point_shape = &#39;border&#39;, point_border_stroke = 0.1,
-        show_network = F, network_color = &#39;lightgrey&#39;, point_size = 2.5,
-        cow_n_col = 2)
+    genes = km_spatialgenes[1:4]$genes,
+    point_shape = &#39;border&#39;, point_border_stroke = 0.1,
+    show_network = F, network_color = &#39;lightgrey&#39;, point_size = 2.5,
+    cow_n_col = 2)
 
 rank_spatialgenes = binSpect(mini_visium, bin_method = &#39;rank&#39;)
 spatGenePlot(mini_visium, expression_values = &#39;scaled&#39;,
-        genes = rank_spatialgenes[1:4]$genes,
-        point_shape = &#39;border&#39;, point_border_stroke = 0.1,
-        show_network = F, network_color = &#39;lightgrey&#39;, point_size = 2.5,
-        cow_n_col = 2)
+    genes = rank_spatialgenes[1:4]$genes,
+    point_shape = &#39;border&#39;, point_border_stroke = 0.1,
+    show_network = F, network_color = &#39;lightgrey&#39;, point_size = 2.5,
+    cow_n_col = 2)
 
 
 silh_spatialgenes = silhouetteRank(gobject = mini_visium) # TODO: suppress print output
 spatGenePlot(mini_visium, expression_values = &#39;scaled&#39;,
-        genes = silh_spatialgenes[1:4]$genes,
-        point_shape = &#39;border&#39;, point_border_stroke = 0.1,
-        show_network = F, network_color = &#39;lightgrey&#39;, point_size = 2.5,
-        cow_n_col = 2)
+    genes = silh_spatialgenes[1:4]$genes,
+    point_shape = &#39;border&#39;, point_border_stroke = 0.1,
+    show_network = F, network_color = &#39;lightgrey&#39;, point_size = 2.5,
+    cow_n_col = 2)
 </pre></div>
 </div>
 </div>
@@ -500,8 +505,8 @@ spatGenePlot(mini_visium, expression_values = &#39;scaled&#39;,
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 1. calculate spatial correlation scores
 ext_spatial_genes = km_spatialgenes[1:100]$genes
 spat_cor_netw_DT = detectSpatialCorGenes(mini_visium,
-                                        method = &#39;network&#39;, spatial_network_name = &#39;Delaunay_network&#39;,
-                                        subset_genes = ext_spatial_genes)
+                    method = &#39;network&#39;, spatial_network_name = &#39;Delaunay_network&#39;,
+                    subset_genes = ext_spatial_genes)
 </pre></div>
 </div>
 </div>
@@ -514,16 +519,16 @@ heatmSpatialCorGenes(mini_visium, spatCorObject = spat_cor_netw_DT, use_clus_nam
 
 netw_ranks = rankSpatialCorGroups(mini_visium, spatCorObject = spat_cor_netw_DT, use_clus_name = &#39;spat_netw_clus&#39;)
 top_netw_spat_cluster = showSpatialCorGenes(spat_cor_netw_DT, use_clus_name = &#39;spat_netw_clus&#39;,
-                                    selected_clusters = 6, show_top_genes = 1)
+                    selected_clusters = 6, show_top_genes = 1)
 
 cluster_genes_DT = showSpatialCorGenes(spat_cor_netw_DT, use_clus_name = &#39;spat_netw_clus&#39;, show_top_genes = 1)
 cluster_genes = cluster_genes_DT$clus; names(cluster_genes) = cluster_genes_DT$gene_ID
 
 mini_visium = createMetagenes(mini_visium, gene_clusters = cluster_genes, name = &#39;cluster_metagene&#39;)
-        spatCellPlot(mini_visium,
-        spat_enr_names = &#39;cluster_metagene&#39;,
-        cell_annotation_values = netw_ranks$clusters,
-        point_size = 1.5, cow_n_col = 3)
+    spatCellPlot(mini_visium,
+    spat_enr_names = &#39;cluster_metagene&#39;,
+    cell_annotation_values = netw_ranks$clusters,
+    point_size = 1.5, cow_n_col = 3)
 </pre></div>
 </div>
 </div>
@@ -536,30 +541,30 @@ if(!file.exists(hmrf_folder)) dir.create(hmrf_folder, recursive = T)
 # perform hmrf
 my_spatial_genes = km_spatialgenes[1:100]$genes
 HMRF_spatial_genes = doHMRF(gobject = mini_visium,
-                        expression_values = &#39;scaled&#39;,
-                        spatial_genes = my_spatial_genes,
-                        spatial_network_name = &#39;Delaunay_network&#39;,
-                        k = 8,
-                        betas = c(28,2,2),
-                        output_folder = paste0(hmrf_folder, &#39;/&#39;, &#39;Spatial_genes_brain/SG_top100_k8_scaled&#39;))
+            expression_values = &#39;scaled&#39;,
+            spatial_genes = my_spatial_genes,
+            spatial_network_name = &#39;Delaunay_network&#39;,
+            k = 8,
+            betas = c(28,2,2),
+            output_folder = paste0(hmrf_folder, &#39;/&#39;, &#39;Spatial_genes_brain/SG_top100_k8_scaled&#39;))
 
 # check and select hmrf
 for(i in seq(28, 30, by = 2)) {
 viewHMRFresults2D(gobject = mini_visium,
-                HMRFoutput = HMRF_spatial_genes,
-                k = 8, betas_to_view = i,
-                point_size = 2)
+        HMRFoutput = HMRF_spatial_genes,
+        k = 8, betas_to_view = i,
+        point_size = 2)
 }
 
 mini_visium = addHMRF(gobject = mini_visium,
-                HMRFoutput = HMRF_spatial_genes,
-                k = 8, betas_to_add = c(28),
-                hmrf_name = &#39;HMRF&#39;)
+        HMRFoutput = HMRF_spatial_genes,
+        k = 8, betas_to_add = c(28),
+        hmrf_name = &#39;HMRF&#39;)
 
 giotto_colors = getDistinctColors(8)
 names(giotto_colors) = 1:8
 spatPlot(gobject = mini_visium, cell_color = &#39;HMRF_k8_b.28&#39;,
-        point_size = 3, coord_fix_ratio = 1, cell_color_code = giotto_colors)
+    point_size = 3, coord_fix_ratio = 1, cell_color_code = giotto_colors)
 </pre></div>
 </div>
 <div class="section" id="export-giotto-analyzer-to-viewer">
@@ -568,15 +573,15 @@ spatPlot(gobject = mini_visium, cell_color = &#39;HMRF_k8_b.28&#39;,
 
 <span class="c1"># select annotations, reductions and expression values to view in Giotto Viewer</span>
 <span class="n">exportGiottoViewer</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_visium</span><span class="p">,</span> <span class="n">output_directory</span> <span class="o">=</span> <span class="n">viewer_folder</span><span class="p">,</span>
-                <span class="n">factor_annotations</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
-                                  <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
-                                  <span class="s1">&#39;HMRF_k8_b.28&#39;</span><span class="p">),</span>
-                <span class="n">numeric_annotations</span> <span class="o">=</span> <span class="s1">&#39;total_expr&#39;</span><span class="p">,</span>
-                <span class="n">dim_reductions</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;umap&#39;</span><span class="p">),</span>
-                <span class="n">dim_reduction_names</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;umap&#39;</span><span class="p">),</span>
-                <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span>
-                <span class="n">expression_rounding</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
-                <span class="n">overwrite_dir</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span>
+        <span class="n">factor_annotations</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;HMRF_k8_b.28&#39;</span><span class="p">),</span>
+        <span class="n">numeric_annotations</span> <span class="o">=</span> <span class="s1">&#39;total_expr&#39;</span><span class="p">,</span>
+        <span class="n">dim_reductions</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;umap&#39;</span><span class="p">),</span>
+        <span class="n">dim_reduction_names</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;umap&#39;</span><span class="p">),</span>
+        <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span>
+        <span class="n">expression_rounding</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="n">overwrite_dir</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

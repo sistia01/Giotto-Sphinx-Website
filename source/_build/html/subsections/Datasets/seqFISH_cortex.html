@@ -16,7 +16,11 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx-toolbox-code.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/sphinx-toolbox.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_toolbox_installation.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
 
@@ -41,6 +45,7 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/sphinx_toolbox_installation.js"></script>
         <script src="../../_static/design-tabs.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -257,9 +262,9 @@ These offset values are known or estimates based on the original raw image:</p>
 <h3>2.1 Setting Giotto Global Instructions and Preparations<a class="headerlink" href="#setting-giotto-global-instructions-and-preparations" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. (optional) set Giotto instructions</span>
 <span class="n">instrs</span> <span class="o">=</span> <span class="n">createGiottoInstructions</span><span class="p">(</span><span class="n">save_plot</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
-                          <span class="n">show_plot</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span>
-                          <span class="n">save_dir</span> <span class="o">=</span> <span class="n">my_working_dir</span><span class="p">,</span>
-                          <span class="n">python_path</span> <span class="o">=</span> <span class="n">python_path</span><span class="p">)</span>
+              <span class="n">show_plot</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span>
+              <span class="n">save_dir</span> <span class="o">=</span> <span class="n">my_working_dir</span><span class="p">,</span>
+              <span class="n">python_path</span> <span class="o">=</span> <span class="n">python_path</span><span class="p">)</span>
 
 <span class="c1"># 2. create giotto object from provided paths ####</span>
 <span class="n">expr_path</span> <span class="o">=</span> <span class="n">paste0</span><span class="p">(</span><span class="n">my_working_dir</span><span class="p">,</span> <span class="s2">&quot;cortex_svz_expression.txt&quot;</span><span class="p">)</span>
@@ -278,17 +283,17 @@ These offset values are known or estimates based on the original raw image:</p>
 
 <span class="c1">## create file with offset information</span>
 <span class="n">my_offset_file</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">table</span><span class="p">::</span><span class="n">data</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">field</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
-                    <span class="n">x_offset</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1654.97</span><span class="p">,</span> <span class="mf">1750.75</span><span class="p">,</span> <span class="mf">1674.35</span><span class="p">,</span> <span class="mf">675.5</span><span class="p">,</span> <span class="mi">2048</span><span class="p">,</span> <span class="mi">675</span><span class="p">),</span>
-                    <span class="n">y_offset</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1438.02</span><span class="p">,</span> <span class="o">-</span><span class="mf">1438.02</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+            <span class="n">x_offset</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1654.97</span><span class="p">,</span> <span class="mf">1750.75</span><span class="p">,</span> <span class="mf">1674.35</span><span class="p">,</span> <span class="mf">675.5</span><span class="p">,</span> <span class="mi">2048</span><span class="p">,</span> <span class="mi">675</span><span class="p">),</span>
+            <span class="n">y_offset</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1438.02</span><span class="p">,</span> <span class="o">-</span><span class="mf">1438.02</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 
 <span class="c1">## create a stitch file</span>
 <span class="n">stitch_file</span> <span class="o">=</span> <span class="n">stitchFieldCoordinates</span><span class="p">(</span><span class="n">location_file</span> <span class="o">=</span> <span class="n">SS_loc_annot</span><span class="p">,</span>
-                             <span class="n">offset_file</span> <span class="o">=</span> <span class="n">my_offset_file</span><span class="p">,</span>
-                             <span class="n">cumulate_offset_x</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
-                             <span class="n">cumulate_offset_y</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
-                             <span class="n">field_col</span> <span class="o">=</span> <span class="s1">&#39;FOV&#39;</span><span class="p">,</span>
-                             <span class="n">reverse_final_x</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
-                             <span class="n">reverse_final_y</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span>
+                 <span class="n">offset_file</span> <span class="o">=</span> <span class="n">my_offset_file</span><span class="p">,</span>
+                 <span class="n">cumulate_offset_x</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+                 <span class="n">cumulate_offset_y</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
+                 <span class="n">field_col</span> <span class="o">=</span> <span class="s1">&#39;FOV&#39;</span><span class="p">,</span>
+                 <span class="n">reverse_final_x</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
+                 <span class="n">reverse_final_y</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span>
 <span class="n">stitch_file</span>    <span class="o">=</span> <span class="n">stitch_file</span><span class="p">[,</span><span class="o">.</span><span class="p">(</span><span class="n">ID</span><span class="p">,</span> <span class="n">X_final</span><span class="p">,</span> <span class="n">Y_final</span><span class="p">)]</span>
 <span class="n">my_offset_file</span> <span class="o">=</span> <span class="n">my_offset_file</span><span class="p">[,</span><span class="o">.</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">x_offset_final</span><span class="p">,</span> <span class="n">y_offset_final</span><span class="p">)]</span>
 </pre></div>
@@ -298,15 +303,15 @@ These offset values are known or estimates based on the original raw image:</p>
 <h3>2.2 Create Giotto Object and Process Data<a class="headerlink" href="#create-giotto-object-and-process-data" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>## create Giotto object
 SS_seqfish &lt;- createGiottoObject(raw_exprs = expr_path,
-                         spatial_locs = stitch_file,
-                         offset_file = my_offset_file,
-                         instructions = instrs)
+             spatial_locs = stitch_file,
+             offset_file = my_offset_file,
+             instructions = instrs)
 
 ## add additional annotation if wanted
 SS_seqfish = addCellMetadata(SS_seqfish,
-                     new_metadata = cortex_fields,
-                     by_column = T,
-                     column_cell_ID = &#39;ID&#39;)
+             new_metadata = cortex_fields,
+             by_column = T,
+             column_cell_ID = &#39;ID&#39;)
 
 ## subset data to the cortex field of views
 cell_metadata = pDataDT(SS_seqfish)
@@ -315,11 +320,11 @@ SS_seqfish = subsetGiotto(SS_seqfish, cell_ids = cortex_cell_ids)
 
 ## filter
 SS_seqfish &lt;- filterGiotto(gobject = SS_seqfish,
-                expression_threshold = 1,
-                gene_det_in_min_cells = 10,
-                min_det_genes_per_cell = 10,
-                expression_values = c(&#39;raw&#39;),
-                verbose = T)
+        expression_threshold = 1,
+        gene_det_in_min_cells = 10,
+        min_det_genes_per_cell = 10,
+        expression_values = c(&#39;raw&#39;),
+        verbose = T)
 
 ## normalize
 SS_seqfish &lt;- normalizeGiotto(gobject = SS_seqfish, scalefactor = 6000, verbose = T)
@@ -329,13 +334,13 @@ SS_seqfish &lt;- addStatistics(gobject = SS_seqfish)
 
 ## adjust expression matrix for technical or known variables
 SS_seqfish &lt;- adjustGiottoMatrix(gobject = SS_seqfish, expression_values = c(&#39;normalized&#39;),
-                      batch_columns = NULL, covariate_columns = c(&#39;nr_genes&#39;, &#39;total_expr&#39;),
-                      return_gobject = TRUE,
-                      update_slot = c(&#39;custom&#39;))
+              batch_columns = NULL, covariate_columns = c(&#39;nr_genes&#39;, &#39;total_expr&#39;),
+              return_gobject = TRUE,
+              update_slot = c(&#39;custom&#39;))
 
 ## visualize
 spatPlot(gobject = SS_seqfish,
-        save_param = list(save_name = &#39;2_a_spatplot&#39;))
+    save_param = list(save_name = &#39;2_a_spatplot&#39;))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/2_a_spatplot.png"><img alt="2_a_spatplot.png" src="../../_images/2_a_spatplot.png" style="width: 400px;" /></a>
@@ -345,7 +350,7 @@ spatPlot(gobject = SS_seqfish,
 <h2>3. Dimension Reduction<a class="headerlink" href="#dimension-reduction" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## highly variable genes (HVG)</span>
 <span class="n">SS_seqfish</span> <span class="o">&lt;-</span> <span class="n">calculateHVG</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;cov_loess&#39;</span><span class="p">,</span> <span class="n">difference_in_cov</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
-                   <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_a_HVGplot&#39;</span><span class="p">,</span> <span class="n">base_height</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">base_width</span> <span class="o">=</span> <span class="mi">5</span><span class="p">))</span>
+           <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_a_HVGplot&#39;</span><span class="p">,</span> <span class="n">base_height</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">base_width</span> <span class="o">=</span> <span class="mi">5</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/3_a_HVGplot2.png"><img alt="3_a_HVGplot.png" src="../../_images/3_a_HVGplot2.png" style="width: 400px;" /></a>
@@ -360,20 +365,20 @@ screePlot(SS_seqfish, save_param = list(save_name = &#39;3_b_screeplot&#39;))
 </div>
 <a class="reference internal image-reference" href="../../_images/3_b_screeplot2.png"><img alt="3_b_screeplot.png" src="../../_images/3_b_screeplot2.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotPCA</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span>
-                <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_c_PCA_reduction&#39;</span><span class="p">))</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_c_PCA_reduction&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/3_c_PCA_reduction2.png"><img alt="3_c_PCA_reduction.png" src="../../_images/3_c_PCA_reduction2.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## run UMAP and tSNE on PCA space (default)</span>
 <span class="n">SS_seqfish</span> <span class="o">&lt;-</span> <span class="n">runUMAP</span><span class="p">(</span><span class="n">SS_seqfish</span><span class="p">,</span> <span class="n">dimensions_to_use</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">15</span><span class="p">,</span> <span class="n">n_threads</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">plotUMAP</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_d_UMAP_reduction&#39;</span><span class="p">))</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_d_UMAP_reduction&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/3_d_UMAP_reduction2.png"><img alt="3_d_UMAP_reduction.png" src="../../_images/3_d_UMAP_reduction2.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SS_seqfish</span> <span class="o">&lt;-</span> <span class="n">runtSNE</span><span class="p">(</span><span class="n">SS_seqfish</span><span class="p">,</span> <span class="n">dimensions_to_use</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">plotTSNE</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_e_tSNE_reduction&#39;</span><span class="p">))</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_e_tSNE_reduction&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/3_e_tSNE_reduction3.png"><img alt="3_e_tSNE_reduction.png" src="../../_images/3_e_tSNE_reduction3.png" style="width: 400px;" /></a>
@@ -385,44 +390,44 @@ screePlot(SS_seqfish, save_param = list(save_name = &#39;3_b_screeplot&#39;))
 <span class="c1">## Leiden clustering</span>
 <span class="n">SS_seqfish</span> <span class="o">&lt;-</span> <span class="n">doLeidenCluster</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span> <span class="n">resolution</span> <span class="o">=</span> <span class="mf">0.4</span><span class="p">,</span> <span class="n">n_iterations</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="n">plotUMAP</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span>
-        <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span> <span class="n">show_NN_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_a_UMAP_leiden&#39;</span><span class="p">))</span>
+    <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span> <span class="n">show_NN_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_a_UMAP_leiden&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/4_a_UMAP_leiden3.png"><img alt="4_a_UMAP_leiden.png" src="../../_images/4_a_UMAP_leiden3.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## Leiden subclustering for specified clusters</span>
 <span class="n">SS_seqfish</span> <span class="o">=</span> <span class="n">doLeidenSubCluster</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span> <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
-                     <span class="n">resolution</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">k_neighbors</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-                     <span class="n">hvg_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;cov_loess&#39;</span><span class="p">,</span> <span class="n">difference_in_cov</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">),</span>
-                     <span class="n">pca_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;normalized&#39;</span><span class="p">,</span> <span class="n">scale_unit</span> <span class="o">=</span> <span class="n">F</span><span class="p">),</span>
-                     <span class="n">nn_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dimensions_to_use</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">),</span>
-                     <span class="n">selected_clusters</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
-                     <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;sub_leiden_clus_select&#39;</span><span class="p">)</span>
+             <span class="n">resolution</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">k_neighbors</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+             <span class="n">hvg_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;cov_loess&#39;</span><span class="p">,</span> <span class="n">difference_in_cov</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">),</span>
+             <span class="n">pca_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;normalized&#39;</span><span class="p">,</span> <span class="n">scale_unit</span> <span class="o">=</span> <span class="n">F</span><span class="p">),</span>
+             <span class="n">nn_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dimensions_to_use</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">),</span>
+             <span class="n">selected_clusters</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
+             <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;sub_leiden_clus_select&#39;</span><span class="p">)</span>
 
 <span class="c1">## set colors for clusters</span>
 <span class="n">subleiden_order</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">5.1</span><span class="p">,</span> <span class="mf">5.2</span><span class="p">,</span>  <span class="mf">2.1</span><span class="p">,</span> <span class="mf">3.1</span><span class="p">,</span>
-             <span class="mf">4.1</span><span class="p">,</span> <span class="mf">6.2</span><span class="p">,</span> <span class="mf">6.1</span><span class="p">,</span>
-             <span class="mf">7.1</span><span class="p">,</span>  <span class="mf">7.2</span><span class="p">,</span> <span class="mf">9.1</span><span class="p">,</span> <span class="mf">8.1</span><span class="p">)</span>
+         <span class="mf">4.1</span><span class="p">,</span> <span class="mf">6.2</span><span class="p">,</span> <span class="mf">6.1</span><span class="p">,</span>
+         <span class="mf">7.1</span><span class="p">,</span>  <span class="mf">7.2</span><span class="p">,</span> <span class="mf">9.1</span><span class="p">,</span> <span class="mf">8.1</span><span class="p">)</span>
 <span class="n">subleiden_colors</span> <span class="o">=</span> <span class="n">Giotto</span><span class="p">:::</span><span class="n">getDistinctColors</span><span class="p">(</span><span class="n">length</span><span class="p">(</span><span class="n">subleiden_order</span><span class="p">))</span>
 <span class="n">names</span><span class="p">(</span><span class="n">subleiden_colors</span><span class="p">)</span> <span class="o">=</span> <span class="n">subleiden_order</span>
 
 <span class="n">plotUMAP</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span>
-        <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;sub_leiden_clus_select&#39;</span><span class="p">,</span> <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">subleiden_colors</span><span class="p">,</span>
-        <span class="n">show_NN_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span> <span class="n">show_center_label</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
-        <span class="n">legend_text</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">legend_symbol_size</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_b_UMAP_leiden_subcluster&#39;</span><span class="p">))</span>
+    <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;sub_leiden_clus_select&#39;</span><span class="p">,</span> <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">subleiden_colors</span><span class="p">,</span>
+    <span class="n">show_NN_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span> <span class="n">show_center_label</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
+    <span class="n">legend_text</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">legend_symbol_size</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_b_UMAP_leiden_subcluster&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/4_b_UMAP_leiden_subcluster.png"><img alt="4_b_UMAP_leiden_subcluster.png" src="../../_images/4_b_UMAP_leiden_subcluster.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## show cluster relationships</span>
 <span class="n">showClusterHeatmap</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span> <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;sub_leiden_clus_select&#39;</span><span class="p">,</span>
-           <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_c_heatmap&#39;</span><span class="p">,</span> <span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;cm&#39;</span><span class="p">),</span>
-           <span class="n">row_names_gp</span> <span class="o">=</span> <span class="n">grid</span><span class="p">::</span><span class="n">gpar</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">9</span><span class="p">),</span> <span class="n">column_names_gp</span> <span class="o">=</span> <span class="n">grid</span><span class="p">::</span><span class="n">gpar</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">9</span><span class="p">))</span>
+       <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_c_heatmap&#39;</span><span class="p">,</span> <span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;cm&#39;</span><span class="p">),</span>
+       <span class="n">row_names_gp</span> <span class="o">=</span> <span class="n">grid</span><span class="p">::</span><span class="n">gpar</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">9</span><span class="p">),</span> <span class="n">column_names_gp</span> <span class="o">=</span> <span class="n">grid</span><span class="p">::</span><span class="n">gpar</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">9</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/4_c_heatmap.png"><img alt="4_c_heatmap.png" src="../../_images/4_c_heatmap.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">showClusterDendrogram</span><span class="p">(</span><span class="n">SS_seqfish</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">rotate</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;sub_leiden_clus_select&#39;</span><span class="p">,</span>
-              <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_d_dendro&#39;</span><span class="p">,</span> <span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;cm&#39;</span><span class="p">))</span>
+          <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_d_dendro&#39;</span><span class="p">,</span> <span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;cm&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/4_d_dendro.png"><img alt="4_d_dendro.png" src="../../_images/4_d_dendro.png" style="width: 400px;" /></a>
@@ -431,9 +436,9 @@ screePlot(SS_seqfish, save_param = list(save_name = &#39;3_b_screeplot&#39;))
 <h2>5. Visualize the Spatial and Expression Space<a class="headerlink" href="#visualize-the-spatial-and-expression-space" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># expression and spatial</span>
 <span class="n">spatDimPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;sub_leiden_clus_select&#39;</span><span class="p">,</span>
-        <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">subleiden_colors</span><span class="p">,</span>
-        <span class="n">dim_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">spat_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;5_a_covis_leiden&#39;</span><span class="p">))</span>
+    <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">subleiden_colors</span><span class="p">,</span>
+    <span class="n">dim_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">spat_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;5_a_covis_leiden&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/5_a_covis_leiden3.png"><img alt="5_a_covis_leiden.png" src="../../_images/5_a_covis_leiden3.png" style="width: 400px;" /></a>
@@ -442,9 +447,9 @@ screePlot(SS_seqfish, save_param = list(save_name = &#39;3_b_screeplot&#39;))
 <span class="n">group_colors</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;purple&#39;</span><span class="p">);</span> <span class="n">names</span><span class="p">(</span><span class="n">group_colors</span><span class="p">)</span> <span class="o">=</span> <span class="n">groups_of_interest</span>
 
 <span class="n">spatDimPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;sub_leiden_clus_select&#39;</span><span class="p">,</span>
-        <span class="n">dim_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">spat_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="n">select_cell_groups</span> <span class="o">=</span> <span class="n">groups_of_interest</span><span class="p">,</span> <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">group_colors</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;5_b_covis_leiden_selected&#39;</span><span class="p">))</span>
+    <span class="n">dim_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">spat_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="n">select_cell_groups</span> <span class="o">=</span> <span class="n">groups_of_interest</span><span class="p">,</span> <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">group_colors</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;5_b_covis_leiden_selected&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/5_b_covis_leiden_selected.png"><img alt="5_b_covis_leiden_selected.png" src="../../_images/5_b_covis_leiden_selected.png" style="width: 400px;" /></a>
@@ -453,28 +458,28 @@ screePlot(SS_seqfish, save_param = list(save_name = &#39;3_b_screeplot&#39;))
 <h2>6. Cell-Type Marker Gene Expression<a class="headerlink" href="#cell-type-marker-gene-expression" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>## gini ##
 gini_markers_subclusters = findMarkers_one_vs_all(gobject = SS_seqfish,
-                                          method = &#39;gini&#39;,
-                                          expression_values = &#39;normalized&#39;,
-                                          cluster_column = &#39;sub_leiden_clus_select&#39;,
-                                          min_genes = 20,
-                                          min_expr_gini_score = 0.5,
-                                          min_det_gini_score = 0.5)
+                      method = &#39;gini&#39;,
+                      expression_values = &#39;normalized&#39;,
+                      cluster_column = &#39;sub_leiden_clus_select&#39;,
+                      min_genes = 20,
+                      min_expr_gini_score = 0.5,
+                      min_det_gini_score = 0.5)
 topgenes_gini = gini_markers_subclusters[, head(.SD, 2), by = &#39;cluster&#39;]
 
 # violinplot
 violinPlot(SS_seqfish, genes = unique(topgenes_gini$genes), cluster_column = &#39;sub_leiden_clus_select&#39;,
-        strip_text = 8, strip_position = &#39;right&#39;, cluster_custom_order = unique(topgenes_gini$cluster),
-        save_param = c(save_name = &#39;6_a_violinplot_gini&#39;, base_width = 5, base_height = 10))
+    strip_text = 8, strip_position = &#39;right&#39;, cluster_custom_order = unique(topgenes_gini$cluster),
+    save_param = c(save_name = &#39;6_a_violinplot_gini&#39;, base_width = 5, base_height = 10))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/6_a_violinplot_gini2.png"><img alt="6_a_violinplot_gini.png" src="../../_images/6_a_violinplot_gini2.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># cluster heatmap
 topgenes_gini2 = gini_markers_subclusters[, head(.SD, 6), by = &#39;cluster&#39;]
 plotMetaDataHeatmap(SS_seqfish, selected_genes = unique(topgenes_gini2$genes),
-                custom_gene_order = unique(topgenes_gini2$genes),
-                custom_cluster_order = unique(topgenes_gini2$cluster),
-                metadata_cols = c(&#39;sub_leiden_clus_select&#39;), x_text_size = 10, y_text_size = 10,
-                save_param = c(save_name = &#39;6_b_metaheatmap_gini&#39;))
+        custom_gene_order = unique(topgenes_gini2$genes),
+        custom_cluster_order = unique(topgenes_gini2$cluster),
+        metadata_cols = c(&#39;sub_leiden_clus_select&#39;), x_text_size = 10, y_text_size = 10,
+        save_param = c(save_name = &#39;6_b_metaheatmap_gini&#39;))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/6_b_metaheatmap_gini2.png"><img alt="6_b_metaheatmap_gini.png" src="../../_images/6_b_metaheatmap_gini2.png" style="width: 400px;" /></a>
@@ -484,24 +489,24 @@ plotMetaDataHeatmap(SS_seqfish, selected_genes = unique(topgenes_gini2$genes),
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>## general cell types
 # create vector with names
 clusters_cell_types_cortex = c(&#39;L6 eNeuron&#39;, &#39;L4 eNeuron&#39;, &#39;L2/3 eNeuron&#39;, &#39;L5 eNeuron&#39;,
-                       &#39;Lhx6 iNeuron&#39;, &#39;Adarb2 iNeuron&#39;,
-                       &#39;endothelial&#39;, &#39;mural&#39;,
-                       &#39;OPC&#39;,&#39;Olig&#39;,
-                       &#39;astrocytes&#39;, &#39;microglia&#39;)
+               &#39;Lhx6 iNeuron&#39;, &#39;Adarb2 iNeuron&#39;,
+               &#39;endothelial&#39;, &#39;mural&#39;,
+               &#39;OPC&#39;,&#39;Olig&#39;,
+               &#39;astrocytes&#39;, &#39;microglia&#39;)
 
 names(clusters_cell_types_cortex) = c(1.1, 2.1, 3.1, 4.1,
-                              5.1, 5.2,
-                              6.1, 6.2,
-                              7.1, 7.2,
-                              8.1, 9.1)
+                  5.1, 5.2,
+                  6.1, 6.2,
+                  7.1, 7.2,
+                  8.1, 9.1)
 
 SS_seqfish = annotateGiotto(gobject = SS_seqfish, annotation_vector = clusters_cell_types_cortex,
-                 cluster_column = &#39;sub_leiden_clus_select&#39;, name = &#39;cell_types&#39;)
+         cluster_column = &#39;sub_leiden_clus_select&#39;, name = &#39;cell_types&#39;)
 
 # cell type order and colors
 cell_type_order = c(&#39;L6 eNeuron&#39;, &#39;L5 eNeuron&#39;, &#39;L4 eNeuron&#39;, &#39;L2/3 eNeuron&#39;,
-            &#39;astrocytes&#39;, &#39;Olig&#39;, &#39;OPC&#39;,&#39;Adarb2 iNeuron&#39;, &#39;Lhx6 iNeuron&#39;,
-            &#39;endothelial&#39;, &#39;mural&#39;, &#39;microglia&#39;)
+        &#39;astrocytes&#39;, &#39;Olig&#39;, &#39;OPC&#39;,&#39;Adarb2 iNeuron&#39;, &#39;Lhx6 iNeuron&#39;,
+        &#39;endothelial&#39;, &#39;mural&#39;, &#39;microglia&#39;)
 
 cell_type_colors = subleiden_colors
 names(cell_type_colors) = clusters_cell_types_cortex[names(subleiden_colors)]
@@ -510,17 +515,17 @@ cell_type_colors = cell_type_colors[cell_type_order]
 
 ## violinplot
 violinPlot(gobject = SS_seqfish, genes = unique(topgenes_gini$genes),
-        strip_text = 7, strip_position = &#39;right&#39;,
-        cluster_custom_order = cell_type_order,
-        cluster_column = &#39;cell_types&#39;, color_violin = &#39;cluster&#39;,
-        save_param = c(save_name = &#39;7_a_violinplot&#39;, base_width = 5))
+    strip_text = 7, strip_position = &#39;right&#39;,
+    cluster_custom_order = cell_type_order,
+    cluster_column = &#39;cell_types&#39;, color_violin = &#39;cluster&#39;,
+    save_param = c(save_name = &#39;7_a_violinplot&#39;, base_width = 5))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/7_a_violinplot.png"><img alt="7_a_violinplot.png" src="../../_images/7_a_violinplot.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## co-visualization</span>
 <span class="n">spatDimPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
-        <span class="n">dim_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">spat_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">dim_show_cluster_center</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span> <span class="n">dim_show_center_label</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;7_b_covisualization&#39;</span><span class="p">))</span>
+    <span class="n">dim_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">spat_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">dim_show_cluster_center</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span> <span class="n">dim_show_center_label</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;7_b_covisualization&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/7_b_covisualization.png"><img alt="7_b_covisualization.png" src="../../_images/7_b_covisualization.png" style="width: 400px;" /></a>
@@ -530,26 +535,26 @@ gini_markers_subclusters[, cell_types := factor(cell_types, cell_type_order)]
 data.table::setorder(gini_markers_subclusters, cell_types)
 
 plotHeatmap(gobject = SS_seqfish,
-        genes = gini_markers_subclusters[, head(.SD, 3), by = &#39;cell_types&#39;]$genes,
-        gene_order = &#39;custom&#39;,
-        gene_custom_order = unique(gini_markers_subclusters[, head(.SD, 3), by = &#39;cluster&#39;]$genes),
-        cluster_column = &#39;cell_types&#39;, cluster_order = &#39;custom&#39;,
-        cluster_custom_order = unique(gini_markers_subclusters[, head(.SD, 3), by = &#39;cell_types&#39;]$cell_types),
-        legend_nrows = 2,
-        save_param = c(save_name = &#39;7_c_heatmap&#39;))
+    genes = gini_markers_subclusters[, head(.SD, 3), by = &#39;cell_types&#39;]$genes,
+    gene_order = &#39;custom&#39;,
+    gene_custom_order = unique(gini_markers_subclusters[, head(.SD, 3), by = &#39;cluster&#39;]$genes),
+    cluster_column = &#39;cell_types&#39;, cluster_order = &#39;custom&#39;,
+    cluster_custom_order = unique(gini_markers_subclusters[, head(.SD, 3), by = &#39;cell_types&#39;]$cell_types),
+    legend_nrows = 2,
+    save_param = c(save_name = &#39;7_c_heatmap&#39;))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/7_c_heatmap.png"><img alt="7_c_heatmap.png" src="../../_images/7_c_heatmap.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>plotHeatmap(gobject = SS_seqfish,
-        cluster_color_code = cell_type_colors,
-        genes = gini_markers_subclusters[, head(.SD, 6), by = &#39;cell_types&#39;]$genes,
-        gene_order = &#39;custom&#39;,
-        gene_label_selection = gini_markers_subclusters[, head(.SD, 2), by = &#39;cluster&#39;]$genes,
-        gene_custom_order = unique(gini_markers_subclusters[, head(.SD, 6), by = &#39;cluster&#39;]$genes),
-        cluster_column = &#39;cell_types&#39;, cluster_order = &#39;custom&#39;,
-        cluster_custom_order = unique(gini_markers_subclusters[, head(.SD, 3), by = &#39;cell_types&#39;]$cell_types),
-        legend_nrows = 2,
-        save_param = c(save_name = &#39;7_d_heatmap_selected&#39;))
+    cluster_color_code = cell_type_colors,
+    genes = gini_markers_subclusters[, head(.SD, 6), by = &#39;cell_types&#39;]$genes,
+    gene_order = &#39;custom&#39;,
+    gene_label_selection = gini_markers_subclusters[, head(.SD, 2), by = &#39;cluster&#39;]$genes,
+    gene_custom_order = unique(gini_markers_subclusters[, head(.SD, 6), by = &#39;cluster&#39;]$genes),
+    cluster_column = &#39;cell_types&#39;, cluster_order = &#39;custom&#39;,
+    cluster_custom_order = unique(gini_markers_subclusters[, head(.SD, 3), by = &#39;cell_types&#39;]$cell_types),
+    legend_nrows = 2,
+    save_param = c(save_name = &#39;7_d_heatmap_selected&#39;))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/7_d_heatmap_selected.png"><img alt="7_d_heatmap_selected.png" src="../../_images/7_d_heatmap_selected.png" style="width: 400px;" /></a>
@@ -558,12 +563,12 @@ plotHeatmap(gobject = SS_seqfish,
 <h2>8. Spatial Grid<a class="headerlink" href="#spatial-grid" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## spatial grid</span>
 <span class="n">SS_seqfish</span> <span class="o">&lt;-</span> <span class="n">createSpatialGrid</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span>
-                     <span class="n">sdimx_stepsize</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span>
-                     <span class="n">sdimy_stepsize</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span>
-                     <span class="n">minimum_padding</span> <span class="o">=</span> <span class="mi">50</span><span class="p">)</span>
+             <span class="n">sdimx_stepsize</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span>
+             <span class="n">sdimy_stepsize</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span>
+             <span class="n">minimum_padding</span> <span class="o">=</span> <span class="mi">50</span><span class="p">)</span>
 
 <span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span> <span class="n">show_grid</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;8_a_grid&#39;</span><span class="p">))</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;8_a_grid&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/8_a_grid.png"><img alt="8_a_grid.png" src="../../_images/8_a_grid.png" style="width: 400px;" /></a>
@@ -578,7 +583,7 @@ SS_seqfish = createSpatialNetwork(gobject = SS_seqfish, minimum_k = 2, maximum_d
 SS_seqfish &lt;- createSpatialNetwork(gobject = SS_seqfish, method = &#39;kNN&#39;, k = 5, name = &#39;spatial_network&#39;)
 SS_seqfish &lt;- createSpatialNetwork(gobject = SS_seqfish, method = &#39;kNN&#39;, k = 10, name = &#39;large_network&#39;)
 SS_seqfish &lt;- createSpatialNetwork(gobject = SS_seqfish, method = &#39;kNN&#39;, k = 100,
-                        maximum_distance_knn = 200, minimum_k = 2, name = &#39;distance_network&#39;)
+            maximum_distance_knn = 200, minimum_k = 2, name = &#39;distance_network&#39;)
 
 ## visualize different spatial networks on first field (~ layer 1)
 cell_metadata = pDataDT(SS_seqfish)
@@ -586,30 +591,30 @@ field1_ids = cell_metadata[FOV == 0]$cell_ID
 subSS_seqfish = subsetGiotto(SS_seqfish, cell_ids = field1_ids)
 
 spatPlot(gobject = subSS_seqfish, show_network = T,
-        network_color = &#39;blue&#39;, spatial_network_name = &#39;Delaunay_network&#39;,
-        point_size = 2.5, cell_color = &#39;cell_types&#39;,
-        save_param = c(save_name = &#39;9_a_spatial_network_delaunay&#39;, base_height = 6))
+    network_color = &#39;blue&#39;, spatial_network_name = &#39;Delaunay_network&#39;,
+    point_size = 2.5, cell_color = &#39;cell_types&#39;,
+    save_param = c(save_name = &#39;9_a_spatial_network_delaunay&#39;, base_height = 6))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/9_a_spatial_network_delaunay.png"><img alt="9_a_spatial_network_delaunay.png" src="../../_images/9_a_spatial_network_delaunay.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">subSS_seqfish</span><span class="p">,</span> <span class="n">show_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
-        <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;spatial_network&#39;</span><span class="p">,</span>
-        <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;9_b_spatial_network_k3&#39;</span><span class="p">,</span> <span class="n">base_height</span> <span class="o">=</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;spatial_network&#39;</span><span class="p">,</span>
+    <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;9_b_spatial_network_k3&#39;</span><span class="p">,</span> <span class="n">base_height</span> <span class="o">=</span> <span class="mi">6</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/9_b_spatial_network_k3.png"><img alt="9_b_spatial_network_k3.png" src="../../_images/9_b_spatial_network_k3.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">subSS_seqfish</span><span class="p">,</span> <span class="n">show_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
-        <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;large_network&#39;</span><span class="p">,</span>
-        <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;9_c_spatial_network_k10&#39;</span><span class="p">,</span> <span class="n">base_height</span> <span class="o">=</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;large_network&#39;</span><span class="p">,</span>
+    <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;9_c_spatial_network_k10&#39;</span><span class="p">,</span> <span class="n">base_height</span> <span class="o">=</span> <span class="mi">6</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/9_c_spatial_network_k10.png"><img alt="9_c_spatial_network_k10.png" src="../../_images/9_c_spatial_network_k10.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">subSS_seqfish</span><span class="p">,</span> <span class="n">show_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
-        <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;distance_network&#39;</span><span class="p">,</span>
-        <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;9_d_spatial_network_dist&#39;</span><span class="p">,</span> <span class="n">base_height</span> <span class="o">=</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;distance_network&#39;</span><span class="p">,</span>
+    <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;9_d_spatial_network_dist&#39;</span><span class="p">,</span> <span class="n">base_height</span> <span class="o">=</span> <span class="mi">6</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/9_d_spatial_network_dist.png"><img alt="9_d_spatial_network_dist.png" src="../../_images/9_d_spatial_network_dist.png" style="width: 400px;" /></a>
@@ -622,10 +627,10 @@ spatPlot(gobject = subSS_seqfish, show_network = T,
 km_spatialgenes = binSpect(SS_seqfish)
 
 spatGenePlot(SS_seqfish, expression_values = &#39;scaled&#39;, genes = km_spatialgenes[1:4]$genes,
-        point_shape = &#39;border&#39;, point_border_stroke = 0.1,
-        show_network = F, network_color = &#39;lightgrey&#39;, point_size = 2.5,
-        cow_n_col = 2,
-        save_param = list(save_name = &#39;10_a_spatialgenes_km&#39;))
+    point_shape = &#39;border&#39;, point_border_stroke = 0.1,
+    show_network = F, network_color = &#39;lightgrey&#39;, point_size = 2.5,
+    cow_n_col = 2,
+    save_param = list(save_name = &#39;10_a_spatialgenes_km&#39;))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/10_a_spatialgenes_km.png"><img alt="10_a_spatialgenes_km.png" src="../../_images/10_a_spatialgenes_km.png" style="width: 400px;" /></a>
@@ -638,27 +643,27 @@ ext_spatial_genes = km_spatialgenes[1:500]$genes
 # 1. calculate gene spatial correlation and single-cell correlation
 # create spatial correlation object
 spat_cor_netw_DT = detectSpatialCorGenes(SS_seqfish,
-                                 method = &#39;network&#39;, spatial_network_name = &#39;Delaunay_network&#39;,
-                                 subset_genes = ext_spatial_genes)
+                 method = &#39;network&#39;, spatial_network_name = &#39;Delaunay_network&#39;,
+                 subset_genes = ext_spatial_genes)
 
 
 # 2. cluster correlated genes &amp; visualize
 spat_cor_netw_DT = clusterSpatialCorGenes(spat_cor_netw_DT, name = &#39;spat_netw_clus&#39;, k = 8)
 
 heatmSpatialCorGenes(SS_seqfish, spatCorObject = spat_cor_netw_DT, use_clus_name = &#39;spat_netw_clus&#39;,
-             save_param = c(save_name = &#39;10_b_spatialcoexpression_heatmap&#39;,
-                            base_height = 6, base_width = 8, units = &#39;cm&#39;),
-             heatmap_legend_param = list(title = NULL))
+         save_param = c(save_name = &#39;10_b_spatialcoexpression_heatmap&#39;,
+                base_height = 6, base_width = 8, units = &#39;cm&#39;),
+         heatmap_legend_param = list(title = NULL))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/10_b_spatialcoexpression_heatmap.png"><img alt="10_b_spatialcoexpression_heatmap.png" src="../../_images/10_b_spatialcoexpression_heatmap.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3. rank spatial correlated clusters and show genes for selected clusters</span>
 <span class="n">netw_ranks</span> <span class="o">=</span> <span class="n">rankSpatialCorGroups</span><span class="p">(</span><span class="n">SS_seqfish</span><span class="p">,</span> <span class="n">spatCorObject</span> <span class="o">=</span> <span class="n">spat_cor_netw_DT</span><span class="p">,</span> <span class="n">use_clus_name</span> <span class="o">=</span> <span class="s1">&#39;spat_netw_clus&#39;</span><span class="p">,</span>
-                          <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;10_c_spatialcoexpression_rank&#39;</span><span class="p">,</span>
-                                         <span class="n">base_height</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">base_width</span> <span class="o">=</span> <span class="mi">5</span><span class="p">))</span>
+              <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;10_c_spatialcoexpression_rank&#39;</span><span class="p">,</span>
+                     <span class="n">base_height</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">base_width</span> <span class="o">=</span> <span class="mi">5</span><span class="p">))</span>
 
 <span class="n">top_netw_spat_cluster</span> <span class="o">=</span> <span class="n">showSpatialCorGenes</span><span class="p">(</span><span class="n">spat_cor_netw_DT</span><span class="p">,</span> <span class="n">use_clus_name</span> <span class="o">=</span> <span class="s1">&#39;spat_netw_clus&#39;</span><span class="p">,</span>
-                                    <span class="n">selected_clusters</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span> <span class="n">show_top_genes</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+                    <span class="n">selected_clusters</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span> <span class="n">show_top_genes</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/10_c_spatialcoexpression_rank.png"><img alt="10_c_spatialcoexpression_rank.png" src="../../_images/10_c_spatialcoexpression_rank.png" style="width: 400px;" /></a>
@@ -669,11 +674,11 @@ cluster_genes = cluster_genes_DT$clus; names(cluster_genes) = cluster_genes_DT$g
 SS_seqfish = createMetagenes(SS_seqfish, gene_clusters = cluster_genes, name = &#39;cluster_metagene&#39;)
 
 spatCellPlot(SS_seqfish,
-        spat_enr_names = &#39;cluster_metagene&#39;,
-        cell_annotation_values = netw_ranks$clusters,
-        point_size = 1.5, cow_n_col = 3,
-        save_param = c(save_name = &#39;10_d_spatialcoexpression_metagenes&#39;,
-                        base_width = 11, base_height = 6))
+    spat_enr_names = &#39;cluster_metagene&#39;,
+    cell_annotation_values = netw_ranks$clusters,
+    point_size = 1.5, cow_n_col = 3,
+    save_param = c(save_name = &#39;10_d_spatialcoexpression_metagenes&#39;,
+            base_width = 11, base_height = 6))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/10_d_spatialcoexpression_metagenes.png"><img alt="10_d_spatialcoexpression_metagenes.png" src="../../_images/10_d_spatialcoexpression_metagenes.png" style="width: 400px;" /></a>
@@ -688,33 +693,33 @@ my_spatial_genes = km_spatialgenes[1:100]$genes
 
 # do HMRF with different betas
 HMRF_spatial_genes = doHMRF(gobject = SS_seqfish,
-                    expression_values = &#39;scaled&#39;,
-                    spatial_genes = my_spatial_genes,
-                    spatial_network_name = &#39;Delaunay_network&#39;,
-                    k = 9,
-                    betas = c(28,2,3),
-                    output_folder = paste0(hmrf_folder, &#39;/&#39;, &#39;Spatial_genes/SG_top100_k9_scaled&#39;))
+            expression_values = &#39;scaled&#39;,
+            spatial_genes = my_spatial_genes,
+            spatial_network_name = &#39;Delaunay_network&#39;,
+            k = 9,
+            betas = c(28,2,3),
+            output_folder = paste0(hmrf_folder, &#39;/&#39;, &#39;Spatial_genes/SG_top100_k9_scaled&#39;))
 
 
 ## view results of HMRF
 for(i in seq(28, 32, by = 2)) {
-        viewHMRFresults2D(gobject = SS_seqfish,
-                HMRFoutput = HMRF_spatial_genes,
-                k = 9, betas_to_view = i,
-                point_size = 2)
+    viewHMRFresults2D(gobject = SS_seqfish,
+        HMRFoutput = HMRF_spatial_genes,
+        k = 9, betas_to_view = i,
+        point_size = 2)
 }
 
 
 ## add HMRF of interest to giotto object
 SS_seqfish = addHMRF(gobject = SS_seqfish,
-                HMRFoutput = HMRF_spatial_genes,
-                k = 9, betas_to_add = c(28),
-                hmrf_name = &#39;HMRF_2&#39;)
+        HMRFoutput = HMRF_spatial_genes,
+        k = 9, betas_to_add = c(28),
+        hmrf_name = &#39;HMRF_2&#39;)
 
 
 ## visualize
 spatPlot(gobject = SS_seqfish, cell_color = &#39;HMRF_2_k9_b.28&#39;, point_size = 3, coord_fix_ratio = 1,
-        save_param = c(save_name = &#39;11_HMRF_2_k9_b.28&#39;, base_height = 3, base_width = 9, save_format = &#39;pdf&#39;))
+    save_param = c(save_name = &#39;11_HMRF_2_k9_b.28&#39;, base_height = 3, base_width = 9, save_format = &#39;pdf&#39;))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/11_HMRF_2_k9_b.28.pdf"><img alt="11_HMRF_2_k9_b.28.pdf" src="../../_images/11_HMRF_2_k9_b.28.pdf" style="width: 400px;" /></a>
@@ -722,42 +727,42 @@ spatPlot(gobject = SS_seqfish, cell_color = &#39;HMRF_2_k9_b.28&#39;, point_size
 <div class="section" id="cell-neighborhood-cell-type-and-cell-type-interactions">
 <h2>12. Cell Neighborhood: Cell-Type and Cell-Type Interactions<a class="headerlink" href="#cell-neighborhood-cell-type-and-cell-type-interactions" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cell_proximities</span> <span class="o">=</span> <span class="n">cellProximityEnrichment</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span>
-                                   <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
-                                   <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;Delaunay_network&#39;</span><span class="p">,</span>
-                                   <span class="n">adjust_method</span> <span class="o">=</span> <span class="s1">&#39;fdr&#39;</span><span class="p">,</span>
-                                   <span class="n">number_of_simulations</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">)</span>
+                   <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
+                   <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;Delaunay_network&#39;</span><span class="p">,</span>
+                   <span class="n">adjust_method</span> <span class="o">=</span> <span class="s1">&#39;fdr&#39;</span><span class="p">,</span>
+                   <span class="n">number_of_simulations</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">)</span>
 
 <span class="c1">## barplot</span>
 <span class="n">cellProximityBarplot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span>
-                <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span> <span class="n">min_orig_ints</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">min_sim_ints</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-                <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_a_barplot_cell_cell_enrichment&#39;</span><span class="p">))</span>
+        <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span> <span class="n">min_orig_ints</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">min_sim_ints</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_a_barplot_cell_cell_enrichment&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/12_a_barplot_cell_cell_enrichment.png"><img alt="12_a_barplot_cell_cell_enrichment.png" src="../../_images/12_a_barplot_cell_cell_enrichment.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## heatmap</span>
 <span class="n">cellProximityHeatmap</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span> <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span> <span class="n">order_cell_types</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
-                <span class="n">color_breaks</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">),</span> <span class="n">color_names</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">),</span>
-                <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_b_heatmap_cell_cell_enrichment&#39;</span><span class="p">,</span> <span class="n">unit</span> <span class="o">=</span> <span class="s1">&#39;in&#39;</span><span class="p">))</span>
+        <span class="n">color_breaks</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">),</span> <span class="n">color_names</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">),</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_b_heatmap_cell_cell_enrichment&#39;</span><span class="p">,</span> <span class="n">unit</span> <span class="o">=</span> <span class="s1">&#39;in&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/12_b_heatmap_cell_cell_enrichment.png"><img alt="12_b_heatmap_cell_cell_enrichment.png" src="../../_images/12_b_heatmap_cell_cell_enrichment.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## network</span>
 <span class="n">cellProximityNetwork</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span> <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span> <span class="n">remove_self_edges</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
-                <span class="n">only_show_enrichment_edges</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
-                <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_c_network_cell_cell_enrichment&#39;</span><span class="p">))</span>
+        <span class="n">only_show_enrichment_edges</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_c_network_cell_cell_enrichment&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/12_c_network_cell_cell_enrichment.png"><img alt="12_c_network_cell_cell_enrichment.png" src="../../_images/12_c_network_cell_cell_enrichment.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## network with self-edges</span>
 <span class="n">cellProximityNetwork</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span> <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span>
-             <span class="n">remove_self_edges</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span> <span class="n">self_loop_strength</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span>
-             <span class="n">only_show_enrichment_edges</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
-             <span class="n">rescale_edge_weights</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
-             <span class="n">node_size</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
-             <span class="n">edge_weight_range_depletion</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
-             <span class="n">edge_weight_range_enrichment</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span>
-             <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_d_network_cell_cell_enrichment_self&#39;</span><span class="p">,</span>
-                            <span class="n">base_height</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">base_width</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">save_format</span> <span class="o">=</span> <span class="s1">&#39;pdf&#39;</span><span class="p">))</span>
+         <span class="n">remove_self_edges</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span> <span class="n">self_loop_strength</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span>
+         <span class="n">only_show_enrichment_edges</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
+         <span class="n">rescale_edge_weights</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+         <span class="n">node_size</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+         <span class="n">edge_weight_range_depletion</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+         <span class="n">edge_weight_range_enrichment</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span>
+         <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_d_network_cell_cell_enrichment_self&#39;</span><span class="p">,</span>
+                <span class="n">base_height</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">base_width</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">save_format</span> <span class="o">=</span> <span class="s1">&#39;pdf&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/12_d_network_cell_cell_enrichment_self.pdf"><img alt="12_d_network_cell_cell_enrichment_self.pdf" src="../../_images/12_d_network_cell_cell_enrichment_self.pdf" style="width: 400px;" /></a>
@@ -765,25 +770,25 @@ spatPlot(gobject = SS_seqfish, cell_color = &#39;HMRF_2_k9_b.28&#39;, point_size
 <span class="c1"># Option 1</span>
 <span class="n">spec_interaction</span> <span class="o">=</span> <span class="s2">&quot;astrocytes--Olig&quot;</span>
 <span class="n">cellProximitySpatPlot2D</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span>
-                <span class="n">interaction_name</span> <span class="o">=</span> <span class="n">spec_interaction</span><span class="p">,</span>
-                <span class="n">show_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
-                <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
-                <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
-                <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">astrocytes</span> <span class="o">=</span> <span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="n">Olig</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">),</span>
-                <span class="n">point_size_select</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">point_size_other</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_e_cell_cell_enrichment_selected&#39;</span><span class="p">))</span>
+        <span class="n">interaction_name</span> <span class="o">=</span> <span class="n">spec_interaction</span><span class="p">,</span>
+        <span class="n">show_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+        <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
+        <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
+        <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">astrocytes</span> <span class="o">=</span> <span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="n">Olig</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">),</span>
+        <span class="n">point_size_select</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">point_size_other</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_e_cell_cell_enrichment_selected&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/12_e_cell_cell_enrichment_selected.png"><img alt="12_e_cell_cell_enrichment_selected.png" src="../../_images/12_e_cell_cell_enrichment_selected.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Option 2: create additional metadata</span>
 <span class="n">SS_seqfish</span> <span class="o">=</span> <span class="n">addCellIntMetadata</span><span class="p">(</span><span class="n">SS_seqfish</span><span class="p">,</span>
-                     <span class="n">spatial_network</span> <span class="o">=</span> <span class="s1">&#39;spatial_network&#39;</span><span class="p">,</span>
-                     <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
-                     <span class="n">cell_interaction</span> <span class="o">=</span> <span class="n">spec_interaction</span><span class="p">,</span>
-                     <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;astro_olig_ints&#39;</span><span class="p">)</span>
+             <span class="n">spatial_network</span> <span class="o">=</span> <span class="s1">&#39;spatial_network&#39;</span><span class="p">,</span>
+             <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
+             <span class="n">cell_interaction</span> <span class="o">=</span> <span class="n">spec_interaction</span><span class="p">,</span>
+             <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;astro_olig_ints&#39;</span><span class="p">)</span>
 <span class="n">spatPlot</span><span class="p">(</span><span class="n">SS_seqfish</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;astro_olig_ints&#39;</span><span class="p">,</span>
-        <span class="n">select_cell_groups</span> <span class="o">=</span>  <span class="n">c</span><span class="p">(</span><span class="s1">&#39;other_astrocytes&#39;</span><span class="p">,</span> <span class="s1">&#39;other_Olig&#39;</span><span class="p">,</span> <span class="s1">&#39;select_astrocytes&#39;</span><span class="p">,</span> <span class="s1">&#39;select_Olig&#39;</span><span class="p">),</span>
-        <span class="n">legend_symbol_size</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_f_cell_cell_enrichment_sel_vs_not&#39;</span><span class="p">))</span>
+    <span class="n">select_cell_groups</span> <span class="o">=</span>  <span class="n">c</span><span class="p">(</span><span class="s1">&#39;other_astrocytes&#39;</span><span class="p">,</span> <span class="s1">&#39;other_Olig&#39;</span><span class="p">,</span> <span class="s1">&#39;select_astrocytes&#39;</span><span class="p">,</span> <span class="s1">&#39;select_Olig&#39;</span><span class="p">),</span>
+    <span class="n">legend_symbol_size</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_f_cell_cell_enrichment_sel_vs_not&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/12_f_cell_cell_enrichment_sel_vs_not.png"><img alt="12_f_cell_cell_enrichment_sel_vs_not.png" src="../../_images/12_f_cell_cell_enrichment_sel_vs_not.png" style="width: 400px;" /></a>
@@ -800,18 +805,18 @@ high_expressed_genes = gene_metadata[mean_expr_det &gt; 1.31]$gene_ID
 
 ## identify genes that are associated with proximity to other cell types
 ICGscoresHighGenes =  findICG(gobject = SS_seqfish,
-                      selected_genes = high_expressed_genes,
-                      spatial_network_name = &#39;Delaunay_network&#39;,
-                      cluster_column = &#39;cell_types&#39;,
-                      diff_test = &#39;permutation&#39;,
-                      adjust_method = &#39;fdr&#39;,
-                      nr_permutations = 2000,
-                      do_parallel = T, cores = 4)
+              selected_genes = high_expressed_genes,
+              spatial_network_name = &#39;Delaunay_network&#39;,
+              cluster_column = &#39;cell_types&#39;,
+              diff_test = &#39;permutation&#39;,
+              adjust_method = &#39;fdr&#39;,
+              nr_permutations = 2000,
+              do_parallel = T, cores = 4)
 
 ## visualize all genes
 plotCellProximityGenes(SS_seqfish, cpgObject = ICGscoresHighGenes,
-               method = &#39;dotplot&#39;,
-               save_param = c(save_name = &#39;13_a_CPG_dotplot&#39;, base_width = 5, base_height = 5))
+           method = &#39;dotplot&#39;,
+           save_param = c(save_name = &#39;13_a_CPG_dotplot&#39;, base_width = 5, base_height = 5))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/13_a_CPG_dotplot.png"><img alt="13_a_CPG_dotplot.png" src="../../_images/13_a_CPG_dotplot.png" style="width: 400px;" /></a>
@@ -824,11 +829,11 @@ plotCellProximityGenes(SS_seqfish, cpgObject = ICGscoresHighGenes,
 <span class="n">names</span><span class="p">(</span><span class="n">ICG_genes</span><span class="p">)</span> <span class="o">=</span> <span class="n">ICG_genes_types</span>
 
 <span class="n">plotICG</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span>
-                <span class="n">cpgObject</span> <span class="o">=</span> <span class="n">ICGscoresHighGenes</span><span class="p">,</span>
-                <span class="n">source_type</span> <span class="o">=</span> <span class="s1">&#39;endothelial&#39;</span><span class="p">,</span>
-                <span class="n">source_markers</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;Pltp&#39;</span><span class="p">,</span> <span class="s1">&#39;Cldn5&#39;</span><span class="p">,</span> <span class="s1">&#39;Apcdd1&#39;</span><span class="p">),</span>
-                <span class="n">ICG_genes</span> <span class="o">=</span> <span class="n">ICG_genes</span><span class="p">,</span>
-                <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;13_b_ICG_barplot&#39;</span><span class="p">))</span>
+        <span class="n">cpgObject</span> <span class="o">=</span> <span class="n">ICGscoresHighGenes</span><span class="p">,</span>
+        <span class="n">source_type</span> <span class="o">=</span> <span class="s1">&#39;endothelial&#39;</span><span class="p">,</span>
+        <span class="n">source_markers</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;Pltp&#39;</span><span class="p">,</span> <span class="s1">&#39;Cldn5&#39;</span><span class="p">,</span> <span class="s1">&#39;Apcdd1&#39;</span><span class="p">),</span>
+        <span class="n">ICG_genes</span> <span class="o">=</span> <span class="n">ICG_genes</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;13_b_ICG_barplot&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/13_b_ICG_barplot.png"><img alt="13_b_ICG_barplot.png" src="../../_images/13_b_ICG_barplot.png" style="width: 400px;" /></a>
@@ -848,23 +853,23 @@ select_receptors = LR_data_det$mouseReceptor
 
 ## get statistical significance of gene pair expression changes based on expression ##
 expr_only_scores = exprCellCellcom(gobject = SS_seqfish,
-                           cluster_column = &#39;cell_types&#39;,
-                           random_iter = 1000,
-                           gene_set_1 = select_ligands,
-                           gene_set_2 = select_receptors,
-                           verbose = FALSE)
+               cluster_column = &#39;cell_types&#39;,
+               random_iter = 1000,
+               gene_set_1 = select_ligands,
+               gene_set_2 = select_receptors,
+               verbose = FALSE)
 
 ## get statistical significance of gene pair expression changes upon cell-cell interaction
 spatial_all_scores = spatCellCellcom(SS_seqfish,
-                             spatial_network_name = &#39;spatial_network&#39;,
-                             cluster_column = &#39;cell_types&#39;,
-                             random_iter = 1000,
-                             gene_set_1 = select_ligands,
-                             gene_set_2 = select_receptors,
-                             adjust_method = &#39;fdr&#39;,
-                             do_parallel = T,
-                             cores = 4,
-                             verbose = &#39;a little&#39;)
+                 spatial_network_name = &#39;spatial_network&#39;,
+                 cluster_column = &#39;cell_types&#39;,
+                 random_iter = 1000,
+                 gene_set_1 = select_ligands,
+                 gene_set_2 = select_receptors,
+                 adjust_method = &#39;fdr&#39;,
+                 do_parallel = T,
+                 cores = 4,
+                 verbose = &#39;a little&#39;)
 
 
 ## select top LR ##
@@ -875,39 +880,39 @@ top_LR_ints = unique(selected_spat[order(-abs(PI))]$LR_comb)[1:33]
 top_LR_cell_ints = unique(selected_spat[order(-abs(PI))]$LR_cell_comb)[1:33]
 
 plotCCcomDotplot(gobject = SS_seqfish,
-         comScores = spatial_all_scores,
-         selected_LR = top_LR_ints,
-         selected_cell_LR = top_LR_cell_ints,
-         cluster_on = &#39;PI&#39;,
-         save_param = c(save_name = &#39;14_a_communication_dotplot&#39;, save_format = &#39;pdf&#39;))
+     comScores = spatial_all_scores,
+     selected_LR = top_LR_ints,
+     selected_cell_LR = top_LR_cell_ints,
+     cluster_on = &#39;PI&#39;,
+     save_param = c(save_name = &#39;14_a_communication_dotplot&#39;, save_format = &#39;pdf&#39;))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/14_a_communication_dotplot.png"><img alt="14_a_communication_dotplot.png" src="../../_images/14_a_communication_dotplot.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## spatial vs rank ####</span>
 <span class="n">comb_comm</span> <span class="o">=</span> <span class="n">combCCcom</span><span class="p">(</span><span class="n">spatialCC</span> <span class="o">=</span> <span class="n">spatial_all_scores</span><span class="p">,</span>
-              <span class="n">exprCC</span> <span class="o">=</span> <span class="n">expr_only_scores</span><span class="p">)</span>
+          <span class="n">exprCC</span> <span class="o">=</span> <span class="n">expr_only_scores</span><span class="p">)</span>
 
 
 <span class="c1"># highest levels of ligand and receptor prediction</span>
 <span class="c1"># top differential activity levels for ligand receptor pairs</span>
 <span class="n">plotRankSpatvsExpr</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span>
-           <span class="n">comb_comm</span><span class="p">,</span>
-           <span class="n">expr_rnk_column</span> <span class="o">=</span> <span class="s1">&#39;LR_expr_rnk&#39;</span><span class="p">,</span>
-           <span class="n">spat_rnk_column</span> <span class="o">=</span> <span class="s1">&#39;LR_spat_rnk&#39;</span><span class="p">,</span>
-           <span class="n">midpoint</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-           <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;14_b_expr_vs_spatial_expression_rank&#39;</span><span class="p">,</span>
-                          <span class="n">base_height</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">base_width</span> <span class="o">=</span> <span class="mf">4.5</span><span class="p">,</span> <span class="n">save_format</span> <span class="o">=</span> <span class="s1">&#39;pdf&#39;</span><span class="p">))</span>
+       <span class="n">comb_comm</span><span class="p">,</span>
+       <span class="n">expr_rnk_column</span> <span class="o">=</span> <span class="s1">&#39;LR_expr_rnk&#39;</span><span class="p">,</span>
+       <span class="n">spat_rnk_column</span> <span class="o">=</span> <span class="s1">&#39;LR_spat_rnk&#39;</span><span class="p">,</span>
+       <span class="n">midpoint</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+       <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;14_b_expr_vs_spatial_expression_rank&#39;</span><span class="p">,</span>
+              <span class="n">base_height</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">base_width</span> <span class="o">=</span> <span class="mf">4.5</span><span class="p">,</span> <span class="n">save_format</span> <span class="o">=</span> <span class="s1">&#39;pdf&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/14_b_expr_vs_spatial_expression_rank.png"><img alt="14_b_expr_vs_spatial_expression_rank.png" src="../../_images/14_b_expr_vs_spatial_expression_rank.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># recovery</span>
 <span class="n">plotRecovery</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span>
-        <span class="n">comb_comm</span><span class="p">,</span>
-        <span class="n">expr_rnk_column</span> <span class="o">=</span> <span class="s1">&#39;LR_expr_rnk&#39;</span><span class="p">,</span>
-        <span class="n">spat_rnk_column</span> <span class="o">=</span> <span class="s1">&#39;LR_spat_rnk&#39;</span><span class="p">,</span>
-        <span class="n">ground_truth</span> <span class="o">=</span> <span class="s1">&#39;spatial&#39;</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;14_c_spatial_recovery_expression_rank&#39;</span><span class="p">,</span>
-                        <span class="n">base_height</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">base_width</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">save_format</span> <span class="o">=</span> <span class="s1">&#39;pdf&#39;</span><span class="p">))</span>
+    <span class="n">comb_comm</span><span class="p">,</span>
+    <span class="n">expr_rnk_column</span> <span class="o">=</span> <span class="s1">&#39;LR_expr_rnk&#39;</span><span class="p">,</span>
+    <span class="n">spat_rnk_column</span> <span class="o">=</span> <span class="s1">&#39;LR_spat_rnk&#39;</span><span class="p">,</span>
+    <span class="n">ground_truth</span> <span class="o">=</span> <span class="s1">&#39;spatial&#39;</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;14_c_spatial_recovery_expression_rank&#39;</span><span class="p">,</span>
+            <span class="n">base_height</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">base_width</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">save_format</span> <span class="o">=</span> <span class="s1">&#39;pdf&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/14_c_spatial_recovery_expression_rank.png"><img alt="14_c_spatial_recovery_expression_rank.png" src="../../_images/14_c_spatial_recovery_expression_rank.png" style="width: 400px;" /></a>
@@ -915,12 +920,12 @@ plotCCcomDotplot(gobject = SS_seqfish,
 
 <span class="c1"># top differential activity levels for ligand receptor pairs</span>
 <span class="n">plotRankSpatvsExpr</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span>
-           <span class="n">comb_comm</span><span class="p">,</span>
-           <span class="n">expr_rnk_column</span> <span class="o">=</span> <span class="s1">&#39;exprPI_rnk&#39;</span><span class="p">,</span>
-           <span class="n">spat_rnk_column</span> <span class="o">=</span> <span class="s1">&#39;spatPI_rnk&#39;</span><span class="p">,</span>
-           <span class="n">midpoint</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-           <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;14_d_expr_vs_spatial_activity&#39;</span><span class="p">,</span>
-                          <span class="n">base_height</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">base_width</span> <span class="o">=</span> <span class="mf">4.5</span><span class="p">,</span> <span class="n">save_format</span> <span class="o">=</span> <span class="s1">&#39;pdf&#39;</span><span class="p">))</span>
+       <span class="n">comb_comm</span><span class="p">,</span>
+       <span class="n">expr_rnk_column</span> <span class="o">=</span> <span class="s1">&#39;exprPI_rnk&#39;</span><span class="p">,</span>
+       <span class="n">spat_rnk_column</span> <span class="o">=</span> <span class="s1">&#39;spatPI_rnk&#39;</span><span class="p">,</span>
+       <span class="n">midpoint</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+       <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;14_d_expr_vs_spatial_activity&#39;</span><span class="p">,</span>
+              <span class="n">base_height</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">base_width</span> <span class="o">=</span> <span class="mf">4.5</span><span class="p">,</span> <span class="n">save_format</span> <span class="o">=</span> <span class="s1">&#39;pdf&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/14_d_expr_vs_spatial_activity.png"><img alt="14_d_expr_vs_spatial_activity.png" src="../../_images/14_d_expr_vs_spatial_activity.png" style="width: 400px;" /></a>
@@ -930,7 +935,7 @@ plotCCcomDotplot(gobject = SS_seqfish,
      <span class="n">spat_rnk_column</span> <span class="o">=</span> <span class="s1">&#39;spatPI_rnk&#39;</span><span class="p">,</span>
      <span class="n">ground_truth</span> <span class="o">=</span> <span class="s1">&#39;spatial&#39;</span><span class="p">,</span>
      <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;14_e_spatial_recovery_activity&#39;</span><span class="p">,</span>
-                    <span class="n">base_height</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">base_width</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">save_format</span> <span class="o">=</span> <span class="s1">&#39;pdf&#39;</span><span class="p">))</span>
+            <span class="n">base_height</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">base_width</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">save_format</span> <span class="o">=</span> <span class="s1">&#39;pdf&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/14_e_spatial_recovery_activity.png"><img alt="14_e_spatial_recovery_activity.png" src="../../_images/14_e_spatial_recovery_activity.png" style="width: 400px;" /></a>
@@ -942,16 +947,16 @@ plotCCcomDotplot(gobject = SS_seqfish,
 <span class="c1"># select annotations, reductions and expression values to view in Giotto Viewer</span>
 <span class="n">pDataDT</span><span class="p">(</span><span class="n">SS_seqfish</span><span class="p">)</span>
 <span class="n">exportGiottoViewer</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">SS_seqfish</span><span class="p">,</span> <span class="n">output_directory</span> <span class="o">=</span> <span class="n">viewer_folder</span><span class="p">,</span>
-           <span class="n">factor_annotations</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
-                                  <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
-                                  <span class="s1">&#39;sub_leiden_clus_select&#39;</span><span class="p">,</span>
-                                  <span class="s1">&#39;HMRF_2_k9_b.28&#39;</span><span class="p">),</span>
-           <span class="n">numeric_annotations</span> <span class="o">=</span> <span class="s1">&#39;total_expr&#39;</span><span class="p">,</span>
-           <span class="n">dim_reductions</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;umap&#39;</span><span class="p">),</span>
-           <span class="n">dim_reduction_names</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;umap&#39;</span><span class="p">),</span>
-           <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span>
-           <span class="n">expression_rounding</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
-           <span class="n">overwrite_dir</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">)</span>
+       <span class="n">factor_annotations</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;sub_leiden_clus_select&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;HMRF_2_k9_b.28&#39;</span><span class="p">),</span>
+       <span class="n">numeric_annotations</span> <span class="o">=</span> <span class="s1">&#39;total_expr&#39;</span><span class="p">,</span>
+       <span class="n">dim_reductions</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;umap&#39;</span><span class="p">),</span>
+       <span class="n">dim_reduction_names</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;umap&#39;</span><span class="p">),</span>
+       <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span>
+       <span class="n">expression_rounding</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+       <span class="n">overwrite_dir</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

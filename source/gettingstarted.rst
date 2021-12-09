@@ -39,6 +39,7 @@ Requirements
 
 .. _Windows, MacOS or Linux specific installation tools.: https://support.rstudio.com/hc/en-us/articles/200486498-Package-Development-Prerequisites
 
+.. _Installation_Section:
 
 *************
 Installation

@@ -9,7 +9,7 @@ Workflow Diagram
 ***************************
 
 .. image:: images/diagram_giotto_workflow.png
-   :width: 400
+   :width: 600
    :alt: Diagram of Giotto Workflow
    :align: center
 
@@ -19,11 +19,16 @@ Workflow Diagram
 Workflow Analyses
 ***************************
 
-*Optional:* Install a Giotto Environment
+********************************
+0. Install a Giotto Environment 
+********************************
+*Optional*
 
-To perform all potential steps and analysis in the Giotto spatial toolbox the user needs to have a number of python modules installed. To make this process as flexible and easy as possible **two different strategies can be used:**
+To perform all potential steps and analysis in the Giotto spatial toolbox the user needs to have a number of python modules installed. 
+To make this process as flexible and easy as possible **two different strategies can be used.** See the `Installation Section <Installation_Section>`_  for more detailed information on installing Giotto and all of the 
+required modules needed to use Giotto succesffully.
 
-The user can install all the necessary modules themself and then the path to their python or environment (e.g. Conda) can be provided as an instruction.
+The user can **install all the necessary modules** themself and then proivide the path to their python or environment (e.g. Conda) as an instruction.
 
 .. code-block::
 
@@ -34,7 +39,9 @@ The user can install all the necessary modules themself and then the path to the
                                       instructions = my_instructions)
 
 
-**Alternatively,** the user can just install a giotto python environment using r-miniconda. This was the method that was implemented in the reticulate package. In this case the environment will be automatically detected and no specific python path need to be provided. This is explained in more detail below
+**Alternatively,** the user can just **install a giotto python environment using r-miniconda.** 
+This was the method that was implemented in the reticulate package. In this case the environment will be *automatically* detected and *no specific python path need to be provided.* 
+The installation, re-installation and removal is explained in futher detail below.
 		
 
 .. code-block:: 

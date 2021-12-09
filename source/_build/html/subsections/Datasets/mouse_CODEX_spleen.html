@@ -16,7 +16,11 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx-toolbox-code.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/sphinx-toolbox.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_toolbox_installation.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
 
@@ -41,6 +45,7 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/sphinx_toolbox_installation.js"></script>
         <script src="../../_static/design-tabs.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -234,7 +239,7 @@
 <span class="c1"># set python path to NULL if you want to automatically install (only the 1st time) and use the giotto miniconda environment</span>
 <span class="n">python_path</span> <span class="o">=</span> <span class="n">NULL</span>
 <span class="k">if</span><span class="p">(</span><span class="ow">is</span><span class="o">.</span><span class="n">null</span><span class="p">(</span><span class="n">python_path</span><span class="p">))</span> <span class="p">{</span>
-        <span class="n">installGiottoEnvironment</span><span class="p">()</span>
+    <span class="n">installGiottoEnvironment</span><span class="p">()</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -259,9 +264,9 @@
 <div class="section" id="optional-set-giotto-instructions">
 <h3>1.1 <em>Optional: Set Giotto Instructions</em><a class="headerlink" href="#optional-set-giotto-instructions" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">instrs</span> <span class="o">=</span> <span class="n">createGiottoInstructions</span><span class="p">(</span><span class="n">show_plot</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span>
-                          <span class="n">save_plot</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
-                          <span class="n">save_dir</span> <span class="o">=</span> <span class="n">results_folder</span><span class="p">,</span>
-                          <span class="n">python_path</span> <span class="o">=</span> <span class="n">python_path</span><span class="p">)</span>
+              <span class="n">save_plot</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
+              <span class="n">save_dir</span> <span class="o">=</span> <span class="n">results_folder</span><span class="p">,</span>
+              <span class="n">python_path</span> <span class="o">=</span> <span class="n">python_path</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -297,9 +302,9 @@ codex_locations = stitch_file[,.(Xcoord, Ycoord)]
 
 # create Giotto object
 codex_test &lt;- createGiottoObject(raw_exprs = codex_expression,
-                         spatial_locs = codex_locations,
-                         instructions = instrs,
-                         cell_metadata = codex_metadata)
+             spatial_locs = codex_locations,
+             instructions = instrs,
+             cell_metadata = codex_metadata)
 
 # subset Giotto object
 cell_meta = pDataDT(codex_test)
@@ -308,38 +313,38 @@ codex_test = subsetGiotto(codex_test, cell_ids = cell_IDs_to_keep)
 
 ## filter
 codex_test &lt;- filterGiotto(gobject = codex_test,
-                   expression_threshold = 1,
-                   gene_det_in_min_cells = 10,
-                   min_det_genes_per_cell = 2,
-                   expression_values = c(&#39;raw&#39;),
-                   verbose = T)
+           expression_threshold = 1,
+           gene_det_in_min_cells = 10,
+           min_det_genes_per_cell = 2,
+           expression_values = c(&#39;raw&#39;),
+           verbose = T)
 
 codex_test &lt;- normalizeGiotto(gobject = codex_test, scalefactor = 6000, verbose = T,
-                      log_norm = FALSE,library_size_norm = FALSE,
-                      scale_genes = FALSE, scale_cells = TRUE)
+              log_norm = FALSE,library_size_norm = FALSE,
+              scale_genes = FALSE, scale_cells = TRUE)
 
 ## add gene &amp; cell statistics
 codex_test &lt;- addStatistics(gobject = codex_test,expression_values = &quot;normalized&quot;)
 
 ## adjust expression matrix for technical or known variables
 codex_test &lt;- adjustGiottoMatrix(gobject = codex_test,
-                         expression_values = c(&#39;normalized&#39;),
-                         batch_columns = NULL,
-                         covariate_columns = NULL,
-                         return_gobject = TRUE,
-                         update_slot = c(&#39;custom&#39;))
+             expression_values = c(&#39;normalized&#39;),
+             batch_columns = NULL,
+             covariate_columns = NULL,
+             return_gobject = TRUE,
+             update_slot = c(&#39;custom&#39;))
 
 ## visualize
 spatPlot(gobject = codex_test,point_size = 0.1,
-        coord_fix_ratio = NULL,point_shape = &#39;no_border&#39;,
-        save_param = list(save_name = &#39;2_a_spatPlot&#39;))
+    coord_fix_ratio = NULL,point_shape = &#39;no_border&#39;,
+    save_param = list(save_name = &#39;2_a_spatPlot&#39;))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/2_a_spatPlot1.png"><img alt="2_a_spatPlot.png" src="../../_images/2_a_spatPlot1.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">codex_test</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span>
-        <span class="n">coord_fix_ratio</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;sample_Xtile_Ytile&#39;</span><span class="p">,</span>
-        <span class="n">legend_symbol_size</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span><span class="n">legend_text</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;2_b_spatPlot&#39;</span><span class="p">))</span>
+    <span class="n">coord_fix_ratio</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;sample_Xtile_Ytile&#39;</span><span class="p">,</span>
+    <span class="n">legend_symbol_size</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span><span class="n">legend_text</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;2_b_spatPlot&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/2_b_spatPlot.png"><img alt="2_b_spatPlot.png" src="../../_images/2_b_spatPlot.png" style="width: 400px;" /></a>
@@ -351,19 +356,19 @@ spatPlot(gobject = codex_test,point_size = 0.1,
 <span class="c1"># PCA</span>
 <span class="n">codex_test</span> <span class="o">&lt;-</span> <span class="n">runPCA</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">codex_test</span><span class="p">,</span> <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;normalized&#39;</span><span class="p">,</span> <span class="n">scale_unit</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s2">&quot;factominer&quot;</span><span class="p">)</span>
 <span class="n">signPCA</span><span class="p">(</span><span class="n">codex_test</span><span class="p">,</span> <span class="n">scale_unit</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">scree_ylim</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
-                <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_a_spatPlot&#39;</span><span class="p">))</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_a_spatPlot&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/3_a_spatPlot.png"><img alt="3_a_spatPlot.png" src="../../_images/3_a_spatPlot.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotPCA</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">codex_test</span><span class="p">,</span> <span class="n">point_shape</span> <span class="o">=</span> <span class="s1">&#39;no_border&#39;</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span>
-                <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_b_PCA&#39;</span><span class="p">))</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_b_PCA&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/3_b_PCA1.png"><img alt="3_b_PCA.png" src="../../_images/3_b_PCA1.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># UMAP</span>
 <span class="n">codex_test</span> <span class="o">&lt;-</span> <span class="n">runUMAP</span><span class="p">(</span><span class="n">codex_test</span><span class="p">,</span> <span class="n">dimensions_to_use</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span> <span class="n">n_components</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">n_threads</span> <span class="o">=</span> <span class="mi">12</span><span class="p">)</span>
 <span class="n">plotUMAP</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">codex_test</span><span class="p">,</span> <span class="n">point_shape</span> <span class="o">=</span> <span class="s1">&#39;no_border&#39;</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_c_UMAP&#39;</span><span class="p">))</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_c_UMAP&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/3_c_UMAP1.png"><img alt="3_c_UMAP.png" src="../../_images/3_c_UMAP1.png" style="width: 400px;" /></a>
@@ -381,15 +386,15 @@ leiden_colors = Giotto:::getDistinctColors(length(unique(codex_metadata$leiden))
 names(leiden_colors) = unique(codex_metadata$leiden)
 
 plotUMAP(gobject = codex_test,
-        cell_color = &#39;leiden&#39;, point_shape = &#39;no_border&#39;, point_size = 0.2, cell_color_code = leiden_colors,
-        save_param = list(save_name = &#39;4_a_UMAP&#39;))
+    cell_color = &#39;leiden&#39;, point_shape = &#39;no_border&#39;, point_size = 0.2, cell_color_code = leiden_colors,
+    save_param = list(save_name = &#39;4_a_UMAP&#39;))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/4_a_UMAP2.png"><img alt="4_a_UMAP.png" src="../../_images/4_a_UMAP2.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">codex_test</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden&#39;</span><span class="p">,</span> <span class="n">point_shape</span> <span class="o">=</span> <span class="s1">&#39;no_border&#39;</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span>
-        <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">leiden_colors</span><span class="p">,</span> <span class="n">coord_fix_ratio</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="n">label_size</span> <span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-        <span class="n">legend_text</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span><span class="n">legend_symbol_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_b_spatplot&#39;</span><span class="p">))</span>
+    <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">leiden_colors</span><span class="p">,</span> <span class="n">coord_fix_ratio</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="n">label_size</span> <span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">legend_text</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span><span class="n">legend_symbol_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_b_spatplot&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/4_b_spatplot.png"><img alt="4_b_spatplot.png" src="../../_images/4_b_spatplot.png" style="width: 400px;" /></a>
@@ -409,13 +414,13 @@ plotUMAP(gobject = codex_test,
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># resolution 0.5</span>
 <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden&#39;</span>
 <span class="n">markers_scran</span> <span class="o">=</span> <span class="n">findMarkers_one_vs_all</span><span class="p">(</span><span class="n">gobject</span><span class="o">=</span><span class="n">codex_test</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;scran&quot;</span><span class="p">,</span>
-                               <span class="n">expression_values</span><span class="o">=</span><span class="s2">&quot;norm&quot;</span><span class="p">,</span> <span class="n">cluster_column</span><span class="o">=</span><span class="n">cluster_column</span><span class="p">,</span> <span class="n">min_genes</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+                   <span class="n">expression_values</span><span class="o">=</span><span class="s2">&quot;norm&quot;</span><span class="p">,</span> <span class="n">cluster_column</span><span class="o">=</span><span class="n">cluster_column</span><span class="p">,</span> <span class="n">min_genes</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">markergenes_scran</span> <span class="o">=</span> <span class="n">unique</span><span class="p">(</span><span class="n">markers_scran</span><span class="p">[,</span> <span class="n">head</span><span class="p">(</span><span class="o">.</span><span class="n">SD</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">by</span><span class="o">=</span><span class="s2">&quot;cluster&quot;</span><span class="p">][[</span><span class="s2">&quot;genes&quot;</span><span class="p">]])</span>
 
 <span class="n">plotMetaDataHeatmap</span><span class="p">(</span><span class="n">codex_test</span><span class="p">,</span> <span class="n">expression_values</span> <span class="o">=</span> <span class="s2">&quot;norm&quot;</span><span class="p">,</span> <span class="n">metadata_cols</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">cluster_column</span><span class="p">),</span>
-            <span class="n">selected_genes</span> <span class="o">=</span> <span class="n">markergenes_scran</span><span class="p">,</span>
-            <span class="n">y_text_size</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span> <span class="n">show_values</span> <span class="o">=</span> <span class="s1">&#39;zscores_rescaled&#39;</span><span class="p">,</span>
-            <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;6_a_metaheatmap&#39;</span><span class="p">))</span>
+        <span class="n">selected_genes</span> <span class="o">=</span> <span class="n">markergenes_scran</span><span class="p">,</span>
+        <span class="n">y_text_size</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span> <span class="n">show_values</span> <span class="o">=</span> <span class="s1">&#39;zscores_rescaled&#39;</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;6_a_metaheatmap&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/6_a_metaheatmap1.png"><img alt="6_a_metaheatmap.png" src="../../_images/6_a_metaheatmap1.png" style="width: 400px;" /></a>
@@ -428,19 +433,19 @@ violinPlot(codex_test, genes = unique(topgenes_scran)[1:8], cluster_column = clu
 <a class="reference internal image-reference" href="../../_images/6_b_violinplot.png"><img alt="6_b_violinplot.png" src="../../_images/6_b_violinplot.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># gini</span>
 <span class="n">markers_gini</span> <span class="o">=</span> <span class="n">findMarkers_one_vs_all</span><span class="p">(</span><span class="n">gobject</span><span class="o">=</span><span class="n">codex_test</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;gini&quot;</span><span class="p">,</span> <span class="n">expression_values</span><span class="o">=</span><span class="s2">&quot;norm&quot;</span><span class="p">,</span>
-                              <span class="n">cluster_column</span><span class="o">=</span><span class="n">cluster_column</span><span class="p">,</span> <span class="n">min_genes</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+                  <span class="n">cluster_column</span><span class="o">=</span><span class="n">cluster_column</span><span class="p">,</span> <span class="n">min_genes</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">markergenes_gini</span> <span class="o">=</span> <span class="n">unique</span><span class="p">(</span><span class="n">markers_gini</span><span class="p">[,</span> <span class="n">head</span><span class="p">(</span><span class="o">.</span><span class="n">SD</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">by</span><span class="o">=</span><span class="s2">&quot;cluster&quot;</span><span class="p">][[</span><span class="s2">&quot;genes&quot;</span><span class="p">]])</span>
 <span class="n">plotMetaDataHeatmap</span><span class="p">(</span><span class="n">codex_test</span><span class="p">,</span> <span class="n">expression_values</span> <span class="o">=</span> <span class="s2">&quot;norm&quot;</span><span class="p">,</span>
-            <span class="n">metadata_cols</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">cluster_column</span><span class="p">),</span> <span class="n">selected_genes</span> <span class="o">=</span> <span class="n">markergenes_gini</span><span class="p">,</span>
-            <span class="n">show_values</span> <span class="o">=</span> <span class="s1">&#39;zscores_rescaled&#39;</span><span class="p">,</span>
-            <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;6_c_metaheatmap&#39;</span><span class="p">))</span>
+        <span class="n">metadata_cols</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">cluster_column</span><span class="p">),</span> <span class="n">selected_genes</span> <span class="o">=</span> <span class="n">markergenes_gini</span><span class="p">,</span>
+        <span class="n">show_values</span> <span class="o">=</span> <span class="s1">&#39;zscores_rescaled&#39;</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;6_c_metaheatmap&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/6_c_metaheatmap.png"><img alt="6_c_metaheatmap.png" src="../../_images/6_c_metaheatmap.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>topgenes_gini = markers_gini[, head(.SD, 1), by = &#39;cluster&#39;]$genes
 violinPlot(codex_test, genes = unique(topgenes_gini), cluster_column = cluster_column,
-        strip_text = 8, strip_position = &#39;right&#39;,
-        save_param = list(save_name = &#39;6_d_violinplot&#39;))
+    strip_text = 8, strip_position = &#39;right&#39;,
+    save_param = list(save_name = &#39;6_d_violinplot&#39;))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/6_d_violinplot.png"><img alt="6_d_violinplot.png" src="../../_images/6_d_violinplot.png" style="width: 400px;" /></a>
@@ -448,19 +453,19 @@ violinPlot(codex_test, genes = unique(topgenes_gini), cluster_column = cluster_c
 <div class="section" id="cell-type-annotation">
 <h2>7. Cell-Type Annotation<a class="headerlink" href="#cell-type-annotation" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clusters_cell_types</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;erythroblasts-F4/80(+) mphs&#39;</span><span class="p">,</span><span class="s1">&#39;B cells&#39;</span><span class="p">,</span><span class="s1">&#39;CD8(+) T cells&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;CD4(+) T cells&#39;</span><span class="p">,</span> <span class="s1">&#39;B cells&#39;</span><span class="p">,</span><span class="s1">&#39;CD11c(+)MHCII(+) cells&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;CD4(+) T cells&#39;</span><span class="p">,</span><span class="s1">&#39;Ter119(+)&#39;</span><span class="p">,</span> <span class="s1">&#39;marginal zone mphs&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;CD31(+)ERTR7(+)&#39;</span><span class="p">,</span> <span class="s1">&#39;FDCs&#39;</span><span class="p">,</span> <span class="s1">&#39;B220(+) DN T cells&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;CD3(+) other markers&#39;</span><span class="p">,</span><span class="s1">&#39;NK cells&#39;</span><span class="p">,</span><span class="s1">&#39;granulocytes&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;plasma cells&#39;</span><span class="p">,</span><span class="s1">&#39;ambiguous&#39;</span><span class="p">,</span><span class="s1">&#39;CD44(+)CD1632(+)Ly6C(+) cells&#39;</span><span class="p">)</span>
+        <span class="s1">&#39;CD4(+) T cells&#39;</span><span class="p">,</span> <span class="s1">&#39;B cells&#39;</span><span class="p">,</span><span class="s1">&#39;CD11c(+)MHCII(+) cells&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;CD4(+) T cells&#39;</span><span class="p">,</span><span class="s1">&#39;Ter119(+)&#39;</span><span class="p">,</span> <span class="s1">&#39;marginal zone mphs&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;CD31(+)ERTR7(+)&#39;</span><span class="p">,</span> <span class="s1">&#39;FDCs&#39;</span><span class="p">,</span> <span class="s1">&#39;B220(+) DN T cells&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;CD3(+) other markers&#39;</span><span class="p">,</span><span class="s1">&#39;NK cells&#39;</span><span class="p">,</span><span class="s1">&#39;granulocytes&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;plasma cells&#39;</span><span class="p">,</span><span class="s1">&#39;ambiguous&#39;</span><span class="p">,</span><span class="s1">&#39;CD44(+)CD1632(+)Ly6C(+) cells&#39;</span><span class="p">)</span>
 
 <span class="n">names</span><span class="p">(</span><span class="n">clusters_cell_types</span><span class="p">)</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">18</span><span class="p">)</span>
 <span class="n">codex_test</span> <span class="o">=</span> <span class="n">annotateGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">codex_test</span><span class="p">,</span> <span class="n">annotation_vector</span> <span class="o">=</span> <span class="n">clusters_cell_types</span><span class="p">,</span>
-                    <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden&#39;</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">)</span>
+            <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden&#39;</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">)</span>
 
 <span class="n">plotMetaDataHeatmap</span><span class="p">(</span><span class="n">codex_test</span><span class="p">,</span> <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span>
-            <span class="n">metadata_cols</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;cell_types&#39;</span><span class="p">),</span><span class="n">y_text_size</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
-            <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;7_a_metaheatmap&#39;</span><span class="p">))</span>
+        <span class="n">metadata_cols</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;cell_types&#39;</span><span class="p">),</span><span class="n">y_text_size</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;7_a_metaheatmap&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/7_a_metaheatmap1.png"><img alt="7_a_metaheatmap.png" src="../../_images/7_a_metaheatmap1.png" style="width: 400px;" /></a>
@@ -470,22 +475,22 @@ mycolorcode = Giotto:::getDistinctColors(n = length(mynames))
 names(mycolorcode) = mynames
 
 plotUMAP(gobject = codex_test, cell_color = &#39;cell_types&#39;,point_shape = &#39;no_border&#39;,   point_size = 0.2,
-        cell_color_code = mycolorcode,
-        show_center_label = F,
-        label_size =2,
-        legend_text = 5,
-        legend_symbol_size = 2,
-        save_param = list(save_name = &#39;7_b_umap&#39;))
+    cell_color_code = mycolorcode,
+    show_center_label = F,
+    label_size =2,
+    legend_text = 5,
+    legend_symbol_size = 2,
+    save_param = list(save_name = &#39;7_b_umap&#39;))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/7_b_umap.png"><img alt="7_b_umap.png" src="../../_images/7_b_umap.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">codex_test</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span> <span class="n">point_shape</span> <span class="o">=</span> <span class="s1">&#39;no_border&#39;</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span>
-        <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">mycolorcode</span><span class="p">,</span>
-        <span class="n">coord_fix_ratio</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="n">label_size</span> <span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-                <span class="n">legend_text</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-        <span class="n">legend_symbol_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;7_c_spatplot&#39;</span><span class="p">))</span>
+    <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">mycolorcode</span><span class="p">,</span>
+    <span class="n">coord_fix_ratio</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">label_size</span> <span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">legend_text</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="n">legend_symbol_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;7_c_spatplot&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/7_c_spatplot1.png"><img alt="7_c_spatplot.png" src="../../_images/7_c_spatplot1.png" style="width: 400px;" /></a>
@@ -498,34 +503,34 @@ subset_cell_ids = cell_metadata[sample_Xtile_Ytile==&quot;BALBc-3_X04_Y08&quot;]
 codex_test_zone1 = subsetGiotto(codex_test, cell_ids = subset_cell_ids)
 
 plotUMAP(gobject = codex_test_zone1,
-        cell_color = &#39;cell_types&#39;, point_shape = &#39;no_border&#39;,   point_size = 1,
-        cell_color_code = mycolorcode,
-        show_center_label = F,
-        label_size =2,
-                legend_text = 5,
-        legend_symbol_size = 2,
-        save_param = list(save_name = &#39;8_a_umap&#39;))
+    cell_color = &#39;cell_types&#39;, point_shape = &#39;no_border&#39;,   point_size = 1,
+    cell_color_code = mycolorcode,
+    show_center_label = F,
+    label_size =2,
+        legend_text = 5,
+    legend_symbol_size = 2,
+    save_param = list(save_name = &#39;8_a_umap&#39;))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/8_a_umap.png"><img alt="8_a_umap.png" src="../../_images/8_a_umap.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">codex_test_zone1</span><span class="p">,</span>
-        <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span> <span class="n">point_shape</span> <span class="o">=</span> <span class="s1">&#39;no_border&#39;</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">mycolorcode</span><span class="p">,</span>
-        <span class="n">coord_fix_ratio</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="n">label_size</span> <span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-        <span class="n">legend_text</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-        <span class="n">legend_symbol_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;8_b_spatplot&#39;</span><span class="p">))</span>
+    <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span> <span class="n">point_shape</span> <span class="o">=</span> <span class="s1">&#39;no_border&#39;</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">mycolorcode</span><span class="p">,</span>
+    <span class="n">coord_fix_ratio</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">label_size</span> <span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">legend_text</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="n">legend_symbol_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;8_b_spatplot&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/8_b_spatplot1.png"><img alt="8_b_spatplot.png" src="../../_images/8_b_spatplot1.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatDimGenePlot</span><span class="p">(</span><span class="n">codex_test_zone1</span><span class="p">,</span>
-        <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span>
-        <span class="n">genes</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;CD8a&quot;</span><span class="p">,</span><span class="s2">&quot;CD19&quot;</span><span class="p">),</span>
-        <span class="n">spat_point_shape</span> <span class="o">=</span> <span class="s1">&#39;no_border&#39;</span><span class="p">,</span>
-        <span class="n">dim_point_shape</span> <span class="o">=</span> <span class="s1">&#39;no_border&#39;</span><span class="p">,</span>
-        <span class="n">cell_color_gradient</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;darkblue&quot;</span><span class="p">,</span> <span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">),</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;8_c_spatdimplot&#39;</span><span class="p">))</span>
+    <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span>
+    <span class="n">genes</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;CD8a&quot;</span><span class="p">,</span><span class="s2">&quot;CD19&quot;</span><span class="p">),</span>
+    <span class="n">spat_point_shape</span> <span class="o">=</span> <span class="s1">&#39;no_border&#39;</span><span class="p">,</span>
+    <span class="n">dim_point_shape</span> <span class="o">=</span> <span class="s1">&#39;no_border&#39;</span><span class="p">,</span>
+    <span class="n">cell_color_gradient</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;darkblue&quot;</span><span class="p">,</span> <span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">),</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;8_c_spatdimplot&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/8_c_spatdimplot.png"><img alt="8_c_spatdimplot.png" src="../../_images/8_c_spatdimplot.png" style="width: 400px;" /></a>
@@ -535,32 +540,32 @@ subset_cell_ids = cell_metadata[sample_Xtile_Ytile==&quot;BALBc-3_X04_Y03&quot;]
 codex_test_zone2 = subsetGiotto(codex_test, cell_ids = subset_cell_ids)
 
 plotUMAP(gobject = codex_test_zone2, cell_color = &#39;cell_types&#39;,point_shape = &#39;no_border&#39;,   point_size = 1,
-        cell_color_code = mycolorcode,
-        show_center_label = F,
-        label_size =2,
-        legend_text = 5,
-        legend_symbol_size = 2,
-        save_param = list(save_name = &#39;8_d_umap&#39;))
+    cell_color_code = mycolorcode,
+    show_center_label = F,
+    label_size =2,
+    legend_text = 5,
+    legend_symbol_size = 2,
+    save_param = list(save_name = &#39;8_d_umap&#39;))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/8_d_umap.png"><img alt="8_d_umap.png" src="../../_images/8_d_umap.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">codex_test_zone2</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span> <span class="n">point_shape</span> <span class="o">=</span> <span class="s1">&#39;no_border&#39;</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">mycolorcode</span><span class="p">,</span>
-        <span class="n">coord_fix_ratio</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="n">label_size</span> <span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-        <span class="n">legend_text</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-        <span class="n">legend_symbol_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;8_e_spatPlot&#39;</span><span class="p">))</span>
+    <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">mycolorcode</span><span class="p">,</span>
+    <span class="n">coord_fix_ratio</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">label_size</span> <span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">legend_text</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="n">legend_symbol_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;8_e_spatPlot&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/8_e_spatPlot.png"><img alt="8_e_spatPlot.png" src="../../_images/8_e_spatPlot.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatDimGenePlot</span><span class="p">(</span><span class="n">codex_test_zone2</span><span class="p">,</span>
-        <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span>
-        <span class="n">genes</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;CD4&quot;</span><span class="p">,</span> <span class="s2">&quot;CD106&quot;</span><span class="p">),</span>
-        <span class="n">spat_point_shape</span> <span class="o">=</span> <span class="s1">&#39;no_border&#39;</span><span class="p">,</span>
-        <span class="n">dim_point_shape</span> <span class="o">=</span> <span class="s1">&#39;no_border&#39;</span><span class="p">,</span>
-        <span class="n">cell_color_gradient</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;darkblue&quot;</span><span class="p">,</span> <span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">),</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;8_f_spatdimgeneplot&#39;</span><span class="p">))</span>
+    <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span>
+    <span class="n">genes</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;CD4&quot;</span><span class="p">,</span> <span class="s2">&quot;CD106&quot;</span><span class="p">),</span>
+    <span class="n">spat_point_shape</span> <span class="o">=</span> <span class="s1">&#39;no_border&#39;</span><span class="p">,</span>
+    <span class="n">dim_point_shape</span> <span class="o">=</span> <span class="s1">&#39;no_border&#39;</span><span class="p">,</span>
+    <span class="n">cell_color_gradient</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;darkblue&quot;</span><span class="p">,</span> <span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">),</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;8_f_spatdimgeneplot&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/8_f_spatdimgeneplot.png"><img alt="8_f_spatdimgeneplot.png" src="../../_images/8_f_spatdimgeneplot.png" style="width: 400px;" /></a>

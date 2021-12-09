@@ -16,7 +16,11 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx-toolbox-code.css" type="text/css" />
+  <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/sphinx-toolbox.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme_edits.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_toolbox_installation.css" type="text/css" />
   <link rel="stylesheet" href="_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme_edits.css" type="text/css" />
 
@@ -41,6 +45,7 @@
         <script src="_static/doctools.js"></script>
         <script src="_static/clipboard.min.js"></script>
         <script src="_static/copybutton.js"></script>
+        <script src="_static/sphinx_toolbox_installation.js"></script>
         <script src="_static/design-tabs.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
@@ -111,6 +116,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Step-by-Step Workflow</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#workflow-diagram">Workflow Diagram</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#workflow-analyses">Workflow Analyses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-a-giotto-environment">0. Install a Giotto Environment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#create-a-giotto-object">1. Create a Giotto Object</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#minimum-requirements"><em>Minimum Requirements</em></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#additional-features"><em>Additional Features</em></a></li>
@@ -283,18 +289,23 @@
 <span id="giottoworkflowanalysespage"></span><h1>Giotto Workflow<a class="headerlink" href="#giotto-workflow" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="workflow-diagram">
 <h2>Workflow Diagram<a class="headerlink" href="#workflow-diagram" title="Permalink to this headline">¶</a></h2>
-<a class="reference internal image-reference" href="_images/diagram_giotto_workflow.png"><img alt="Diagram of Giotto Workflow" class="align-center" src="_images/diagram_giotto_workflow.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/diagram_giotto_workflow.png"><img alt="Diagram of Giotto Workflow" class="align-center" src="_images/diagram_giotto_workflow.png" style="width: 600px;" /></a>
 </div>
 <div class="section" id="workflow-analyses">
 <span id="giotto-workflow-analyses"></span><h2>Workflow Analyses<a class="headerlink" href="#workflow-analyses" title="Permalink to this headline">¶</a></h2>
-<p><em>Optional:</em> Install a Giotto Environment</p>
-<p>To perform all potential steps and analysis in the Giotto spatial toolbox the user needs to have a number of python modules installed. To make this process as flexible and easy as possible <strong>two different strategies can be used:</strong></p>
+</div>
+<div class="section" id="install-a-giotto-environment">
+<h2>0. Install a Giotto Environment<a class="headerlink" href="#install-a-giotto-environment" title="Permalink to this headline">¶</a></h2>
+<p><em>Optional</em></p>
+<p>To perform all potential steps and analysis in the Giotto spatial toolbox the user needs to have a number of python modules installed.
+To make this process as flexible and easy as possible <strong>two different strategies can be used.</strong> See the <a class="reference external" href="Installation_Section">Installation</a> Section for more detailed information on installing Giotto and all of the
+required modules needed to use Giotto succesffully.</p>
 <p>The user can install all the necessary modules themself and then the path to their python or environment (e.g. Conda) can be provided as an instruction.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
 <span class="n">my_instructions</span> <span class="o">=</span> <span class="n">createGiottoInstructions</span><span class="p">(</span><span class="n">python_path</span> <span class="o">=</span> <span class="s1">&#39;your/python/path&#39;</span><span class="p">)</span>
 <span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span>
-                              <span class="n">spatial_locs</span> <span class="o">=</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span>
-                              <span class="n">instructions</span> <span class="o">=</span> <span class="n">my_instructions</span><span class="p">)</span>
+                  <span class="n">spatial_locs</span> <span class="o">=</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span>
+                  <span class="n">instructions</span> <span class="o">=</span> <span class="n">my_instructions</span><span class="p">)</span>
 </pre></div>
 </div>
 <p><strong>Alternatively,</strong> the user can just install a giotto python environment using r-miniconda. This was the method that was implemented in the reticulate package. In this case the environment will be automatically detected and no specific python path need to be provided. This is explained in more detail below</p>
@@ -333,7 +344,7 @@
 <span class="n">path_to_locations</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_locs.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 
 <span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="n">path_to_matrix</span><span class="p">,</span>
-                              <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">path_to_locations</span><span class="p">)</span>
+                  <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">path_to_locations</span><span class="p">)</span>
 
 
 <span class="c1"># 2. Use an existing matrix and data.table</span>
@@ -341,7 +352,7 @@
 <span class="n">cell_locations</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">table</span><span class="p">::</span><span class="n">fread</span><span class="p">(</span><span class="n">path_to_locations</span><span class="p">)</span>
 
 <span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="n">expression_matrix</span><span class="p">,</span>
-                              <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">cell_locations</span><span class="p">)</span>
+                  <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">cell_locations</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -372,14 +383,14 @@
 <span class="n">path_to_python</span> <span class="o">=</span> <span class="s1">&#39;/usr/bin/python3&#39;</span> <span class="c1"># can be something else</span>
 <span class="n">working_directory</span> <span class="o">=</span> <span class="n">getwd</span><span class="p">()</span> <span class="c1"># this will use your current working directory</span>
 <span class="n">my_instructions</span> <span class="o">=</span> <span class="n">createGiottoInstructions</span><span class="p">(</span><span class="n">python_path</span> <span class="o">=</span> <span class="n">path_to_python</span><span class="p">,</span>
-                                   <span class="n">save_dir</span> <span class="o">=</span> <span class="n">working_directory</span><span class="p">)</span>
+                   <span class="n">save_dir</span> <span class="o">=</span> <span class="n">working_directory</span><span class="p">)</span>
 
 <span class="c1"># 3. Create your giotto object</span>
 <span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="n">path_to_matrix</span><span class="p">,</span>
-                              <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">path_to_locations</span><span class="p">,</span>
-                              <span class="n">cell_metadata</span> <span class="o">=</span> <span class="n">my_cell_metadata</span><span class="p">,</span>
-                              <span class="n">gene_metadata</span> <span class="o">=</span> <span class="n">my_gene_metadata</span><span class="p">,</span>
-                              <span class="n">instructions</span> <span class="o">=</span> <span class="n">my_instructions</span><span class="p">)</span>
+                  <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">path_to_locations</span><span class="p">,</span>
+                  <span class="n">cell_metadata</span> <span class="o">=</span> <span class="n">my_cell_metadata</span><span class="p">,</span>
+                  <span class="n">gene_metadata</span> <span class="o">=</span> <span class="n">my_gene_metadata</span><span class="p">,</span>
+                  <span class="n">instructions</span> <span class="o">=</span> <span class="n">my_instructions</span><span class="p">)</span>
 
 <span class="c1"># 4. Check which giotto instructions are associated with your giotto object</span>
 <span class="n">showGiottoInstructions</span><span class="p">(</span><span class="n">my_giotto_object</span><span class="p">)</span>
@@ -397,16 +408,16 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path_to_matrix</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_expr.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 <span class="n">path_to_locations</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_locs.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 <span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="n">path_to_matrix</span><span class="p">,</span>
-                              <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">path_to_locations</span><span class="p">)</span>
+                  <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">path_to_locations</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="filter-giotto-object-based-on-gene-and-cell-coverage">
 <h3>2.2 Filter Giotto object based on gene and cell coverage<a class="headerlink" href="#filter-giotto-object-based-on-gene-and-cell-coverage" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_giotto_object</span> <span class="o">&lt;-</span> <span class="n">filterGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">,</span>
-                         <span class="n">expression_threshold</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-                         <span class="n">gene_det_in_min_cells</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-                         <span class="n">min_det_genes_per_cell</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
+             <span class="n">expression_threshold</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+             <span class="n">gene_det_in_min_cells</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+             <span class="n">min_det_genes_per_cell</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -420,8 +431,8 @@
 <h3>2.4 <em>Optional:</em> Add gene and cell statistics and adjust matrix for technical covariates or batch effects<a class="headerlink" href="#optional-add-gene-and-cell-statistics-and-adjust-matrix-for-technical-covariates-or-batch-effects" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_giotto_object</span> <span class="o">&lt;-</span> <span class="n">addStatistics</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">)</span>
 <span class="n">my_giotto_object</span> <span class="o">&lt;-</span> <span class="n">adjustGiottoMatrix</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">,</span>
-                               <span class="n">expression_values</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;normalized&#39;</span><span class="p">),</span>
-                               <span class="n">covariate_columns</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;nr_genes&#39;</span><span class="p">,</span> <span class="s1">&#39;total_expr&#39;</span><span class="p">))</span>
+                   <span class="n">expression_values</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;normalized&#39;</span><span class="p">),</span>
+                   <span class="n">covariate_columns</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;nr_genes&#39;</span><span class="p">,</span> <span class="s1">&#39;total_expr&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -436,7 +447,7 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path_to_matrix</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_expr.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 <span class="n">path_to_locations</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_locs.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 <span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="n">path_to_matrix</span><span class="p">,</span>
-                              <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">path_to_locations</span><span class="p">)</span>
+                  <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">path_to_locations</span><span class="p">)</span>
 <span class="n">my_giotto_object</span> <span class="o">&lt;-</span> <span class="n">filterGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">)</span>
 <span class="n">my_giotto_object</span> <span class="o">&lt;-</span> <span class="n">normalizeGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">)</span>
 </pre></div>
@@ -485,13 +496,13 @@
 <span class="n">path_to_locations</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_locs.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 
 <span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="n">path_to_matrix</span><span class="p">,</span>
-                              <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">path_to_locations</span><span class="p">)</span>
+                  <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">path_to_locations</span><span class="p">)</span>
 
 <span class="c1"># processing</span>
 <span class="n">my_giotto_object</span> <span class="o">&lt;-</span> <span class="n">filterGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">seqfish_mini</span><span class="p">,</span>
-                     <span class="n">expression_threshold</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
-                     <span class="n">gene_det_in_min_cells</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
-                     <span class="n">min_det_genes_per_cell</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+             <span class="n">expression_threshold</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+             <span class="n">gene_det_in_min_cells</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+             <span class="n">min_det_genes_per_cell</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">my_giotto_object</span> <span class="o">&lt;-</span> <span class="n">normalizeGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">)</span>
 
 <span class="c1"># dimension reduction</span>
@@ -529,13 +540,13 @@
 <p><em>To fine-tune clustering results Giotto provides methods to calculate similarities between clusters and merge clusters based on correlation and size parameters.</em></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate cluster similarities to see how individual clusters are correlated</span>
 <span class="n">cluster_similarities</span> <span class="o">=</span> <span class="n">getClusterSimilarity</span><span class="p">(</span><span class="n">my_giotto_object</span><span class="p">,</span>
-                                    <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">)</span>
+                    <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">)</span>
 
 <span class="c1"># Merge similar clusters based on correlation and size parameters</span>
 <span class="n">mini_giotto_single_cell</span> <span class="o">=</span> <span class="n">mergeClusters</span><span class="p">(</span><span class="n">my_giotto_object</span><span class="p">,</span>
-                                <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
-                                <span class="n">min_cor_score</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">,</span>
-                                <span class="n">force_min_group_size</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
+                <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
+                <span class="n">min_cor_score</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">,</span>
+                <span class="n">force_min_group_size</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
 
 <span class="c1"># Visualize</span>
 <span class="n">pDataDT</span><span class="p">(</span><span class="n">my_giotto_object</span><span class="p">)</span>
@@ -572,12 +583,12 @@ See seqfish+ clustering example.</p>
 <h3>5.1 Gini<a class="headerlink" href="#gini" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Between 2 groups</span>
 <span class="n">gini_markers</span> <span class="o">=</span> <span class="n">findGiniMarkers</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_giotto_single_cell</span><span class="p">,</span>
-                       <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
-                       <span class="n">group_1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-                       <span class="n">group_2</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+               <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
+               <span class="n">group_1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+               <span class="n">group_2</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
 <span class="c1"># For each cluster</span>
 <span class="n">gini_markers</span> <span class="o">=</span> <span class="n">findGiniMarkers_one_vs_all</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_giotto_single_cell</span><span class="p">,</span>
-                                  <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">)</span>
+                  <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -586,12 +597,12 @@ See seqfish+ clustering example.</p>
 <p><em>Requires Scran to be installed.</em></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Between 2 groups</span>
 <span class="n">scran_markers</span> <span class="o">=</span> <span class="n">findScranMarkers</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_giotto_single_cell</span><span class="p">,</span>
-                         <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
-                         <span class="n">group_1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-                         <span class="n">group_2</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+             <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
+             <span class="n">group_1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+             <span class="n">group_2</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
 <span class="c1"># For each cluster</span>
 <span class="n">scran_markers</span> <span class="o">=</span> <span class="n">findScranMarkers_one_vs_all</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_giotto_single_cell</span><span class="p">,</span>
-                                    <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">)</span>
+                    <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -600,13 +611,13 @@ See seqfish+ clustering example.</p>
 <p><em>Requires Mast to be installed.</em></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Between 2 groups</span>
 <span class="n">mast_markers</span> <span class="o">=</span> <span class="n">findMastMarkers</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_giotto_single_cell</span><span class="p">,</span>
-                        <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
-                        <span class="n">group_1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-                        <span class="n">group_2</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
+            <span class="n">group_1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="n">group_2</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
 
 <span class="c1"># For each cluster</span>
 <span class="n">mast_markers</span> <span class="o">=</span> <span class="n">findMastMarkers_one_vs_all</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_giotto_single_cell</span><span class="p">,</span>
-                                  <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">)</span>
+                  <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -637,9 +648,9 @@ See seqfish+ clustering example.</p>
 
 <span class="c1"># Convert cluster results into annotations and add to cell metadata</span>
 <span class="n">mini_giotto_single_cell</span> <span class="o">=</span> <span class="n">annotateGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_giotto_single_cell</span><span class="p">,</span>
-                                 <span class="n">annotation_vector</span> <span class="o">=</span> <span class="n">clusters_cell_types</span><span class="p">,</span>
-                                 <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
-                                 <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;cell_types2&#39;</span><span class="p">)</span>
+                 <span class="n">annotation_vector</span> <span class="o">=</span> <span class="n">clusters_cell_types</span><span class="p">,</span>
+                 <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
+                 <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;cell_types2&#39;</span><span class="p">)</span>
 <span class="c1"># Inspect new annotation column</span>
 <span class="n">pDataDT</span><span class="p">(</span><span class="n">mini_giotto_single_cell</span><span class="p">)</span>
 
@@ -658,7 +669,7 @@ See seqfish+ clustering example.</p>
 
 <span class="c1"># Remove cell_types column</span>
 <span class="n">mini_giotto_single_cell</span> <span class="o">=</span> <span class="n">removeCellAnnotation</span><span class="p">(</span><span class="n">mini_giotto_single_cell</span><span class="p">,</span>
-                                       <span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">)</span>
+                       <span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -669,7 +680,7 @@ See seqfish+ clustering example.</p>
 
 <span class="c1"># Remove nr_cells column</span>
 <span class="n">mini_giotto_single_cell</span> <span class="o">=</span> <span class="n">removeGeneAnnotation</span><span class="p">(</span><span class="n">mini_giotto_single_cell</span><span class="p">,</span>
-                                        <span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;nr_cells&#39;</span><span class="p">)</span>
+                    <span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;nr_cells&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -688,7 +699,7 @@ See seqfish+ clustering example.</p>
 <span class="n">path_to_locations</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;visium_DG_locs.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 
 <span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="n">path_to_matrix</span><span class="p">,</span>
-                              <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">path_to_locations</span><span class="p">)</span>
+                  <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">path_to_locations</span><span class="p">)</span>
 
 <span class="c1"># processing</span>
 <span class="n">my_giotto_object</span> <span class="o">&lt;-</span> <span class="n">normalizeGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">)</span>
@@ -700,38 +711,38 @@ See seqfish+ clustering example.</p>
 <div class="section" id="page-enrichment">
 <h4>7.2.1 PAGE Enrichment<a class="headerlink" href="#page-enrichment" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">astro_epen_markers</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;Krt15&quot;</span> <span class="p">,</span> <span class="s2">&quot;Apoc1&quot;</span> <span class="p">,</span> <span class="s2">&quot;Igsf1&quot;</span> <span class="p">,</span> <span class="s2">&quot;Gjb6&quot;</span> <span class="p">,</span> <span class="s2">&quot;Slc26a3&quot;</span> <span class="p">,</span>
-               <span class="s2">&quot;1500015O10Rik&quot;</span> <span class="p">,</span> <span class="s2">&quot;S1pr1&quot;</span> <span class="p">,</span> <span class="s2">&quot;Riiad1&quot;</span> <span class="p">,</span> <span class="s2">&quot;Cldn10&quot;</span> <span class="p">,</span> <span class="s2">&quot;Itih3&quot;</span> <span class="p">,</span>
-               <span class="s2">&quot;Ccdc153&quot;</span> <span class="p">,</span> <span class="s2">&quot;Cbs&quot;</span> <span class="p">,</span> <span class="s2">&quot;C4b&quot;</span> <span class="p">,</span> <span class="s2">&quot;Gm11627&quot;</span> <span class="p">,</span> <span class="s2">&quot;Folr1&quot;</span> <span class="p">,</span>
-               <span class="s2">&quot;Calml4&quot;</span> <span class="p">,</span> <span class="s2">&quot;Aqp4&quot;</span> <span class="p">,</span> <span class="s2">&quot;Ppp1r3g&quot;</span> <span class="p">,</span> <span class="s2">&quot;1700012B09Rik&quot;</span> <span class="p">,</span> <span class="s2">&quot;Hes5&quot;</span><span class="p">)</span>
+           <span class="s2">&quot;1500015O10Rik&quot;</span> <span class="p">,</span> <span class="s2">&quot;S1pr1&quot;</span> <span class="p">,</span> <span class="s2">&quot;Riiad1&quot;</span> <span class="p">,</span> <span class="s2">&quot;Cldn10&quot;</span> <span class="p">,</span> <span class="s2">&quot;Itih3&quot;</span> <span class="p">,</span>
+           <span class="s2">&quot;Ccdc153&quot;</span> <span class="p">,</span> <span class="s2">&quot;Cbs&quot;</span> <span class="p">,</span> <span class="s2">&quot;C4b&quot;</span> <span class="p">,</span> <span class="s2">&quot;Gm11627&quot;</span> <span class="p">,</span> <span class="s2">&quot;Folr1&quot;</span> <span class="p">,</span>
+           <span class="s2">&quot;Calml4&quot;</span> <span class="p">,</span> <span class="s2">&quot;Aqp4&quot;</span> <span class="p">,</span> <span class="s2">&quot;Ppp1r3g&quot;</span> <span class="p">,</span> <span class="s2">&quot;1700012B09Rik&quot;</span> <span class="p">,</span> <span class="s2">&quot;Hes5&quot;</span><span class="p">)</span>
 
 <span class="n">gran_markers</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;Nr3c2&quot;</span><span class="p">,</span> <span class="s2">&quot;Gabra5&quot;</span><span class="p">,</span> <span class="s2">&quot;Tubgcp2&quot;</span><span class="p">,</span> <span class="s2">&quot;Ahcyl2&quot;</span><span class="p">,</span>
-         <span class="s2">&quot;Islr2&quot;</span><span class="p">,</span> <span class="s2">&quot;Rasl10a&quot;</span><span class="p">,</span> <span class="s2">&quot;Tmem114&quot;</span><span class="p">,</span> <span class="s2">&quot;Bhlhe22&quot;</span><span class="p">,</span>
-         <span class="s2">&quot;Ntf3&quot;</span><span class="p">,</span> <span class="s2">&quot;C1ql2&quot;</span><span class="p">)</span>
+     <span class="s2">&quot;Islr2&quot;</span><span class="p">,</span> <span class="s2">&quot;Rasl10a&quot;</span><span class="p">,</span> <span class="s2">&quot;Tmem114&quot;</span><span class="p">,</span> <span class="s2">&quot;Bhlhe22&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;Ntf3&quot;</span><span class="p">,</span> <span class="s2">&quot;C1ql2&quot;</span><span class="p">)</span>
 
 <span class="n">cortex_hippo_markers</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;6330403A02Rik&quot;</span> <span class="p">,</span> <span class="s2">&quot;Tekt5&quot;</span> <span class="p">,</span> <span class="s2">&quot;Wipf3&quot;</span> <span class="p">,</span> <span class="s2">&quot;1110032F04Rik&quot;</span> <span class="p">,</span> <span class="s2">&quot;Lmo3&quot;</span> <span class="p">,</span>
-                 <span class="s2">&quot;Nrep&quot;</span> <span class="p">,</span> <span class="s2">&quot;Slc30a3&quot;</span> <span class="p">,</span> <span class="s2">&quot;Plcxd2&quot;</span> <span class="p">,</span> <span class="s2">&quot;D630023F18Rik&quot;</span> <span class="p">,</span> <span class="s2">&quot;Nptx1&quot;</span> <span class="p">,</span>
-                 <span class="s2">&quot;C1ql3&quot;</span> <span class="p">,</span> <span class="s2">&quot;Ddit4l&quot;</span> <span class="p">,</span> <span class="s2">&quot;Fezf2&quot;</span> <span class="p">,</span> <span class="s2">&quot;Col24a1&quot;</span> <span class="p">,</span> <span class="s2">&quot;Kcnf1&quot;</span> <span class="p">,</span>
-                 <span class="s2">&quot;Tnnc1&quot;</span> <span class="p">,</span> <span class="s2">&quot;Gm12371&quot;</span> <span class="p">,</span> <span class="s2">&quot;3110035E14Rik&quot;</span> <span class="p">,</span> <span class="s2">&quot;Nr4a2&quot;</span> <span class="p">,</span> <span class="s2">&quot;Nr4a3&quot;</span><span class="p">)</span>
+         <span class="s2">&quot;Nrep&quot;</span> <span class="p">,</span> <span class="s2">&quot;Slc30a3&quot;</span> <span class="p">,</span> <span class="s2">&quot;Plcxd2&quot;</span> <span class="p">,</span> <span class="s2">&quot;D630023F18Rik&quot;</span> <span class="p">,</span> <span class="s2">&quot;Nptx1&quot;</span> <span class="p">,</span>
+         <span class="s2">&quot;C1ql3&quot;</span> <span class="p">,</span> <span class="s2">&quot;Ddit4l&quot;</span> <span class="p">,</span> <span class="s2">&quot;Fezf2&quot;</span> <span class="p">,</span> <span class="s2">&quot;Col24a1&quot;</span> <span class="p">,</span> <span class="s2">&quot;Kcnf1&quot;</span> <span class="p">,</span>
+         <span class="s2">&quot;Tnnc1&quot;</span> <span class="p">,</span> <span class="s2">&quot;Gm12371&quot;</span> <span class="p">,</span> <span class="s2">&quot;3110035E14Rik&quot;</span> <span class="p">,</span> <span class="s2">&quot;Nr4a2&quot;</span> <span class="p">,</span> <span class="s2">&quot;Nr4a3&quot;</span><span class="p">)</span>
 
 <span class="n">oligo_markers</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;Efhd1&quot;</span> <span class="p">,</span> <span class="s2">&quot;H2-Ab1&quot;</span> <span class="p">,</span> <span class="s2">&quot;Enpp6&quot;</span> <span class="p">,</span> <span class="s2">&quot;Ninj2&quot;</span> <span class="p">,</span> <span class="s2">&quot;Bmp4&quot;</span> <span class="p">,</span>
-          <span class="s2">&quot;Tnr&quot;</span> <span class="p">,</span> <span class="s2">&quot;Hapln2&quot;</span> <span class="p">,</span> <span class="s2">&quot;Neu4&quot;</span> <span class="p">,</span> <span class="s2">&quot;Wfdc18&quot;</span> <span class="p">,</span> <span class="s2">&quot;Ccp110&quot;</span> <span class="p">,</span>
-          <span class="s2">&quot;Gm26834&quot;</span> <span class="p">,</span> <span class="s2">&quot;Il23a&quot;</span> <span class="p">,</span> <span class="s2">&quot;Arap2&quot;</span> <span class="p">,</span> <span class="s2">&quot;Nkx2-9&quot;</span> <span class="p">,</span> <span class="s2">&quot;Mal&quot;</span> <span class="p">,</span>
-          <span class="s2">&quot;Tmem2&quot;</span> <span class="p">,</span> <span class="s2">&quot;Birc2&quot;</span> <span class="p">,</span> <span class="s2">&quot;Cdkn1c&quot;</span> <span class="p">,</span> <span class="s2">&quot;Pak4&quot;</span> <span class="p">,</span> <span class="s2">&quot;Tmem88b&quot;</span><span class="p">)</span>
+      <span class="s2">&quot;Tnr&quot;</span> <span class="p">,</span> <span class="s2">&quot;Hapln2&quot;</span> <span class="p">,</span> <span class="s2">&quot;Neu4&quot;</span> <span class="p">,</span> <span class="s2">&quot;Wfdc18&quot;</span> <span class="p">,</span> <span class="s2">&quot;Ccp110&quot;</span> <span class="p">,</span>
+      <span class="s2">&quot;Gm26834&quot;</span> <span class="p">,</span> <span class="s2">&quot;Il23a&quot;</span> <span class="p">,</span> <span class="s2">&quot;Arap2&quot;</span> <span class="p">,</span> <span class="s2">&quot;Nkx2-9&quot;</span> <span class="p">,</span> <span class="s2">&quot;Mal&quot;</span> <span class="p">,</span>
+      <span class="s2">&quot;Tmem2&quot;</span> <span class="p">,</span> <span class="s2">&quot;Birc2&quot;</span> <span class="p">,</span> <span class="s2">&quot;Cdkn1c&quot;</span> <span class="p">,</span> <span class="s2">&quot;Pak4&quot;</span> <span class="p">,</span> <span class="s2">&quot;Tmem88b&quot;</span><span class="p">)</span>
 
 
 <span class="n">signature_matrix</span> <span class="o">=</span> <span class="n">makeSignMatrixPAGE</span><span class="p">(</span><span class="n">sign_names</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;Astro_ependymal&#39;</span><span class="p">,</span>
-                                             <span class="s1">&#39;Granule&#39;</span><span class="p">,</span>
-                                             <span class="s1">&#39;Cortex_hippocampus&#39;</span><span class="p">,</span>
-                                             <span class="s1">&#39;Oligo_dendrocytes&#39;</span><span class="p">),</span>
-                              <span class="n">sign_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">astro_epen_markers</span><span class="p">,</span>
-                                               <span class="n">gran_markers</span><span class="p">,</span>
-                                               <span class="n">cortex_hippo_markers</span><span class="p">,</span>
-                                               <span class="n">oligo_markers</span><span class="p">))</span>
+                         <span class="s1">&#39;Granule&#39;</span><span class="p">,</span>
+                         <span class="s1">&#39;Cortex_hippocampus&#39;</span><span class="p">,</span>
+                         <span class="s1">&#39;Oligo_dendrocytes&#39;</span><span class="p">),</span>
+                  <span class="n">sign_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">astro_epen_markers</span><span class="p">,</span>
+                           <span class="n">gran_markers</span><span class="p">,</span>
+                           <span class="n">cortex_hippo_markers</span><span class="p">,</span>
+                           <span class="n">oligo_markers</span><span class="p">))</span>
 
 <span class="c1"># runSpatialEnrich() can also be used as a wrapper for all currently provided enrichment options</span>
 <span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">runPAGEEnrich</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">,</span>
-                         <span class="n">sign_matrix</span> <span class="o">=</span> <span class="n">signature_matrix</span><span class="p">,</span>
-                         <span class="n">min_overlap_genes</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+             <span class="n">sign_matrix</span> <span class="o">=</span> <span class="n">signature_matrix</span><span class="p">,</span>
+             <span class="n">min_overlap_genes</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">cell_types_subset</span> <span class="o">=</span> <span class="n">colnames</span><span class="p">(</span><span class="n">signature_matrix</span><span class="p">)</span>
 <span class="n">spatCellPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">,</span>
      <span class="n">spat_enr_names</span> <span class="o">=</span> <span class="s1">&#39;PAGE&#39;</span><span class="p">,</span>
@@ -774,7 +785,7 @@ spatCellPlot(gobject = my_giotto_object,
 <div class="section" id="hypergeometric-enrichment">
 <h4>7.2.3 Hypergeometric enrichment<a class="headerlink" href="#hypergeometric-enrichment" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">runHyperGeometricEnrich</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">,</span>
-                                   <span class="n">sign_matrix</span> <span class="o">=</span> <span class="n">signature_matrix</span><span class="p">)</span>
+                   <span class="n">sign_matrix</span> <span class="o">=</span> <span class="n">signature_matrix</span><span class="p">)</span>
 
 <span class="n">cell_types_subset</span> <span class="o">=</span> <span class="n">colnames</span><span class="p">(</span><span class="n">signature_matrix</span><span class="p">)</span>
 <span class="n">spatCellPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">,</span>
@@ -801,18 +812,18 @@ spatCellPlot(gobject = my_giotto_object,
 <div class="section" id="create-a-spatial-grid">
 <h3>8.1 Create a spatial grid<a class="headerlink" href="#create-a-spatial-grid" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mini_giotto_single_cell</span> <span class="o">&lt;-</span> <span class="n">createSpatialGrid</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_giotto_single_cell</span><span class="p">,</span>
-                                    <span class="n">sdimx_stepsize</span> <span class="o">=</span> <span class="mi">250</span><span class="p">,</span>
-                                    <span class="n">sdimy_stepsize</span> <span class="o">=</span> <span class="mi">250</span><span class="p">,</span>
-                                    <span class="n">minimum_padding</span> <span class="o">=</span> <span class="mi">50</span><span class="p">)</span>
+                    <span class="n">sdimx_stepsize</span> <span class="o">=</span> <span class="mi">250</span><span class="p">,</span>
+                    <span class="n">sdimy_stepsize</span> <span class="o">=</span> <span class="mi">250</span><span class="p">,</span>
+                    <span class="n">minimum_padding</span> <span class="o">=</span> <span class="mi">50</span><span class="p">)</span>
 <span class="c1"># Visualize grid</span>
 <span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_giotto_single_cell</span><span class="p">,</span> <span class="n">show_grid</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">)</span>
 
 <span class="c1"># Create another larger grid</span>
 <span class="n">mini_giotto_single_cell</span> <span class="o">&lt;-</span> <span class="n">createSpatialGrid</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_giotto_single_cell</span><span class="p">,</span>
-                                    <span class="n">sdimx_stepsize</span> <span class="o">=</span> <span class="mi">350</span><span class="p">,</span>
-                                    <span class="n">sdimy_stepsize</span> <span class="o">=</span> <span class="mi">350</span><span class="p">,</span>
-                                    <span class="n">minimum_padding</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
-                                    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;large_grid&#39;</span><span class="p">)</span>
+                    <span class="n">sdimx_stepsize</span> <span class="o">=</span> <span class="mi">350</span><span class="p">,</span>
+                    <span class="n">sdimy_stepsize</span> <span class="o">=</span> <span class="mi">350</span><span class="p">,</span>
+                    <span class="n">minimum_padding</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+                    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;large_grid&#39;</span><span class="p">)</span>
 
 <span class="c1"># Show available grids</span>
 <span class="n">showGrids</span><span class="p">(</span><span class="n">mini_giotto_single_cell</span><span class="p">)</span>
@@ -831,12 +842,12 @@ spatCellPlot(gobject = my_giotto_object,
 <span class="c1"># Create a spatial network, the Delaunay network is the default network</span>
 <span class="c1"># Default name = &#39;Delaunay_network&#39;</span>
 <span class="n">mini_giotto_single_cell</span> <span class="o">=</span> <span class="n">createSpatialNetwork</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_giotto_single_cell</span><span class="p">,</span> <span class="n">minimum_k</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
-                            <span class="n">maximum_distance_delaunay</span> <span class="o">=</span> <span class="mi">400</span><span class="p">)</span>
+                <span class="n">maximum_distance_delaunay</span> <span class="o">=</span> <span class="mi">400</span><span class="p">)</span>
 
 <span class="c1"># Create a kNN network with 4 spatial neighbors</span>
 <span class="c1"># Default name = &#39;kNN_network&#39;</span>
 <span class="n">mini_giotto_single_cell</span> <span class="o">=</span> <span class="n">createSpatialNetwork</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">mini_giotto_single_cell</span><span class="p">,</span> <span class="n">minimum_k</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
-                            <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;kNN&#39;</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
+                <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;kNN&#39;</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
 
 <span class="c1"># Show available networks</span>
 <span class="n">showNetworks</span><span class="p">(</span><span class="n">mini_giotto_single_cell</span><span class="p">)</span>
@@ -864,13 +875,13 @@ spatCellPlot(gobject = my_giotto_object,
 <span class="n">path_to_locations</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_locs.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 
 <span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="n">path_to_matrix</span><span class="p">,</span>
-                              <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">path_to_locations</span><span class="p">)</span>
+                  <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">path_to_locations</span><span class="p">)</span>
 
 <span class="c1"># Processing</span>
 <span class="n">my_giotto_object</span> <span class="o">&lt;-</span> <span class="n">filterGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">seqfish_mini</span><span class="p">,</span>
-                     <span class="n">expression_threshold</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
-                     <span class="n">gene_det_in_min_cells</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
-                     <span class="n">min_det_genes_per_cell</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+             <span class="n">expression_threshold</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+             <span class="n">gene_det_in_min_cells</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+             <span class="n">min_det_genes_per_cell</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">my_giotto_object</span> <span class="o">&lt;-</span> <span class="n">normalizeGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">)</span>
 
 <span class="c1"># Create network (required for binSpect methods)</span>
@@ -940,13 +951,13 @@ spatGenePlot(my_giotto_object, expression_values = &#39;scaled&#39;,
 <span class="n">path_to_locations</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_locs.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 
 <span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="n">path_to_matrix</span><span class="p">,</span>
-                              <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">path_to_locations</span><span class="p">)</span>
+                  <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">path_to_locations</span><span class="p">)</span>
 
 <span class="c1"># Processing</span>
 <span class="n">my_giotto_object</span> <span class="o">&lt;-</span> <span class="n">filterGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">seqfish_mini</span><span class="p">,</span>
-                     <span class="n">expression_threshold</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
-                     <span class="n">gene_det_in_min_cells</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
-                     <span class="n">min_det_genes_per_cell</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+             <span class="n">expression_threshold</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+             <span class="n">gene_det_in_min_cells</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+             <span class="n">min_det_genes_per_cell</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">my_giotto_object</span> <span class="o">&lt;-</span> <span class="n">normalizeGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">)</span>
 
 <span class="c1"># Create network (required for binSpect methods)</span>
@@ -963,36 +974,36 @@ spatGenePlot(my_giotto_object, expression_values = &#39;scaled&#39;,
 <h4>10.2.1 Calculate spatial correlation scores<a class="headerlink" href="#calculate-spatial-correlation-scores" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ext_spatial_genes = km_spatialgenes[1:500]$genes
 spat_cor_netw_DT = detectSpatialCorGenes(my_giotto_object,
-                                 method = &#39;network&#39;,
-                                 spatial_network_name = &#39;Delaunay_network&#39;,
-                                 subset_genes = ext_spatial_genes)
+                 method = &#39;network&#39;,
+                 spatial_network_name = &#39;Delaunay_network&#39;,
+                 subset_genes = ext_spatial_genes)
 </pre></div>
 </div>
 </div>
 <div class="section" id="cluster-correlation-scores">
 <h4>10.2.2 Cluster correlation scores<a class="headerlink" href="#cluster-correlation-scores" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>spat_cor_netw_DT = clusterSpatialCorGenes(spat_cor_netw_DT,
-                                  name = &#39;spat_netw_clus&#39;, k = 8)
+                  name = &#39;spat_netw_clus&#39;, k = 8)
 heatmSpatialCorGenes(my_giotto_object, spatCorObject = spat_cor_netw_DT,
-             use_clus_name = &#39;spat_netw_clus&#39;)
+         use_clus_name = &#39;spat_netw_clus&#39;)
 
 
-                                 .. code-block::
+                 .. code-block::
 
 # Rank spatial correlation clusters based on how similar they are
 netw_ranks = rankSpatialCorGroups(my_giotto_object,
-                          spatCorObject = spat_cor_netw_DT,
-                          use_clus_name = &#39;spat_netw_clus&#39;)
+              spatCorObject = spat_cor_netw_DT,
+              use_clus_name = &#39;spat_netw_clus&#39;)
 
 # Extract information about clusters
 top_netw_spat_cluster = showSpatialCorGenes(spat_cor_netw_DT,
-                                    use_clus_name = &#39;spat_netw_clus&#39;,
-                                    selected_clusters = 6,
-                                    show_top_genes = 1)
+                    use_clus_name = &#39;spat_netw_clus&#39;,
+                    selected_clusters = 6,
+                    show_top_genes = 1)
 
 cluster_genes_DT = showSpatialCorGenes(spat_cor_netw_DT,
-                               use_clus_name = &#39;spat_netw_clus&#39;,
-                               show_top_genes = 1)
+                   use_clus_name = &#39;spat_netw_clus&#39;,
+                   show_top_genes = 1)
 
 cluster_genes = cluster_genes_DT$clus; names(cluster_genes) = cluster_genes_DT$gene_ID
 
@@ -1018,13 +1029,13 @@ spatCellPlot(my_giotto_object,
 <span class="n">path_to_locations</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_locs.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 
 <span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="n">path_to_matrix</span><span class="p">,</span>
-                              <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">path_to_locations</span><span class="p">)</span>
+                  <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">path_to_locations</span><span class="p">)</span>
 
 <span class="c1"># Processing</span>
 <span class="n">my_giotto_object</span> <span class="o">&lt;-</span> <span class="n">filterGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">seqfish_mini</span><span class="p">,</span>
-                     <span class="n">expression_threshold</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
-                     <span class="n">gene_det_in_min_cells</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
-                     <span class="n">min_det_genes_per_cell</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+             <span class="n">expression_threshold</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+             <span class="n">gene_det_in_min_cells</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+             <span class="n">min_det_genes_per_cell</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">my_giotto_object</span> <span class="o">&lt;-</span> <span class="n">normalizeGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">)</span>
 
 <span class="c1"># Create network (required for binSpect methods)</span>
@@ -1044,25 +1055,25 @@ if(!file.exists(hmrf_folder)) dir.create(hmrf_folder, recursive = T)
 # Perform hmrf
 my_spatial_genes = km_spatialgenes[1:100]$genes
 HMRF_spatial_genes = doHMRF(gobject = my_giotto_object,
-                    expression_values = &#39;scaled&#39;,
-                    spatial_genes = my_spatial_genes,
-                    spatial_network_name = &#39;Delaunay_network&#39;,
-                    k = 9,
-                    betas = c(28,2,2),
-                    output_folder = paste0(hmrf_folder, &#39;/&#39;, &#39;Spatial_genes/SG_top100_k9_scaled&#39;))
+            expression_values = &#39;scaled&#39;,
+            spatial_genes = my_spatial_genes,
+            spatial_network_name = &#39;Delaunay_network&#39;,
+            k = 9,
+            betas = c(28,2,2),
+            output_folder = paste0(hmrf_folder, &#39;/&#39;, &#39;Spatial_genes/SG_top100_k9_scaled&#39;))
 
 # Check and visualize hmrf results
 for(i in seq(28, 30, by = 2)) {
    viewHMRFresults2D(gobject = my_giotto_object,
-            HMRFoutput = HMRF_spatial_genes,
-            k = 9, betas_to_view = i,
-            point_size = 2)
+        HMRFoutput = HMRF_spatial_genes,
+        k = 9, betas_to_view = i,
+        point_size = 2)
 }
 
 my_giotto_object = addHMRF(gobject = my_giotto_object,
-          HMRFoutput = HMRF_spatial_genes,
-          k = 9, betas_to_add = c(28),
-          hmrf_name = &#39;HMRF&#39;)
+      HMRFoutput = HMRF_spatial_genes,
+      k = 9, betas_to_add = c(28),
+      hmrf_name = &#39;HMRF&#39;)
 
 # Visualize selected hmrf result
 giotto_colors = Giotto:::getDistinctColors(9)
@@ -1084,13 +1095,13 @@ path_to_matrix = system.file(&quot;extdata&quot;, &quot;seqfish_field_expr.txt&q
 path_to_locations = system.file(&quot;extdata&quot;, &quot;seqfish_field_locs.txt&quot;, package = &#39;Giotto&#39;)
 
 my_giotto_object = createGiottoObject(raw_exprs = path_to_matrix,
-                              spatial_locs = path_to_locations)
+                  spatial_locs = path_to_locations)
 
 # Processing
 my_giotto_object &lt;- filterGiotto(gobject = seqfish_mini,
-                     expression_threshold = 0.5,
-                     gene_det_in_min_cells = 20,
-                     min_det_genes_per_cell = 0)
+             expression_threshold = 0.5,
+             gene_det_in_min_cells = 20,
+             min_det_genes_per_cell = 0)
 my_giotto_object &lt;- normalizeGiotto(gobject = my_giotto_object)
 
 # Dimension reduction
@@ -1109,9 +1120,9 @@ clusters_cell_types = paste0(&#39;cell &#39;, LETTERS[1:uniq_clusters])
 names(clusters_cell_types) = 1:uniq_clusters
 
 my_giotto_object = annotateGiotto(gobject = my_giotto_object,
-                      annotation_vector = clusters_cell_types,
-                      cluster_column = &#39;leiden_clus&#39;,
-                      name = &#39;cell_types&#39;)
+              annotation_vector = clusters_cell_types,
+              cluster_column = &#39;leiden_clus&#39;,
+              name = &#39;cell_types&#39;)
 
 # Create network (required for binSpect methods)
 my_giotto_object = createSpatialNetwork(gobject = my_giotto_object, minimum_k = 2)
@@ -1125,10 +1136,10 @@ km_spatialgenes = binSpect(my_giotto_object, bin_method = &#39;kmeans&#39;)
 <h3>12.2 Run cell-cell interactions<a class="headerlink" href="#run-cell-cell-interactions" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span> <span class="o">=</span> <span class="mi">2841</span><span class="p">)</span>
 <span class="n">cell_proximities</span> <span class="o">=</span> <span class="n">cellProximityEnrichment</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">,</span>
-                                   <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
-                                   <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;Delaunay_network&#39;</span><span class="p">,</span>
-                                   <span class="n">adjust_method</span> <span class="o">=</span> <span class="s1">&#39;fdr&#39;</span><span class="p">,</span>
-                                   <span class="n">number_of_simulations</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
+                   <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
+                   <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;Delaunay_network&#39;</span><span class="p">,</span>
+                   <span class="n">adjust_method</span> <span class="o">=</span> <span class="s1">&#39;fdr&#39;</span><span class="p">,</span>
+                   <span class="n">number_of_simulations</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1136,31 +1147,31 @@ km_spatialgenes = binSpect(my_giotto_object, bin_method = &#39;kmeans&#39;)
 <h3>12.3 Visualize cell-cell interactions<a class="headerlink" href="#visualize-cell-cell-interactions" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Barplot</span>
 <span class="n">cellProximityBarplot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">,</span>
-             <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span>
-             <span class="n">min_orig_ints</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">min_sim_ints</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+         <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span>
+         <span class="n">min_orig_ints</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">min_sim_ints</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
 
 <span class="c1"># Heatmap</span>
 <span class="n">cellProximityHeatmap</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">,</span>
-             <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span>
-             <span class="n">order_cell_types</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
-             <span class="n">color_breaks</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">),</span>
-             <span class="n">color_names</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">))</span>
+         <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span>
+         <span class="n">order_cell_types</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+         <span class="n">color_breaks</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">),</span>
+         <span class="n">color_names</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">))</span>
 
 <span class="c1"># Network</span>
 <span class="n">cellProximityNetwork</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">,</span>
-             <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span>
-             <span class="n">remove_self_edges</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">only_show_enrichment_edges</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span>
+         <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span>
+         <span class="n">remove_self_edges</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">only_show_enrichment_edges</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span>
 
 
 <span class="c1"># Network with self-edges</span>
 <span class="n">cellProximityNetwork</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">,</span>
-             <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span>
-             <span class="n">remove_self_edges</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span> <span class="n">self_loop_strength</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span>
-             <span class="n">only_show_enrichment_edges</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
-             <span class="n">rescale_edge_weights</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
-             <span class="n">node_size</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
-             <span class="n">edge_weight_range_depletion</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
-             <span class="n">edge_weight_range_enrichment</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+         <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span>
+         <span class="n">remove_self_edges</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span> <span class="n">self_loop_strength</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span>
+         <span class="n">only_show_enrichment_edges</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
+         <span class="n">rescale_edge_weights</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+         <span class="n">node_size</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+         <span class="n">edge_weight_range_depletion</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+         <span class="n">edge_weight_range_enrichment</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1169,22 +1180,22 @@ km_spatialgenes = binSpect(my_giotto_object, bin_method = &#39;kmeans&#39;)
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Option 1</span>
 <span class="n">spec_interaction</span> <span class="o">=</span> <span class="s2">&quot;cell D--cell F&quot;</span>
 <span class="n">cellProximitySpatPlot2D</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">my_giotto_object</span><span class="p">,</span>
-                <span class="n">interaction_name</span> <span class="o">=</span> <span class="n">spec_interaction</span><span class="p">,</span>
-                <span class="n">show_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
-                <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
-                <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
-                <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;cell D&#39;</span> <span class="o">=</span> <span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="s1">&#39;cell F&#39;</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">),</span>
-                <span class="n">point_size_select</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">point_size_other</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">interaction_name</span> <span class="o">=</span> <span class="n">spec_interaction</span><span class="p">,</span>
+        <span class="n">show_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+        <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
+        <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
+        <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;cell D&#39;</span> <span class="o">=</span> <span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="s1">&#39;cell F&#39;</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">),</span>
+        <span class="n">point_size_select</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">point_size_other</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
 
 
 <span class="c1"># Option 2: create additional metadata</span>
 <span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">addCellIntMetadata</span><span class="p">(</span><span class="n">my_giotto_object</span><span class="p">,</span>
-                     <span class="n">spatial_network</span> <span class="o">=</span> <span class="s1">&#39;Delaunay_network&#39;</span><span class="p">,</span>
-                     <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
-                     <span class="n">cell_interaction</span> <span class="o">=</span> <span class="n">spec_interaction</span><span class="p">,</span>
-                     <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;D_F_interactions&#39;</span><span class="p">)</span>
+             <span class="n">spatial_network</span> <span class="o">=</span> <span class="s1">&#39;Delaunay_network&#39;</span><span class="p">,</span>
+             <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">,</span>
+             <span class="n">cell_interaction</span> <span class="o">=</span> <span class="n">spec_interaction</span><span class="p">,</span>
+             <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;D_F_interactions&#39;</span><span class="p">)</span>
 <span class="n">spatPlot</span><span class="p">(</span><span class="n">my_giotto_object</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;D_F_interactions&#39;</span><span class="p">,</span> <span class="n">legend_symbol_size</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
-        <span class="n">select_cell_groups</span> <span class="o">=</span>  <span class="n">c</span><span class="p">(</span><span class="s1">&#39;other_cell D&#39;</span><span class="p">,</span> <span class="s1">&#39;other_cell F&#39;</span><span class="p">,</span> <span class="s1">&#39;select_cell D&#39;</span><span class="p">,</span> <span class="s1">&#39;select_cell F&#39;</span><span class="p">))</span>
+    <span class="n">select_cell_groups</span> <span class="o">=</span>  <span class="n">c</span><span class="p">(</span><span class="s1">&#39;other_cell D&#39;</span><span class="p">,</span> <span class="s1">&#39;other_cell F&#39;</span><span class="p">,</span> <span class="s1">&#39;select_cell D&#39;</span><span class="p">,</span> <span class="s1">&#39;select_cell F&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1200,13 +1211,13 @@ path_to_matrix = system.file(&quot;extdata&quot;, &quot;seqfish_field_expr.txt&q
 path_to_locations = system.file(&quot;extdata&quot;, &quot;seqfish_field_locs.txt&quot;, package = &#39;Giotto&#39;)
 
 my_giotto_object = createGiottoObject(raw_exprs = path_to_matrix,
-                              spatial_locs = path_to_locations)
+                  spatial_locs = path_to_locations)
 
 # Processing
 my_giotto_object &lt;- filterGiotto(gobject = seqfish_mini,
-                     expression_threshold = 0.5,
-                     gene_det_in_min_cells = 20,
-                     min_det_genes_per_cell = 0)
+             expression_threshold = 0.5,
+             gene_det_in_min_cells = 20,
+             min_det_genes_per_cell = 0)
 my_giotto_object &lt;- normalizeGiotto(gobject = my_giotto_object)
 
 # Dimension reduction
@@ -1225,9 +1236,9 @@ clusters_cell_types = paste0(&#39;cell &#39;, LETTERS[1:uniq_clusters])
 names(clusters_cell_types) = 1:uniq_clusters
 
 my_giotto_object = annotateGiotto(gobject = my_giotto_object,
-                              annotation_vector = clusters_cell_types,
-                              cluster_column = &#39;leiden_clus&#39;,
-                              name = &#39;cell_types&#39;)
+                  annotation_vector = clusters_cell_types,
+                  cluster_column = &#39;leiden_clus&#39;,
+                  name = &#39;cell_types&#39;)
 
 # Create network (required for binSpect methods)
 my_giotto_object = createSpatialNetwork(gobject = my_giotto_object, minimum_k = 2)
@@ -1249,13 +1260,13 @@ high_expressed_genes = gene_metadata[mean_expr_det &gt; 4]$gene_ID
 
 # Identify genes that are associated with proximity to other cell types
 ICGscoresHighGenes =  findICG(gobject = my_giotto_object,
-                              selected_genes = high_expressed_genes,
-                              spatial_network_name = &#39;Delaunay_network&#39;,
-                              cluster_column = &#39;cell_types&#39;,
-                              diff_test = &#39;permutation&#39;,
-                              adjust_method = &#39;fdr&#39;,
-                              nr_permutations = 500,
-                              do_parallel = T, cores = 2)
+                  selected_genes = high_expressed_genes,
+                  spatial_network_name = &#39;Delaunay_network&#39;,
+                  cluster_column = &#39;cell_types&#39;,
+                  diff_test = &#39;permutation&#39;,
+                  adjust_method = &#39;fdr&#39;,
+                  nr_permutations = 500,
+                  do_parallel = T, cores = 2)
 
 # Visualize all genes
 plotCellProximityGenes(seqfish_mini, cpgObject = ICGscoresHighGenes, method = &#39;dotplot&#39;)
@@ -1266,8 +1277,8 @@ plotCellProximityGenes(seqfish_mini, cpgObject = ICGscoresHighGenes, method = &#
 <h3>13.3 Filter ICGs<a class="headerlink" href="#filter-icgs" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Filter genes</span>
 <span class="n">ICGscoresFilt</span> <span class="o">=</span> <span class="n">filterICG</span><span class="p">(</span><span class="n">ICGscoresHighGenes</span><span class="p">,</span>
-                          <span class="n">min_cells</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">min_int_cells</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">min_fdr</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
-                   <span class="n">min_spat_diff</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">min_log2_fc</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">min_zscore</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+              <span class="n">min_cells</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">min_int_cells</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">min_fdr</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+           <span class="n">min_spat_diff</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">min_log2_fc</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">min_zscore</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1298,13 +1309,13 @@ path_to_matrix = system.file(&quot;extdata&quot;, &quot;seqfish_field_expr.txt&q
 path_to_locations = system.file(&quot;extdata&quot;, &quot;seqfish_field_locs.txt&quot;, package = &#39;Giotto&#39;)
 
 my_giotto_object = createGiottoObject(raw_exprs = path_to_matrix,
-                                      spatial_locs = path_to_locations)
+                      spatial_locs = path_to_locations)
 
 # Processing
 my_giotto_object &lt;- filterGiotto(gobject = my_giotto_object,
-                             expression_threshold = 0.5,
-                            gene_det_in_min_cells = 20,
-                             min_det_genes_per_cell = 0)
+                 expression_threshold = 0.5,
+                gene_det_in_min_cells = 20,
+                 min_det_genes_per_cell = 0)
 my_giotto_object &lt;- normalizeGiotto(gobject = my_giotto_object)
 
 # Dimension reduction
@@ -1323,9 +1334,9 @@ clusters_cell_types = paste0(&#39;cell &#39;, LETTERS[1:uniq_clusters])
 names(clusters_cell_types) = 1:uniq_clusters
 
 my_giotto_object = annotateGiotto(gobject = my_giotto_object,
-                              annotation_vector = clusters_cell_types,
-                              cluster_column = &#39;leiden_clus&#39;,
-                              name = &#39;cell_types&#39;)
+                  annotation_vector = clusters_cell_types,
+                  cluster_column = &#39;leiden_clus&#39;,
+                  name = &#39;cell_types&#39;)
 
 # Create network (required for binSpect methods)
 my_giotto_object = createSpatialNetwork(gobject = my_giotto_object, minimum_k = 2)
@@ -1348,22 +1359,22 @@ select_receptors = LR_data_det$mouseReceptor
 
 # Get statistical significance of gene pair expression changes based on expression ##
 expr_only_scores = exprCellCellcom(gobject = my_giotto_object,
-        cluster_column = &#39;cell_types&#39;,
-        random_iter = 500,
-        gene_set_1 = select_ligands,
-        gene_set_2 = select_receptors)
+    cluster_column = &#39;cell_types&#39;,
+    random_iter = 500,
+    gene_set_1 = select_ligands,
+    gene_set_2 = select_receptors)
 
 # Get statistical significance of gene pair expression changes upon cell-cell interaction
 spatial_all_scores = spatCellCellcom(my_giotto_object,
-                             spatial_network_name = &#39;Delaunay_network&#39;,
-                             cluster_column = &#39;cell_types&#39;,
-                             random_iter = 500,
-                             gene_set_1 = select_ligands,
-                             gene_set_2 = select_receptors,
-                             adjust_method = &#39;fdr&#39;,
-                             do_parallel = T,
-                             cores = 4,
-                             verbose = &#39;none&#39;)
+                 spatial_network_name = &#39;Delaunay_network&#39;,
+                 cluster_column = &#39;cell_types&#39;,
+                 random_iter = 500,
+                 gene_set_1 = select_ligands,
+                 gene_set_2 = select_receptors,
+                 adjust_method = &#39;fdr&#39;,
+                 do_parallel = T,
+                 cores = 4,
+                 verbose = &#39;none&#39;)
 </pre></div>
 </div>
 </div>
@@ -1377,35 +1388,35 @@ top_LR_ints = unique(selected_spat[order(-abs(PI))]$LR_comb)[1:33]
 top_LR_cell_ints = unique(selected_spat[order(-abs(PI))]$LR_cell_comb)[1:33]
 
 plotCCcomHeatmap(gobject = my_giotto_object,
+    comScores = spatial_all_scores,
+    selected_LR = top_LR_ints,
+    selected_cell_LR = top_LR_cell_ints,
+    show = &#39;LR_expr&#39;)
+
+plotCCcomDotplot(gobject = my_giotto_object,
         comScores = spatial_all_scores,
         selected_LR = top_LR_ints,
         selected_cell_LR = top_LR_cell_ints,
-        show = &#39;LR_expr&#39;)
-
-plotCCcomDotplot(gobject = my_giotto_object,
-                comScores = spatial_all_scores,
-                selected_LR = top_LR_ints,
-                selected_cell_LR = top_LR_cell_ints,
-                cluster_on = &#39;PI&#39;)
+        cluster_on = &#39;PI&#39;)
 
 ## * Spatial vs rank ####
 comb_comm = combCCcom(spatialCC = spatial_all_scores,
-                exprCC = expr_only_scores)
+        exprCC = expr_only_scores)
 
 # Top differential activity levels for ligand receptor pairs
 plotRankSpatvsExpr(gobject = my_giotto_object,
-                comb_comm,
-                expr_rnk_column = &#39;exprPI_rnk&#39;,
-                spat_rnk_column = &#39;spatPI_rnk&#39;,
-                midpoint = 10)
+        comb_comm,
+        expr_rnk_column = &#39;exprPI_rnk&#39;,
+        spat_rnk_column = &#39;spatPI_rnk&#39;,
+        midpoint = 10)
 
 ### Recovery ####
 # Predict maximum differential activity
 plotRecovery(gobject = my_giotto_object,
-        comb_comm,
-        expr_rnk_column = &#39;exprPI_rnk&#39;,
-        spat_rnk_column = &#39;spatPI_rnk&#39;,
-        ground_truth = &#39;spatial&#39;)
+    comb_comm,
+    expr_rnk_column = &#39;exprPI_rnk&#39;,
+    spat_rnk_column = &#39;spatPI_rnk&#39;,
+    ground_truth = &#39;spatial&#39;)
 </pre></div>
 </div>
 </div>

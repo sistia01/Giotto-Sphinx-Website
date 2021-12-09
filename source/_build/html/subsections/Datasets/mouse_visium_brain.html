@@ -16,7 +16,11 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx-toolbox-code.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/sphinx-toolbox.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_toolbox_installation.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
 
@@ -41,6 +45,7 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/sphinx_toolbox_installation.js"></script>
         <script src="../../_static/design-tabs.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -234,7 +239,7 @@
 <span class="c1"># set python path to NULL if you want to automatically install (only the 1st time) and use the giotto miniconda environment</span>
 <span class="n">python_path</span> <span class="o">=</span> <span class="n">NULL</span>
 <span class="k">if</span><span class="p">(</span><span class="ow">is</span><span class="o">.</span><span class="n">null</span><span class="p">(</span><span class="n">python_path</span><span class="p">))</span> <span class="p">{</span>
-        <span class="n">installGiottoEnvironment</span><span class="p">()</span>
+    <span class="n">installGiottoEnvironment</span><span class="p">()</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -265,8 +270,8 @@
 <h2>1. Giotto Global Instructions and Preparations<a class="headerlink" href="#giotto-global-instructions-and-preparations" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## create instructions</span>
      <span class="n">instrs</span> <span class="o">=</span> <span class="n">createGiottoInstructions</span><span class="p">(</span><span class="n">save_dir</span> <span class="o">=</span> <span class="n">results_folder</span><span class="p">,</span>
-                               <span class="n">save_plot</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
-                               <span class="n">show_plot</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">)</span>
+                   <span class="n">save_plot</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
+                   <span class="n">show_plot</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">)</span>
 
      <span class="c1">## provide path to visium folder</span>
      <span class="c1">#data_path = &#39;/path/to/Brain_data/&#39;</span>
@@ -278,13 +283,13 @@
 <h2>2. Create Giotto Object and Process The Data<a class="headerlink" href="#create-giotto-object-and-process-the-data" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## directly from visium folder</span>
 <span class="n">visium_brain</span> <span class="o">=</span> <span class="n">createGiottoVisiumObject</span><span class="p">(</span><span class="n">visium_dir</span> <span class="o">=</span> <span class="n">data_path</span><span class="p">,</span> <span class="n">expr_data</span> <span class="o">=</span> <span class="s1">&#39;raw&#39;</span><span class="p">,</span>
-                                 <span class="n">png_name</span> <span class="o">=</span> <span class="s1">&#39;tissue_lowres_image.png&#39;</span><span class="p">,</span>
-                                 <span class="n">gene_column_index</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">instructions</span> <span class="o">=</span> <span class="n">instrs</span><span class="p">)</span>
+                 <span class="n">png_name</span> <span class="o">=</span> <span class="s1">&#39;tissue_lowres_image.png&#39;</span><span class="p">,</span>
+                 <span class="n">gene_column_index</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">instructions</span> <span class="o">=</span> <span class="n">instrs</span><span class="p">)</span>
 
 <span class="c1">## update and align background image</span>
 <span class="c1"># problem: image is not perfectly aligned</span>
 <span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">visium_brain</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;in_tissue&#39;</span><span class="p">,</span> <span class="n">show_image</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">point_alpha</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;2_a_spatplot_image&#39;</span><span class="p">))</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;2_a_spatplot_image&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/2_a_spatplot_image.png"><img alt="2_a_spatplot_image.png" src="../../_images/2_a_spatplot_image.png" style="width: 400px;" /></a>
@@ -292,12 +297,12 @@
 <span class="n">showGiottoImageNames</span><span class="p">(</span><span class="n">visium_brain</span><span class="p">)</span> <span class="c1"># &quot;image&quot; is the default name</span>
 <span class="c1"># adjust parameters to align image (iterative approach)</span>
 <span class="n">visium_brain</span> <span class="o">=</span> <span class="n">updateGiottoImage</span><span class="p">(</span><span class="n">visium_brain</span><span class="p">,</span> <span class="n">image_name</span> <span class="o">=</span> <span class="s1">&#39;image&#39;</span><span class="p">,</span>
-                          <span class="n">xmax_adj</span> <span class="o">=</span> <span class="mi">1300</span><span class="p">,</span> <span class="n">xmin_adj</span> <span class="o">=</span> <span class="mi">1200</span><span class="p">,</span>
-                          <span class="n">ymax_adj</span> <span class="o">=</span> <span class="mi">1100</span><span class="p">,</span> <span class="n">ymin_adj</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
+              <span class="n">xmax_adj</span> <span class="o">=</span> <span class="mi">1300</span><span class="p">,</span> <span class="n">xmin_adj</span> <span class="o">=</span> <span class="mi">1200</span><span class="p">,</span>
+              <span class="n">ymax_adj</span> <span class="o">=</span> <span class="mi">1100</span><span class="p">,</span> <span class="n">ymin_adj</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
 
 <span class="c1"># now it&#39;s aligned</span>
 <span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">visium_brain</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;in_tissue&#39;</span><span class="p">,</span> <span class="n">show_image</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">point_alpha</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;2_b_spatplot_image_adjusted&#39;</span><span class="p">))</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;2_b_spatplot_image_adjusted&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/2_b_spatplot_image_adjusted.png"><img alt="2_b_spatplot_image_adjusted.png" src="../../_images/2_b_spatplot_image_adjusted.png" style="width: 400px;" /></a>
@@ -306,8 +311,8 @@
 
 <span class="c1">## compare in tissue with provided jpg</span>
 <span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">visium_brain</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;in_tissue&#39;</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;0&#39;</span> <span class="o">=</span> <span class="s1">&#39;lightgrey&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">),</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;2_c_in_tissue&#39;</span><span class="p">))</span>
+    <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;0&#39;</span> <span class="o">=</span> <span class="s1">&#39;lightgrey&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">),</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;2_c_in_tissue&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/2_c_in_tissue.png"><img alt="2_c_in_tissue.png" src="../../_images/2_c_in_tissue.png" style="width: 400px;" /></a>
@@ -318,11 +323,11 @@ visium_brain = subsetGiotto(visium_brain, cell_ids = in_tissue_barcodes)
 
 ## filter
 visium_brain &lt;- filterGiotto(gobject = visium_brain,
-                      expression_threshold = 1,
-                      gene_det_in_min_cells = 50,
-                      min_det_genes_per_cell = 1000,
-                      expression_values = c(&#39;raw&#39;),
-                      verbose = T)
+              expression_threshold = 1,
+              gene_det_in_min_cells = 50,
+              min_det_genes_per_cell = 1000,
+              expression_values = c(&#39;raw&#39;),
+              verbose = T)
 
 ## normalize
 visium_brain &lt;- normalizeGiotto(gobject = visium_brain, scalefactor = 6000, verbose = T)
@@ -332,13 +337,13 @@ visium_brain &lt;- addStatistics(gobject = visium_brain)
 
 ## visualize
 patPlot2D(gobject = visium_brain, show_image = T, point_alpha = 0.7,
-        ave_param = list(save_name = &#39;2_d_spatial_locations&#39;))
+    ave_param = list(save_name = &#39;2_d_spatial_locations&#39;))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/2_d_spatial_locations1.png"><img alt="2_d_spatial_locations.png" src="../../_images/2_d_spatial_locations1.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatPlot2D</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">visium_brain</span><span class="p">,</span> <span class="n">show_image</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">point_alpha</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">,</span>
-        <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;nr_genes&#39;</span><span class="p">,</span> <span class="n">color_as_factor</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;2_e_nr_genes&#39;</span><span class="p">))</span>
+    <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;nr_genes&#39;</span><span class="p">,</span> <span class="n">color_as_factor</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;2_e_nr_genes&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/2_e_nr_genes.png"><img alt="2_e_nr_genes.png" src="../../_images/2_e_nr_genes.png" style="width: 400px;" /></a>
@@ -347,7 +352,7 @@ patPlot2D(gobject = visium_brain, show_image = T, point_alpha = 0.7,
 <h2>3. Dimension Reduction<a class="headerlink" href="#dimension-reduction" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## highly variable genes (HVG)</span>
 <span class="n">visium_brain</span> <span class="o">&lt;-</span> <span class="n">calculateHVG</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">visium_brain</span><span class="p">,</span>
-                      <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_a_HVGplot&#39;</span><span class="p">))</span>
+              <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_a_HVGplot&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/3_a_HVGplot.png"><img alt="3_a_HVGplot.png" src="../../_images/3_a_HVGplot.png" style="width: 400px;" /></a>
@@ -356,29 +361,29 @@ gene_metadata = fDataDT(visium_brain)
 featgenes = gene_metadata[hvg == &#39;yes&#39; &amp; perc_cells &gt; 3 &amp; mean_expr_det &gt; 0.4]$gene_ID
 
 visium_brain &lt;- runPCA(gobject = visium_brain,
-               genes_to_use = featgenes,
-               scale_unit = F, center = T,
-               method=&quot;factominer&quot;)
+           genes_to_use = featgenes,
+           scale_unit = F, center = T,
+           method=&quot;factominer&quot;)
 
 screePlot(visium_brain, ncp = 30, save_param = list(save_name = &#39;3_b_screeplot&#39;))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/3_b_screeplot.png"><img alt="3_b_screeplot.png" src="../../_images/3_b_screeplot.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotPCA</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">visium_brain</span><span class="p">,</span>
-                <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_c_PCA_reduction&#39;</span><span class="p">))</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_c_PCA_reduction&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/3_c_PCA_reduction.png"><img alt="3_c_PCA_reduction.png" src="../../_images/3_c_PCA_reduction.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## run UMAP and tSNE on PCA space (default)</span>
 <span class="n">visium_brain</span> <span class="o">&lt;-</span> <span class="n">runUMAP</span><span class="p">(</span><span class="n">visium_brain</span><span class="p">,</span> <span class="n">dimensions_to_use</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">plotUMAP</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">visium_brain</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_d_UMAP_reduction&#39;</span><span class="p">))</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_d_UMAP_reduction&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/3_d_UMAP_reduction.png"><img alt="3_d_UMAP_reduction.png" src="../../_images/3_d_UMAP_reduction.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">visium_brain</span> <span class="o">&lt;-</span> <span class="n">runtSNE</span><span class="p">(</span><span class="n">visium_brain</span><span class="p">,</span> <span class="n">dimensions_to_use</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">plotTSNE</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">visium_brain</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_e_tSNE_reduction&#39;</span><span class="p">))</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_e_tSNE_reduction&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/3_e_tSNE_reduction.png"><img alt="3_e_tSNE_reduction.png" src="../../_images/3_e_tSNE_reduction.png" style="width: 400px;" /></a>
@@ -390,8 +395,8 @@ screePlot(visium_brain, ncp = 30, save_param = list(save_name = &#39;3_b_screepl
 <span class="c1">## Leiden clustering</span>
 <span class="n">visium_brain</span> <span class="o">&lt;-</span> <span class="n">doLeidenCluster</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">visium_brain</span><span class="p">,</span> <span class="n">resolution</span> <span class="o">=</span> <span class="mf">0.4</span><span class="p">,</span> <span class="n">n_iterations</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="n">plotUMAP</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">visium_brain</span><span class="p">,</span>
-        <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span> <span class="n">show_NN_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span>
-                <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_a_UMAP_leiden&#39;</span><span class="p">))</span>
+    <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span> <span class="n">show_NN_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_a_UMAP_leiden&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/4_a_UMAP_leiden1.png"><img alt="4_a_UMAP_leiden.png" src="../../_images/4_a_UMAP_leiden1.png" style="width: 400px;" /></a>
@@ -417,13 +422,13 @@ screePlot(visium_brain, ncp = 30, save_param = list(save_name = &#39;3_b_screepl
 <div class="section" id="subset-dataset-on-dg-region">
 <h3>5.2 Subset Dataset on DG Region<a class="headerlink" href="#subset-dataset-on-dg-region" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DG_subset</span> <span class="o">=</span> <span class="n">subsetGiottoLocs</span><span class="p">(</span><span class="n">visium_brain</span><span class="p">,</span>
-                     <span class="n">x_max</span> <span class="o">=</span> <span class="mi">6500</span><span class="p">,</span> <span class="n">x_min</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">,</span>
-                     <span class="n">y_max</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2500</span><span class="p">,</span> <span class="n">y_min</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5500</span><span class="p">,</span>
-                     <span class="n">return_gobject</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">)</span>
+             <span class="n">x_max</span> <span class="o">=</span> <span class="mi">6500</span><span class="p">,</span> <span class="n">x_min</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">,</span>
+             <span class="n">y_max</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2500</span><span class="p">,</span> <span class="n">y_min</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5500</span><span class="p">,</span>
+             <span class="n">return_gobject</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">)</span>
 
 <span class="n">spatDimPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">DG_subset</span><span class="p">,</span>
-        <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span> <span class="n">spat_point_size</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-         <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;5_c_DEG_subset&#39;</span><span class="p">))</span>
+    <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span> <span class="n">spat_point_size</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+     <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;5_c_DEG_subset&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/5_c_DEG_subset.png"><img alt="5_c_DEG_subset.png" src="../../_images/5_c_DEG_subset.png" style="width: 400px;" /></a>
@@ -434,26 +439,26 @@ screePlot(visium_brain, ncp = 30, save_param = list(save_name = &#39;3_b_screepl
 <div class="section" id="gini">
 <h3>6.1 Gini<a class="headerlink" href="#gini" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>gini_markers_subclusters = findMarkers_one_vs_all(gobject = visium_brain,
-                                          method = &#39;gini&#39;,
-                                          expression_values = &#39;normalized&#39;,
-                                          cluster_column = &#39;leiden_clus&#39;,
-                                          min_genes = 20,
-                                          min_expr_gini_score = 0.5,
-                                          min_det_gini_score = 0.5)
+                      method = &#39;gini&#39;,
+                      expression_values = &#39;normalized&#39;,
+                      cluster_column = &#39;leiden_clus&#39;,
+                      min_genes = 20,
+                      min_expr_gini_score = 0.5,
+                      min_det_gini_score = 0.5)
 topgenes_gini = gini_markers_subclusters[, head(.SD, 2), by = &#39;cluster&#39;]$genes
 
 # violinplot
 violinPlot(visium_brain, genes = unique(topgenes_gini), cluster_column = &#39;leiden_clus&#39;,
-        strip_text = 8, strip_position = &#39;right&#39;,
-        save_param = list(save_name = &#39;6_a_violinplot_gini&#39;, base_width = 5, base_height = 10))
+    strip_text = 8, strip_position = &#39;right&#39;,
+    save_param = list(save_name = &#39;6_a_violinplot_gini&#39;, base_width = 5, base_height = 10))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/6_a_violinplot_gini.png"><img alt="6_a_violinplot_gini.png" src="../../_images/6_a_violinplot_gini.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cluster heatmap</span>
 <span class="n">plotMetaDataHeatmap</span><span class="p">(</span><span class="n">visium_brain</span><span class="p">,</span> <span class="n">selected_genes</span> <span class="o">=</span> <span class="n">topgenes_gini</span><span class="p">,</span>
-            <span class="n">metadata_cols</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;leiden_clus&#39;</span><span class="p">),</span>
-            <span class="n">x_text_size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">y_text_size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-            <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;6_b_metaheatmap_gini&#39;</span><span class="p">))</span>
+        <span class="n">metadata_cols</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;leiden_clus&#39;</span><span class="p">),</span>
+        <span class="n">x_text_size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">y_text_size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;6_b_metaheatmap_gini&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/6_b_metaheatmap_gini.png"><img alt="6_b_metaheatmap_gini.png" src="../../_images/6_b_metaheatmap_gini.png" style="width: 400px;" /></a>
@@ -469,21 +474,21 @@ dimGenePlot2D(visium_brain, expression_values = &#39;scaled&#39;,
 <div class="section" id="scran">
 <h3>6.2 Scran<a class="headerlink" href="#scran" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>scran_markers_subclusters = findMarkers_one_vs_all(gobject = visium_brain,
-                                           method = &#39;scran&#39;,
-                                           expression_values = &#39;normalized&#39;,
-                                           cluster_column = &#39;leiden_clus&#39;)
+                       method = &#39;scran&#39;,
+                       expression_values = &#39;normalized&#39;,
+                       cluster_column = &#39;leiden_clus&#39;)
 topgenes_scran = scran_markers_subclusters[, head(.SD, 2), by = &#39;cluster&#39;]$genes
 
 # violinplot
 violinPlot(visium_brain, genes = unique(topgenes_scran), cluster_column = &#39;leiden_clus&#39;,
-        strip_text = 10, strip_position = &#39;right&#39;,
-        save_param = list(save_name = &#39;6_d_violinplot_scran&#39;, base_width = 5))
+    strip_text = 10, strip_position = &#39;right&#39;,
+    save_param = list(save_name = &#39;6_d_violinplot_scran&#39;, base_width = 5))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/6_d_violinplot_scran.png"><img alt="6_d_violinplot_scran.png" src="../../_images/6_d_violinplot_scran.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cluster heatmap</span>
 <span class="n">plotMetaDataHeatmap</span><span class="p">(</span><span class="n">visium_brain</span><span class="p">,</span> <span class="n">selected_genes</span> <span class="o">=</span> <span class="n">topgenes_scran</span><span class="p">,</span>
-            <span class="n">metadata_cols</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;leiden_clus&#39;</span><span class="p">),</span>
+        <span class="n">metadata_cols</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;leiden_clus&#39;</span><span class="p">),</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/6_e_metaheatmap_scran.png"><img alt="6_e_metaheatmap_scran.png" src="../../_images/6_e_metaheatmap_scran.png" style="width: 400px;" /></a>
@@ -512,23 +517,23 @@ Cell type signatures are combination of all marker genes identified in <a class=
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 1.1 create binary matrix of cell signature genes
 # small example #
 gran_markers = c(&quot;Nr3c2&quot;, &quot;Gabra5&quot;, &quot;Tubgcp2&quot;, &quot;Ahcyl2&quot;,
-         &quot;Islr2&quot;, &quot;Rasl10a&quot;, &quot;Tmem114&quot;, &quot;Bhlhe22&quot;,
-         &quot;Ntf3&quot;, &quot;C1ql2&quot;)
+     &quot;Islr2&quot;, &quot;Rasl10a&quot;, &quot;Tmem114&quot;, &quot;Bhlhe22&quot;,
+     &quot;Ntf3&quot;, &quot;C1ql2&quot;)
 
 oligo_markers = c(&quot;Efhd1&quot;, &quot;H2-Ab1&quot;, &quot;Enpp6&quot;, &quot;Ninj2&quot;,
-          &quot;Bmp4&quot;, &quot;Tnr&quot;, &quot;Hapln2&quot;, &quot;Neu4&quot;,
-          &quot;Wfdc18&quot;, &quot;Ccp110&quot;)
+      &quot;Bmp4&quot;, &quot;Tnr&quot;, &quot;Hapln2&quot;, &quot;Neu4&quot;,
+      &quot;Wfdc18&quot;, &quot;Ccp110&quot;)
 
 di_mesench_markers = c(&quot;Cartpt&quot;, &quot;Scn1a&quot;, &quot;Lypd6b&quot;,  &quot;Drd5&quot;,
-               &quot;Gpr88&quot;, &quot;Plcxd2&quot;, &quot;Cpne7&quot;, &quot;Pou4f1&quot;,
-               &quot;Ctxn2&quot;, &quot;Wnt4&quot;)
+           &quot;Gpr88&quot;, &quot;Plcxd2&quot;, &quot;Cpne7&quot;, &quot;Pou4f1&quot;,
+           &quot;Ctxn2&quot;, &quot;Wnt4&quot;)
 
 signature_matrix = makeSignMatrixPAGE(sign_names = c(&#39;Granule_neurons&#39;,
-                                             &#39;Oligo_dendrocytes&#39;,
-                                             &#39;di_mesenchephalon&#39;),
-                              sign_list = list(gran_markers,
-                                               oligo_markers,
-                                               di_mesench_markers))
+                         &#39;Oligo_dendrocytes&#39;,
+                         &#39;di_mesenchephalon&#39;),
+                  sign_list = list(gran_markers,
+                           oligo_markers,
+                           di_mesench_markers))
 
 # 1.2 [shortcut] fully pre-prepared matrix for all cell types
 sign_matrix_path = system.file(&quot;extdata&quot;, &quot;sig_matrix.txt&quot;, package = &#39;Giotto&#39;)
@@ -546,12 +551,12 @@ visium_brain = runPAGEEnrich(gobject = visium_brain, sign_matrix = sig_matrix)
 # 1.4 heatmap of enrichment versus annotation (e.g. clustering result)
 cell_types = colnames(sig_matrix)
 plotMetaDataCellsHeatmap(gobject = visium_brain,
-                 metadata_cols = &#39;leiden_clus&#39;,
-                 value_cols = cell_types,
-                 spat_enr_names = &#39;PAGE&#39;,
-                 x_text_size = 8,
-                 y_text_size = 8,
-                 save_param = list(save_name=&quot;7_a_metaheatmap&quot;))
+         metadata_cols = &#39;leiden_clus&#39;,
+         value_cols = cell_types,
+         spat_enr_names = &#39;PAGE&#39;,
+         x_text_size = 8,
+         y_text_size = 8,
+         save_param = list(save_name=&quot;7_a_metaheatmap&quot;))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/7_a_metaheatmap2.png"><img alt="7_a_metaheatmap.png" src="../../_images/7_a_metaheatmap2.png" style="width: 400px;" /></a>
@@ -574,12 +579,12 @@ plotMetaDataCellsHeatmap(gobject = visium_brain,
 </div>
 <a class="reference internal image-reference" href="../../_images/7_c_spatcellplot.png"><img alt="7_c_spatcellplot_2.png" src="../../_images/7_c_spatcellplot.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatDimCellPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">visium_brain</span><span class="p">,</span>
-        <span class="n">spat_enr_names</span> <span class="o">=</span> <span class="s1">&#39;PAGE&#39;</span><span class="p">,</span>
-        <span class="n">cell_annotation_values</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;Cortex_hippocampus&#39;</span><span class="p">,</span> <span class="s1">&#39;Granule_neurons&#39;</span><span class="p">,</span>
-                                   <span class="s1">&#39;di_mesencephalon_1&#39;</span><span class="p">,</span> <span class="s1">&#39;Oligo_dendrocyte&#39;</span><span class="p">,</span><span class="s1">&#39;Vascular&#39;</span><span class="p">),</span>
-        <span class="n">cow_n_col</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">spat_point_size</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="n">plot_alignment</span> <span class="o">=</span> <span class="s1">&#39;horizontal&#39;</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span><span class="o">=</span><span class="s2">&quot;7_d_spatDimCellPlot&quot;</span><span class="p">,</span> <span class="n">base_width</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">base_height</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>
+    <span class="n">spat_enr_names</span> <span class="o">=</span> <span class="s1">&#39;PAGE&#39;</span><span class="p">,</span>
+    <span class="n">cell_annotation_values</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;Cortex_hippocampus&#39;</span><span class="p">,</span> <span class="s1">&#39;Granule_neurons&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;di_mesencephalon_1&#39;</span><span class="p">,</span> <span class="s1">&#39;Oligo_dendrocyte&#39;</span><span class="p">,</span><span class="s1">&#39;Vascular&#39;</span><span class="p">),</span>
+    <span class="n">cow_n_col</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">spat_point_size</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">plot_alignment</span> <span class="o">=</span> <span class="s1">&#39;horizontal&#39;</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span><span class="o">=</span><span class="s2">&quot;7_d_spatDimCellPlot&quot;</span><span class="p">,</span> <span class="n">base_width</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">base_height</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/7_d_spatDimCellPlot.png"><img alt="7_d_spatDimCellPlot.png" src="../../_images/7_d_spatDimCellPlot.png" style="width: 400px;" /></a>
@@ -588,12 +593,12 @@ plotMetaDataCellsHeatmap(gobject = visium_brain,
 <div class="section" id="spatial-grid">
 <h2>8. Spatial Grid<a class="headerlink" href="#spatial-grid" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">visium_brain</span> <span class="o">&lt;-</span> <span class="n">createSpatialGrid</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">visium_brain</span><span class="p">,</span>
-                           <span class="n">sdimx_stepsize</span> <span class="o">=</span> <span class="mi">400</span><span class="p">,</span>
-                           <span class="n">sdimy_stepsize</span> <span class="o">=</span> <span class="mi">400</span><span class="p">,</span>
-                           <span class="n">minimum_padding</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+               <span class="n">sdimx_stepsize</span> <span class="o">=</span> <span class="mi">400</span><span class="p">,</span>
+               <span class="n">sdimy_stepsize</span> <span class="o">=</span> <span class="mi">400</span><span class="p">,</span>
+               <span class="n">minimum_padding</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">spatPlot</span><span class="p">(</span><span class="n">visium_brain</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span> <span class="n">show_grid</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
-        <span class="n">grid_color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">spatial_grid_name</span> <span class="o">=</span> <span class="s1">&#39;spatial_grid&#39;</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;8_grid&#39;</span><span class="p">))</span>
+    <span class="n">grid_color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">spatial_grid_name</span> <span class="o">=</span> <span class="s1">&#39;spatial_grid&#39;</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;8_grid&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/8_grid.png"><img alt="8_grid.png" src="../../_images/8_grid.png" style="width: 400px;" /></a>
@@ -601,15 +606,15 @@ plotMetaDataCellsHeatmap(gobject = visium_brain,
 <div class="section" id="spatial-network">
 <h2>9. Spatial Network<a class="headerlink" href="#spatial-network" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">visium_brain</span> <span class="o">&lt;-</span> <span class="n">createSpatialNetwork</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">visium_brain</span><span class="p">,</span>
-                             <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;kNN&#39;</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-                             <span class="n">maximum_distance_knn</span> <span class="o">=</span> <span class="mi">400</span><span class="p">,</span>
-                             <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;spatial_network&#39;</span><span class="p">)</span>
+                 <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;kNN&#39;</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                 <span class="n">maximum_distance_knn</span> <span class="o">=</span> <span class="mi">400</span><span class="p">,</span>
+                 <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;spatial_network&#39;</span><span class="p">)</span>
 
 <span class="n">showNetworks</span><span class="p">(</span><span class="n">visium_brain</span><span class="p">)</span>
 
 <span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">visium_brain</span><span class="p">,</span> <span class="n">show_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
-        <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;spatial_network&#39;</span><span class="p">,</span>
-        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;9_a_knn_network&#39;</span><span class="p">))</span>
+    <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s1">&#39;spatial_network&#39;</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;9_a_knn_network&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/9_a_knn_network.png"><img alt="9_a_knn_network.png" src="../../_images/9_a_knn_network.png" style="width: 400px;" /></a>
@@ -620,7 +625,7 @@ plotMetaDataCellsHeatmap(gobject = visium_brain,
 <h3>10.1 Spatial Genes<a class="headerlink" href="#spatial-genes" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>## kmeans binarization
 kmtest = binSpect(visium_brain, calc_hub = T, hub_min_int = 5,
-          spatial_network_name = &#39;spatial_network&#39;)
+      spatial_network_name = &#39;spatial_network&#39;)
 spatGenePlot(visium_brain, expression_values = &#39;scaled&#39;,
      genes = kmtest$genes[1:6], cow_n_col = 2, point_size = 1.5,
      save_param = list(save_name = &#39;10_a_spatial_genes_km&#39;))
@@ -629,8 +634,8 @@ spatGenePlot(visium_brain, expression_values = &#39;scaled&#39;,
 <a class="reference internal image-reference" href="../../_images/10_a_spatial_genes_km.png"><img alt="10_a_spatial_genes_km.png" src="../../_images/10_a_spatial_genes_km.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>## rank binarization
 ranktest = binSpect(visium_brain, bin_method = &#39;rank&#39;,
-            calc_hub = T, hub_min_int = 5,
-            spatial_network_name = &#39;spatial_network&#39;)
+        calc_hub = T, hub_min_int = 5,
+        spatial_network_name = &#39;spatial_network&#39;)
 spatGenePlot(visium_brain, expression_values = &#39;scaled&#39;,
      genes = ranktest$genes[1:6], cow_n_col = 2, point_size = 1.5,
      save_param = list(save_name = &#39;10_b_spatial_genes_rank&#39;))
@@ -645,27 +650,27 @@ ext_spatial_genes = ranktest[1:1500,]$gene
 
 # here we use existing detectSpatialCorGenes function to calculate pairwise distances between genes (but set network_smoothing=0 to use default clustering)
 spat_cor_netw_DT = detectSpatialCorGenes(visium_brain,
-                                 method = &#39;network&#39;,
-                                 spatial_network_name = &#39;spatial_network&#39;,
-                                 subset_genes = ext_spatial_genes)
+                 method = &#39;network&#39;,
+                 spatial_network_name = &#39;spatial_network&#39;,
+                 subset_genes = ext_spatial_genes)
 
 # cluster spatial genes
 spat_cor_netw_DT = clusterSpatialCorGenes(spat_cor_netw_DT, name = &#39;spat_netw_clus&#39;, k = 20)
 
 # visualize clusters
 heatmSpatialCorGenes(visium_brain,
-             spatCorObject = spat_cor_netw_DT,
-             use_clus_name = &#39;spat_netw_clus&#39;,
-             heatmap_legend_param = list(title = NULL),
-             save_param = list(save_name=&quot;10_c_heatmap&quot;,
-                               base_height = 6, base_width = 8, units = &#39;cm&#39;))
+         spatCorObject = spat_cor_netw_DT,
+         use_clus_name = &#39;spat_netw_clus&#39;,
+         heatmap_legend_param = list(title = NULL),
+         save_param = list(save_name=&quot;10_c_heatmap&quot;,
+                   base_height = 6, base_width = 8, units = &#39;cm&#39;))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/10_c_heatmap.png"><img alt="10_c_heatmap.png" src="../../_images/10_c_heatmap.png" style="width: 400px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>table(spat_cor_netw_DT$cor_clusters$spat_netw_clus)
 
 coexpr_dt = data.table::data.table(genes = names(spat_cor_netw_DT$cor_clusters$spat_netw_clus),
-               cluster = spat_cor_netw_DT$cor_clusters$spat_netw_clus)
+           cluster = spat_cor_netw_DT$cor_clusters$spat_netw_clus)
 data.table::setorder(coexpr_dt, cluster)
 top30_coexpr_dt = coexpr_dt[, head(.SD, 30) , by = cluster]
 
@@ -677,18 +682,18 @@ hmrf_folder = paste0(results_folder,&#39;/&#39;,&#39;11_HMRF/&#39;)
 if(!file.exists(hmrf_folder)) dir.create(hmrf_folder, recursive = T)
 
 HMRF_spatial_genes = doHMRF(gobject = visium_brain,
-                    expression_values = &#39;scaled&#39;,
-                    spatial_genes = my_spatial_genes, k = 20,
-                    spatial_network_name=&quot;spatial_network&quot;,
-                    betas = c(0, 10, 5),
-                    output_folder = paste0(hmrf_folder, &#39;/&#39;, &#39;Spatial_genes/SG_topgenes_k20_scaled&#39;))
+            expression_values = &#39;scaled&#39;,
+            spatial_genes = my_spatial_genes, k = 20,
+            spatial_network_name=&quot;spatial_network&quot;,
+            betas = c(0, 10, 5),
+            output_folder = paste0(hmrf_folder, &#39;/&#39;, &#39;Spatial_genes/SG_topgenes_k20_scaled&#39;))
 
 visium_brain = addHMRF(gobject = visium_brain, HMRFoutput = HMRF_spatial_genes,
-               k = 20, betas_to_add = c(0, 10, 20, 30, 40),
-               hmrf_name = &#39;HMRF&#39;)
+           k = 20, betas_to_add = c(0, 10, 20, 30, 40),
+           hmrf_name = &#39;HMRF&#39;)
 
 spatPlot(gobject = visium_brain, cell_color = &#39;HMRF_k20_b.40&#39;,
-        point_size = 2, save_param=c(save_name=&quot;10_d_spatPlot2D_HMRF&quot;))
+    point_size = 2, save_param=c(save_name=&quot;10_d_spatPlot2D_HMRF&quot;))
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/10_d_spatPlot2D_HMRF.png"><img alt="10_d_spatPlot2D_HMRF.png" src="../../_images/10_d_spatPlot2D_HMRF.png" style="width: 400px;" /></a>
@@ -703,20 +708,20 @@ spatPlot(gobject = visium_brain, cell_color = &#39;HMRF_k20_b.40&#39;,
 <span class="n">viewer_folder</span> <span class="o">=</span> <span class="n">paste0</span><span class="p">(</span><span class="n">results_folder</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;mouse_Visium_brain_viewer&#39;</span><span class="p">)</span>
 
 <span class="n">exportGiottoViewer</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">visium_brain</span><span class="p">,</span>
-           <span class="n">output_directory</span> <span class="o">=</span> <span class="n">viewer_folder</span><span class="p">,</span>
-           <span class="n">spat_enr_names</span> <span class="o">=</span> <span class="s1">&#39;PAGE&#39;</span><span class="p">,</span>
-           <span class="n">factor_annotations</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;in_tissue&#39;</span><span class="p">,</span>
-                                  <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
-                                  <span class="s1">&#39;HMRF_k20_b.40&#39;</span><span class="p">),</span>
-           <span class="n">numeric_annotations</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;nr_genes&#39;</span><span class="p">,</span>
-                                   <span class="s1">&#39;clus_25&#39;</span><span class="p">),</span>
-           <span class="n">dim_reductions</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;tsne&#39;</span><span class="p">,</span> <span class="s1">&#39;umap&#39;</span><span class="p">),</span>
-           <span class="n">dim_reduction_names</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;tsne&#39;</span><span class="p">,</span> <span class="s1">&#39;umap&#39;</span><span class="p">),</span>
-           <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span>
-           <span class="n">expression_rounding</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
-           <span class="n">overwrite_dir</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span>
+       <span class="n">output_directory</span> <span class="o">=</span> <span class="n">viewer_folder</span><span class="p">,</span>
+       <span class="n">spat_enr_names</span> <span class="o">=</span> <span class="s1">&#39;PAGE&#39;</span><span class="p">,</span>
+       <span class="n">factor_annotations</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;in_tissue&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;HMRF_k20_b.40&#39;</span><span class="p">),</span>
+       <span class="n">numeric_annotations</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;nr_genes&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;clus_25&#39;</span><span class="p">),</span>
+       <span class="n">dim_reductions</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;tsne&#39;</span><span class="p">,</span> <span class="s1">&#39;umap&#39;</span><span class="p">),</span>
+       <span class="n">dim_reduction_names</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;tsne&#39;</span><span class="p">,</span> <span class="s1">&#39;umap&#39;</span><span class="p">),</span>
+       <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;scaled&#39;</span><span class="p">,</span>
+       <span class="n">expression_rounding</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+       <span class="n">overwrite_dir</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span>
 
-            <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;6_e_metaheatmap_scran&#39;</span><span class="p">))</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;6_e_metaheatmap_scran&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
