@@ -36,18 +36,15 @@ Relevant Links
 
 :bdg-link-primary:`Giotto GitHub <https://github.com/RubD/Giotto/>` :bdg-link-danger:`Report Issue <SubmittingGitHubIssues>` :bdg-link-success:`Giotto Viewer <http://spatial.rc.fas.harvard.edu/giotto-viewer/>` 
 
-.. !! GitHub Sheild Not Found !! 
+
+License
+=====================
+
 .. github-shield:: 
     :username: RubD
     :repository: Giotto
     :license: 
 
-License
-=====================
-`MIT`_ | `File License`_ 
-
-.. _MIT: https://opensource.org/licenses/mit-license.php
-.. _File License: https://rubd.github.io/Giotto_site/LICENSE-text.html
 
 How to Cite Giotto?
 ==========================================

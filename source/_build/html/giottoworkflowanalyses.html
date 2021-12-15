@@ -298,9 +298,9 @@
 <h2>0. Install a Giotto Environment<a class="headerlink" href="#install-a-giotto-environment" title="Permalink to this headline">¶</a></h2>
 <p><em>Optional</em></p>
 <p>To perform all potential steps and analysis in the Giotto spatial toolbox the user needs to have a number of python modules installed.
-To make this process as flexible and easy as possible <strong>two different strategies can be used.</strong> See the <a class="reference external" href="Installation_Section">Installation</a> Section for more detailed information on installing Giotto and all of the
+To make this process as flexible and easy as possible <strong>two different strategies can be used.</strong> See the <a class="reference external" href="Installation_Section">Installation Section</a>  for more detailed information on installing Giotto and all of the
 required modules needed to use Giotto succesffully.</p>
-<p>The user can install all the necessary modules themself and then the path to their python or environment (e.g. Conda) can be provided as an instruction.</p>
+<p>The user can <strong>install all the necessary modules</strong> themself and then proivide the path to their python or environment (e.g. Conda) as an instruction.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
 <span class="n">my_instructions</span> <span class="o">=</span> <span class="n">createGiottoInstructions</span><span class="p">(</span><span class="n">python_path</span> <span class="o">=</span> <span class="s1">&#39;your/python/path&#39;</span><span class="p">)</span>
 <span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span>
@@ -308,7 +308,9 @@ required modules needed to use Giotto succesffully.</p>
                   <span class="n">instructions</span> <span class="o">=</span> <span class="n">my_instructions</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>Alternatively,</strong> the user can just install a giotto python environment using r-miniconda. This was the method that was implemented in the reticulate package. In this case the environment will be automatically detected and no specific python path need to be provided. This is explained in more detail below</p>
+<p><strong>Alternatively,</strong> the user can just <strong>install a giotto python environment using r-miniconda.</strong>
+This was the method that was implemented in the reticulate package. In this case the environment will be <em>automatically</em> detected and <em>no specific python path need to be provided.</em>
+The installation, re-installation and removal is explained in futher detail below.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
 </pre></div>
 </div>

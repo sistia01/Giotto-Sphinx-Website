@@ -24,7 +24,7 @@ Description
   * Calculate spatially increased ligand-receptor expression in cells of interacting cell type pairs
   * Find interaction changed genes (ICG): genes that change expression in one cell type due to interaction with a neighboring cell type
 
-* Giotto provides a number of options to visualize both 2D and 3D data and the outcome of Giotto can be interactively explored using `Giotto Viewer`_, which allows you to overlay the obtained results with raw or additional images of the profiled tissue section(s).
+* Giotto provides a number of options to visualize both 2D and 3D data and the outcome of Giotto can be interactively explored using :bdg-link-success:`Giotto Viewer <http://spatial.rc.fas.harvard.edu/giotto-viewer/>`, which allows you to overlay the obtained results with raw or additional images of the profiled tissue section(s).
 
 .. _Giotto Viewer: http://spatial.rc.fas.harvard.edu/spatialgiotto/giotto.install.native.html
 
@@ -63,6 +63,133 @@ This workflow image is designed to help with Giotto Installation. Users should f
     :alt: Image of Giotto Installation Workflow
     :align: center
 
+Part 1: R Giotto Requirements 
+
+.. tab-set::
+
+	.. tab-item:: R Package Installation
+
+		Have you ever installed an R package that is in development?
+
+		.. dropdown:: Yes 
+ 
+			Move on to the next step: Giotto Installation.
+		
+		.. dropdown:: No
+
+			If this is the first time you build and install an R package you can follow `this link <https://support.rstudio.com/hc/en-us/articles/200486498-Package-Development-Prerequisites>`_, which has simple installation instructions for Windows, Mac OSX and Linux.
+			To specifically install the command-line tools of Xcode for Mac OSX you might also need to run this line **in terminal**:
+
+			.. code-block:: 
+
+  				xcode-select -- install 
+
+			Move on to the next step: Giotto Installation  
+
+
+	.. tab-item:: Giotto Installation 
+		
+		Have you installed Giotto before?
+
+		.. dropdown:: Yes 
+
+			Run the following code to load giotto intto your R workspace. 
+
+			.. code-block::
+
+				library(Giotto)
+
+			Move on to the next step: Python Package Installation  
+
+		.. dropdown:: No
+
+
+			If you have installed an R Package before but this is your first time installting Giotto pleae follow the instructions below.
+			Giotto can be installed within 1-5 mins.
+
+			**This version requires C Compilation**
+
+			.. code-block::
+
+				library(devtools) # If not installed: install.packages('devtools')
+				library(remotes)  #If not installed: install.packages('remotes')
+				remotes::install_github("RubD/Giotto") 
+
+			.. warning:: 	
+				If you are having compilation (gfortran) problems check goftran.
+
+			**This version does not require C Compliation**	
+
+			.. code-block::
+
+				remotes::install_github("RubD/Giotto@cless") 
+
+			Next, run the following code to load giotto intto your R workspace. 
+
+			.. code-block::
+
+				library(Giotto)
+
+			Then, move on to the next step: Python Package Installation  
+
+Part 2: Python Giotto Requirements 
+
+.. tab-set:: 
+
+	.. tab-item:: Python Package Installation 
+
+		Have you ever installed a Python Package?
+
+		.. dropdown:: Yes
+
+			Move on to the next step: Giotto-Specific Python Packages 
+
+		.. dropdown:: No 
+
+			Information on how to install a Python package can be found `here`_.
+			Once you have read through the information, proceeed to the next step: Giotto-Specific Python Packages. 
+
+
+	.. tab-item:: Giotto-Specific Python Packages
+
+		Have you installed the python modules necessary for Giotto to run?
+		
+		.. dropdown:: Required Modules 
+
+			To perform all potential steps and analysis in the Giotto spatial toolbox the user needs to have a number of python modules installed. 
+			To make this process as flexible and easy as possible two different strategies can be used
+
+			* pandas
+			* python-igraph (igraph)
+			* networkx
+			* leidenalg
+			* python-louvain (community)
+			* smfishHmrf
+			* python.app (**OSX only**)
+			* scikit-learn
+
+			:octicon:`alert` These are necessary to run all available analyses, but can be installed automatically (see **Automatic Installation**) or manually (see **Manual Installation**) explained in the next steps.
+
+		.. dropdown:: Yes 
+
+			Move on to the next step: Python Path Specification 
+
+		.. dropdown:: No
+
+			Move on to the next step: Python Path Specification 
+
+	.. tab-item:: Python Path Specification 
+
+		Have you specified your python path in R?
+
+		.. dropdown:: Yes
+
+			You can now start using Giotto `verified;success`! 
+
+		.. dropdown:: No 
+
+.. _here: https://packaging.python.org/en/latest/tutorials/installing-packages/
+
 .. _R_Installation: 
 
 R Installation 
@@ -79,9 +206,9 @@ If this is the first time you build and install an R package you can follow `thi
 
 To specifically install the command-line tools of Xcode for Mac OSX you might also need to run this line **in terminal**:
 
-.. code-block: 
+.. code-block:: 
 
-  xcode-select -- install 
+  	xcode-select -- install 
 
 .. _FirstTimeGiotto: 
 
