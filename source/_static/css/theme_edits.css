@@ -89,6 +89,11 @@ div.highlight  {
 }
 
 /* change the width of the page */ 
+/* 
+This did not work
 .wy-nav-content {
     max-width: 1200px !important;
+}*/
+.wy-nav-content {
+    max-width: none;
 }
