@@ -27,7 +27,7 @@ Follow these instructions to create your own Docker container and run Giotto:
    
       * **Note**: The password you enter will be whatever you declared in step 2.
 
-5. Run the following in RStudio:
+5. Run the following **in RStudio**:
    
    1. library(Giotto)
 

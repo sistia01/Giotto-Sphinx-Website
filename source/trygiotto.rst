@@ -15,5 +15,6 @@ Try Giotto
 There are two methods through which users may try Giotto, either via :bdg-ref-warning-line:`Docker <DockerInformation>` or :bdg-ref-primary-line:`Binder. <BinderInformation>`. 
 
 Click the buttons above to learn more about the models or test them out!
+
 .. Sphinx-Design formatting: https://sphinx-design.readthedocs.io/en/latest/badges_buttons.html
 
