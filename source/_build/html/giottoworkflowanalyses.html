@@ -113,10 +113,9 @@
 <p class="caption" role="heading"><span class="caption-text">Guides</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="WorkflowAndHowTos.html">Workflow</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Step-by-Step Workflow</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Giotto Workflow</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#workflow-diagram">Workflow Diagram</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#workflow-analyses">Workflow Analyses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#install-a-giotto-environment">0. Install a Giotto Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-a-giotto-environment-optional">0. Install a Giotto Environment (<em>Optional</em>)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#create-a-giotto-object">1. Create a Giotto Object</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#minimum-requirements"><em>Minimum Requirements</em></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#additional-features"><em>Additional Features</em></a></li>
@@ -173,31 +172,31 @@
 <li class="toctree-l4"><a class="reference internal" href="#run-spatial-gene-detection-methods">9.2. Run spatial gene detection methods</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#spatially-coexpressed-genes">10. Identify genes that are spatially co-expressed</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#spatially-coexpressed-genes">10.  Identify genes that are spatially co-expressed</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id11">10.1 Processing steps</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#run-spatial-gene-co-expression-method">10.2 Run spatial gene co-expression method</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#explore-spatial-domains-with-hmrf">11. Explore spatial domains with HMRF</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#explore-spatial-domains-with-hmrf">11.  Explore spatial domains with HMRF</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id12">11.1 Processing steps</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#run-hmrf">11.2 Run HMRF</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#calculate-spatial-cell-cell-interaction-enrichment">12. Calculate spatial cell-cell interaction enrichment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#calculate-spatial-cell-cell-interaction-enrichment">12.  Calculate spatial cell-cell interaction enrichment</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id13">12.1 Processing steps</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#run-cell-cell-interactions">12.2 Run cell-cell interactions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#visualize-cell-cell-interactions">12.3 Visualize cell-cell interactions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#visualize-interactions-at-the-spatial-level">12.4 Visualize interactions at the spatial level</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#find-cell-cell-interaction-changed-genes-icg">13. Find cell-cell interaction changed genes (ICG)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#find-cell-cell-interaction-changed-genes-icg">13.  Find cell-cell interaction changed genes (ICG)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id14">13.1 Processing steps</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#run-interaction-changed-genes-icg">13.2 Run Interaction Changed Genes (ICG)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#filter-icgs">13.3 Filter ICGs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#visualize-selected-icg">13.4 Visualize selected ICG</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#enriched-or-depleted-ligand-receptor-interactions">14. Identify enriched or depleted ligand-receptor interactions in hetero and homo-typic cell interactions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#enriched-or-depleted-ligand-receptor-interactions">14.  Identify enriched or depleted ligand-receptor interactions in hetero and homo-typic cell interactions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id15">14.1 Processing steps</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#run-ligand-receptor-signaling">14.2 Run Ligand Receptor signaling</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#plot-ligand-receptor-signaling-results">14.3 Plot ligand receptor signaling results</a></li>
@@ -289,16 +288,12 @@
 <span id="giottoworkflowanalysespage"></span><h1>Giotto Workflow<a class="headerlink" href="#giotto-workflow" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="workflow-diagram">
 <h2>Workflow Diagram<a class="headerlink" href="#workflow-diagram" title="Permalink to this headline">¶</a></h2>
-<a class="reference internal image-reference" href="_images/diagram_giotto_workflow.png"><img alt="Diagram of Giotto Workflow" class="align-center" src="_images/diagram_giotto_workflow.png" style="width: 600px;" /></a>
+<a class="with-shadow reference internal image-reference" href="_images/diagram_giotto_workflow.png"><img alt="Diagram of Giotto Workflow" class="with-shadow align-center" src="_images/diagram_giotto_workflow.png" style="width: 700px;" /></a>
 </div>
-<div class="section" id="workflow-analyses">
-<span id="giotto-workflow-analyses"></span><h2>Workflow Analyses<a class="headerlink" href="#workflow-analyses" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="install-a-giotto-environment">
-<h2>0. Install a Giotto Environment<a class="headerlink" href="#install-a-giotto-environment" title="Permalink to this headline">¶</a></h2>
-<p><em>Optional</em></p>
+<div class="section" id="install-a-giotto-environment-optional">
+<span id="install-a-giotto-environment"></span><h2>0. Install a Giotto Environment (<em>Optional</em>)<a class="headerlink" href="#install-a-giotto-environment-optional" title="Permalink to this headline">¶</a></h2>
 <p>To perform all potential steps and analysis in the Giotto spatial toolbox the user needs to have a number of python modules installed.
-To make this process as flexible and easy as possible <strong>two different strategies can be used.</strong> See the <a class="reference external" href="Installation_Section">Installation Section</a>  for more detailed information on installing Giotto and all of the
+To make this process as flexible and easy as possible <strong>two different strategies can be used.</strong> See the <a class="reference external" href="part2_python_giotto_requirements">Part 2.2 Giotto-Specific Python Packages</a> for more detailed information on installing Giotto and all of the
 required modules needed to use Giotto succesffully.</p>
 <p>The user can <strong>install all the necessary modules</strong> themself and then proivide the path to their python or environment (e.g. Conda) as an instruction.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
@@ -311,26 +306,62 @@ required modules needed to use Giotto succesffully.</p>
 <p><strong>Alternatively,</strong> the user can just <strong>install a giotto python environment using r-miniconda.</strong>
 This was the method that was implemented in the reticulate package. In this case the environment will be <em>automatically</em> detected and <em>no specific python path need to be provided.</em>
 The installation, re-installation and removal is explained in futher detail below.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Load Giotto into R<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Installation</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Install Giotto Environment<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">installGiottoEnvironment</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Re-install the Giotto environment</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Re-install the Giotto Environment<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">installGiottoEnvironment</span><span class="p">(</span><span class="n">force_environment</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Re-install mini-conda and Giotto environment</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Re-install mini-conda and Giotto Environment<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">installGiottoEnvironment</span><span class="p">(</span><span class="n">force_miniconda</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Remove Giotto environment</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Remove Giotto Environment<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">removeGiottoEnvironment</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+</details></div>
 <div class="section" id="create-a-giotto-object">
 <span id="id1"></span><h2>1. Create a Giotto Object<a class="headerlink" href="#create-a-giotto-object" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="minimum-requirements">
@@ -402,10 +433,18 @@ The installation, re-installation and removal is explained in futher detail belo
 </div>
 <div class="section" id="process-and-filter-a-giotto-object">
 <span id="id2"></span><h2>2. Process and Filter a Giotto Object<a class="headerlink" href="#process-and-filter-a-giotto-object" title="Permalink to this headline">¶</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Load Giotto into R<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="section" id="id3">
+</div>
+</details><div class="section" id="id3">
 <h3>2.1 Create a Giotto object<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path_to_matrix</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_expr.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 <span class="n">path_to_locations</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_locs.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
@@ -441,10 +480,18 @@ The installation, re-installation and removal is explained in futher detail belo
 </div>
 <div class="section" id="dimension-reduction">
 <span id="id4"></span><h2>3. Dimension Reduction<a class="headerlink" href="#dimension-reduction" title="Permalink to this headline">¶</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Load Giotto into R<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="section" id="create-and-process-giotto-object">
+</div>
+</details><div class="section" id="create-and-process-giotto-object">
 <h3>3.1 Create and process Giotto object<a class="headerlink" href="#create-and-process-giotto-object" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path_to_matrix</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_expr.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 <span class="n">path_to_locations</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_locs.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
@@ -492,9 +539,18 @@ The installation, re-installation and removal is explained in futher detail belo
 <span id="id5"></span><h2>4. Cluster cells or spots<a class="headerlink" href="#cluster-cells-or-spots" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="processing-steps">
 <h3>4.1 Processing steps<a class="headerlink" href="#processing-steps" title="Permalink to this headline">¶</a></h3>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Load Giotto into R<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
-
-<span class="n">path_to_matrix</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_expr.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path_to_matrix</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_expr.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 <span class="n">path_to_locations</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_locs.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 
 <span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="n">path_to_matrix</span><span class="p">,</span>
@@ -571,8 +627,18 @@ See seqfish+ clustering example.</p>
 <span id="id6"></span><h2>5. Identify differentially expressed genes<a class="headerlink" href="#identify-differentially-expressed-genes" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="marker-gene-detection">
 <h3>Marker Gene Detection<a class="headerlink" href="#marker-gene-detection" title="Permalink to this headline">¶</a></h3>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Load Giotto into R<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
-<span class="n">data</span><span class="p">(</span><span class="s2">&quot;mini_giotto_single_cell&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">(</span><span class="s2">&quot;mini_giotto_single_cell&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>This tutorial starts from a pre-computed mini Giotto object, which has already undergone pre-processing, dimensions reduction and clustering steps. Currently provides 3 different methods to identify marker genes:
@@ -632,8 +698,18 @@ See seqfish+ clustering example.</p>
 <span id="id7"></span><h2>6. Annotate clusters<a class="headerlink" href="#annotate-clusters" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="giotto-annotation-tools">
 <h3>Giotto Annotation Tools<a class="headerlink" href="#giotto-annotation-tools" title="Permalink to this headline">¶</a></h3>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Load Giotto into R<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
-<span class="n">data</span><span class="p">(</span><span class="s2">&quot;mini_giotto_single_cell&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">(</span><span class="s2">&quot;mini_giotto_single_cell&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p><em>Clustering results or other type of metadata information can be further annotated by the user by providing a named vector. Cell or gene metadata can also be removed from the Giotto object if required.</em></p>
@@ -695,9 +771,18 @@ See seqfish+ clustering example.</p>
 </div>
 <div class="section" id="id9">
 <h3>7.1 Processing steps<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Load Giotto into R<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
-
-<span class="n">path_to_matrix</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;visium_DG_expr.txt.gz&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path_to_matrix</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;visium_DG_expr.txt.gz&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 <span class="n">path_to_locations</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;visium_DG_locs.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 
 <span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="n">path_to_matrix</span><span class="p">,</span>
@@ -807,8 +892,18 @@ spatCellPlot(gobject = my_giotto_object,
 </div>
 <div class="section" id="create-a-spatial-grid-or-network">
 <span id="spatial-grid-or-network"></span><h2>8. Create a Spatial grid or Network<a class="headerlink" href="#create-a-spatial-grid-or-network" title="Permalink to this headline">¶</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Load Giotto into R<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
-<span class="n">data</span><span class="p">(</span><span class="s2">&quot;mini_giotto_single_cell&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">(</span><span class="s2">&quot;mini_giotto_single_cell&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="create-a-spatial-grid">
@@ -869,11 +964,20 @@ spatCellPlot(gobject = my_giotto_object,
 <div class="section" id="find-genes-with-a-spatially-coherent-gene-expression-pattern">
 <span id="spatially-coherent-gene-expression-pattern"></span><h2>9. Find genes with a spatially coherent gene expression pattern<a class="headerlink" href="#find-genes-with-a-spatially-coherent-gene-expression-pattern" title="Permalink to this headline">¶</a></h2>
 <p><em>Spatial Gene Detection Tools</em></p>
-<div class="section" id="id10">
-<h3>9.1 Processing steps<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Load Giotto into R<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
-
-<span class="n">path_to_matrix</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_expr.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><div class="section" id="id10">
+<h3>9.1 Processing steps<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path_to_matrix</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_expr.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 <span class="n">path_to_locations</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_locs.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 
 <span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="n">path_to_matrix</span><span class="p">,</span>
@@ -943,13 +1047,22 @@ spatGenePlot(my_giotto_object, expression_values = &#39;scaled&#39;,
 </div>
 </div>
 <div class="section" id="spatially-coexpressed-genes">
-<span id="identify-genes-that-are-spatially-co-expressed"></span><h2>10. Identify genes that are spatially co-expressed<a class="headerlink" href="#spatially-coexpressed-genes" title="Permalink to this headline">¶</a></h2>
+<span id="identify-genes-that-are-spatially-co-expressed"></span><h2>10.  Identify genes that are spatially co-expressed<a class="headerlink" href="#spatially-coexpressed-genes" title="Permalink to this headline">¶</a></h2>
 <p><em>Spatial Gene Co-Expression</em></p>
-<div class="section" id="id11">
-<h3>10.1 Processing steps<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Load Giotto into R<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
-
-<span class="n">path_to_matrix</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_expr.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><div class="section" id="id11">
+<h3>10.1 Processing steps<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path_to_matrix</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_expr.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 <span class="n">path_to_locations</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_locs.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 
 <span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="n">path_to_matrix</span><span class="p">,</span>
@@ -1021,13 +1134,22 @@ spatCellPlot(my_giotto_object,
 </div>
 </div>
 <div class="section" id="explore-spatial-domains-with-hmrf">
-<span id="spatial-domains-with-hmrf"></span><h2>11. Explore spatial domains with HMRF<a class="headerlink" href="#explore-spatial-domains-with-hmrf" title="Permalink to this headline">¶</a></h2>
+<span id="spatial-domains-with-hmrf"></span><h2>11.  Explore spatial domains with HMRF<a class="headerlink" href="#explore-spatial-domains-with-hmrf" title="Permalink to this headline">¶</a></h2>
 <p><em>HMRF</em></p>
-<div class="section" id="id12">
-<h3>11.1 Processing steps<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Load Giotto into R<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
-
-<span class="n">path_to_matrix</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_expr.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><div class="section" id="id12">
+<h3>11.1 Processing steps<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path_to_matrix</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_expr.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 <span class="n">path_to_locations</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;seqfish_field_locs.txt&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;Giotto&#39;</span><span class="p">)</span>
 
 <span class="n">my_giotto_object</span> <span class="o">=</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="n">path_to_matrix</span><span class="p">,</span>
@@ -1087,13 +1209,22 @@ spatPlot(gobject = my_giotto_object, cell_color = &#39;HMRF_k9_b.28&#39;,
 </div>
 </div>
 <div class="section" id="calculate-spatial-cell-cell-interaction-enrichment">
-<span id="calculate-spatial-cell-cell-interaction"></span><h2>12. Calculate spatial cell-cell interaction enrichment<a class="headerlink" href="#calculate-spatial-cell-cell-interaction-enrichment" title="Permalink to this headline">¶</a></h2>
+<span id="calculate-spatial-cell-cell-interaction"></span><h2>12.  Calculate spatial cell-cell interaction enrichment<a class="headerlink" href="#calculate-spatial-cell-cell-interaction-enrichment" title="Permalink to this headline">¶</a></h2>
 <p><em>Cell-cell interaction analysis and visualization</em></p>
-<div class="section" id="id13">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Load Giotto into R<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><div class="section" id="id13">
 <h3>12.1 Processing steps<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>library(Giotto)
-
-path_to_matrix = system.file(&quot;extdata&quot;, &quot;seqfish_field_expr.txt&quot;, package = &#39;Giotto&#39;)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>path_to_matrix = system.file(&quot;extdata&quot;, &quot;seqfish_field_expr.txt&quot;, package = &#39;Giotto&#39;)
 path_to_locations = system.file(&quot;extdata&quot;, &quot;seqfish_field_locs.txt&quot;, package = &#39;Giotto&#39;)
 
 my_giotto_object = createGiottoObject(raw_exprs = path_to_matrix,
@@ -1203,13 +1334,22 @@ km_spatialgenes = binSpect(my_giotto_object, bin_method = &#39;kmeans&#39;)
 </div>
 </div>
 <div class="section" id="find-cell-cell-interaction-changed-genes-icg">
-<span id="find-cell-cell-interactions-changed-genes"></span><h2>13. Find cell-cell interaction changed genes (ICG)<a class="headerlink" href="#find-cell-cell-interaction-changed-genes-icg" title="Permalink to this headline">¶</a></h2>
+<span id="find-cell-cell-interactions-changed-genes"></span><h2>13.  Find cell-cell interaction changed genes (ICG)<a class="headerlink" href="#find-cell-cell-interaction-changed-genes-icg" title="Permalink to this headline">¶</a></h2>
 <p><em>Interaction changed genes</em></p>
-<div class="section" id="id14">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Load Giotto into R<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><div class="section" id="id14">
 <h3>13.1 Processing steps<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>library(Giotto)
-
-path_to_matrix = system.file(&quot;extdata&quot;, &quot;seqfish_field_expr.txt&quot;, package = &#39;Giotto&#39;)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>path_to_matrix = system.file(&quot;extdata&quot;, &quot;seqfish_field_expr.txt&quot;, package = &#39;Giotto&#39;)
 path_to_locations = system.file(&quot;extdata&quot;, &quot;seqfish_field_locs.txt&quot;, package = &#39;Giotto&#39;)
 
 my_giotto_object = createGiottoObject(raw_exprs = path_to_matrix,
@@ -1302,8 +1442,19 @@ plotCellProximityGenes(seqfish_mini, cpgObject = ICGscoresHighGenes, method = &#
 </div>
 </div>
 <div class="section" id="enriched-or-depleted-ligand-receptor-interactions">
-<span id="identify-enriched-or-depleted-ligand-receptor-interactions-in-hetero-and-homo-typic-cell-interactions"></span><h2>14. Identify enriched or depleted ligand-receptor interactions in hetero and homo-typic cell interactions<a class="headerlink" href="#enriched-or-depleted-ligand-receptor-interactions" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id15">
+<span id="identify-enriched-or-depleted-ligand-receptor-interactions-in-hetero-and-homo-typic-cell-interactions"></span><h2>14.  Identify enriched or depleted ligand-receptor interactions in hetero and homo-typic cell interactions<a class="headerlink" href="#enriched-or-depleted-ligand-receptor-interactions" title="Permalink to this headline">¶</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Load Giotto into R<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><div class="section" id="id15">
 <h3>14.1 Processing steps<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>library(Giotto)
 

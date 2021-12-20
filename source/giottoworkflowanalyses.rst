@@ -9,23 +9,19 @@ Workflow Diagram
 ***************************
 
 .. image:: images/diagram_giotto_workflow.png
-   :width: 600
+   :width: 700
+   :class: with-shadow
    :alt: Diagram of Giotto Workflow
    :align: center
 
-.. _Giotto Workflow Analyses: 
+.. _install_a_giotto_environment:
 
-***************************
-Workflow Analyses
-***************************
-
-********************************
-0. Install a Giotto Environment 
-********************************
-*Optional*
+*********************************************
+0. Install a Giotto Environment (*Optional*)
+*********************************************
 
 To perform all potential steps and analysis in the Giotto spatial toolbox the user needs to have a number of python modules installed. 
-To make this process as flexible and easy as possible **two different strategies can be used.** See the `Installation Section <Installation_Section>`_  for more detailed information on installing Giotto and all of the 
+To make this process as flexible and easy as possible **two different strategies can be used.** See the `Part 2.2 Giotto-Specific Python Packages <part2_python_giotto_requirements>`_ for more detailed information on installing Giotto and all of the 
 required modules needed to use Giotto succesffully.
 
 The user can **install all the necessary modules** themself and then proivide the path to their python or environment (e.g. Conda) as an instruction.
@@ -44,34 +40,36 @@ This was the method that was implemented in the reticulate package. In this case
 The installation, re-installation and removal is explained in futher detail below.
 		
 
-.. code-block:: 
+.. dropdown:: Load Giotto into R 
 
-	library(Giotto)
+	.. code-block:: 
+
+		library(Giotto)
 
 
-Installation
+.. dropdown:: Install Giotto Environment
 
-.. code-block:: 
+	.. code-block:: 
 
-	installGiottoEnvironment()
+		installGiottoEnvironment()
 
-Re-install the Giotto environment
+.. dropdown:: Re-install the Giotto Environment
 
-.. code-block:: 
+	.. code-block:: 
 
-	installGiottoEnvironment(force_environment = TRUE)
+		installGiottoEnvironment(force_environment = TRUE)
 
-Re-install mini-conda and Giotto environment
+.. dropdown:: Re-install mini-conda and Giotto Environment
 
-.. code-block::
+	.. code-block::
 
-	installGiottoEnvironment(force_miniconda = TRUE)
+		installGiottoEnvironment(force_miniconda = TRUE)
 
-Remove Giotto environment
+.. dropdown:: Remove Giotto Environment
 
-.. code-block:: 
+	.. code-block:: 
 
-	removeGiottoEnvironment()
+		removeGiottoEnvironment()
 
 
 .. _create-a-giotto-object:
@@ -79,6 +77,7 @@ Remove Giotto environment
 **************************
 1. Create a Giotto Object 
 **************************
+
 *Minimum Requirements*
 =========================
 * Expression Matrix
@@ -150,9 +149,11 @@ Usually specifying your own instructions can be most useful to:
 2. Process and Filter a Giotto Object 
 ****************************************
 
-.. code-block::
-	
-	library(Giotto)
+.. dropdown:: Load Giotto into R
+
+	.. code-block::
+		
+		library(Giotto)
 
 2.1 Create a Giotto object 
 ===========================
@@ -192,16 +193,17 @@ Usually specifying your own instructions can be most useful to:
 
 
 
-
-
 .. _dimension-reduction:
 
 **************************
 3. Dimension Reduction
 **************************
-.. code-block::
 
-	library(Giotto)
+.. dropdown:: Load Giotto into R
+	
+	.. code-block::
+		
+		library(Giotto)
 
 3.1 Create and process Giotto object 
 ========================================================================
@@ -259,9 +261,13 @@ Usually specifying your own instructions can be most useful to:
 4.1 Processing steps 
 ===============================================================================================
 
-.. code-block::
+.. dropdown:: Load Giotto into R
+	
+	.. code-block::
+		
+		library(Giotto)
 
-	library(Giotto)
+.. code-block::
 
 	path_to_matrix = system.file("extdata", "seqfish_field_expr.txt", package = 'Giotto')
 	path_to_locations = system.file("extdata", "seqfish_field_locs.txt", package = 'Giotto')
@@ -347,9 +353,14 @@ See seqfish+ clustering example.
 Marker Gene Detection 
 ============================
 
+.. dropdown:: Load Giotto into R
+	
+	.. code-block::
+		
+		library(Giotto)
+
 .. code-block::
 
-	library(Giotto)
 	data("mini_giotto_single_cell")
 
 This tutorial starts from a pre-computed mini Giotto object, which has already undergone pre-processing, dimensions reduction and clustering steps. Currently provides 3 different methods to identify marker genes:
@@ -414,12 +425,18 @@ A general wrapper has also been created which covers all three methods. See **fi
 ********************************
 6. Annotate clusters
 ********************************
+
 Giotto Annotation Tools 
 =======================================================================================
 
+.. dropdown:: Load Giotto into R
+	
+	.. code-block::
+		
+		library(Giotto)
+
 .. code-block:: 
 
-	library(Giotto)
 	data("mini_giotto_single_cell")
 
 *Clustering results or other type of metadata information can be further annotated by the user by providing a named vector. Cell or gene metadata can also be removed from the Giotto object if required.*
@@ -487,9 +504,13 @@ Giotto spot enrichment tools
 7.1 Processing steps 
 ==============================================================================================
 
-.. code-block::
+.. dropdown:: Load Giotto into R
+	
+	.. code-block::
+		
+		library(Giotto)
 
-	library(Giotto)
+.. code-block::
 
 	path_to_matrix = system.file("extdata", "visium_DG_expr.txt.gz", package = 'Giotto')
 	path_to_locations = system.file("extdata", "visium_DG_locs.txt", package = 'Giotto')
@@ -601,9 +622,15 @@ Giotto spot enrichment tools
 ******************************************
 8. Create a Spatial grid or Network
 ******************************************
+
+.. dropdown:: Load Giotto into R
+	
+	.. code-block::
+		
+		library(Giotto)
+
 .. code-block::
 
-	library(Giotto)
 	data("mini_giotto_single_cell")
 
 8.1 Create a spatial grid 
@@ -668,11 +695,15 @@ Giotto spot enrichment tools
 *******************************************************************
 *Spatial Gene Detection Tools*
 
+.. dropdown:: Load Giotto into R
+	
+	.. code-block::
+		
+		library(Giotto)
+
 9.1 Processing steps 
 ========================
 .. code-block::
-
-	library(Giotto)
 
 	path_to_matrix = system.file("extdata", "seqfish_field_expr.txt", package = 'Giotto')
 	path_to_locations = system.file("extdata", "seqfish_field_locs.txt", package = 'Giotto')
@@ -745,17 +776,21 @@ Giotto spot enrichment tools
 .. _spatially-coexpressed-genes:
 
 ***************************************************
-10. Identify genes that are spatially co-expressed
+10.  Identify genes that are spatially co-expressed
 ***************************************************
 
 *Spatial Gene Co-Expression* 
+
+.. dropdown:: Load Giotto into R
+	
+	.. code-block::
+		
+		library(Giotto)
 
 10.1 Processing steps 
 ======================================================================================
 
 .. code-block::
-
-	library(Giotto)
 
 	path_to_matrix = system.file("extdata", "seqfish_field_expr.txt", package = 'Giotto')
 	path_to_locations = system.file("extdata", "seqfish_field_locs.txt", package = 'Giotto')
@@ -831,17 +866,21 @@ Giotto spot enrichment tools
 .. _spatial-domains-with-HMRF:
 
 ****************************************
-11. Explore spatial domains with HMRF
+11.  Explore spatial domains with HMRF
 ****************************************
 
 *HMRF*
+
+.. dropdown:: Load Giotto into R
+	
+	.. code-block::
+		
+		library(Giotto)
 
 11.1 Processing steps
 =======================
 
 .. code-block::
-
-	library(Giotto)
 
 	path_to_matrix = system.file("extdata", "seqfish_field_expr.txt", package = 'Giotto')
 	path_to_locations = system.file("extdata", "seqfish_field_locs.txt", package = 'Giotto')
@@ -902,16 +941,20 @@ Giotto spot enrichment tools
 .. _calculate-spatial-cell-cell-interaction:
 
 *******************************************************
-12. Calculate spatial cell-cell interaction enrichment
+12.  Calculate spatial cell-cell interaction enrichment
 *******************************************************
 *Cell-cell interaction analysis and visualization*
+
+.. dropdown:: Load Giotto into R
+	
+	.. code-block::
+		
+		library(Giotto)
 
 12.1 Processing steps 
 ===========================
 
 .. code-block::
-
-	library(Giotto)
 
 	path_to_matrix = system.file("extdata", "seqfish_field_expr.txt", package = 'Giotto')
 	path_to_locations = system.file("extdata", "seqfish_field_locs.txt", package = 'Giotto')
@@ -1024,18 +1067,21 @@ Giotto spot enrichment tools
 .. _find-cell-cell-interactions-changed-genes:
 
 ******************************************************
-13. Find cell-cell interaction changed genes (ICG)
+13.  Find cell-cell interaction changed genes (ICG)
 ******************************************************
 
 *Interaction changed genes*
 
+.. dropdown:: Load Giotto into R
+	
+	.. code-block::
+		
+		library(Giotto)
 
 13.1 Processing steps 
 ============================
 
 .. code-block::
-	
-	library(Giotto)
 
 	path_to_matrix = system.file("extdata", "seqfish_field_expr.txt", package = 'Giotto')
 	path_to_locations = system.file("extdata", "seqfish_field_locs.txt", package = 'Giotto')
@@ -1130,8 +1176,14 @@ Giotto spot enrichment tools
 .. _enriched-or-depleted-ligand-receptor-interactions:
 
 **********************************************************************************************************
-14. Identify enriched or depleted ligand-receptor interactions in hetero and homo-typic cell interactions
+14.  Identify enriched or depleted ligand-receptor interactions in hetero and homo-typic cell interactions
 **********************************************************************************************************
+
+.. dropdown:: Load Giotto into R
+	
+	.. code-block::
+		
+		library(Giotto)
 
 14.1 Processing steps
 ===============================

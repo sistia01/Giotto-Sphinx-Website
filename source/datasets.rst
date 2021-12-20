@@ -1,5 +1,4 @@
 .. _datasets: 
-
 ################################
 Examples
 ################################
@@ -34,10 +33,10 @@ merFISH Example
     # choose your directory
     my_working_dir = getwd()
 
-    # standard download data to working directory
+    # standardly download data to working directory
     getSpatialDataset(dataset = 'merfish_preoptic', directory = my_working_dir)
 
-    # use wget to  download data to working directory (much faster)
+    # use wget to download data to working directory (much faster)
     getSpatialDataset(dataset = 'merfish_preoptic', directory = my_working_dir, method = 'wget')
 
     # avoid certification issues with wget
@@ -128,10 +127,12 @@ Full Datasets
         .. image:: images/dataset_page/human_cyCIF_PDAC_image_summary.png
             :target: subsections/datasets/human_cyCIF_PDAC_image_summary.rst 
 
-        .. button-link:: /subsections/datasets/human_CyCIF_PDAC.rst 
+        .. button-ref:: /subsections/datasets/human_CyCIF_PDAC.rst 
+            :ref-type: any
             :color: dark
             :shadow:
             :expand:
+            :click-parent:
     
             Human CyCIF PDAC
 
@@ -165,6 +166,7 @@ Full Datasets
         
         .. image:: images/dataset_page/visium_brain_image_summary.png 
             :target: subsections/datasets/mouse_visium_brain.rst
+            :width: 300 
 
         .. button-link:: subsections/datasets/mouse_visium_brain.rst
             :color: dark
@@ -177,8 +179,9 @@ Full Datasets
         
         .. image:: images/dataset_page/visium_kidney_image_summary.png 
             :target: subsections/datasets/mouse_visium_kidney.rst
+            :width: 300 
 
-        .. button-link:: subsections/datasets/mouse_visium_kidney.rst
+        .. button-link:: subsections/datasets/mouse_visium_kidney.rst 
             :color: dark
             :shadow:
             :expand:
@@ -189,6 +192,7 @@ Full Datasets
         
         .. image:: images/dataset_page/osmFISH_SS_cortex_image_summary.png 
             :target: subsections/datasets/osmFISH_mouse_SS_cortex.rst
+            :width: 300 
 
         .. button-link:: /subsections/datasets/osmFISH_mouse_SS_cortex.rst
             :color: dark
@@ -203,6 +207,7 @@ Full Datasets
         :columns: 4
         
         .. image:: images/dataset_page/mouse_SS_cortex_and_subventricular.png 
+            :width: 300
             :target: subsections/datasets/seqFISH_cortex.rst
 
         .. button-link:: subsections/datasets/seqFISH_cortex.rst

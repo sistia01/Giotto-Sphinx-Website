@@ -8,5 +8,5 @@ with Giotto.
 .. toctree::
     :maxdepth: 2
 
-    Step-by-Step Workflow <giottoworkflowanalyses.rst>
+    giottoworkflowanalyses.rst
     HowTos and Tips <tipsandtricks.rst>
