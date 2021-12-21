@@ -80,9 +80,10 @@ Mini Datasets
     .. grid-item-card::
 
         .. image:: images/dataset_page/mini_STARmap.png  
-            :target: subsections/datasets/mini_3D_STARmap.rst 
+            :target: /subsections/datasets/mini_3D_STARmap.rst 
 
-        .. button-link:: subsections/datasets/mini_3D_STARmap.rst 
+        .. button-ref:: /subsections/datasets/mini_3D_STARmap.rst 
+            :ref-type: doc
             :color: dark
             :shadow:
             :expand:
