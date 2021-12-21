@@ -53,13 +53,20 @@ Arguments
 Value 
 ******************
 
-An updated Giotto object that uses the SpatialDE resutlts. 
-
+An updated Giotto object that incorporates the `SpatialDE <https://github.com/Teichlab/SpatialDE#readme>`__ resutlts. 
 
 ******************
 Details 
 ******************
 
-This function is a wrapper for the SpatialAEH method implemented in the SpatialDE function. 
+This function is a wrapper for the automatic expresion histology (AEH) method performed in the SpatialDE function. 
+SpatialDE provides automatic expression histology, a method that groups genes into common spatial patterns 
+(and conversely reveal histological patterns based on gene coexpression).
+
+.. note:: 
+
+	AEH requires two parameters: the number of patterns, and the characteristic lengthscale for histological patterns.
+
+For more information visit the `SpatialDE Github Page <https://github.com/Teichlab/SpatialDE#readme>`__.
 
 

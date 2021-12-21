@@ -24,11 +24,13 @@ Description
   * Calculate spatially increased ligand-receptor expression in cells of interacting cell type pairs
   * Find interaction changed genes (ICG): genes that change expression in one cell type due to interaction with a neighboring cell type
 
-* Giotto provides a number of options to visualize both 2D and 3D data and the outcome of Giotto can be interactively explored using :bdg-link-success:`Giotto Viewer <http://spatial.rc.fas.harvard.edu/giotto-viewer/>`, which allows you to overlay the obtained results with raw or additional images of the profiled tissue section(s).
+* Giotto provides a number of options to visualize both 2D and 3D data and the outcome of Giotto can be interactively explored using :bdg-link-success:`Giotto Viewer <http://spatial.rc.fas.harvard.edu/giotto-viewer/>` which allows you to overlay the obtained results with raw or additional images of the profiled tissue section(s).
 
 .. _Giotto Viewer: http://spatial.rc.fas.harvard.edu/spatialgiotto/giotto.install.native.html
 
-Make sure to check out the `Datasets <datasets>`_ section to see examples of the Giotto workflow.
+.. tip:: 
+	
+	Be sure to check out the :ref:`Examples Section <datasets>` to get a better undersstanding of the Giotto workflow.
 
 *************
 Requirements
@@ -44,7 +46,7 @@ Requirements
 *************
 Installation
 *************
-Giotto is installed via R but there are required Python which must be installed in order for Giotto to function properly. 
+Giotto is installed via R **but** there are required Python which must be installed in order for Giotto to function properly. 
 Below are instructions for both Giotto Package Installation (via R) and Installation of Required Python Modules. 
 In order to use Giotto successfully, users must have both the Giotto Package installed as well as the required Python Packages. 
 
