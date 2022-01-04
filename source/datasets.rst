@@ -69,8 +69,8 @@ Mini Datasets
         .. image:: images/dataset_page/mini_seqFISH.png
             :target: ../build/html/subsections/datasets/mini_seqFISH.html
 
-        .. button-ref:: `mini_seqFISH`_
-            :ref-type: any
+        .. button-ref:: subsections/datasets/mini_seqFISH.rst
+            :ref-type: doc
             :color: dark
             :shadow:
             :expand:
