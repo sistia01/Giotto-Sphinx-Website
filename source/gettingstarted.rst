@@ -202,7 +202,7 @@ Part 2: Python Giotto Requirements
 			:open:
 
 			There are two methods through which users may install the required python modules ('Automatic Installation' vs. 'Manual Installation')
-
+			
 			.. dropdown:: 2.2A: Automatic Installation 
 
 				The python modules will be installed automatically in a miniconda environment when installing Giotto. However, it will ask you whether you want to install them and you can opt out and select your preferred python path. In that case you need to do a manual installation of the python modules.

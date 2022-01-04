@@ -11,11 +11,13 @@ STARmap Mouse Cortex
 Install Giotto and Python Modules
 *******************************************
 
-To run this vignette you need to install all the necessary Python modules. This can be done either (1) manually or (2) via our Installation Tool (from within R). 
+To run this vignette you need to install **all** of the necessary Python modules. 
 
-1. :ref:`Click here for manual installation instructions <manualinstallation>`
-2. :ref:`Click here for our automatic installation tool instructions <automaticinstallation>`
+.. important::
+	
+	Python module installation can be done either **automatically** via our installation tool (from within R) (see step 2.2A) or **manually** (see step 2.2B). 
 
+	:octicon:`eye` See :ref:`Part 2.2 Giotto-Specific Python Packages <part2_python_giotto_requirements>` of our Giotto Installation section for step-by-step instructions. 
 
 ***************************
 Set-Up Giotto 
