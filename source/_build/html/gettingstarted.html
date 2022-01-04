@@ -115,8 +115,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#howtos">HowTos</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#giotto-workflow-analyses-steps"><span class="xref std std-doc">Giotto Workflow Analyses Steps</span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#giotto-analyzer-and-viewer-interaction-work-in-progress">Giotto Analyzer and Viewer interaction [work in progress]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#giotto-workflow-analyses-steps-howtos"><span class="xref std std-doc">Giotto Workflow Analyses Steps “HowTos”</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#giotto-analyzer-and-viewer-interaction-work-in-progress">Giotto Analyzer and Viewer interaction [<em>work in progress</em>]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tips-and-tricks">Tips and Tricks</a></li>
 </ul>
 </li>
@@ -216,8 +216,6 @@
 <li><p>Clustering and cell type annotation</p></li>
 </ul>
 </li>
-</ul>
-<ul class="simple">
 <li><p>To facilitate the analysis of recently emerging high-throughput, but lower-resolution spatial transcriptomic technologies, such as 10X Genomics Visium and Slide-seq, Giotto has 3 implemented algorithms for estimating the spatial enrichment of different cell types by integration of known gene signatures or single-cell RNAseq expression and annotation data.</p></li>
 <li><p>Spatial information is retained through the formation of a spatial grid and/or a spatial proximity network, which is used to:</p>
 <ul>
@@ -229,9 +227,12 @@
 <li><p>Find interaction changed genes (ICG): genes that change expression in one cell type due to interaction with a neighboring cell type</p></li>
 </ul>
 </li>
-<li><p>Giotto provides a number of options to visualize both 2D and 3D data and the outcome of Giotto can be interactively explored using <a class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success reference external" href="http://spatial.rc.fas.harvard.edu/giotto-viewer/"><span>Giotto Viewer</span></a>, which allows you to overlay the obtained results with raw or additional images of the profiled tissue section(s).</p></li>
+<li><p>Giotto provides a number of options to visualize both 2D and 3D data and the outcome of Giotto can be interactively explored using <a class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success reference external" href="http://spatial.rc.fas.harvard.edu/giotto-viewer/"><span>Giotto Viewer</span></a> which allows you to overlay the obtained results with raw or additional images of the profiled tissue section(s).</p></li>
 </ul>
-<p>Make sure to check out the <a class="reference external" href="datasets">Datasets</a> section to see examples of the Giotto workflow.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Be sure to check out the <a class="reference internal" href="datasets.html#datasets"><span class="std std-ref">Examples Section</span></a> to get a better undersstanding of the Giotto workflow.</p>
+</div>
 </div>
 <div class="section" id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
@@ -243,20 +244,20 @@
 </div>
 <div class="section" id="installation">
 <span id="installation-section"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>Giotto is installed via R but there are required Python which must be installed in order for Giotto to function properly.
-Below are instructions for both Giotto Package Installation (via R) and Installation of Required Python Modules.
-In order to use Giotto successfully, users must have both the Giotto Package installed as well as the required Python Packages.</p>
+<p>Giotto is installed via R <strong>but there are required Python modules</strong> which <strong>must</strong> be installed in order for Giotto to function properly.
+Below are the instructions for both the Giotto Package Installation (Part 1) done via R and the Installation of Required Python Modules (Part 2).
+In order to use Giotto successfully, users <strong>must</strong> have both the Giotto Package installed as well as the required Python Packages.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Make sure that your system has satisfied <strong>all</strong> of the requirements needed to sucessfully install Giotto.</p>
 </div>
 <p>For ease of acces, there is a method which allows users to automatically install all of the necessary python modules from within R (see Part 2.2 Giotto-Specific Python Packages for more information).</p>
-<p><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-light-bulb" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 01-1.484.211c-.04-.282-.163-.547-.37-.847a8.695 8.695 0 00-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.75.75 0 01-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75zM6 15.25a.75.75 0 01.75-.75h2.5a.75.75 0 010 1.5h-2.5a.75.75 0 01-.75-.75zM5.75 12a.75.75 0 000 1.5h4.5a.75.75 0 000-1.5h-4.5z"></path></svg> Checkout out the <a class="reference external" href="faqs">Errors and FAQs Section</a> for more troubleshooting tips on common installation issues.</p>
+<p><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-light-bulb" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 01-1.484.211c-.04-.282-.163-.547-.37-.847a8.695 8.695 0 00-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.75.75 0 01-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75zM6 15.25a.75.75 0 01.75-.75h2.5a.75.75 0 010 1.5h-2.5a.75.75 0 01-.75-.75zM5.75 12a.75.75 0 000 1.5h4.5a.75.75 0 000-1.5h-4.5z"></path></svg> Checkout out the <a class="reference internal" href="errorsfaqsandtips.html#faqs"><span class="std std-ref">Common Errors and Solutions</span></a> for more troubleshooting tips on common installation issues.</p>
 <div class="section" id="giotto-installation-workflow">
 <span id="giottoinstallationworkflow"></span><h3>Giotto Installation Workflow<a class="headerlink" href="#giotto-installation-workflow" title="Permalink to this headline">¶</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="5b3494c3-d2f7-4c2a-8024-2921de602930" name="864833eb-54c5-4555-a4af-fa8b0a613fec" type="radio">
-</input><label class="sd-tab-label" for="5b3494c3-d2f7-4c2a-8024-2921de602930">
+<input checked="checked" id="2dc14900-81fe-424d-a096-c4a7d5f2da8d" name="132a6aac-b51c-4a05-8a31-8248cd1ef0be" type="radio">
+</input><label class="sd-tab-label" for="2dc14900-81fe-424d-a096-c4a7d5f2da8d">
 Giotto Installation Workflow</label><div class="sd-tab-content docutils">
 <p>This workflow image is designed to help with Giotto Installation.
 Users should follow the installation process by answering Yes or No to the following quetions.
@@ -270,7 +271,7 @@ Workflow Diagram<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<a class="reference internal image-reference" href="_images/Giotto_Installation_Workflow.png"><img alt="Image of Giotto Installation Workflow" class="align-center" src="_images/Giotto_Installation_Workflow.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/GiottoInstallationWorkflow.png"><img alt="Image of Giotto Installation Workflow" class="align-center" src="_images/GiottoInstallationWorkflow.png" style="width: 600px;" /></a>
 </div>
 </details></div>
 </div>
@@ -278,10 +279,10 @@ Workflow Diagram<div class="sd-summary-down docutils">
 <div class="section" id="part-1-r-giotto-requirements">
 <h3>Part 1: R Giotto Requirements<a class="headerlink" href="#part-1-r-giotto-requirements" title="Permalink to this headline">¶</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="5b3b3c52-5d85-470a-b033-38de7ed6d6c9" name="60b821ac-811d-4c43-b5fb-a7e1d9dfb2fb" type="radio">
-</input><label class="sd-tab-label" for="5b3b3c52-5d85-470a-b033-38de7ed6d6c9">
+<input checked="checked" id="02e2fa3c-716d-4d7f-a34e-96730f3ab3a2" name="62b0eee3-838e-4cba-b73b-37ac73ada40e" type="radio">
+</input><label class="sd-tab-label" for="02e2fa3c-716d-4d7f-a34e-96730f3ab3a2">
 1.1: R Package Installation</label><div class="sd-tab-content docutils">
-<p>Have you ever installed an R package that is in development?</p>
+<p><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-question" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zM6.92 6.085c.081-.16.19-.299.34-.398.145-.097.371-.187.74-.187.28 0 .553.087.738.225A.613.613 0 019 6.25c0 .177-.04.264-.077.318a.956.956 0 01-.277.245c-.076.051-.158.1-.258.161l-.007.004a7.728 7.728 0 00-.313.195 2.416 2.416 0 00-.692.661.75.75 0 001.248.832.956.956 0 01.276-.245 6.3 6.3 0 01.26-.16l.006-.004c.093-.057.204-.123.313-.195.222-.149.487-.355.692-.662.214-.32.329-.702.329-1.15 0-.76-.36-1.348-.863-1.725A2.76 2.76 0 008 4c-.631 0-1.155.16-1.572.438-.413.276-.68.638-.849.977a.75.75 0 101.342.67z"></path></svg> <strong>Have you ever installed an R package that is in development?</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Yes<div class="sd-summary-down docutils">
@@ -306,10 +307,10 @@ To specifically install the command-line tools of Xcode for Mac OSX you might al
 <p class="sd-card-text"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-arrow-right" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"></path></svg> Move on to the next step: Giotto Installation</p>
 </div>
 </details></div>
-<input id="c85e8d52-9703-4bb1-9d8f-2fe006b3362d" name="60b821ac-811d-4c43-b5fb-a7e1d9dfb2fb" type="radio">
-</input><label class="sd-tab-label" for="c85e8d52-9703-4bb1-9d8f-2fe006b3362d">
+<input id="ae3e1dda-25ed-4de1-8f8b-6aa66bcd298c" name="62b0eee3-838e-4cba-b73b-37ac73ada40e" type="radio">
+</input><label class="sd-tab-label" for="ae3e1dda-25ed-4de1-8f8b-6aa66bcd298c">
 1.2: Giotto Installation</label><div class="sd-tab-content docutils">
-<p>Have you installed Giotto before?</p>
+<p><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-question" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zM6.92 6.085c.081-.16.19-.299.34-.398.145-.097.371-.187.74-.187.28 0 .553.087.738.225A.613.613 0 019 6.25c0 .177-.04.264-.077.318a.956.956 0 01-.277.245c-.076.051-.158.1-.258.161l-.007.004a7.728 7.728 0 00-.313.195 2.416 2.416 0 00-.692.661.75.75 0 001.248.832.956.956 0 01.276-.245 6.3 6.3 0 01.26-.16l.006-.004c.093-.057.204-.123.313-.195.222-.149.487-.355.692-.662.214-.32.329-.702.329-1.15 0-.76-.36-1.348-.863-1.725A2.76 2.76 0 008 4c-.631 0-1.155.16-1.572.438-.413.276-.68.638-.849.977a.75.75 0 101.342.67z"></path></svg> <strong>Have you installed Giotto before?</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Yes<div class="sd-summary-down docutils">
@@ -358,10 +359,10 @@ Giotto can be installed within 1-5 mins.</p>
 <div class="section" id="part-2-python-giotto-requirements">
 <span id="part2-python-giotto-requirements"></span><h3>Part 2: Python Giotto Requirements<a class="headerlink" href="#part-2-python-giotto-requirements" title="Permalink to this headline">¶</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="b6f70ea7-6468-44d1-adcf-498c62ec2a98" name="4491f301-094d-4a1a-9709-a8f48d67943c" type="radio">
-</input><label class="sd-tab-label" for="b6f70ea7-6468-44d1-adcf-498c62ec2a98">
+<input checked="checked" id="213f6220-6d6f-49de-bde1-c247613319de" name="d4c8b9a6-bf4c-4293-8abe-e4cd207c6fa2" type="radio">
+</input><label class="sd-tab-label" for="213f6220-6d6f-49de-bde1-c247613319de">
 2.1: Python Package Installation</label><div class="sd-tab-content docutils">
-<p>Have you ever installed a Python Package?</p>
+<p><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-question" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zM6.92 6.085c.081-.16.19-.299.34-.398.145-.097.371-.187.74-.187.28 0 .553.087.738.225A.613.613 0 019 6.25c0 .177-.04.264-.077.318a.956.956 0 01-.277.245c-.076.051-.158.1-.258.161l-.007.004a7.728 7.728 0 00-.313.195 2.416 2.416 0 00-.692.661.75.75 0 001.248.832.956.956 0 01.276-.245 6.3 6.3 0 01.26-.16l.006-.004c.093-.057.204-.123.313-.195.222-.149.487-.355.692-.662.214-.32.329-.702.329-1.15 0-.76-.36-1.348-.863-1.725A2.76 2.76 0 008 4c-.631 0-1.155.16-1.572.438-.413.276-.68.638-.849.977a.75.75 0 101.342.67z"></path></svg> <strong>Have you ever installed a Python Package?</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Yes<div class="sd-summary-down docutils">
@@ -379,13 +380,13 @@ No<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Information on how to install a Python package can be found <a class="reference external" href="https://packaging.python.org/en/latest/tutorials/installing-packages/">here</a>.
-Once you have read through the information, <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-arrow-right" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"></path></svg> proceeed to the next step: Giotto-Specific Python Packages.</p>
+Once you have read through the information <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-arrow-right" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"></path></svg> proceeed to the next step: Giotto-Specific Python Packages.</p>
 </div>
 </details></div>
-<input id="40097bf5-9a78-4231-9c4d-adbee5609ac4" name="4491f301-094d-4a1a-9709-a8f48d67943c" type="radio">
-</input><label class="sd-tab-label" for="40097bf5-9a78-4231-9c4d-adbee5609ac4">
+<input id="2c0f3058-9e7b-4e7b-aad2-080c0053d6e7" name="d4c8b9a6-bf4c-4293-8abe-e4cd207c6fa2" type="radio">
+</input><label class="sd-tab-label" for="2c0f3058-9e7b-4e7b-aad2-080c0053d6e7">
 2.2: Giotto-Specific Python Packages</label><div class="sd-tab-content docutils">
-<p>Have you installed the python modules necessary for Giotto to run?</p>
+<p><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-question" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zM6.92 6.085c.081-.16.19-.299.34-.398.145-.097.371-.187.74-.187.28 0 .553.087.738.225A.613.613 0 019 6.25c0 .177-.04.264-.077.318a.956.956 0 01-.277.245c-.076.051-.158.1-.258.161l-.007.004a7.728 7.728 0 00-.313.195 2.416 2.416 0 00-.692.661.75.75 0 001.248.832.956.956 0 01.276-.245 6.3 6.3 0 01.26-.16l.006-.004c.093-.057.204-.123.313-.195.222-.149.487-.355.692-.662.214-.32.329-.702.329-1.15 0-.76-.36-1.348-.863-1.725A2.76 2.76 0 008 4c-.631 0-1.155.16-1.572.438-.413.276-.68.638-.849.977a.75.75 0 101.342.67z"></path></svg> <strong>Have you installed the python modules necessary for Giotto to run?</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Required Modules<div class="sd-summary-down docutils">
@@ -405,7 +406,7 @@ To make this process as flexible and easy as possible two different strategies c
 <li><p class="sd-card-text">python.app (<strong>OSX only</strong>)</p></li>
 <li><p class="sd-card-text">scikit-learn</p></li>
 </ul>
-<p class="sd-card-text"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg> These are necessary to run all available analyses, but can be installed automatically (see <strong>Automatic Installation</strong>) or manually (see <strong>Manual Installation</strong>) explained in the next steps.</p>
+<p class="sd-card-text"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg> These are necessary to run all available analyses, but can be installed automatically (see <strong>2.2A Automatic Installation</strong>) or manually (see <strong>2.2B Manual Installation</strong>) explained in detail below (Reponse “No”).</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -416,17 +417,17 @@ Yes<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-arrow-right" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"></path></svg> Move on to the next step: Python Path Specification</p>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 No<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">There are two methods through which users may install the required python modules (‘Automatic’ vs. ‘Manual’)</p>
+<p class="sd-card-text">There are two methods through which users may install the required python modules (‘Automatic Installation’ vs. ‘Manual Installation’)</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-2.2A: Automatic<div class="sd-summary-down docutils">
+2.2A: Automatic Installation<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -489,7 +490,7 @@ Remove Giotto Environment<div class="sd-summary-down docutils">
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-2.2B: Manual<div class="sd-summary-down docutils">
+2.2B: Manual Installation<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -497,8 +498,8 @@ Remove Giotto Environment<div class="sd-summary-down docutils">
 <p class="sd-card-text">There are two methods thorugh which users can install the necessary Python modules manually with <strong>(1) Pip in Python3</strong> or <strong>(2) Conda</strong>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p class="sd-card-text">With either ONE of the <strong>Manual Installation</strong> options (<strong>Install with Pip in Python3</strong> or <strong>Install with Conda</strong>) the user will have to provide the python path to <a class="reference internal" href="subsections/documentation_functions/createGiottoInstructions.html#creategiottoinstructions"><span class="std std-ref">createGiottoInstructions</span></a>.
-If this is not done, Giotto will not be able to use the installed python modules.</p>
+<p class="sd-card-text">With either one of the <strong>Manual Installation</strong> options (<strong>Install with Pip in Python3</strong> or <strong>Install with Conda</strong>) users will have to provide the python path to <a class="reference internal" href="subsections/documentation_functions/createGiottoInstructions.html#creategiottoinstructions"><span class="std std-ref">createGiottoInstructions</span></a>.
+If this is not done, Giotto <strong>will not</strong> be able to use the installed python modules.</p>
 </div>
 <p class="sd-card-text"><em>Note:</em> If pip install does not work, try installing the modules within a <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands">conda environment</a>. For more inforomation on vitual environments with conda visit this <a class="reference external" href="https://heartbeat.fritz.ai/creating-python-virtual-environments-with-conda-why-and-how-180ebd02d1db">page</a>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -587,17 +588,20 @@ For Linux<div class="sd-summary-down docutils">
 </ol>
 </div>
 </details></div>
-</details><p class="sd-card-text">With the Manual Installation Option users will need to specify their Python path.
-Please <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-arrow-right" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"></path></svg> move on to the next step: Python Path Specification</p>
+</details><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p class="sd-card-text">With either one of the Manual Installation options users <strong>must</strong> specify their Python path.</p>
+</div>
+<p class="sd-card-text">Please <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-arrow-right" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"></path></svg> move on to the next step: 2.3 Python Path Specification</p>
 </div>
 </details></div>
-<input id="5f5338ad-c54c-44d0-abbe-9b720e1873b0" name="4491f301-094d-4a1a-9709-a8f48d67943c" type="radio">
-</input><label class="sd-tab-label" for="5f5338ad-c54c-44d0-abbe-9b720e1873b0">
+<input id="a99f8acc-aa71-4957-81da-9eb1ffc731e7" name="d4c8b9a6-bf4c-4293-8abe-e4cd207c6fa2" type="radio">
+</input><label class="sd-tab-label" for="a99f8acc-aa71-4957-81da-9eb1ffc731e7">
 2.3 Python Path Specification</label><div class="sd-tab-content docutils">
-<p>Have you specified your python path in R?</p>
+<p><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-question" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zM6.92 6.085c.081-.16.19-.299.34-.398.145-.097.371-.187.74-.187.28 0 .553.087.738.225A.613.613 0 019 6.25c0 .177-.04.264-.077.318a.956.956 0 01-.277.245c-.076.051-.158.1-.258.161l-.007.004a7.728 7.728 0 00-.313.195 2.416 2.416 0 00-.692.661.75.75 0 001.248.832.956.956 0 01.276-.245 6.3 6.3 0 01.26-.16l.006-.004c.093-.057.204-.123.313-.195.222-.149.487-.355.692-.662.214-.32.329-.702.329-1.15 0-.76-.36-1.348-.863-1.725A2.76 2.76 0 008 4c-.631 0-1.155.16-1.572.438-.413.276-.68.638-.849.977a.75.75 0 101.342.67z"></path></svg> <strong>Have you specified your python path in R?</strong></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>With the Manual Installation option, once the user has installed all of the necessary modules, via either of the methods above (e.g. Conda), the path to their python environment can be provided as an instruction in R.</p>
+<p>With the Manual Installation option, once the user has installed all of the necessary modules, via either of the methods (e.g. Conda), the path to their python environment can be provided as an instruction in R.</p>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -635,10 +639,10 @@ No<div class="sd-summary-down docutils">
 <div class="section" id="howtos">
 <span id="howtolabel"></span><h2>HowTos<a class="headerlink" href="#howtos" title="Permalink to this headline">¶</a></h2>
 <p>Giotto provides a lot of analyses, visualizations and other options to facilitate your spatial dataset analysis. We are working on providing easy-to-understand examples or tutorials, but if anything is not clear or if there is something you would like to see in particular, then do not hesitate to <a class="reference external" href="https://github.com/RubD/Giotto/issues">contact us.</a></p>
-<p>In addition to our HowTos we have also created a way for users to test out Giotto via <a class="sd-sphinx-override sd-badge sd-outline-warning sd-text-warning reference internal" href="subsections/trygiotto/docker.html#dockerinformation"><span class="std std-ref">Docker</span></a> or <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference internal" href="subsections/trygiotto/binder.html#binderinformation"><span class="std std-ref">Binder</span></a> (see <a class="reference external" href="TryGiotto">Try Giotto</a> for more informstion).</p>
-<div class="section" id="giotto-workflow-analyses-steps">
-<h3><a class="reference internal" href="giottoworkflowanalyses.html"><span class="doc">Giotto Workflow Analyses Steps</span></a><a class="headerlink" href="#giotto-workflow-analyses-steps" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic simple" start="0">
+<p>In addition to our HowTos we have also created a way for users to test out Giotto via <a class="sd-sphinx-override sd-badge sd-outline-warning sd-text-warning reference internal" href="subsections/trygiotto/docker.html#dockerinformation"><span class="std std-ref">Docker</span></a> or <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference internal" href="subsections/trygiotto/binder.html#binderinformation"><span class="std std-ref">Binder</span></a> (see <a class="reference internal" href="trygiotto.html#trygiotto"><span class="std std-ref">Try Giotto</span></a> for more informstion).</p>
+<div class="section" id="giotto-workflow-analyses-steps-howtos">
+<h3><a class="reference internal" href="giottoworkflowanalyses.html"><span class="doc">Giotto Workflow Analyses Steps “HowTos”</span></a><a class="headerlink" href="#giotto-workflow-analyses-steps-howtos" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
 <li><p><a class="reference internal" href="giottoworkflowanalyses.html#install-a-giotto-environment"><span class="std std-ref">Install a Giotto Environment (*Optional*)</span></a></p></li>
 <li><p><a class="reference internal" href="giottoworkflowanalyses.html#create-a-giotto-object"><span class="std std-ref">Create a Giotto Object</span></a></p></li>
 <li><p><a class="reference internal" href="giottoworkflowanalyses.html#process-and-filter-a-giotto-object"><span class="std std-ref">Process and Filter a Giotto Object</span></a></p></li>
@@ -658,7 +662,7 @@ No<div class="sd-summary-down docutils">
 </ol>
 </div>
 <div class="section" id="giotto-analyzer-and-viewer-interaction-work-in-progress">
-<h3>Giotto Analyzer and Viewer interaction [work in progress]<a class="headerlink" href="#giotto-analyzer-and-viewer-interaction-work-in-progress" title="Permalink to this headline">¶</a></h3>
+<h3>Giotto Analyzer and Viewer interaction [<em>work in progress</em>]<a class="headerlink" href="#giotto-analyzer-and-viewer-interaction-work-in-progress" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>How to switch between Giotto Analyzer and Viewer?</p></li>
 </ul>

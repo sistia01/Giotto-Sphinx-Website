@@ -5,8 +5,8 @@ Visualize Spatial Data with Voronoi Plots
 ############################################
 
 Voronoi plots are an attractive way to visualize spatial expression data since it reduces whitespace between single cells or spots, 
-however the voronoi borders do **NOT** necessarily mimick the true cell borders. Nevertheless it has been used to ‘segment’ cells and 
-assign transcripts to individual cells. Here we merely use it as a beautifull visualization alternative to simple ‘points’.
+however the voronoi borders do **NOT** necessarily mimic the true cell borders. Nevertheless it has been used to ‘segment’ cells and 
+assign transcripts to individual cells. Here we merely use it as a beautiful visualization alternative to simple ‘points’.
 
 *************************************************************
 1. Analysis of the mini seqFISH+ dataset

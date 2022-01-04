@@ -3,7 +3,7 @@
 ########################################################
 Different Ways to Visualize Spatial Data
 ########################################################
-This section delves into the mutliple different ways that Giotto provides to visualize your spatial data.
+This section delves into the multiple different ways that Giotto provides to visualize your spatial data.
 
 .. tip::
 	Check out the different `dataset examples <datasets>`_ to see the wide range of visualization options.

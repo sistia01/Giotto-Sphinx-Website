@@ -21,7 +21,7 @@ All spatial visualization functions in the Giotto toolbox can be overlaid on a b
 .. dropdown:: **2. How to modify an image (i.e. change the background color)?**
 	:animate: fade-in
 
-	* **estimateImageBg** function to estimage the background color of your Giotto or magick image
+	* **estimateImageBg** function to estimate the background color of your Giotto or magick image
 	* **changeImageBg** function to change the background color of your image
 	* **plotGiottoImage** function to plot an image by itself
 

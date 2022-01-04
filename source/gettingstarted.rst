@@ -7,13 +7,13 @@ Getting Started
 Description 
 *************
 
-- Giotto provides a flexible framework for common single-cell processing steps such as:
+* Giotto provides a flexible framework for common single-cell processing steps such as:
    
-  - Quality control
-  - Normalization
-  - Dimension reduction
-  - Clustering and cell type annotation
-
+  * Quality control
+  * Normalization
+  * Dimension reduction
+  * Clustering and cell type annotation
+  
 * To facilitate the analysis of recently emerging high-throughput, but lower-resolution spatial transcriptomic technologies, such as 10X Genomics Visium and Slide-seq, Giotto has 3 implemented algorithms for estimating the spatial enrichment of different cell types by integration of known gene signatures or single-cell RNAseq expression and annotation data.
 * Spatial information is retained through the formation of a spatial grid and/or a spatial proximity network, which is used to:
   
@@ -46,9 +46,9 @@ Requirements
 *************
 Installation
 *************
-Giotto is installed via R **but** there are required Python which must be installed in order for Giotto to function properly. 
-Below are instructions for both Giotto Package Installation (via R) and Installation of Required Python Modules. 
-In order to use Giotto successfully, users must have both the Giotto Package installed as well as the required Python Packages. 
+Giotto is installed via R **but there are required Python modules** which **must** be installed in order for Giotto to function properly. 
+Below are the instructions for both the Giotto Package Installation (Part 1) done via R and the Installation of Required Python Modules (Part 2). 
+In order to use Giotto successfully, users **must** have both the Giotto Package installed as well as the required Python Packages. 
 
 .. important:: 
 
@@ -56,7 +56,7 @@ In order to use Giotto successfully, users must have both the Giotto Package ins
 
 For ease of acces, there is a method which allows users to automatically install all of the necessary python modules from within R (see Part 2.2 Giotto-Specific Python Packages for more information). 
 
-:octicon:`light-bulb` Checkout out the `Errors and FAQs Section <faqs>`__ for more troubleshooting tips on common installation issues.  
+:octicon:`light-bulb` Checkout out the :ref:`Common Errors and Solutions <faqs>` for more troubleshooting tips on common installation issues.  
 
 .. _GiottoInstallationWorkflow:
 
@@ -78,7 +78,7 @@ Giotto Installation Workflow
  
 		.. dropdown:: Workflow Diagram 
 		
-			.. image:: images/Giotto_Installation_Workflow.png
+			.. image:: images/GiottoInstallationWorkflow.png
 				:width: 600
 				:alt: Image of Giotto Installation Workflow
 				:align: center
@@ -90,7 +90,7 @@ Part 1: R Giotto Requirements
 
 	.. tab-item:: 1.1: R Package Installation
 
-		Have you ever installed an R package that is in development?
+		:octicon:`question` **Have you ever installed an R package that is in development?**
 
 		.. dropdown:: Yes 
  
@@ -110,7 +110,7 @@ Part 1: R Giotto Requirements
 
 	.. tab-item:: 1.2: Giotto Installation 
 		
-		Have you installed Giotto before?
+		:octicon:`question` **Have you installed Giotto before?**
 
 		.. dropdown:: Yes 
 
@@ -162,7 +162,7 @@ Part 2: Python Giotto Requirements
 
 	.. tab-item:: 2.1: Python Package Installation 
 
-		Have you ever installed a Python Package?
+		:octicon:`question` **Have you ever installed a Python Package?**
 
 		.. dropdown:: Yes
 
@@ -171,12 +171,12 @@ Part 2: Python Giotto Requirements
 		.. dropdown:: No 
 
 			Information on how to install a Python package can be found `here`_.
-			Once you have read through the information, :octicon:`arrow-right` proceeed to the next step: Giotto-Specific Python Packages. 
+			Once you have read through the information :octicon:`arrow-right` proceeed to the next step: Giotto-Specific Python Packages. 
 
 
 	.. tab-item:: 2.2: Giotto-Specific Python Packages
 
-		Have you installed the python modules necessary for Giotto to run?
+		:octicon:`question` **Have you installed the python modules necessary for Giotto to run?**
 		
 		.. dropdown:: Required Modules 
 
@@ -192,17 +192,18 @@ Part 2: Python Giotto Requirements
 			* python.app (**OSX only**)
 			* scikit-learn
 
-			:octicon:`alert` These are necessary to run all available analyses, but can be installed automatically (see **Automatic Installation**) or manually (see **Manual Installation**) explained in the next steps.
+			:octicon:`alert` These are necessary to run all available analyses, but can be installed automatically (see **2.2A Automatic Installation**) or manually (see **2.2B Manual Installation**) explained in detail below (Reponse "No").
 
 		.. dropdown:: Yes 
 
 			:octicon:`arrow-right` Move on to the next step: Python Path Specification 
 
 		.. dropdown:: No
+			:open:
 
-			There are two methods through which users may install the required python modules ('Automatic' vs. 'Manual')
+			There are two methods through which users may install the required python modules ('Automatic Installation' vs. 'Manual Installation')
 
-			.. dropdown:: 2.2A: Automatic 
+			.. dropdown:: 2.2A: Automatic Installation 
 
 				The python modules will be installed automatically in a miniconda environment when installing Giotto. However, it will ask you whether you want to install them and you can opt out and select your preferred python path. In that case you need to do a manual installation of the python modules.
 				To perform all potential steps and analysis in the Giotto spatial toolbox the user needs to have a number of python modules installed. Installation of the Giotto Environment allows users to install the required Python environment via MiniConda without specifying their python path. 
@@ -243,13 +244,13 @@ Part 2: Python Giotto Requirements
 					With the automatic installation option, the user **DOES NOT** have to specify a python path. 
 				
 
-			.. dropdown:: 2.2B: Manual
+			.. dropdown:: 2.2B: Manual Installation
 
 				There are two methods thorugh which users can install the necessary Python modules manually with **(1) Pip in Python3** or **(2) Conda**.
 
 				.. warning:: 
-					With either ONE of the **Manual Installation** options (**Install with Pip in Python3** or **Install with Conda**) the user will have to provide the python path to :ref:`createGiottoInstructions <createGiottoInstructions>`. 
-					If this is not done, Giotto will not be able to use the installed python modules.
+					With either one of the **Manual Installation** options (**Install with Pip in Python3** or **Install with Conda**) users will have to provide the python path to :ref:`createGiottoInstructions <createGiottoInstructions>`. 
+					If this is not done, Giotto **will not** be able to use the installed python modules.
 					
 				*Note:* If pip install does not work, try installing the modules within a `conda environment <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands>`_. For more inforomation on vitual environments with conda visit this `page <https://heartbeat.fritz.ai/creating-python-virtual-environments-with-conda-why-and-how-180ebd02d1db>`_.
 
@@ -310,16 +311,18 @@ Part 2: Python Giotto Requirements
 								/Users/your_username/anaconda3/envs/giotto_env/bin/python
 
 
-			With the Manual Installation Option users will need to specify their Python path. 
-			Please :octicon:`arrow-right` move on to the next step: Python Path Specification 
+			.. warning:: 
+				With either one of the Manual Installation options users **must** specify their Python path. 
+
+			Please :octicon:`arrow-right` move on to the next step: 2.3 Python Path Specification 
 
 	.. tab-item:: 2.3 Python Path Specification 
 
-		Have you specified your python path in R?
+		:octicon:`question` **Have you specified your python path in R?**
 
 		.. note::
 			
-			With the Manual Installation option, once the user has installed all of the necessary modules, via either of the methods above (e.g. Conda), the path to their python environment can be provided as an instruction in R.
+			With the Manual Installation option, once the user has installed all of the necessary modules, via either of the methods (e.g. Conda), the path to their python environment can be provided as an instruction in R.
 
 		.. dropdown:: Yes
 
@@ -352,14 +355,14 @@ HowTos
 *******
 Giotto provides a lot of analyses, visualizations and other options to facilitate your spatial dataset analysis. We are working on providing easy-to-understand examples or tutorials, but if anything is not clear or if there is something you would like to see in particular, then do not hesitate to `contact us.`_
 
-In addition to our HowTos we have also created a way for users to test out Giotto via :bdg-ref-warning-line:`Docker <DockerInformation>` or :bdg-ref-primary-line:`Binder <BinderInformation>` (see `Try Giotto <TryGiotto>`_ for more informstion).
+In addition to our HowTos we have also created a way for users to test out Giotto via :bdg-ref-warning-line:`Docker <DockerInformation>` or :bdg-ref-primary-line:`Binder <BinderInformation>` (see :ref:`Try Giotto <TryGiotto>` for more informstion).
 
 .. _contact us.: https://github.com/RubD/Giotto/issues
 
-:doc:`Giotto Workflow Analyses Steps </giottoworkflowanalyses>`
-================================================================
+:doc:`Giotto Workflow Analyses Steps "HowTos" </giottoworkflowanalyses>`
+============================================================================
 
-0. :ref:`Install a Giotto Environment (*Optional*) <install_a_giotto_environment>`
+1. :ref:`Install a Giotto Environment (*Optional*) <install_a_giotto_environment>`
 
 #. :ref:`Create a Giotto Object <create-a-giotto-object>`
 #. :ref:`Process and Filter a Giotto Object <process-and-filter-a-giotto-object>` 
@@ -377,7 +380,7 @@ In addition to our HowTos we have also created a way for users to test out Giott
 #. :ref:`Identify enriched or depleted ligand-receptor interactions in hetero and homo-typic cell interactions <enriched-or-depleted-ligand-receptor-interactions>`
 #. :ref:`Export Giotto results to use in Giotto viewer <giotto-viewer-export>`
  
-Giotto Analyzer and Viewer interaction [work in progress]
+Giotto Analyzer and Viewer interaction [*work in progress*]
 ===========================================================
 
 * How to switch between Giotto Analyzer and Viewer?
