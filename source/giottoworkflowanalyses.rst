@@ -17,11 +17,11 @@ Workflow Diagram
 .. _install_a_giotto_environment:
 
 *********************************************
-0. Install a Giotto Environment (*Optional*)
+0. *Optional:* Install a Giotto Environment 
 *********************************************
 
 To perform all potential steps and analysis in the Giotto spatial toolbox the user needs to have a number of python modules installed. 
-To make this process as flexible and easy as possible **two different strategies can be used.** See the `Part 2.2 Giotto-Specific Python Packages <part2_python_giotto_requirements>`_ for more detailed information on installing Giotto and all of the 
+To make this process as flexible and easy as possible **two different strategies can be used.** See the :ref:`Part 2.2 Giotto-Specific Python Packages <part2_python_giotto_requirements>` for more detailed information on installing Giotto and all of the 
 required modules needed to use Giotto succesffully.
 
 The user can **install all the necessary modules** themself and then proivide the path to their python or environment (e.g. Conda) as an instruction.

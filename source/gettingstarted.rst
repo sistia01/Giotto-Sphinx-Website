@@ -355,15 +355,15 @@ HowTos
 *******
 Giotto provides a lot of analyses, visualizations and other options to facilitate your spatial dataset analysis. We are working on providing easy-to-understand examples or tutorials, but if anything is not clear or if there is something you would like to see in particular, then do not hesitate to `contact us.`_
 
-In addition to our HowTos we have also created a way for users to test out Giotto via :bdg-ref-warning-line:`Docker <DockerInformation>` or :bdg-ref-primary-line:`Binder <BinderInformation>` (see :ref:`Try Giotto <TryGiotto>` for more informstion).
+In addition to our HowTos we have also created a way for users to test out Giotto via :bdg-ref-warning-line:`Docker <DockerInformation>` or :bdg-ref-primary-line:`Binder <BinderInformation>` (see :ref:`Try Giotto <TryGiotto>` for more information).
 
 .. _contact us.: https://github.com/RubD/Giotto/issues
 
 :doc:`Giotto Workflow Analyses Steps "HowTos" </giottoworkflowanalyses>`
 ============================================================================
 
-1. :ref:`Install a Giotto Environment (*Optional*) <install_a_giotto_environment>`
-
+0. :ref:`Optional: Install a Giotto Environment <install_a_giotto_environment>`
+   
 #. :ref:`Create a Giotto Object <create-a-giotto-object>`
 #. :ref:`Process and Filter a Giotto Object <process-and-filter-a-giotto-object>` 
 #. :ref:`Dimension Reduction <dimension-reduction>`  
