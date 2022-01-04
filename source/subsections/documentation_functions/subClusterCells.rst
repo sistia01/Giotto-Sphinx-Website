@@ -73,7 +73,7 @@ Arguments
 	* - **resolution**	
 	  - resolution
 	* - **n_iterations**	
-	  - number of interations to run the Leiden algorithm.
+	  - number of iterations to run the Leiden algorithm.
 	* - **gamma**	
 	  - gamma
 	* - **omega**	

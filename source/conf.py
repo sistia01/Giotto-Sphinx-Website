@@ -39,7 +39,8 @@ extensions = ['sphinx.ext.autosectionlabel',
 'sphinx_copybutton',
 'sphinx_toolbox', #fatal error
 'sphinx_toolbox.shields', #fatal error
-'sphinx_toolbox.github'
+'sphinx_toolbox.github',
+'sphinxcontrib.spelling' #spell checker
 ]
 
 # Configuration for sphinx_toolbox

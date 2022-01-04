@@ -10,7 +10,7 @@ Each Giotto function that creates a plot as **3 important parameters**:
 * **return_plot**: to return the plot as an object, default is TRUE
 * **save_plot**: to automatically save the plot, default is FALSE
 
-These parameters are automatically provided by **createGiottoObject**, but can also be explicitely provided using **createGiottoInstructions** or a named list, which can then be given to **createGiottoObject** as a parameter.
+These parameters are automatically provided by **createGiottoObject**, but can also be explicitly provided using **createGiottoInstructions** or a named list, which can then be given to **createGiottoObject** as a parameter.
 
 Besides those 3 parameters **createGiottoInstructions** also allows to provide other general Giotto parameters, such as your python path and other information for automatically saving a plot, like size, plotting format, etc.
 
