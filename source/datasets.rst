@@ -67,10 +67,11 @@ Mini Datasets
     .. grid-item-card::
 
         .. image:: images/dataset_page/mini_seqFISH.png
-            :target: ../build/html/subsections/datasets/mini_seqFISH.html
+            :target: ../../build/html/subsections/datasets/mini_seqFISH.html
 
-        .. button-ref:: subsections/datasets/mini_seqFISH.rst
-            :ref-type: doc
+        .. button-ref:: mini_seqfish
+            :ref-type: any
+            :click-parent:
             :color: dark
             :shadow:
             :expand:
@@ -80,7 +81,7 @@ Mini Datasets
     .. grid-item-card::
 
         .. image:: images/dataset_page/mini_STARmap.png  
-            :target: mini_3D_STARmap.html 
+            :target: ../../build/html/subsections/datasets/mini_3D_STARmap.html 
 
         .. button-ref:: /subsections/datasets/mini_3D_STARmap.rst 
             :ref-type: doc
@@ -93,7 +94,7 @@ Mini Datasets
     .. grid-item-card::
         
         .. image:: images/dataset_page/mini_visium.png  
-            :target: subsections/datasets/mini_3D_STARmap.rst 
+            :target: ../../build/html/subsections/datasets/mini_3D_STARmap.html
     
         .. button-link:: subsections/datasets/mini_visium.rst 
             :color: dark
