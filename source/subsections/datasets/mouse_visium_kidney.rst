@@ -1,3 +1,5 @@
+.. _mouse_visium_kidney:
+
 ####################
 Mouse Visium Kidney
 ####################

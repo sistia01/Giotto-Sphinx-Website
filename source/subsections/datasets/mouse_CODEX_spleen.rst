@@ -1,5 +1,7 @@
+.. _mouse_CODEX_spleen:
+
 ####################
-Mouse Visium Kidney
+Mouse CODEX Spleen
 ####################
 
 .. warning::

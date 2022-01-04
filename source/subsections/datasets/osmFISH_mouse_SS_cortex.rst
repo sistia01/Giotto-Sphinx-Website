@@ -1,3 +1,5 @@
+.. _osmFISH_mouse_SS_cortex:
+
 #################################
 Mouse osmFISH SS Cortex
 #################################

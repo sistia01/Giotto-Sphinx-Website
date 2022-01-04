@@ -1,3 +1,5 @@
+.. _merFISH_hypot_preopt_region:
+
 ###############################################
 merFISH Mouse Hypothalamus Preoptic Region
 ###############################################
