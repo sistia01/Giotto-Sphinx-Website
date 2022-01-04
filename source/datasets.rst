@@ -67,7 +67,7 @@ Mini Datasets
     .. grid-item-card::
 
         .. image:: images/dataset_page/mini_seqFISH.png
-            :target: `mini_seqFISH`_ 
+            :target: ../build/html/subsections/datasets/mini_seqFISH.html
 
         .. button-ref:: `mini_seqFISH`_
             :ref-type: any
