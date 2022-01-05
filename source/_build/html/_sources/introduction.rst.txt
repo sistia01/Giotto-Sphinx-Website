@@ -36,7 +36,6 @@ Relevant Links
 
 :bdg-link-primary:`Giotto GitHub <https://github.com/RubD/Giotto/>` :bdg-link-danger:`Report Issue <SubmittingGitHubIssues>` :bdg-link-success:`Giotto Viewer <http://spatial.rc.fas.harvard.edu/giotto-viewer/>` 
 
-
 License
 =====================
 

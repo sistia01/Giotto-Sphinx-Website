@@ -92,7 +92,9 @@ A plotly.
 ******************
 Details 
 ******************
-Description of parameters ... 
+
+This is a short wrapper function for 3D Principal Component Analysis (PCA) visualization. 
+Helps to check for batch effects.  
 
 .. seealso::
 	Other reduced dimension visualizations: `dimPlot2D() <dimPlot2D>`_, `dimPlot() <dimPlot>`_, `plotPCA_2D() <plotPCA_2D>`_, `plotPCA_3D() <plotPCA_3D>`_, `plotPCA() <plotPCA>`_, `plotTSNE_2D() <plotTSNE_2D>`_, `plotTSNE_3D() <plotTSNE_3D>`_, `plotTSNE() <plotTSNE>`_, `plotUMAP_2D() <plotUMAP_2D>`_, `plotUMAP_3D() <plotUMAP_3D>`_, `plotUMAP() <plotUMAP>`_.

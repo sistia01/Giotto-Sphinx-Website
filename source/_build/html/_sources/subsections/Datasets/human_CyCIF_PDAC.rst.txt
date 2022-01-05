@@ -1,3 +1,5 @@
+.. _human_cyCIF_PDAC_image_summary:
+
 ###############################################
 Human CyCIF PDAC
 ###############################################
@@ -11,9 +13,9 @@ Human CyCIF PDAC
 Install Python Modules
 ************************
 
-.. warning:: 
-	
-	Warning: This tutorial was written with Giotto version 0.3.6.9038, your version is 1.0.3. This is a more recent version and results should be reproducible
+.. warning::
+
+	This tutorial was written with **Giotto version 0.3.6.9046**, your version is **1.0.3**. This is a more recent version and results should be reproducible. 
 
 To run this vignette you need to install **all** of the necessary Python modules. 
 

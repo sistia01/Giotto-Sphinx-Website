@@ -304,7 +304,7 @@ P-val, Q-val are useful for cut-off based approach to filtering the spatial gene
 <p>This is one of methods that Giotto supports to search for spatially variable genes. This function is a wrapper for the SpatialDE method implemented in the <a class="reference external" href="https://www.nature.com/articles/nmeth.4636">SpatialDE function</a>. The input is a gene expression matrix.
 There are 4 version of expression matrix (indicated by expression_values).
 Raw version (in counts) is recommended. SpatialDE performs library size normalization (by default) if raw expression is used. Otherwise, one can also use “normalized” and skip SpatialDE normalization step.</p>
-<p>There are no other parameters required. The parameters color, sig_alpha, unsig_alpha are used for plotting the Fraction spatial variance vs Adj. P-value <a href="#id1"><span class="problematic" id="id2">`https://github.com/Teichlab/SpatialDE`_</span></a> , and is optional.
+<p>There are no other parameters required. The parameters color, sig_alpha, unsig_alpha are used for plotting the Fraction spatial variance vs Adj. P-value <a class="reference external" href="https://github.com/teichlab/spatialde">SpatialDE GitHub</a>, and is optional.
 To disable this FSV vs. Adj P-value plot, show_plot is set to NA (default).
 The parameters return_plot, save_plot, save_param are for saving the results automatically to disk (default values are NA). They are attached to every function (see CreateGiottoInstructions()).</p>
 </div>

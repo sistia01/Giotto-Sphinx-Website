@@ -187,9 +187,7 @@ A ggplot.
 Details 
 ******************
 
-Description of parameters ... 
-
-
+May be used for spatial visualization analysis, particularly for co-expression analysis. 
 
 .. seealso::
 	See `spatDimPlot2D() <spatDimPlot2D>`_ and `spatDimPlot3D() <spatDimPlot3D>`_ for more information on 3D visualization. For other spatial and dimension reduction visualizations see: `spatDimPlot2D() <spatDimPlot2D>`_, `spatDimPlot3D() <spatDimPlot3D>`_

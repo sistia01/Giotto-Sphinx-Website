@@ -118,10 +118,28 @@ The main steps are:
 2. Define genes of interest
 3. Call HMRF routine to find spatial clusters
 
+.. important::
+	* HMRF is now split into two functions: ``initHMRF()`` and ``doHMRF()``
+	* Removed python requirement for HMRF and Java
+	* Removed writing to files and reading from files for HMRF
+	* ``initHMRF()`` step consists of filtering spatial genes, sampling spatial genes, and kmeans initialization
+	* ``doHMRF()`` will perform HMRF after init step
+	* Spatial gene functions (``binspect`` and ``silhouetteRank``) now automatically add spatial gene results to gene metadata table. To do so, return_gobject is added to functions.
+	* ``initHMRF`` will automatically use spatial genes from gene metadata table for gene filtering, sampling purposes. So, binSpect/silhouetteRank should be run with ``return_gobject=TRUE``. BinSpect/silhouetteRank will default to ``TRUE`` for ``return_gobject``. 
+
+	Example 
+  
+  	.. code-block::
+		  
+		  visium=binSpect(visium, return_gobject=TRUE).
+
+
 
 ******************
 Example
 ******************
+
+Previous version of `doHMRF() <doHMRF>`_
 
 .. code-block::
 	
@@ -135,5 +153,14 @@ Example
 	## add HMRF of interest to giotto object
 	VC_test = addHMRF(gobject = VC_test,HMRFoutput = HMRF_spatial_genes, k = 9, betas_to_add = c(28), hmrf_name = 'HMRF_2')
 
+Upated version of ``doHMRF()``
 
+.. code-block::
 
+	visium=silhouetteRank(visium, rbp_p=0.99, examine_top=0.1, return_gobject=T)
+	hmrf=initHMRF(visium, spatial_network_name="spatial_network", use_spatial_genes="silhouetteRank", k=10, nstart=100)
+	res=doHMRF(hmrf, betas=c(0, 10, 5))
+
+	visium = binSpect(visium, calc_hub = T, hub_min_int = 5,spatial_network_name = 'spatial_network', return_gobject=T)
+	hmrf2=initHMRF(visium, spatial_network_name="spatial_network", use_spatial_genes="binSpect", k=10, nstart=100)
+	res2=doHMRF(hmrf2, betas=c(0, 10, 5))
