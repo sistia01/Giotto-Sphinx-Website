@@ -133,7 +133,7 @@ Full Datasets
         .. image:: images/dataset_page/human_cyCIF_PDAC_image_summary.png
             :target: ../../build/html/subsections/datasets/human_cyCIF_PDAC_image_summary.html 
 
-        .. button-ref:: mini_visium
+        .. button-ref:: human_cyCIF_PDAC_image_summary
             :ref-type: any
             :click-parent:
             :color: dark
