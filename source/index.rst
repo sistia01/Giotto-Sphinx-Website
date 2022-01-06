@@ -39,7 +39,7 @@ Example Functionalities
 
 Analysis and visualization of large-scale spatial transcriptomic and proteomic datasets.
 
-.. card-carousel:: 3
+.. card-carousel:: 1
 
       .. card:: Figure 2A
          :text-align: center
