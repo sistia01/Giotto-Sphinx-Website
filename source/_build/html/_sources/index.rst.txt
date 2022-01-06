@@ -54,19 +54,21 @@ Analysis and visualization of large-scale spatial transcriptomic and proteomic d
             :width: 400 
 
       .. card:: Figure 2C
+            :text-align: center
 
          .. image:: images/index/Index_Fig_C.png
             :target: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7938609/figure/Fig2/
-            :width: 400 
+            :width: 400
 
       .. card:: Figure 2D
+         :text-align: center
 
          .. image:: images/index/Index_Fig_D.png
             :target: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7938609/figure/Fig2/
             :width: 300 
 
 
-Fig.A Visualization in both expression (top) and physical (bottom) space of the cell types identified by Giotto Analyzer in the pre-optic hypothalamic merFISH dataset, which consists of 12 slices from the same 3D sample (distance unit = 1 μm). 
-Fig.B Heatmap showing the marker genes for the identified cell populations in Fig.A,Fig.C Visualization in both expression and physical space of two representative slices within the z-orientation (100 μm and 400 μm). Fig.D, Fig.E Overlay of gene expression in both expression and physical space for the selected slices in Fig.C, Fig.F.
+**Fig.A** Visualization in both expression (top) and physical (bottom) space of the cell types identified by Giotto Analyzer in the pre-optic hypothalamic merFISH dataset, which consists of 12 slices from the same 3D sample (distance unit = 1 μm). 
+**Fig.B** Heatmap showing the marker genes for the identified cell populations in **Fig.A**, **Fig.C** Visualization in both expression and physical space of two representative slices within the z-orientation (100 μm and 400 μm). **Fig.D**, **Fig.E** Overlay of gene expression in both expression and physical space for the selected slices in **Fig.C**, **Fig.F**.
 
 :octicon:`light-bulb` Click on the images to learn more!
