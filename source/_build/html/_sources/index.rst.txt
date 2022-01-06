@@ -42,19 +42,21 @@ Analysis and visualization of large-scale spatial transcriptomic and proteomic d
 .. card-carousel:: 3
 
       .. card:: Figure 2A
+         :text-align: center
          
          .. image:: images/index/Index_Fig_A.png
             :target: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7938609/figure/Fig2/
             :width: 400 
 
       .. card:: Figure 2B
+         :text-align: center
 
          .. image:: images/index/Index_Fig_B.png
             :target: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7938609/figure/Fig2/
             :width: 400 
 
       .. card:: Figure 2C
-            :text-align: center
+         :text-align: center
 
          .. image:: images/index/Index_Fig_C.png
             :target: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7938609/figure/Fig2/

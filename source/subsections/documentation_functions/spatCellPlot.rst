@@ -172,7 +172,7 @@ See `dimPlot2D() <dimPlot2D>`_ and `dimPlot3D() <dimPlot3D>`_ for 3D plot inform
 Examples 
 ******************
 
-.. code:: 
+.. code-block:: 
 
 	data(mini_giotto_single_cell)
 
@@ -222,12 +222,31 @@ Examples
 	#> 20: -1383.30 9.142231 1.263504 6.152727
 	# visualize total expression information
 	spatCellPlot(mini_giotto_single_cell, cell_annotation_values = 'total_expr')
-	
+
+
+
+.. image:: /images/documentation/spatCellPlot-1.png
+	:width: 500
+	:alt: spatCellPlot
+.. image:: /images/documentation/spatCellPlot-2.png
+	:width: 500
+	:alt: spatCellPlot
+
+
+.. code-block:: 
+
 	# visualize enrichment results
 	spatCellPlot(mini_giotto_single_cell,
                	spat_enr_names = 'cluster_metagene',
                	cell_annotation_values = c('1','2'))
 
+
+.. image:: /images/documentation/spatCellPlot-3.png
+	:width: 500
+	:alt: spatCellPlot
+.. image:: /images/documentation/spatCellPlot-4.png
+	:width: 500
+	:alt: spatCellPlot
 
 
 
