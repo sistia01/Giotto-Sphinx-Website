@@ -9,6 +9,7 @@ Spatial transcriptomic and proteomic technologies have provided new opportunitie
    :caption: General
    :hidden:
 
+   Home <index.rst>
    About <introduction.rst>
    Installation <gettingstarted.rst> 
    Documentation <documentation.rst>
