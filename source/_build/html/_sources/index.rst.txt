@@ -9,6 +9,7 @@ Spatial transcriptomic and proteomic technologies have provided new opportunitie
    :caption: General
    :hidden:
 
+   Home <index.rst>
    About <introduction.rst>
    Installation <gettingstarted.rst> 
    Documentation <documentation.rst>
@@ -21,6 +22,7 @@ Spatial transcriptomic and proteomic technologies have provided new opportunitie
    :hidden:
 
    Workflow <WorkflowAndHowTos.rst>
+   HowTos <tipsandtricks.rst>
    Examples <datasets.rst>  
    Try Giotto <trygiotto.rst>
    

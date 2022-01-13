@@ -4,6 +4,9 @@
 How to Submit a GitHub Issue
 ################################
 
+Please read through the information below before submitting your issue to our GitHub page. 
+The link to report an issue can be found at the bottom of the page. 
+
 .. .. code-block:: r
 
     knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
@@ -240,5 +243,5 @@ Example of a Bad GitHub issue
 
 > I am having trouble adjusting my Giotto matrix. My error says that the covariate column name(s) were not found in the cell meta data. What do I do?
 
-`Report Issue <https://github.com/RubD/Giotto/issues>`__
-================================================================
+
+:bdg-link-danger:`Report Issue <https://github.com/RubD/Giotto/issues>`

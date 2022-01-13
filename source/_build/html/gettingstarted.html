@@ -104,18 +104,38 @@
             
               <p class="caption" role="heading"><span class="caption-text">General</span></p>
 <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Home</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">About</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-installation-workflow">Giotto Installation Workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#part-1-r-giotto-requirements">Part 1: R Giotto Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#part-2-python-giotto-requirements">Part 2: Python Giotto Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-analyzer-and-viewer-interaction-work-in-progress">Giotto Analyzer and Viewer interaction [<em>work in progress</em>]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://spatial.rc.fas.harvard.edu/giotto-viewer/">Giotto Viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tipsandtricks.html">HowTos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trygiotto.html">Try Giotto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="errorsfaqsandtips.html">Common Errors and Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="github_issues.html">Report a Bug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#example-functionalities">Example Functionalities</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">About</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#giotto-installation-workflow">Giotto Installation Workflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#part-1-r-giotto-requirements">Part 1: R Giotto Requirements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#part-2-python-giotto-requirements">Part 2: Python Giotto Requirements</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#howtos">HowTos</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#giotto-workflow-analyses-steps-howtos"><span class="xref std std-doc">Giotto Workflow Analyses Steps “HowTos”</span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#giotto-analyzer-and-viewer-interaction-work-in-progress">Giotto Analyzer and Viewer interaction [<em>work in progress</em>]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tips-and-tricks">Tips and Tricks</a></li>
 </ul>
@@ -128,7 +148,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Guides</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="WorkflowAndHowTos.html">Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tipsandtricks.html">HowTos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datasets.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="trygiotto.html">Try Giotto</a></li>
 </ul>
@@ -205,35 +225,6 @@
             
   <div class="section" id="getting-started">
 <span id="gettingstartedpage"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Giotto provides a flexible framework for common single-cell processing steps such as:</p>
-<ul>
-<li><p>Quality control</p></li>
-<li><p>Normalization</p></li>
-<li><p>Dimension reduction</p></li>
-<li><p>Clustering and cell type annotation</p></li>
-</ul>
-</li>
-<li><p>To facilitate the analysis of recently emerging high-throughput, but lower-resolution spatial transcriptomic technologies, such as 10X Genomics Visium and Slide-seq, Giotto has 3 implemented algorithms for estimating the spatial enrichment of different cell types by integration of known gene signatures or single-cell RNAseq expression and annotation data.</p></li>
-<li><p>Spatial information is retained through the formation of a spatial grid and/or a spatial proximity network, which is used to:</p>
-<ul>
-<li><p>Identify spatial genes</p></li>
-<li><p>Extract continuous spatial-expression patterns</p></li>
-<li><p>Identify discrete spatial domains using HMRF</p></li>
-<li><p>Explore cell-type/cell-type spatial interaction enrichment or depletion</p></li>
-<li><p>Calculate spatially increased ligand-receptor expression in cells of interacting cell type pairs</p></li>
-<li><p>Find interaction changed genes (ICG): genes that change expression in one cell type due to interaction with a neighboring cell type</p></li>
-</ul>
-</li>
-<li><p>Giotto provides a number of options to visualize both 2D and 3D data and the outcome of Giotto can be interactively explored using <a class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success reference external" href="http://spatial.rc.fas.harvard.edu/giotto-viewer/"><span>Giotto Viewer</span></a> which allows you to overlay the obtained results with raw or additional images of the profiled tissue section(s).</p></li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Be sure to check out the <a class="reference internal" href="datasets.html#datasets"><span class="std std-ref">Examples Section</span></a> to get a better undersstanding of the Giotto workflow.</p>
-</div>
-</div>
 <div class="section" id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -256,8 +247,8 @@ In order to use Giotto successfully, users <strong>must</strong> have both the G
 <div class="section" id="giotto-installation-workflow">
 <span id="giottoinstallationworkflow"></span><h3>Giotto Installation Workflow<a class="headerlink" href="#giotto-installation-workflow" title="Permalink to this headline">¶</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="5ab62a24-3b4e-45bd-b0ed-5a0a9550b31f" name="d44425a4-b2c4-4629-9167-c6c63e8b1cfa" type="radio">
-</input><label class="sd-tab-label" for="5ab62a24-3b4e-45bd-b0ed-5a0a9550b31f">
+<input checked="checked" id="b672448b-f918-4374-aa90-f61eee4ca2e8" name="7efda8dc-701d-493b-b7b8-9219be4728d8" type="radio">
+</input><label class="sd-tab-label" for="b672448b-f918-4374-aa90-f61eee4ca2e8">
 Giotto Installation Workflow</label><div class="sd-tab-content docutils">
 <p>This workflow image is designed to help with Giotto Installation.
 Users should follow the installation process by answering Yes or No to the following quetions.
@@ -279,8 +270,8 @@ Workflow Diagram<div class="sd-summary-down docutils">
 <div class="section" id="part-1-r-giotto-requirements">
 <h3>Part 1: R Giotto Requirements<a class="headerlink" href="#part-1-r-giotto-requirements" title="Permalink to this headline">¶</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="341476e1-56e9-4ef3-8c06-393d996f1023" name="36747b9e-2395-4c10-b3de-0f638ba3b136" type="radio">
-</input><label class="sd-tab-label" for="341476e1-56e9-4ef3-8c06-393d996f1023">
+<input checked="checked" id="ae05832b-4cba-4a33-8106-437e9baacf37" name="7f91eed1-3c07-4794-b88f-88c4fcd567c0" type="radio">
+</input><label class="sd-tab-label" for="ae05832b-4cba-4a33-8106-437e9baacf37">
 1.1: R Package Installation</label><div class="sd-tab-content docutils">
 <p><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-question" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zM6.92 6.085c.081-.16.19-.299.34-.398.145-.097.371-.187.74-.187.28 0 .553.087.738.225A.613.613 0 019 6.25c0 .177-.04.264-.077.318a.956.956 0 01-.277.245c-.076.051-.158.1-.258.161l-.007.004a7.728 7.728 0 00-.313.195 2.416 2.416 0 00-.692.661.75.75 0 001.248.832.956.956 0 01.276-.245 6.3 6.3 0 01.26-.16l.006-.004c.093-.057.204-.123.313-.195.222-.149.487-.355.692-.662.214-.32.329-.702.329-1.15 0-.76-.36-1.348-.863-1.725A2.76 2.76 0 008 4c-.631 0-1.155.16-1.572.438-.413.276-.68.638-.849.977a.75.75 0 101.342.67z"></path></svg> <strong>Have you ever installed an R package that is in development?</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -307,8 +298,8 @@ To specifically install the command-line tools of Xcode for Mac OSX you might al
 <p class="sd-card-text"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-arrow-right" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"></path></svg> Move on to the next step: Giotto Installation</p>
 </div>
 </details></div>
-<input id="84fe287a-fe1d-4321-9b4a-9aea4c6988a0" name="36747b9e-2395-4c10-b3de-0f638ba3b136" type="radio">
-</input><label class="sd-tab-label" for="84fe287a-fe1d-4321-9b4a-9aea4c6988a0">
+<input id="1ee5552d-4630-4582-9ed6-170e677ce82e" name="7f91eed1-3c07-4794-b88f-88c4fcd567c0" type="radio">
+</input><label class="sd-tab-label" for="1ee5552d-4630-4582-9ed6-170e677ce82e">
 1.2: Giotto Installation</label><div class="sd-tab-content docutils">
 <p><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-question" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zM6.92 6.085c.081-.16.19-.299.34-.398.145-.097.371-.187.74-.187.28 0 .553.087.738.225A.613.613 0 019 6.25c0 .177-.04.264-.077.318a.956.956 0 01-.277.245c-.076.051-.158.1-.258.161l-.007.004a7.728 7.728 0 00-.313.195 2.416 2.416 0 00-.692.661.75.75 0 001.248.832.956.956 0 01.276-.245 6.3 6.3 0 01.26-.16l.006-.004c.093-.057.204-.123.313-.195.222-.149.487-.355.692-.662.214-.32.329-.702.329-1.15 0-.76-.36-1.348-.863-1.725A2.76 2.76 0 008 4c-.631 0-1.155.16-1.572.438-.413.276-.68.638-.849.977a.75.75 0 101.342.67z"></path></svg> <strong>Have you installed Giotto before?</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -359,8 +350,8 @@ Giotto can be installed within 1-5 mins.</p>
 <div class="section" id="part-2-python-giotto-requirements">
 <span id="part2-python-giotto-requirements"></span><h3>Part 2: Python Giotto Requirements<a class="headerlink" href="#part-2-python-giotto-requirements" title="Permalink to this headline">¶</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="1a5ec9c3-a28e-4098-8b74-78ebfc1a94be" name="954e82b1-d4d9-477e-bdb0-b1d696b0d360" type="radio">
-</input><label class="sd-tab-label" for="1a5ec9c3-a28e-4098-8b74-78ebfc1a94be">
+<input checked="checked" id="955769c0-ab63-49e8-8da6-fd135e9dc899" name="8857806d-4a0e-4da9-bd51-61907de9cfff" type="radio">
+</input><label class="sd-tab-label" for="955769c0-ab63-49e8-8da6-fd135e9dc899">
 2.1: Python Package Installation</label><div class="sd-tab-content docutils">
 <p><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-question" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zM6.92 6.085c.081-.16.19-.299.34-.398.145-.097.371-.187.74-.187.28 0 .553.087.738.225A.613.613 0 019 6.25c0 .177-.04.264-.077.318a.956.956 0 01-.277.245c-.076.051-.158.1-.258.161l-.007.004a7.728 7.728 0 00-.313.195 2.416 2.416 0 00-.692.661.75.75 0 001.248.832.956.956 0 01.276-.245 6.3 6.3 0 01.26-.16l.006-.004c.093-.057.204-.123.313-.195.222-.149.487-.355.692-.662.214-.32.329-.702.329-1.15 0-.76-.36-1.348-.863-1.725A2.76 2.76 0 008 4c-.631 0-1.155.16-1.572.438-.413.276-.68.638-.849.977a.75.75 0 101.342.67z"></path></svg> <strong>Have you ever installed a Python Package?</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -383,8 +374,8 @@ No<div class="sd-summary-down docutils">
 Once you have read through the information <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-arrow-right" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"></path></svg> proceeed to the next step: Giotto-Specific Python Packages.</p>
 </div>
 </details></div>
-<input id="2ac3593b-efec-4528-80f1-4a7aa2e3963f" name="954e82b1-d4d9-477e-bdb0-b1d696b0d360" type="radio">
-</input><label class="sd-tab-label" for="2ac3593b-efec-4528-80f1-4a7aa2e3963f">
+<input id="69f7877b-4283-4284-bab4-a5daac6b3a0c" name="8857806d-4a0e-4da9-bd51-61907de9cfff" type="radio">
+</input><label class="sd-tab-label" for="69f7877b-4283-4284-bab4-a5daac6b3a0c">
 2.2: Giotto-Specific Python Packages</label><div class="sd-tab-content docutils">
 <p><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-question" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zM6.92 6.085c.081-.16.19-.299.34-.398.145-.097.371-.187.74-.187.28 0 .553.087.738.225A.613.613 0 019 6.25c0 .177-.04.264-.077.318a.956.956 0 01-.277.245c-.076.051-.158.1-.258.161l-.007.004a7.728 7.728 0 00-.313.195 2.416 2.416 0 00-.692.661.75.75 0 001.248.832.956.956 0 01.276-.245 6.3 6.3 0 01.26-.16l.006-.004c.093-.057.204-.123.313-.195.222-.149.487-.355.692-.662.214-.32.329-.702.329-1.15 0-.76-.36-1.348-.863-1.725A2.76 2.76 0 008 4c-.631 0-1.155.16-1.572.438-.413.276-.68.638-.849.977a.75.75 0 101.342.67z"></path></svg> <strong>Have you installed the python modules necessary for Giotto to run?</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -595,8 +586,8 @@ For Linux<div class="sd-summary-down docutils">
 <p class="sd-card-text">Please <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-arrow-right" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"></path></svg> move on to the next step: 2.3 Python Path Specification</p>
 </div>
 </details></div>
-<input id="a8c397f8-1e1d-47b6-b416-e0451c25cab6" name="954e82b1-d4d9-477e-bdb0-b1d696b0d360" type="radio">
-</input><label class="sd-tab-label" for="a8c397f8-1e1d-47b6-b416-e0451c25cab6">
+<input id="9f96f5a3-3072-4e95-9bf6-ada592dd160d" name="8857806d-4a0e-4da9-bd51-61907de9cfff" type="radio">
+</input><label class="sd-tab-label" for="9f96f5a3-3072-4e95-9bf6-ada592dd160d">
 2.3 Python Path Specification</label><div class="sd-tab-content docutils">
 <p><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-question" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zM6.92 6.085c.081-.16.19-.299.34-.398.145-.097.371-.187.74-.187.28 0 .553.087.738.225A.613.613 0 019 6.25c0 .177-.04.264-.077.318a.956.956 0 01-.277.245c-.076.051-.158.1-.258.161l-.007.004a7.728 7.728 0 00-.313.195 2.416 2.416 0 00-.692.661.75.75 0 001.248.832.956.956 0 01.276-.245 6.3 6.3 0 01.26-.16l.006-.004c.093-.057.204-.123.313-.195.222-.149.487-.355.692-.662.214-.32.329-.702.329-1.15 0-.76-.36-1.348-.863-1.725A2.76 2.76 0 008 4c-.631 0-1.155.16-1.572.438-.413.276-.68.638-.849.977a.75.75 0 101.342.67z"></path></svg> <strong>Have you specified your python path in R?</strong></p>
 <div class="admonition note">
@@ -634,35 +625,13 @@ No<div class="sd-summary-down docutils">
 </div>
 </details></div>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Check out the <a class="reference internal" href="datasets.html#datasets"><span class="std std-ref">Examples Section</span></a> to get a better understanding of the Giotto workflow.</p>
 </div>
-</div>
-<div class="section" id="howtos">
-<span id="howtolabel"></span><h2>HowTos<a class="headerlink" href="#howtos" title="Permalink to this headline">¶</a></h2>
-<p>Giotto provides a lot of analyses, visualizations and other options to facilitate your spatial dataset analysis. We are working on providing easy-to-understand examples or tutorials, but if anything is not clear or if there is something you would like to see in particular, then do not hesitate to <a class="reference external" href="https://github.com/RubD/Giotto/issues">contact us.</a></p>
-<p>In addition to our HowTos we have also created a way for users to test out Giotto via <a class="sd-sphinx-override sd-badge sd-outline-warning sd-text-warning reference internal" href="subsections/trygiotto/docker.html#dockerinformation"><span class="std std-ref">Docker</span></a> or <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference internal" href="subsections/trygiotto/binder.html#binderinformation"><span class="std std-ref">Binder</span></a> (see <a class="reference internal" href="trygiotto.html#trygiotto"><span class="std std-ref">Try Giotto</span></a> for more information).</p>
-<div class="section" id="giotto-workflow-analyses-steps-howtos">
-<h3><a class="reference internal" href="giottoworkflowanalyses.html"><span class="doc">Giotto Workflow Analyses Steps “HowTos”</span></a><a class="headerlink" href="#giotto-workflow-analyses-steps-howtos" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic simple" start="0">
-<li><p><a class="reference internal" href="giottoworkflowanalyses.html#install-a-giotto-environment"><span class="std std-ref">Optional: Install a Giotto Environment</span></a></p></li>
-<li><p><a class="reference internal" href="giottoworkflowanalyses.html#create-a-giotto-object"><span class="std std-ref">Create a Giotto Object</span></a></p></li>
-<li><p><a class="reference internal" href="giottoworkflowanalyses.html#process-and-filter-a-giotto-object"><span class="std std-ref">Process and Filter a Giotto Object</span></a></p></li>
-<li><p><a class="reference internal" href="giottoworkflowanalyses.html#dimension-reduction"><span class="std std-ref">Dimension Reduction</span></a></p></li>
-<li><p><a class="reference internal" href="giottoworkflowanalyses.html#cluster-cells-or-spots"><span class="std std-ref">Cluster cells or spots</span></a></p></li>
-<li><p><a class="reference internal" href="giottoworkflowanalyses.html#identify-differentially-expressed-genes"><span class="std std-ref">Identify differentially expressed genes</span></a></p></li>
-<li><p><a class="reference internal" href="giottoworkflowanalyses.html#annotate-clusters"><span class="std std-ref">Annotate clusters</span></a></p></li>
-<li><p><a class="reference internal" href="giottoworkflowanalyses.html#cell-type-enrichment-or-deconvolution-per-spot"><span class="std std-ref">Cell-type enrichment or deconvolution per spot</span></a></p></li>
-<li><p><a class="reference internal" href="giottoworkflowanalyses.html#spatial-grid-or-network"><span class="std std-ref">Create a Spatial grid or Network</span></a></p></li>
-<li><p><a class="reference internal" href="giottoworkflowanalyses.html#spatially-coherent-gene-expression-pattern"><span class="std std-ref">Find genes with a spatially coherent gene expression pattern</span></a></p></li>
-<li><p><a class="reference internal" href="giottoworkflowanalyses.html#spatially-coexpressed-genes"><span class="std std-ref">Identify genes that are spatially co-expressed</span></a></p></li>
-<li><p><a class="reference internal" href="giottoworkflowanalyses.html#spatial-domains-with-hmrf"><span class="std std-ref">Explore spatial domains with HMRF</span></a></p></li>
-<li><p><a class="reference internal" href="giottoworkflowanalyses.html#calculate-spatial-cell-cell-interaction"><span class="std std-ref">Calculate spatial cell-cell interaction enrichment</span></a></p></li>
-<li><p><a class="reference internal" href="giottoworkflowanalyses.html#find-cell-cell-interactions-changed-genes"><span class="std std-ref">Find cell-cell interaction changed genes (ICG)</span></a></p></li>
-<li><p><a class="reference internal" href="giottoworkflowanalyses.html#enriched-or-depleted-ligand-receptor-interactions"><span class="std std-ref">Identify enriched or depleted ligand-receptor interactions in hetero and homo-typic cell interactions</span></a></p></li>
-<li><p><a class="reference internal" href="giottoworkflowanalyses.html#giotto-viewer-export"><span class="std std-ref">Export Giotto results to use in Giotto viewer</span></a></p></li>
-</ol>
 </div>
 <div class="section" id="giotto-analyzer-and-viewer-interaction-work-in-progress">
-<h3>Giotto Analyzer and Viewer interaction [<em>work in progress</em>]<a class="headerlink" href="#giotto-analyzer-and-viewer-interaction-work-in-progress" title="Permalink to this headline">¶</a></h3>
+<span id="howtolabel"></span><h3>Giotto Analyzer and Viewer interaction [<em>work in progress</em>]<a class="headerlink" href="#giotto-analyzer-and-viewer-interaction-work-in-progress" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>How to switch between Giotto Analyzer and Viewer?</p></li>
 </ul>
@@ -678,9 +647,63 @@ No<div class="sd-summary-down docutils">
 <li><p><a class="reference internal" href="subsections/tipsandtricks/giottoclass.html#giotto-class"><span class="std std-ref">Working with the Giotto class</span></a></p></li>
 <li><p><a class="reference internal" href="subsections/tipsandtricks/workingwithimages.html#working-with-giotto-images"><span class="std std-ref">Adding and Working with Images in Giotto</span></a></p></li>
 </ul>
-<div class="admonition seealso">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
+<summary class="sd-summary-title sd-card-header">
+<a class="reference internal" href="giottoworkflowanalyses.html"><span class="doc">Giotto Workflow Analyses Guided Steps</span></a><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ol class="arabic simple" start="0">
+<li><p class="sd-card-text"><a class="reference internal" href="giottoworkflowanalyses.html#install-a-giotto-environment"><span class="std std-ref">*Optional* Install a Giotto Environment</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="giottoworkflowanalyses.html#create-a-giotto-object"><span class="std std-ref">Create a Giotto Object</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="giottoworkflowanalyses.html#process-and-filter-a-giotto-object"><span class="std std-ref">Process and Filter a Giotto Object</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="giottoworkflowanalyses.html#dimension-reduction"><span class="std std-ref">Dimension Reduction</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="giottoworkflowanalyses.html#cluster-cells-or-spots"><span class="std std-ref">Cluster cells or spots</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="giottoworkflowanalyses.html#identify-differentially-expressed-genes"><span class="std std-ref">Identify differentially expressed genes</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="giottoworkflowanalyses.html#annotate-clusters"><span class="std std-ref">Annotate clusters</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="giottoworkflowanalyses.html#cell-type-enrichment-or-deconvolution-per-spot"><span class="std std-ref">Cell-type enrichment or deconvolution per spot</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="giottoworkflowanalyses.html#spatial-grid-or-network"><span class="std std-ref">Create a Spatial grid or Network</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="giottoworkflowanalyses.html#spatially-coherent-gene-expression-pattern"><span class="std std-ref">Find genes with a spatially coherent gene expression pattern</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="giottoworkflowanalyses.html#spatially-coexpressed-genes"><span class="std std-ref">Identify genes that are spatially co-expressed</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="giottoworkflowanalyses.html#spatial-domains-with-hmrf"><span class="std std-ref">Explore spatial domains with HMRF</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="giottoworkflowanalyses.html#calculate-spatial-cell-cell-interaction"><span class="std std-ref">Calculate spatial cell-cell interaction enrichment</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="giottoworkflowanalyses.html#find-cell-cell-interactions-changed-genes"><span class="std std-ref">Find cell-cell interaction changed genes (ICG)</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="giottoworkflowanalyses.html#enriched-or-depleted-ligand-receptor-interactions"><span class="std std-ref">Identify enriched or depleted ligand-receptor interactions in hetero and homo-typic cell interactions</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="giottoworkflowanalyses.html#giotto-viewer-export"><span class="std std-ref">Export Giotto results to use in Giotto viewer</span></a></p></li>
+</ol>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
+<summary class="sd-summary-title sd-card-header">
+<a class="reference internal" href="tipsandtricks.html#howtosection"><span class="std std-ref">HowTos</span></a><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference internal" href="subsections/tipsandtricks/howtosubsetgiottoobject.html#ways-of-subsetting"><span class="std std-ref">Different ways of subsetting Giotto results?</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="subsections/tipsandtricks/waystovisualizespatialdata.html#global-instructions-and-save-plots"><span class="std std-ref">How to create global instructions and show or save your created plots?</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="subsections/tipsandtricks/howtovisualizeandsaveplots.html#visualize-data"><span class="std std-ref">Different ways to visualize your spatial data?</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="subsections/tipsandtricks/testandstoremultipleanayses.html#test-and-store"><span class="std std-ref">How to test and store multiple parameters or analyses?</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="subsections/tipsandtricks/visualizewithvoronoiplots.html#voronoi-plots"><span class="std std-ref">Visualize spatial data with voronoi plots</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="subsections/tipsandtricks/giottoclass.html#giotto-class"><span class="std std-ref">Working with the Giotto class</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="subsections/tipsandtricks/workingwithimages.html#working-with-giotto-images"><span class="std std-ref">Adding and Working with Images in Giotto</span></a></p></li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header sd-bg-warning sd-bg-text-warning">
+Giotto Analyzer and Viewer interaction [<em>work in progress</em>] <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">How to switch between Giotto Analyzer and Viewer?</p></li>
+</ul>
+</div>
+</details><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="errorsfaqsandtips.html#faqs"><span class="std std-ref">FAQs</span></a> for more information</p>
+<p><a class="reference internal" href="errorsfaqsandtips.html#faqs"><span class="std std-ref">FAQs</span></a> for more help.</p>
 </div>
 </div>
 </div>

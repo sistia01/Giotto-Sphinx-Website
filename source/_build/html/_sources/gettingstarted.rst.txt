@@ -3,34 +3,6 @@
 #######################
 Getting Started 
 #######################
-*************
-Description 
-*************
-
-* Giotto provides a flexible framework for common single-cell processing steps such as:
-   
-  * Quality control
-  * Normalization
-  * Dimension reduction
-  * Clustering and cell type annotation
-  
-* To facilitate the analysis of recently emerging high-throughput, but lower-resolution spatial transcriptomic technologies, such as 10X Genomics Visium and Slide-seq, Giotto has 3 implemented algorithms for estimating the spatial enrichment of different cell types by integration of known gene signatures or single-cell RNAseq expression and annotation data.
-* Spatial information is retained through the formation of a spatial grid and/or a spatial proximity network, which is used to:
-  
-  * Identify spatial genes
-  * Extract continuous spatial-expression patterns
-  * Identify discrete spatial domains using HMRF
-  * Explore cell-type/cell-type spatial interaction enrichment or depletion
-  * Calculate spatially increased ligand-receptor expression in cells of interacting cell type pairs
-  * Find interaction changed genes (ICG): genes that change expression in one cell type due to interaction with a neighboring cell type
-
-* Giotto provides a number of options to visualize both 2D and 3D data and the outcome of Giotto can be interactively explored using :bdg-link-success:`Giotto Viewer <http://spatial.rc.fas.harvard.edu/giotto-viewer/>` which allows you to overlay the obtained results with raw or additional images of the profiled tissue section(s).
-
-.. _Giotto Viewer: http://spatial.rc.fas.harvard.edu/spatialgiotto/giotto.install.native.html
-
-.. tip:: 
-	
-	Be sure to check out the :ref:`Examples Section <datasets>` to get a better undersstanding of the Giotto workflow.
 
 *************
 Requirements
@@ -348,38 +320,13 @@ Part 2: Python Giotto Requirements
 .. _here: https://packaging.python.org/en/latest/tutorials/installing-packages/
 
 
+.. tip:: 
+	
+	Check out the :ref:`Examples Section <datasets>` to get a better understanding of the Giotto workflow.
+
+
 .. _howtolabel:
 
-*******
-HowTos
-*******
-Giotto provides a lot of analyses, visualizations and other options to facilitate your spatial dataset analysis. We are working on providing easy-to-understand examples or tutorials, but if anything is not clear or if there is something you would like to see in particular, then do not hesitate to `contact us.`_
-
-In addition to our HowTos we have also created a way for users to test out Giotto via :bdg-ref-warning-line:`Docker <DockerInformation>` or :bdg-ref-primary-line:`Binder <BinderInformation>` (see :ref:`Try Giotto <TryGiotto>` for more information).
-
-.. _contact us.: https://github.com/RubD/Giotto/issues
-
-:doc:`Giotto Workflow Analyses Steps "HowTos" </giottoworkflowanalyses>`
-============================================================================
-
-0. :ref:`Optional: Install a Giotto Environment <install_a_giotto_environment>`
-   
-#. :ref:`Create a Giotto Object <create-a-giotto-object>`
-#. :ref:`Process and Filter a Giotto Object <process-and-filter-a-giotto-object>` 
-#. :ref:`Dimension Reduction <dimension-reduction>`  
-#. :ref:`Cluster cells or spots <cluster_cells-or-spots>`
-#. :ref:`Identify differentially expressed genes <identify-differentially-expressed-genes>`
-#. :ref:`Annotate clusters <annotate-clusters>`
-#. :ref:`Cell-type enrichment or deconvolution per spot <cell-type-enrichment-or-deconvolution-per-spot>`
-#. :ref:`Create a Spatial grid or Network <spatial-grid-or-network>`
-#. :ref:`Find genes with a spatially coherent gene expression pattern <spatially-coherent-gene-expression-pattern>`
-#. :ref:`Identify genes that are spatially co-expressed <spatially-coexpressed-genes>`
-#. :ref:`Explore spatial domains with HMRF <spatial-domains-with-HMRF>`
-#. :ref:`Calculate spatial cell-cell interaction enrichment <calculate-spatial-cell-cell-interaction>`
-#. :ref:`Find cell-cell interaction changed genes (ICG) <find-cell-cell-interactions-changed-genes>`
-#. :ref:`Identify enriched or depleted ligand-receptor interactions in hetero and homo-typic cell interactions <enriched-or-depleted-ligand-receptor-interactions>`
-#. :ref:`Export Giotto results to use in Giotto viewer <giotto-viewer-export>`
- 
 Giotto Analyzer and Viewer interaction [*work in progress*]
 ===========================================================
 
@@ -397,5 +344,44 @@ Tips and Tricks
 * :ref:`Adding and Working with Images in Giotto <working-with-giotto-images>`
 
 
+.. dropdown:: :doc:`Giotto Workflow Analyses Guided Steps</giottoworkflowanalyses>`
+	:animate: fade-in 
+	
+	0. :ref:`*Optional* Install a Giotto Environment <install_a_giotto_environment>` 
+	1. :ref:`Create a Giotto Object <create-a-giotto-object>`
+	#. :ref:`Process and Filter a Giotto Object <process-and-filter-a-giotto-object>` 
+	#. :ref:`Dimension Reduction <dimension-reduction>`
+	#. :ref:`Cluster cells or spots <cluster_cells-or-spots>`
+	#. :ref:`Identify differentially expressed genes <identify-differentially-expressed-genes>`
+	#. :ref:`Annotate clusters <annotate-clusters>`
+	#. :ref:`Cell-type enrichment or deconvolution per spot <cell-type-enrichment-or-deconvolution-per-spot>`
+	#. :ref:`Create a Spatial grid or Network <spatial-grid-or-network>`
+	#. :ref:`Find genes with a spatially coherent gene expression pattern <spatially-coherent-gene-expression-pattern>`
+	#. :ref:`Identify genes that are spatially co-expressed <spatially-coexpressed-genes>`
+	#. :ref:`Explore spatial domains with HMRF <spatial-domains-with-HMRF>`
+	#. :ref:`Calculate spatial cell-cell interaction enrichment <calculate-spatial-cell-cell-interaction>`
+	#. :ref:`Find cell-cell interaction changed genes (ICG) <find-cell-cell-interactions-changed-genes>`
+	#. :ref:`Identify enriched or depleted ligand-receptor interactions in hetero and homo-typic cell interactions <enriched-or-depleted-ligand-receptor-interactions>`
+	#. :ref:`Export Giotto results to use in Giotto viewer <giotto-viewer-export>`
+
+
+.. dropdown:: :ref:`HowTos <howtosection>`
+	:animate: fade-in 
+	
+	* :ref:`Different ways of subsetting Giotto results? <ways-of-subsetting>`
+	* :ref:`How to create global instructions and show or save your created plots? <global-instructions-and-save-plots>`
+	* :ref:`Different ways to visualize your spatial data? <visualize-data>`
+	* :ref:`How to test and store multiple parameters or analyses? <test-and-store>`
+	* :ref:`Visualize spatial data with voronoi plots <voronoi-plots>`
+	* :ref:`Working with the Giotto class <giotto-class>`
+	* :ref:`Adding and Working with Images in Giotto <working-with-giotto-images>`
+
+
+.. dropdown:: Giotto Analyzer and Viewer interaction [*work in progress*] :octicon:`alert`
+	:color: warning
+
+	* How to switch between Giotto Analyzer and Viewer?
+
+
 .. seealso:: 
-	:ref:`FAQs <faqs>` for more information
+	:ref:`FAQs <faqs>` for more help.
