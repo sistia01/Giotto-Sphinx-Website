@@ -9,4 +9,5 @@ with Giotto.
     :maxdepth: 2
 
     giottoworkflowanalyses.rst
-    HowTos and Tips <tipsandtricks.rst>
+
+.. moved    HowTos and Tips <tipsandtricks.rst> to individual page 

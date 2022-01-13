@@ -21,6 +21,7 @@ Spatial transcriptomic and proteomic technologies have provided new opportunitie
    :hidden:
 
    Workflow <WorkflowAndHowTos.rst>
+   HowTos <tipsandtricks.rst>
    Examples <datasets.rst>  
    Try Giotto <trygiotto.rst>
    
