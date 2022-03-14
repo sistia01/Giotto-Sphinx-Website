@@ -1,3 +1,5 @@
 {
-    "restructuredtext.confPath": "${workspaceFolder}/source"
+    "restructuredtext.confPath": "${workspaceFolder}/source",
+    "esbonio.sphinx.confDir": "/Users/adrianasistig/Documents/GitHub/Giotto-Sphinx_Website/source",
+    "esbonio.server.enabled": true
 }

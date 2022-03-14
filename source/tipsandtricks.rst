@@ -19,6 +19,6 @@ This section has various HowTo tutorials that aim to spotlight some of the ways 
 
 Giotto provides a lot of analyses, visualizations and other options to facilitate your spatial dataset analysis. We are working on providing easy-to-understand examples or tutorials, but if anything is not clear or if there is something you would like to see in particular, then do not hesitate to `contact us.`_
 
-In addition to our HowTos we have also created a way for users to test out Giotto via :bdg-ref-warning-line:`Docker <DockerInformation>` or :bdg-ref-primary-line:`Binder <BinderInformation>` (see :ref:`Try Giotto <TryGiotto>` for more information).
+In addition to our HowTos we have also created a way for users to test out Giotto via :bdg-ref-warning-line:`Docker <DockerInformation>`, :bdg-ref-primary-line:`Binder <BinderInformation>`, or :bdg-ref-secondary-line:`Terra. <Terra>`(see :ref:`Try Giotto <TryGiotto>` for more information).
 
 .. _contact us.: https://github.com/RubD/Giotto/issues

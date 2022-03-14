@@ -13,16 +13,14 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
   <link rel="stylesheet" href="_static/sphinx-toolbox-code.css" type="text/css" />
   <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/sphinx-toolbox.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme_edits.css" type="text/css" />
   <link rel="stylesheet" href="_static/sphinx_toolbox_installation.css" type="text/css" />
-  <link rel="stylesheet" href="_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme_edits.css" type="text/css" />
+  <link rel="stylesheet" href="_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
 
   
   
@@ -39,14 +37,15 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
         <script src="_static/clipboard.min.js"></script>
         <script src="_static/copybutton.js"></script>
         <script src="_static/sphinx_toolbox_installation.js"></script>
         <script src="_static/design-tabs.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -102,8 +101,39 @@
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+              <p class="caption"><span class="caption-text">General</span></p>
 <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">.. Home</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="development.html">Development</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-1-0-1-1-0-3">Giotto 1.0.1 - 1.0.3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-1-0-0">Giotto 1.0.0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-0-3-5">Giotto 0.3.5</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-0-3-2">Giotto 0.3.2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-0-3-1">Giotto 0.3.1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-0-3-0">Giotto 0.3.0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-0-2-4">Giotto 0.2.4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-0-2-3">Giotto 0.2.3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-0-2-2">Giotto 0.2.2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference external" href="https://github.com/RubD/Giotto/">Source Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contribute.html">Contribute</a></li>
+<li class="toctree-l3"><a class="reference external" href="https://github.com/RubD/Giotto/tree/suite">Giotto Suite</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference external" href="http://spatial.rc.fas.harvard.edu/giotto-viewer/">Giotto Viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tipsandtricks.html">HowTos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trygiotto.html">Try Giotto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="errorsfaqsandtips.html">Common Errors and Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="github_issues.html">Report a Bug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#example-functionalities">Example Functionalities</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="documentation.html">Documentation</a></li>
@@ -122,17 +152,18 @@
 </li>
 <li class="toctree-l2"><a class="reference external" href="https://github.com/RubD/Giotto/">Source Code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://github.com/RubD/Giotto/tree/suite">Giotto Suite</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference external" href="http://spatial.rc.fas.harvard.edu/giotto-viewer/">Giotto Viewer</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<p class="caption"><span class="caption-text">Guides</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="WorkflowAndHowTos.html">Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tipsandtricks.html">HowTos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datasets.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="trygiotto.html">Try Giotto</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Issues</span></p>
+<p class="caption"><span class="caption-text">Issues</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="errorsfaqsandtips.html">Common Errors and Solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="github_issues.html">Report a Bug</a></li>
@@ -304,7 +335,7 @@ cell interactions</p></li>
 <div class="section" id="giotto-0-3-5">
 <h2>Giotto 0.3.5<a class="headerlink" href="#giotto-0-3-5" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>background images See <a class="reference internal" href="gettingstarted.html#howtos"><span class="std std-ref">HowTos</span></a> for more information!</p></li>
+<li><p>background images See <a class="reference internal" href="tipsandtricks.html#howtos"><span class="std std-ref">HowTos</span></a> for more information!</p></li>
 <li><p>support for sparse matrices</p></li>
 <li><p>PCA can be calculated with the packages irlba (default) or factominer
 (old default)</p></li>
@@ -321,7 +352,7 @@ spatial grids and networks</p></li>
 <div class="section" id="giotto-0-3-2">
 <h2>Giotto 0.3.2<a class="headerlink" href="#giotto-0-3-2" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>added voronoi plots to use in spatial plotting. See <a class="reference internal" href="gettingstarted.html#howtos"><span class="std std-ref">HowTos</span></a> for more informaiton.</p></li>
+<li><p>added voronoi plots to use in spatial plotting. See <a class="reference internal" href="tipsandtricks.html#howtos"><span class="std std-ref">HowTos</span></a> for more informaiton.</p></li>
 <li><p>generalized visualization parameters between functions</p></li>
 </ul>
 </div>
@@ -382,7 +413,7 @@ a Delaunay spatial network.</p></li>
 <li><p>Fixed multiple bugs</p></li>
 <li><p>Improved speed by changing code to Rcpp and implementing
 parallelization options</p></li>
-<li><p>updated <a class="reference internal" href="gettingstarted.html#howtos"><span class="std std-ref">HowTos</span></a> tutorials in
+<li><p>updated <a class="reference internal" href="tipsandtricks.html#howtos"><span class="std std-ref">HowTos</span></a> tutorials in
 Start section</p></li>
 <li><p>Finished the analysis of 10 different spatial datasets (tutorials are
 a work-in-progress)</p></li>

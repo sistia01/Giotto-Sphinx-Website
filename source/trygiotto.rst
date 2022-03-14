@@ -11,8 +11,10 @@ Try Giotto
 
     Binder <subsections/trygiotto/binder.rst>
     Docker <subsections/trygiotto/docker.rst>
+    Terra <subsections/trygiotto/terra.rst>
 
-There are two methods through which users may try Giotto, either via :bdg-ref-warning-line:`Docker <DockerInformation>` or :bdg-ref-primary-line:`Binder. <BinderInformation>`. 
+
+There are three methods through which users may try Giotto, either via :bdg-ref-warning-line:`Docker <DockerInformation>`, :bdg-ref-primary-line:`Binder. <BinderInformation>` or :bdg-ref-secondary-line:`Terra. <Terra>`. 
 
 Click the buttons above to learn more about the models or test them out!
 
@@ -22,7 +24,7 @@ Click the buttons above to learn more about the models or test them out!
 Example Of Running A Binder Notebook
 **************************************
 
-Below is an example of running :bdg-ref-primary-line:`Binder. <BinderInformation>` notebook `a - Creating-a-Giotto-Object <https://hub.gke2.mybinder.org/user/ndelrossi7-r-conda-binder-7ca9izu5/lab/tree/notebooks/a-Creating-a-Giotto-Object.ipynb>`__.
+Below is an example of running :bdg-ref-primary-line:`Binder. <BinderInformation>` notebook `(a)-Creating-a-Giotto-Object <https://hub.gke2.mybinder.org/user/ndelrossi7-r-conda-binder-7ca9izu5/lab/tree/notebooks/a-Creating-a-Giotto-Object.ipynb>`__.
 
 .. card-carousel:: 1
 

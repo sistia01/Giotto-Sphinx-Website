@@ -13,16 +13,14 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
   <link rel="stylesheet" href="_static/sphinx-toolbox-code.css" type="text/css" />
   <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/sphinx-toolbox.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme_edits.css" type="text/css" />
   <link rel="stylesheet" href="_static/sphinx_toolbox_installation.css" type="text/css" />
-  <link rel="stylesheet" href="_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme_edits.css" type="text/css" />
+  <link rel="stylesheet" href="_static/design-style.d53ab927f7bad3eaa42da95908504b10.min.css" type="text/css" />
 
   
   
@@ -39,14 +37,15 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
         <script src="_static/clipboard.min.js"></script>
         <script src="_static/copybutton.js"></script>
         <script src="_static/sphinx_toolbox_installation.js"></script>
         <script src="_static/design-tabs.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -102,8 +101,153 @@
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+              <p class="caption"><span class="caption-text">General</span></p>
 <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">.. Home</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html">Installation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#giotto-handing-functions">Giotto Handing Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-instructions">Giotto Instructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-object">Giotto Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-environment">Giotto Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-helper-functions">Giotto Helper Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#giotto-processing-functions">Giotto Processing Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#import-raw-data">Import Raw Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/getSpatialDataset.html">getSpatialDataset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/readExprMatrix.html">readExprMatrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/get10XMatrix.html">get10Xmatrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/get10XMatrix_h5.html">get10Xmatrix_h5</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/stitchFieldCoordinates.html">stitchFieldCoordinates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/stitchTileCoordinates.html">stitchTileCoordinates</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-images">Adding Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/estimateImageBg.html">estimateImageBg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/changeImageBg.html">changeImageBg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/createGiottoImage.html">createGiottoImage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/addGiottoImage.html">addGiottoImage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/addGiottoImageToSpatPlot.html">addGiottoImageToSpatPlot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/showGiottoImageNames.html">showGiottoImageNames</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/updateGiottoImage.html">updateGiottoImage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/getGiottoImage.html">getGiottoImage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotGiottoImage.html">plotGiottoImage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#dimension-reduction">Dimension Reduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/calculateHVG.html">calculateHVG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/signPCA.html">signPCA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/screePlot.html">screePlot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/jackstrawPlot.html">jackstrawPlot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/runPCA.html">runPCA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/runUMAP.html">runUMAP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/runtSNE.html">runtSNE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#clustering">Clustering</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/createNearestNetwork.html">createNearestNetwork</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/addNetworkLayout.html">addNetworkLayout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/extractNearestNetwork.html">extractNearestNetwork</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/clusterCells.html">clusterCells</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/doLeidenCluster.html">doLeidenCluster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/doLouvainCluster.html">doLouvainCluster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/doKmeans.html">doKmeans</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/doHclust.html">doHclust</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/subClusterCells.html">subClusterCells</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/doLeidenSubCluster.html">doLeidenSubCluster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/doLouvainSubCluster.html">doLouvainSubCluster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/getClusterSimilarity.html">getClusterSimilarity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/mergeClusters.html">mergeClusters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/getDendrogramSplits.html">getDendrogramSplits</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#marker-genes">Marker Genes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/findMarkers.html">findMarkers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/findMarkers_one_vs_all.html">findMarkers_one_vs_all</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/findGiniMarkers.html">findGiniMarkers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/findGiniMarkers_one_vs_all.html">findGiniMarkers_one_vs_all</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/findScranMarkers.html">findScranMarkers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/findScranMarkers_one_vs_all.html">findScranMarkers_one_vs_all</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/findMastMarkers.html">findMastMarkers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/findMastMarkers_one_vs_all.html">findMastMarkers_one_vs_all</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#auxiliary-visualizations">Auxiliary Visualizations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/showClusterHeatmap.html">showClusterHeatmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/showClusterDendrogram.html">showClusterDendrogram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotHeatmap.html">plotHeatmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotMetaDataHeatmap.html">plotMetaDataHeatmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotMetaDataCellsHeatmap.html">plotMetaDataCellsHeatmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/violinPlot.html">violinPlot</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#spatial">Spatial</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#enrichment-deconvolution">Enrichment &amp; Deconvolution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spatial-network-or-grid">Spatial Network Or Grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spatial-genes">Spatial Genes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spatial-gene-simulation">Spatial Gene Simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spatial-co-expression-patterns-modules">Spatial Co-Expression Patterns/Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#hidden-markov-random-field-hmrf">Hidden Markov Random Field (HMRF)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/doHMRF.html">doHMRF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/loadHMRF.html">loadHMRF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/viewHMRFresults.html">viewHMRFresults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/writeHMRFresults.html">writeHMRFresults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/addHMRF.html">addHMRF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/viewHMRFresults2D.html">viewHMRFresults2D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/viewHMRFresults3D.html">viewHMRFresults3D</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#d-visualization">2D Visualization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#in-expression-space">In Expression Space</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#in-spatial-space">In Spatial Space</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#in-both-spatial-and-expression-space">In Both Spatial And Expression Space</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">3D Visualization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Dimension Reduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">In Spatial Space</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#in-silico-cross-sections">In Silico Cross Sections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/createCrossSection.html">createCrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/crossSectionGenePlot.html">crossSectionGenePlot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/crossSectionPlot.html">crossSectionPlot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/crossSectionGenePlot3D.html">crossSectionGenePlot3D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/crossSectionPlot3D.html">crossSectionPlot3D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/insertCrossSectionSpatPlot3D.html">insertCrossSectionSpatPlot3D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/insertCrossSectionGenePlot3D.html">insertCrossSectionGenePlot3D</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#cell-neighborhood">Cell Neighborhood</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cell-type-cell-type-enrichment">Cell-Type/Cell-Type Enrichment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spatial-interaction-changed-genes-icg">Spatial Interaction Changed Genes (ICG)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ligand-receptor-cell-communication">Ligand-Receptor Cell Communication</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#export-from-giotto-analyzer-to-viewer">Export From Giotto Analyzer To Viewer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/exportGiottoViewer.html">exportGiottoViewer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#interoperability">Interoperability</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/anndataToGiotto.html">anndataToGiotto</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://spatial.rc.fas.harvard.edu/giotto-viewer/">Giotto Viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tipsandtricks.html">HowTos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trygiotto.html">Try Giotto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="errorsfaqsandtips.html">Common Errors and Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="github_issues.html">Report a Bug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#example-functionalities">Example Functionalities</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Installation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Documentation</a><ul>
@@ -414,13 +558,13 @@
 <li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
 <li class="toctree-l1"><a class="reference external" href="http://spatial.rc.fas.harvard.edu/giotto-viewer/">Giotto Viewer</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<p class="caption"><span class="caption-text">Guides</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="WorkflowAndHowTos.html">Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tipsandtricks.html">HowTos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datasets.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="trygiotto.html">Try Giotto</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Issues</span></p>
+<p class="caption"><span class="caption-text">Issues</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="errorsfaqsandtips.html">Common Errors and Solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="github_issues.html">Report a Bug</a></li>
