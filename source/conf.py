@@ -45,7 +45,7 @@ extensions = [
 'sphinx_toolbox', 
 'sphinx_toolbox.shields',
 'sphinx_toolbox.github',
-'myst_parser'
+#'myst_parser' #myst_parser caused a fatal error
 #'sphinxcontrib.spelling' #spell checker fatal error
 ]
 
