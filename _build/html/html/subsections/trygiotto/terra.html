@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terra &mdash; Giotto 1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sphinx-toolbox-code.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx-toolbox.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sphinx_toolbox_installation.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/sphinx_toolbox_installation.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="FAQs and Solutions to Errors" href="../../errorsfaqsandtips.html" />
+    <link rel="prev" title="Docker Image" href="docker.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html">
+            <img src="../../_static/GiottoLogo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../documentation.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://spatial.rc.fas.harvard.edu/giotto-viewer/">Giotto Viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../tipsandtricks.html">HowTos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../trygiotto.html">Try Giotto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="binder.html">Binder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker.html">Docker</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Terra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#launching-giotto-on-the-cloud">Launching Giotto on the Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up-your-terra-account">Setting up your Terra account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-billing-account">Creating a Billing Account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-workspace">Create A Workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-cloud-environment">Create a Cloud Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#customizing-your-cloud-environment-using-a-giotto-s-docker-image">Customizing your Cloud Environment using a Giotto’s Docker image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#customizing-your-cloud-environment-using-a-startup-script">Customizing your Cloud Environment using a Startup Script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#share-your-workspace-with-collaborators">Share your workspace with collaborators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../trygiotto.html#example-of-running-a-binder-notebook">Example Of Running A Binder Notebook</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Issues</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../errorsfaqsandtips.html">Common Errors and Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github_issues.html">Report a Bug</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Giotto</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../trygiotto.html">Try Giotto</a> &raquo;</li>
+      <li>Terra</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/subsections/trygiotto/terra.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="terra">
+<span id="terrainformation"></span><h1>Terra<a class="headerlink" href="#terra" title="Permalink to this headline"></a></h1>
+<div class="section" id="launching-giotto-on-the-cloud">
+<h2>Launching Giotto on the Cloud<a class="headerlink" href="#launching-giotto-on-the-cloud" title="Permalink to this headline"></a></h2>
+<p>You can run all your pipelines using Giotto on the Cloud through Terra platform.</p>
+</div>
+<div class="section" id="setting-up-your-terra-account">
+<h2>Setting up your Terra account<a class="headerlink" href="#setting-up-your-terra-account" title="Permalink to this headline"></a></h2>
+<p>Go to <a class="reference external" href="https://app.terra.bio/">Terra</a> on your Chrome browser and <cite>Sign Up</cite> using the same email address that you will use for the billing account on Google Cloud Platform.</p>
+</div>
+<div class="section" id="creating-a-billing-account">
+<h2>Creating a Billing Account<a class="headerlink" href="#creating-a-billing-account" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Create an account on the Google Cloud Platform.</p></li>
+<li><p>Set Terra as a billing user on your account.</p></li>
+<li><p>Select your Google account to create your billing project on Terra.</p></li>
+</ul>
+<p>For additional information about billing account go to this <a class="reference external" href="https://support.terra.bio/hc/en-us/articles/360048632271-Understanding-Terra-costs-and-billing">link</a> .</p>
+</div>
+<div class="section" id="create-a-workspace">
+<h2>Create A Workspace<a class="headerlink" href="#create-a-workspace" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Create a workspace within your billing account.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All users with access permissions to your workspace will share the same billing account.</p>
+</div>
+<ul class="simple">
+<li><p>Launch a Virtual Machine with a Cloud environment.</p></li>
+</ul>
+</div>
+<div class="section" id="create-a-cloud-environment">
+<h2>Create a Cloud Environment<a class="headerlink" href="#create-a-cloud-environment" title="Permalink to this headline"></a></h2>
+<p>In Terra, you can run Cloud Environments using Jupyter notebooks or the RStudio App. We recommend to your either the Juypyter notebook + Python + Bioconductor or RStudio + Bioconductor options.</p>
+<img alt="../../_images/01_environments.png" src="../../_images/01_environments.png" />
+<p>You can customize the memory usage, the number of CPUs, and the persistent disk size for your virtual machine.</p>
+<img alt="../../_images/01_vm.png" src="../../_images/01_vm.png" />
+<p>Once you launched either a Jupyter notebook or the RStudio App, you can install the Giotto package using <a class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary reference external" href="https://github.com/RubD/Giotto/"><span>RubD/Giotto/</span></a>.</p>
+<p>If your prefer to launch a virtual machine ready to use, you can use our Terra-based Docker image, or the <a class="reference external" href="https://github.com/josschavezf/giotto_cloud/blob/main/startup_script.sh">Giotto’s startup script</a> .</p>
+</div>
+<div class="section" id="customizing-your-cloud-environment-using-a-giotto-s-docker-image">
+<h2>Customizing your Cloud Environment using a Giotto’s Docker image<a class="headerlink" href="#customizing-your-cloud-environment-using-a-giotto-s-docker-image" title="Permalink to this headline"></a></h2>
+<p>Under Application configuration, use the option Custom Environment and introduce the link to Docker container, named josschavezf/terra-jupyter-bioconductor-giotto:latest</p>
+<img alt="../../_images/02_docker.png" src="../../_images/02_docker.png" />
+</div>
+<div class="section" id="customizing-your-cloud-environment-using-a-startup-script">
+<h2>Customizing your Cloud Environment using a Startup Script<a class="headerlink" href="#customizing-your-cloud-environment-using-a-startup-script" title="Permalink to this headline"></a></h2>
+<p>You can download the Startup Script from this <a class="reference external" href="https://github.com/josschavezf/giotto_cloud/blob/main/startup_script.sh">link</a> .</p>
+<ul class="simple">
+<li><p>Upload the Startup Script to your Workspace Files.</p></li>
+</ul>
+<img alt="../../_images/03_upload.png" src="../../_images/03_upload.png" />
+<ul class="simple">
+<li><p>Click on the startup_script.sh document and select “View this file in the Google Cloud Storage Browser” this option will re-direct you to your Google Cloud documents page</p></li>
+</ul>
+<img alt="../../_images/03_view.png" src="../../_images/03_view.png" />
+<ul class="simple">
+<li><p>Click on the startup_script.sh document to display the file details. Copy the link</p></li>
+</ul>
+<img alt="../../_images/03_googlecloud.png" src="../../_images/03_googlecloud.png" />
+<img alt="../../_images/03_url.png" src="../../_images/03_url.png" />
+<ul class="simple">
+<li><p>Use this link to launch the Cloud environment under the Startup Script option</p></li>
+</ul>
+<img alt="../../_images/03_cloud.png" src="../../_images/03_cloud.png" />
+<ul class="simple">
+<li><p>Click on Create Environment</p></li>
+</ul>
+</div>
+<div class="section" id="share-your-workspace-with-collaborators">
+<h2>Share your workspace with collaborators<a class="headerlink" href="#share-your-workspace-with-collaborators" title="Permalink to this headline"></a></h2>
+<p>You can share your workspace with collaborators, including data, notebooks, and workflows stored in your workspace.</p>
+<ul class="simple">
+<li><p>Go to the Dashboard tab on your workspace and click the three dots on the upper right corner.</p></li>
+<li><p>Select Share option.</p></li>
+<li><p>Add the email of your collaborator. They will receive an invitation for joining the worskpace.</p></li>
+<li><p>You can select which permissions are granted to your collaborator (reader, writer or owner).</p></li>
+<li><p>Click the save button.</p></li>
+</ul>
+<img alt="../../_images/04_share.png" src="../../_images/04_share.png" />
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg> Considerations to take into account when sharing with collaborators in Terra<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">Keep in mind that all Cloud environments (virtual machines) launched within the same workspace are linked to the same billing account.</p></li>
+<li><p class="sd-card-text">Simultaneous modification of notebooks are not allowed.</p></li>
+<li><p class="sd-card-text">Opening the notebook while someone else is editing will show a message, but the current editor is not notified when someone else is trying to open the notebook.</p></li>
+</ul>
+</div>
+</details></div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="docker.html" class="btn btn-neutral float-left" title="Docker Image" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../errorsfaqsandtips.html" class="btn btn-neutral float-right" title="FAQs and Solutions to Errors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Ruben Dries, Qian Zhu, Huipeng Li, Rui Dong, Guo-Cheng Yuan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

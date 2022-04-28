@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Function Documentation &mdash; Giotto 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx-toolbox-code.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/sphinx-toolbox.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme_edits.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_toolbox_installation.css" type="text/css" />
+      <link rel="stylesheet" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme_edits.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/sphinx_toolbox_installation.js"></script>
+        <script src="_static/design-tabs.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Create Giotto Instructions" href="subsections/documentation_functions/createGiottoInstructions.html" />
+    <link rel="prev" title="Getting Started" href="gettingstarted.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html">
+            <img src="_static/GiottoLogo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#giotto-handing-functions">Giotto Handing Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#giotto-instructions">Giotto Instructions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/createGiottoInstructions.html">createGiottoInstructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/readGiottoInstructions.html">readGiottoInstructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/showGiottoInstructions.html">showGiottoInstructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/changeGiottoInstructions.html">changeGiottoInstructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/replaceGiottoInstructions.html">replaceGiottoInstructions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#giotto-object">Giotto Object</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/createGiottoObject.html">createGiottoObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/createGiottoVisiumObject.html">createGiottoVisiumObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/filterGiotto.html">filterGiotto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/subsetGiotto.html">subsetGiotto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/subsetGiottoLocs.html">subsetGiottoLocs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#giotto-environment">Giotto Environment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/installGiottoEnvironmentFunction.html">installGiottoEnvironment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/removeGiottoEnvironment.html">removeGiottoEnvironment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/checkGiottoEnvironment.html">checkGiottoEnvironment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#giotto-helper-functions">Giotto Helper Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/pDataDT.html">pDataDT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/fDataDT.html">fDataDT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/showProcessingSteps.html">showProcessingSteps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/calculateMetaTable.html">calculateMetaTable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/calculateMetaTableCells.html">calculateMetaTableCells</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/combineMetadata.html">combineMetadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/createMetagenes.html">createMetagenes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/findNetworkNeighbors.html">findNetworkNeighbors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#giotto-processing-functions">Giotto Processing Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/filterDistributions.html">filterDistributions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/filterCombinations.html">filterCombinations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/normalizeGiotto.html">normalizeGiotto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/adjustGiottoMatrix.html">adjustGiottoMatrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/annotateGiotto.html">annotateGiotto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/removeCellAnnotation.html">removeCellAnnotation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/removeGeneAnnotation.html">removeGeneAnnotation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/addCellMetadata.html">addCellMetadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/addGeneMetadata.html">addGeneMetadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/addGeneStatistics.html">addGeneStatistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/addCellStatistics.html">addCellStatistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/addStatistics.html">addStatistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/addGenesPerc.html">addGenesPerc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/addCellIntMetadata.html">addCellIntMetadata</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#import-raw-data">Import Raw Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/getSpatialDataset.html">getSpatialDataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/readExprMatrix.html">readExprMatrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/get10XMatrix.html">get10Xmatrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/get10XMatrix_h5.html">get10Xmatrix_h5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/stitchFieldCoordinates.html">stitchFieldCoordinates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/stitchTileCoordinates.html">stitchTileCoordinates</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-images">Adding Images</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/estimateImageBg.html">estimateImageBg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/changeImageBg.html">changeImageBg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/createGiottoImage.html">createGiottoImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/addGiottoImage.html">addGiottoImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/addGiottoImageToSpatPlot.html">addGiottoImageToSpatPlot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/showGiottoImageNames.html">showGiottoImageNames</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/updateGiottoImage.html">updateGiottoImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/getGiottoImage.html">getGiottoImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/plotGiottoImage.html">plotGiottoImage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dimension-reduction">Dimension Reduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/calculateHVG.html">calculateHVG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/signPCA.html">signPCA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/screePlot.html">screePlot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/jackstrawPlot.html">jackstrawPlot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/runPCA.html">runPCA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/runUMAP.html">runUMAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/runtSNE.html">runtSNE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#clustering">Clustering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/createNearestNetwork.html">createNearestNetwork</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/addNetworkLayout.html">addNetworkLayout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/extractNearestNetwork.html">extractNearestNetwork</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/clusterCells.html">clusterCells</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/doLeidenCluster.html">doLeidenCluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/doLouvainCluster.html">doLouvainCluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/doKmeans.html">doKmeans</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/doHclust.html">doHclust</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/subClusterCells.html">subClusterCells</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/doLeidenSubCluster.html">doLeidenSubCluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/doLouvainSubCluster.html">doLouvainSubCluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/getClusterSimilarity.html">getClusterSimilarity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/mergeClusters.html">mergeClusters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/getDendrogramSplits.html">getDendrogramSplits</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#marker-genes">Marker Genes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/findMarkers.html">findMarkers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/findMarkers_one_vs_all.html">findMarkers_one_vs_all</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/findGiniMarkers.html">findGiniMarkers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/findGiniMarkers_one_vs_all.html">findGiniMarkers_one_vs_all</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/findScranMarkers.html">findScranMarkers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/findScranMarkers_one_vs_all.html">findScranMarkers_one_vs_all</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/findMastMarkers.html">findMastMarkers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/findMastMarkers_one_vs_all.html">findMastMarkers_one_vs_all</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#auxiliary-visualizations">Auxiliary Visualizations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/showClusterHeatmap.html">showClusterHeatmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/showClusterDendrogram.html">showClusterDendrogram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/plotHeatmap.html">plotHeatmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/plotMetaDataHeatmap.html">plotMetaDataHeatmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/plotMetaDataCellsHeatmap.html">plotMetaDataCellsHeatmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/violinPlot.html">violinPlot</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#spatial">Spatial</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#enrichment-deconvolution">Enrichment &amp; Deconvolution</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/makeSignMatrixPAGE.html">makeSignMatrixPAGE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/makeSignMatrixRank.html">makeSignMatrixRank</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/runSpatialEnrich.html">runSpatialEnrich</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/createSpatialEnrich.html">createSpatialEnrich</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/runPAGEEnrich.html">runPAGEEnrich</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/PAGEEnrich.html">PAGEEnrich</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/runRankEnrich.html">runRankEnrich</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/rankEnrich.html">rankEnrich</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/runHyperGeometricEnrich.html">runHyperGeometricEnrich</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/hyperGeometricEnrich.html">hyperGeometricEnrich</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/runSpatialDeconv.html">runSpatialDeconv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/runDWLSDeconv.html">runDWLSDeconv</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#spatial-network-or-grid">Spatial Network Or Grid</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/spatNetwDistributionsDistance.html">spatNetwDistributionsDistance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/spatNetwDistributionsKneighbors.html">spatNetwDistributionsKneighbors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/spatNetwDistributions.html">spatNetwDistributions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/createSpatialDelaunayNetwork.html">createSpatialDelaunayNetwork</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotStatDelaunayNetwork.html">plotStatDelaunayNetwork</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/createSpatialKNNnetwork.html">createSpatialKNNnetwork</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/createSpatialNetwork.html">createSpatialNetwork</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/annotateSpatialNetwork.html">annotateSpatialNetwork</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/annotateSpatialGrid.html">annotateSpatialGrid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/createSpatialGrid.html">createSpatialGrid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/showNetworks.html">showNetworks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/showGrids.html">showGrids</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#spatial-genes">Spatial Genes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/binSpect.html">binSpect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/binSpectSingle.html">binSpectSingle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/binSpectMulti.html">binSpectMulti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/silhouetteRank.html">silhouetteRank</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/spatialDE.html">spatialDE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/spatialAEH.html">spatialAEH</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/trendSceek.html">trendSceek</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/spark.html">spark</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#spatial-gene-simulation">Spatial Gene Simulation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/simulateOneGenePatternGiottoObject.html">simulateOneGenePatternGiottoObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/runPatternSimulation.html">runPatternSimulation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#spatial-co-expression-patterns-modules">Spatial Co-Expression Patterns/Modules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/clusterSpatialCorGenes.html">clusterSpatialCorGenes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/detectSpatialCorGenes.html">detectSpatialCorGenes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/heatmSpatialCorGenes.html">heatmSpatialCorGenes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/showSpatialCorGenes.html">showSpatialCorGenes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/rankSpatialCorGroups.html">rankSpatialCorGroups</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hidden-markov-random-field-hmrf">Hidden Markov Random Field (HMRF)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/doHMRF.html">doHMRF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/loadHMRF.html">loadHMRF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/viewHMRFresults.html">viewHMRFresults</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/writeHMRFresults.html">writeHMRFresults</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/addHMRF.html">addHMRF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/viewHMRFresults2D.html">viewHMRFresults2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/viewHMRFresults3D.html">viewHMRFresults3D</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#d-visualization">2D Visualization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#in-expression-space">In Expression Space</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/dimPlot.html">dimPlot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotUMAP.html">plotUMAP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotTSNE.html">plotTSNE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotPCA.html">plotPCA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/dimGenePlot.html">dimGenePlot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/dimCellPlot.html">dimCellPlot</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#in-spatial-space">In Spatial Space</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/spatPlot.html">spatPlot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/spatPlot2D.html">spatPlot2D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/spatGenePlot.html">spatGenePlot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/spatGenePlot3D.html">spatGenePlot3D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/spatCellPlot.html">spatCellPlot</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#in-both-spatial-and-expression-space">In Both Spatial And Expression Space</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/spatDimPlot.html">spatDimPlot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/spatDimPlot3D.html">spatDimPlot3D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/spatDimGenePlot.html">spatDimGenePlot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/spatDimCellPlot.html">spatDimCellPlot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/spatDimCellPlot2D.html">spatDimCellPlot2D</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">3D Visualization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Dimension Reduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/dimPlot2D.html">dimPlot2D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/dimPlot3D.html">dimPlot3D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotUMAP_3D.html">plotUMAP_3D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotTSNE_3D.html">plotTSNE_3D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotPCA_3D.html">plotPCA_3D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/dimGenePlot3D.html">dimGenePlot3D</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">In Spatial Space</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/spatPlot3D.html">spatPlot3D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/spatDimGenePlot3D.html">spatDimGenePlot3D</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#in-silico-cross-sections">In Silico Cross Sections</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/createCrossSection.html">createCrossSection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/crossSectionGenePlot.html">crossSectionGenePlot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/crossSectionPlot.html">crossSectionPlot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/crossSectionGenePlot3D.html">crossSectionGenePlot3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/crossSectionPlot3D.html">crossSectionPlot3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/insertCrossSectionSpatPlot3D.html">insertCrossSectionSpatPlot3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/insertCrossSectionGenePlot3D.html">insertCrossSectionGenePlot3D</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cell-neighborhood">Cell Neighborhood</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cell-type-cell-type-enrichment">Cell-Type/Cell-Type Enrichment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/cellProximityEnrichment.html">cellProximityEnrichment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/cellProximityBarplot.html">cellProximityBarplot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/cellProximityHeatmap.html">cellProximityHeatmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/cellProximityNetwork.html">cellProximityNetwork</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/cellProximitySpatPlot.html">cellProximitySpatPlot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/cellProximitySpatPlot3D.html">cellProximitySpatPlot3D</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#spatial-interaction-changed-genes-icg">Spatial Interaction Changed Genes (ICG)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/findInteractionChangedGenes.html">findInteractionChangedGenes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/findICG.html">findICG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/findCellProximityGenes.html">findCellProximityGenes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/findCPG.html">findCPG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/filterCellProximityGenes.html">filterCellProximityGenes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/filterInteractionChangedGenes.html">filterInteractionChangedGenes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/filterICG.html">filterICG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/filterCPG.html">filterCPG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/combineInteractionChangedGenes.html">Combine ICG Scores (Pairwise)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/combineInteractionChangedGenes.html#value">Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/combineICG.html">Combine ICG Scores (Pairwise)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/combineICG.html#value">Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/combineCellProximityGenes.html">combineCellProximityGenes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/combineCPG.html">combineCPG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotInteractionChangedGenes.html">Visualize ICGs via Barplot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotInteractionChangedGenes.html#value">Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotICG.html">Visualize ICGs via Barplot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotICG.html#value">Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotCellProximityGenes.html">Visualize Cell Proximity Gene Scores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotCellProximityGenes.html#value">Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotCPG.html">Visualize Cell Proximity Gene Scores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotCPG.html#value">Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotCombineInteractionChangedGenes.html">Visualize Combined ICG Scores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotCombineInteractionChangedGenes.html#value">Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotCombineICG.html">Visualize Combined ICG Scores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotCombineICG.html#value">Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotCombineCellProximityGenes.html">plotCombineCellProximityGenes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotCombineCPG.html">plotCombineCPG</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ligand-receptor-cell-communication">Ligand-Receptor Cell Communication</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/exprCellCellcom.html">exprCellCellcom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/spatCellCellcom.html">spatCellCellcom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotCCcomDotplot.html">plotCCcomDotplot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotRankSpatvsExpr.html">plotRankSpatvsExpr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/documentation_functions/plotRecovery.html">plotRecovery</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#export-from-giotto-analyzer-to-viewer">Export From Giotto Analyzer To Viewer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/exportGiottoViewer.html">exportGiottoViewer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#interoperability">Interoperability</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subsections/documentation_functions/anndataToGiotto.html">anndataToGiotto</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://spatial.rc.fas.harvard.edu/giotto-viewer/">Giotto Viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tipsandtricks.html">HowTos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trygiotto.html">Try Giotto</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Issues</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="errorsfaqsandtips.html">Common Errors and Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="github_issues.html">Report a Bug</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Giotto</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Function Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/documentation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="function-documentation">
+<h1>Function Documentation<a class="headerlink" href="#function-documentation" title="Permalink to this headline"></a></h1>
+<div class="section" id="giotto-handing-functions">
+<h2>Giotto Handing Functions<a class="headerlink" href="#giotto-handing-functions" title="Permalink to this headline"></a></h2>
+<div class="section" id="giotto-instructions">
+<h3>Giotto Instructions<a class="headerlink" href="#giotto-instructions" title="Permalink to this headline"></a></h3>
+<p><em>Create or change Giotto instructions (e.g. defaults, plotting, saving, etc.)</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/createGiottoInstructions.html#creategiottoinstructions"><span class="std std-ref">createGiottoInstructions()</span></a></p></td>
+<td><p>Create Giotto Instructions</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/readGiottoInstructions.html#readgiottoinstructions"><span class="std std-ref">readGiottoInstructions()</span></a></p></td>
+<td><p>Read Giotto Instructions</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/showGiottoInstructions.html#showgiottoinstructions"><span class="std std-ref">showGiottoInstructions()</span></a></p></td>
+<td><p>Show Giotto Instructions</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/changeGiottoInstructions.html#changegiottoinstructions"><span class="std std-ref">changeGiottoInstructions()</span></a></p></td>
+<td><p>Change Giotto Instructions</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/replaceGiottoInstructions.html#replacegiottoinstructions"><span class="std std-ref">replaceGiottoInstructions()</span></a></p></td>
+<td><p>Replace Giotto Instructions</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="giotto-object">
+<h3>Giotto Object<a class="headerlink" href="#giotto-object" title="Permalink to this headline"></a></h3>
+<p><em>Create and operate on Giotto Object</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/createGiottoObject.html#creategiottoobject"><span class="std std-ref">createGiottoObject()</span></a></p></td>
+<td><p>Create a Giotto object</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/createGiottoVisiumObject.html#creategiottovisiumobject"><span class="std std-ref">createGiottoVisiumObject()</span></a></p></td>
+<td><p>Create a Visium Object</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/filterGiotto.html#filtergiotto"><span class="std std-ref">filterGiotto()</span></a></p></td>
+<td><p>Filter Giotto</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/subsetGiotto.html#subsetgiotto"><span class="std std-ref">subsetGiotto()</span></a></p></td>
+<td><p>Subset Giotto</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/subsetGiottoLocs.html#subsetgiottolocs"><span class="std std-ref">subsetGiottoLocs()</span></a></p></td>
+<td><p>Subset Giotto Locs</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="giotto-environment">
+<h3>Giotto Environment<a class="headerlink" href="#giotto-environment" title="Permalink to this headline"></a></h3>
+<p><em>Work with Giotto Python Environment</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/installGiottoEnvironmentFunction.html#installgiottoenvironmentfunction"><span class="std std-ref">installGiottoEnvironment()</span></a></p></td>
+<td><p>Install Giotto Environment</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/removeGiottoEnvironment.html#removegiottoenvironment"><span class="std std-ref">removeGiottoEnvironment()</span></a></p></td>
+<td><p>Remove Giotto Environment</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/checkGiottoEnvironment.html#checkgiottoenvironment"><span class="std std-ref">checkGiottoEnvironment()</span></a></p></td>
+<td><p>Check Giotto Environment</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="giotto-helper-functions">
+<h3>Giotto Helper Functions<a class="headerlink" href="#giotto-helper-functions" title="Permalink to this headline"></a></h3>
+<p><em>Common functions to help working with Giotto objects</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/pDataDT.html#pdatadt"><span class="std std-ref">pDataDT()</span></a></p></td>
+<td><p>Show Cell Metadata</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/fDataDT.html#fdatadt"><span class="std std-ref">fDataDT()</span></a></p></td>
+<td><p>Show Gene Metadata</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/showProcessingSteps.html#showprocessingsteps"><span class="std std-ref">showProcessingSteps()</span></a></p></td>
+<td><p>Show Sequential Processing Steps</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/calculateMetaTable.html#calculatemetatable"><span class="std std-ref">calculateMetaTable()</span></a></p></td>
+<td><p>Calculate Average Gene Expression</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/calculateMetaTableCells.html#calculatemetatablecells"><span class="std std-ref">calculateMetaTableCells()</span></a></p></td>
+<td><p>Calculate the Average Metadata Values</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/combineMetadata.html#combinemetadata"><span class="std std-ref">combineMetadata()</span></a></p></td>
+<td><p>Combine Cell Metadata</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/createMetagenes.html#createmetagenes"><span class="std std-ref">createMetagenes()</span></a></p></td>
+<td><p>Create Average Metagene</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/findNetworkNeighbors.html#findnetworkneighbors"><span class="std std-ref">findNetworkNeighbors()</span></a></p></td>
+<td><p>Find Spatial Neighbors</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="giotto-processing-functions">
+<h3>Giotto Processing Functions<a class="headerlink" href="#giotto-processing-functions" title="Permalink to this headline"></a></h3>
+<p><em>Functions that will (help to) add, update or change the Giotto object when processing spatial data.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/filterDistributions.html#filterdistributions"><span class="std std-ref">filterDistributions()</span></a></p></td>
+<td><p>Show Gene Distributions</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/filterCombinations.html#filtercombinations"><span class="std std-ref">filterCombinations()</span></a></p></td>
+<td><p>Show Gene/Cell Loss</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/normalizeGiotto.html#normalizegiotto"><span class="std std-ref">normalizeGiotto()</span></a></p></td>
+<td><p>Normalize And/Or Scale Expression Values</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/adjustGiottoMatrix.html#adjustgiottomatrix"><span class="std std-ref">adjustGiottoMatrix()</span></a></p></td>
+<td><p>Adjust Expression Values</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/annotateGiotto.html#annotategiotto"><span class="std std-ref">annotateGiotto()</span></a></p></td>
+<td><p>Convert Cluster Results Into User Provided Annotation</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/removeCellAnnotation.html#removecellannotation"><span class="std std-ref">removeCellAnnotation()</span></a></p></td>
+<td><p>Remove Cell Annotation</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/removeGeneAnnotation.html#removegeneannotation"><span class="std std-ref">removeGeneAnnotation()</span></a></p></td>
+<td><p>Remove Gene Annotation</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/addCellMetadata.html#addcellmetadata"><span class="std std-ref">addCellMetadata()</span></a></p></td>
+<td><p>Add Cell Metadata</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/addGeneMetadata.html#addgenemetadata"><span class="std std-ref">addGeneMetadata()</span></a></p></td>
+<td><p>Add Gene Metadatat</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/addGeneStatistics.html#addgenestatistics"><span class="std std-ref">addGeneStatistics()</span></a></p></td>
+<td><p>Add Gene Statistics</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/addCellStatistics.html#addcellstatistics"><span class="std std-ref">addCellStatistics()</span></a></p></td>
+<td><p>Add Cell Statistics</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/addStatistics.html#addstatistics"><span class="std std-ref">addStatistics()</span></a></p></td>
+<td><p>Add Gene and Cell Statistics</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/addGenesPerc.html#addgenesperc"><span class="std std-ref">addGenesPerc()</span></a></p></td>
+<td><p>Calculate Percent Counts</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/addCellIntMetadata.html#addcellintmetadata"><span class="std std-ref">addCellIntMetadata()</span></a></p></td>
+<td><p>Add Cell Metadata Information Column</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="import-raw-data">
+<h2>Import Raw Data<a class="headerlink" href="#import-raw-data" title="Permalink to this headline"></a></h2>
+<p><em>Functions to help to import raw spatial data.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/getSpatialDataset.html#getspatialdataset"><span class="std std-ref">getSpatialDataset()</span></a></p></td>
+<td><p>Get The Spatial Data</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/readExprMatrix.html#readexprmatrix"><span class="std std-ref">readExprMatrix()</span></a></p></td>
+<td><p>Read The Expression Matrix</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/get10XMatrix.html#get10xmatrix"><span class="std std-ref">get10Xmatrix()</span></a></p></td>
+<td><p>Get An Expression Matrix From 10X Structure</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/get10XMatrix_h5.html#get10xmatrix-h5"><span class="std std-ref">get10Xmatrix_h5()</span></a></p></td>
+<td><p>Get An Expression Matrix From 10X h5 Path</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/stitchFieldCoordinates.html#stitchfieldcoordinates"><span class="std std-ref">stitchFieldCoordinates()</span></a></p></td>
+<td><p>Stitch Field Coordinates Together</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/stitchTileCoordinates.html#stitchtilecoordinates"><span class="std std-ref">stitchTileCoordinates()</span></a></p></td>
+<td><p>Stitch Tile Coordinates Together</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="adding-images">
+<h2>Adding Images<a class="headerlink" href="#adding-images" title="Permalink to this headline"></a></h2>
+<p><em>Functions to work with images for a Giotto object.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/estimateImageBg.html#estimateimagebg"><span class="std std-ref">estimateImageBg()</span></a></p></td>
+<td><p>Estimate Background Color</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/changeImageBg.html#changeimagebg"><span class="std std-ref">changeImageBg()</span></a></p></td>
+<td><p>Change Background Color</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/createGiottoImage.html#creategiottoimage"><span class="std std-ref">createGiottoImage()</span></a></p></td>
+<td><p>Create a Giotto Image</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/addGiottoImage.html#addgiottoimage"><span class="std std-ref">addGiottoImage()</span></a></p></td>
+<td><p>Add a Giotto Image to Giotto Object</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/addGiottoImageToSpatPlot.html#addgiottoimagetospatplot"><span class="std std-ref">addGiottoImageToSpatPlot()</span></a></p></td>
+<td><p>Add Giotto Image to Spatial ggplot</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/showGiottoImageNames.html#showgiottoimagenames"><span class="std std-ref">showGiottoImageNames()</span></a></p></td>
+<td><p>Print Attached Giotto Image</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/updateGiottoImage.html#updategiottoimage"><span class="std std-ref">updateGiottoImage()</span></a></p></td>
+<td><p>Update Giotto Image Boundaries</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/getGiottoImage.html#getgiottoimage"><span class="std std-ref">getGiottoImage()</span></a></p></td>
+<td><p>Get Giotto Image From Giotto Object</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/plotGiottoImage.html#plotgiottoimage"><span class="std std-ref">plotGiottoImage()</span></a></p></td>
+<td><p>Plot A Giotto Image From A Giotto Object</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dimension-reduction">
+<h2>Dimension Reduction<a class="headerlink" href="#dimension-reduction" title="Permalink to this headline"></a></h2>
+<p><em>Functions to reduce dimensions.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/calculateHVG.html#calculatehvg"><span class="std std-ref">calculateHVG()</span></a></p></td>
+<td><p>Compute Highly Variable Genes</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/signPCA.html#signpca"><span class="std std-ref">signPCA()</span></a></p></td>
+<td><p>Identify PC’s</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/screePlot.html#screeplot"><span class="std std-ref">screePlot()</span></a></p></td>
+<td><p>Identify Significant PCs Via Screeplot</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/jackstrawPlot.html#jackstrawplot"><span class="std std-ref">jackstrawPlot()</span></a></p></td>
+<td><p>Identify Significant PCs Via JackstrawPlot</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/runPCA.html#runpca"><span class="std std-ref">runPCA()</span></a></p></td>
+<td><p>Run A PCA</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/runUMAP.html#runumap"><span class="std std-ref">runUMAP()</span></a></p></td>
+<td><p>Run A UMAP</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/runtSNE.html#runtsne"><span class="std std-ref">runtSNE()</span></a></p></td>
+<td><p>Run a tSNE</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="clustering">
+<h2>Clustering<a class="headerlink" href="#clustering" title="Permalink to this headline"></a></h2>
+<p><em>Functions to cluster cells.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/createNearestNetwork.html#createnearestnetwork"><span class="std std-ref">createNearestNetwork()</span></a></p></td>
+<td><p>Create NN Network</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/addNetworkLayout.html#addnetworklayout"><span class="std std-ref">addNetworkLayout()</span></a></p></td>
+<td><p>Add Network Layout</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/extractNearestNetwork.html#extractnearestnetwork"><span class="std std-ref">extractNearestNetwork()</span></a></p></td>
+<td><p>Calculate Gene Signature Enrichment Score</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/clusterCells.html#clustercells"><span class="std std-ref">clusterCells()</span></a></p></td>
+<td><p>Cluster Cells</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/doLeidenCluster.html#doleidencluster"><span class="std std-ref">doLeidenCluster()</span></a></p></td>
+<td><p>Cluster Cells Using NN-Network</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/doLouvainCluster.html#dolouvaincluster"><span class="std std-ref">doLouvainCluster()</span></a></p></td>
+<td><p>Cluster Cells Using NN-Network and Louvain Algorithm</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/doKmeans.html#dokmeans"><span class="std std-ref">doKmeans()</span></a></p></td>
+<td><p>Cluster Cells Using K-Means</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/doHclust.html#dohclust"><span class="std std-ref">doHclust()</span></a></p></td>
+<td><p>Cluster Cells Using Hierarchical Clustering</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/subClusterCells.html#subclustercells"><span class="std std-ref">subClusterCells()</span></a></p></td>
+<td><p>Sub-Cluster Cells</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/doLeidenSubCluster.html#doleidensubcluster"><span class="std std-ref">doLeidenSubCluster()</span></a></p></td>
+<td><p>Further Sub-Clustering of Cells Using NN-Network and Leiden Algorithm</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/doLouvainSubCluster.html#dolouvainsubcluster"><span class="std std-ref">doLouvainSubCluster()</span></a></p></td>
+<td><p>Further Sub-Clustering of Cells Using NN-Network and Louvain Algorithm</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/getClusterSimilarity.html#getclustersimilarity"><span class="std std-ref">getClusterSimilarity()</span></a></p></td>
+<td><p>Determine Pairwise Correlation Score</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/mergeClusters.html#mergeclusters"><span class="std std-ref">mergeClusters()</span></a></p></td>
+<td><p>Merge Clusters</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/getDendrogramSplits.html#getdendrogramsplits"><span class="std std-ref">getDendrogramSplits()</span></a></p></td>
+<td><p>Split Dendrogram</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="marker-genes">
+<h2>Marker Genes<a class="headerlink" href="#marker-genes" title="Permalink to this headline"></a></h2>
+<p><em>Functions to detect cell type / cluster specific marker genes.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/findMarkers.html#findmarkersfunction"><span class="std std-ref">findMarkers()</span></a></p></td>
+<td><p>Find Marker Genes</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/findMarkers_one_vs_all.html#findmarkers-one-vs-all"><span class="std std-ref">findMarkers_one_vs_all()</span></a></p></td>
+<td><p>Find Marker Genes At Once</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/findGiniMarkers.html#findginimarkers"><span class="std std-ref">findGiniMarkers()</span></a></p></td>
+<td><p>Find Gini Markers</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/findGiniMarkers_one_vs_all.html#findginimarkers-one-vs-all"><span class="std std-ref">findGiniMarkers_one_vs_all()</span></a></p></td>
+<td><p>Find Marker Genes Using Gini in One vs. All Manner</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/findScranMarkers.html#findscranmarkers"><span class="std std-ref">findScranMarkers()</span></a></p></td>
+<td><p>Identify Marker Genes Based on Scran</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/findScranMarkers_one_vs_all.html#findscranmarkers-one-vs-all"><span class="std std-ref">findScranMarkers_one_vs_all()</span></a></p></td>
+<td><p>Identify Marker Genes in a One vs. All Manner</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/findMastMarkers.html#findmastmarkers"><span class="std std-ref">findMastMarkers()</span></a></p></td>
+<td><p>Identify Marker Genes Using MAST</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/findMastMarkers_one_vs_all.html#findmastmarkers-one-vs-all"><span class="std std-ref">findMastMarkers_one_vs_all()</span></a></p></td>
+<td><p>Identify Marker Genes Using MAST in One vs. All Manner</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="auxiliary-visualizations">
+<h2>Auxiliary Visualizations<a class="headerlink" href="#auxiliary-visualizations" title="Permalink to this headline"></a></h2>
+<p><em>Functions for different visualization options to explore gene, cell or cluster characteristics.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/showClusterHeatmap.html#showclusterheatmap"><span class="std std-ref">showClusterHeatmap()</span></a></p></td>
+<td><p>Create Cluster Heatmap</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/showClusterDendrogram.html#showclusterdendrogram"><span class="std std-ref">showClusterDendrogram()</span></a></p></td>
+<td><p>Create Cluster Dendrogram</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/plotHeatmap.html#plotheatmap"><span class="std std-ref">plotHeatmap()</span></a></p></td>
+<td><p>Plot Heatmap</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/plotMetaDataHeatmap.html#plotmetadataheatmap"><span class="std std-ref">plotMetaDataHeatmap()</span></a></p></td>
+<td><p>Plot Heatmap for Metadata</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/plotMetaDataCellsHeatmap.html#plotmetadatacellsheatmap"><span class="std std-ref">plotMetaDataCellsHeatmap()</span></a></p></td>
+<td><p>Plot Heatmap for Cell Metdata</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/violinPlot.html#violinplot"><span class="std std-ref">violinPlot()</span></a></p></td>
+<td><p>Create Violin Plot</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="spatial">
+<h2>Spatial<a class="headerlink" href="#spatial" title="Permalink to this headline"></a></h2>
+<div class="section" id="enrichment-deconvolution">
+<h3>Enrichment &amp; Deconvolution<a class="headerlink" href="#enrichment-deconvolution" title="Permalink to this headline"></a></h3>
+<p><em>Functions for algorithms to compute spatial enrichment of gene signatures or single-cell RNA-seq annotation.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/makeSignMatrixPAGE.html#makesignmatrixpage"><span class="std std-ref">makeSignMatrixPAGE()</span></a></p></td>
+<td><p>Convert Gene Signature List To Binary Matrix</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/makeSignMatrixRank.html#makesignmatrixrank"><span class="std std-ref">makeSignMatrixRank()</span></a></p></td>
+<td><p>Convert Single-Cell Matrix to Cluster</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/runSpatialEnrich.html#runspatialenrich"><span class="std std-ref">runSpatialEnrich()</span></a></p></td>
+<td><p>Calculate Gene Signature Enrichment Score With RANK</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/createSpatialEnrich.html#createspatialenrich"><span class="std std-ref">createSpatialEnrich()</span></a></p></td>
+<td><p>Calculate Gene Signature Enrichment Scores</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/runPAGEEnrich.html#runpageenrich"><span class="std std-ref">runPAGEEnrich()</span></a></p></td>
+<td><p>Calculate Position Gene Signature Enrichment With PAGE</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/PAGEEnrich.html#pageenrich"><span class="std std-ref">PAGEEnrich()</span></a></p></td>
+<td><p>Calculate Gene Signature  Enrichment With PAGE</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/runRankEnrich.html#runrankenrich"><span class="std std-ref">runRankEnrich()</span></a></p></td>
+<td><p>Calculate Gene Signature Enrichment Using RANK</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/rankEnrich.html#rankenrich"><span class="std std-ref">rankEnrich()</span></a></p></td>
+<td><p>Calculate Gene Signature Enrichment Score With RANK</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/runHyperGeometricEnrich.html#runhypergeometricenrich"><span class="std std-ref">runHyperGeometricEnrich()</span></a></p></td>
+<td><p>Calculate Gene Signature Enrichment Score With Hypergeometric Test</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/hyperGeometricEnrich.html#hypergeometricenrich"><span class="std std-ref">hyperGeometricEnrich()</span></a></p></td>
+<td><p>Calculate Gene Signature Enrichment Score With Hypergeometric Test</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/runSpatialDeconv.html#runspatialdeconv"><span class="std std-ref">runSpatialDeconv()</span></a></p></td>
+<td><p>Perform Deconvolution</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/runDWLSDeconv.html#rundwlsdeconv"><span class="std std-ref">runDWLSDeconv()</span></a></p></td>
+<td><p>Perform DWLS Deconvolution</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="spatial-network-or-grid">
+<h3>Spatial Network Or Grid<a class="headerlink" href="#spatial-network-or-grid" title="Permalink to this headline"></a></h3>
+<p><em>Function to (help) create a spatial network or grid.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/spatNetwDistributionsDistance.html#spatnetwdistributionsdistance"><span class="std std-ref">spatNetwDistributionsDistance()</span></a></p></td>
+<td><p>Distance Distribution for Spatial k-Neighbor</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/spatNetwDistributionsKneighbors.html#spatnetwdistributionskneighbors"><span class="std std-ref">spatNetwDistributionsKneighbors()</span></a></p></td>
+<td><p>Distance Distribution for Spatial k-Neighbor</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/spatNetwDistributions.html#spatnetwdistributions"><span class="std std-ref">spatNetwDistributions()</span></a></p></td>
+<td><p>Histogram of Distance Distribution for Spatial k-Neighbors</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/createSpatialDelaunayNetwork.html#createspatialdelaunaynetwork"><span class="std std-ref">createSpatialDelaunayNetwork()</span></a></p></td>
+<td><p>Create Spatial Delaunay</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/plotStatDelaunayNetwork.html#plotstatdelaunaynetwork"><span class="std std-ref">plotStatDelaunayNetwork()</span></a></p></td>
+<td><p>Plot Network Statistics for Delaunay Network</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/createSpatialKNNnetwork.html#createspatialknnnetwork"><span class="std std-ref">createSpatialKNNnetwork()</span></a></p></td>
+<td><p>Create Spatial KNN Network</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/createSpatialNetwork.html#createspatialnetwork"><span class="std std-ref">createSpatialNetwork()</span></a></p></td>
+<td><p>Create Spatial Network</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/annotateSpatialNetwork.html#annotatespatialnetwork"><span class="std std-ref">annotateSpatialNetwork()</span></a></p></td>
+<td><p>Annotate Spatial Network</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/annotateSpatialGrid.html#annotatespatialgrid"><span class="std std-ref">annotateSpatialGrid()</span></a></p></td>
+<td><p>Annotate Spatial Grid</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/createSpatialGrid.html#createspatialgrid"><span class="std std-ref">createSpatialGrid()</span></a></p></td>
+<td><p>Create Spatial Grid</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/showNetworks.html#shownetworks"><span class="std std-ref">showNetworks()</span></a></p></td>
+<td><p>Print Available Spatial Networks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/showGrids.html#showgrids"><span class="std std-ref">showGrids()</span></a></p></td>
+<td><p>Print Available Spatial Grids</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="spatial-genes">
+<h3>Spatial Genes<a class="headerlink" href="#spatial-genes" title="Permalink to this headline"></a></h3>
+<p><em>Functions to identify spatial genes.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/binSpect.html#binspect"><span class="std std-ref">binSpect()</span></a></p></td>
+<td><p>Create BinSpect</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/binSpectSingle.html#binspectsingle"><span class="std std-ref">binSpectSingle()</span></a></p></td>
+<td><p>Create binSpect For Single Network</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/binSpectMulti.html#binspectmulti"><span class="std std-ref">binSpectMulti()</span></a></p></td>
+<td><p>binSpect for Multiple KNN Networks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/silhouetteRank.html#silhouetterank"><span class="std std-ref">silhouetteRank()</span></a></p></td>
+<td><p>Create binSpect For Single Network</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/spatialDE.html#spatialde"><span class="std std-ref">spatialDE()</span></a></p></td>
+<td><p>Compute Spatial Variables With SpatialDE Method</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/spatialAEH.html#spatialaeh"><span class="std std-ref">spatialAEH()</span></a></p></td>
+<td><p>Compute Spatial Variables With SpatialAEH Method</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/trendSceek.html#trendsceek"><span class="std std-ref">trendSceek()</span></a></p></td>
+<td><p>Compute Spatially Variable Genes With Trendsceek</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/spark.html#spark"><span class="std std-ref">spark()</span></a></p></td>
+<td><p>Compute Spatially Variable Genes With SPARK</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="spatial-gene-simulation">
+<h3>Spatial Gene Simulation<a class="headerlink" href="#spatial-gene-simulation" title="Permalink to this headline"></a></h3>
+<p><em>Functions to simulate a gene expression pattern.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/simulateOneGenePatternGiottoObject.html#simulateonegenepatterngiottoobject"><span class="std std-ref">simulateOneGenePatternGiottoObject()</span></a></p></td>
+<td><p>Create Simulated Spatial Pattern</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/runPatternSimulation.html#runpatternsimulation"><span class="std std-ref">runPatternSimulation()</span></a></p></td>
+<td><p>Create Known Spatial Pattern for Selected Genes</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="spatial-co-expression-patterns-modules">
+<h3>Spatial Co-Expression Patterns/Modules<a class="headerlink" href="#spatial-co-expression-patterns-modules" title="Permalink to this headline"></a></h3>
+<p><em>Functions to identify spatial co-expression patterns.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/clusterSpatialCorGenes.html#clusterspatialcorgenes"><span class="std std-ref">clusterSpatialCorGenes()</span></a></p></td>
+<td><p>Cluster Genes Using Spatial Information</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/detectSpatialCorGenes.html#detectspatialcorgenes"><span class="std std-ref">detectSpatialCorGenes()</span></a></p></td>
+<td><p>Detect Genes Using Spatial Correlation</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/heatmSpatialCorGenes.html#heatmspatialcorgenes"><span class="std std-ref">heatmSpatialCorGenes()</span></a></p></td>
+<td><p>Create Heatmap of Spatial Correlation</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/showSpatialCorGenes.html#showspatialcorgenes"><span class="std std-ref">showSpatialCorGenes()</span></a></p></td>
+<td><p>Show Spatially Correlated Genes</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/rankSpatialCorGroups.html#rankspatialcorgroups"><span class="std std-ref">rankSpatialCorGroups()</span></a></p></td>
+<td><p>Rank Spatially Correlated Gene Clusters</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="hidden-markov-random-field-hmrf">
+<h2>Hidden Markov Random Field (HMRF)<a class="headerlink" href="#hidden-markov-random-field-hmrf" title="Permalink to this headline"></a></h2>
+<p><em>Functions to identify spatial domains with HMRF.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/doHMRF.html#dohmrf"><span class="std std-ref">doHMRF()</span></a></p></td>
+<td><p>Rank Spatially Correlated Gene Clusters</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/loadHMRF.html#loadhmrf"><span class="std std-ref">loadHMRF()</span></a></p></td>
+<td><p>Load HMRF</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/viewHMRFresults.html#viewhmrfresults"><span class="std std-ref">viewHMRFresults()</span></a></p></td>
+<td><p>View HMRF Results</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/writeHMRFresults.html#writehmrfresults"><span class="std std-ref">writeHMRFresults()</span></a></p></td>
+<td><p>Write <a class="reference external" href="doHMRF">doHMRF()</a> Results</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/addHMRF.html#addhmrf"><span class="std std-ref">addHMRF()</span></a></p></td>
+<td><p>Add <a class="reference external" href="doHMRF">doHMRF()</a> Results</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/viewHMRFresults2D.html#viewhmrfresults2d"><span class="std std-ref">viewHMRFresults2D()</span></a></p></td>
+<td><p>View HMRF Results</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/viewHMRFresults3D.html#viewhmrfresults3d"><span class="std std-ref">viewHMRFresults3D()</span></a></p></td>
+<td><p>View HMRF Results</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="d-visualization">
+<h2>2D Visualization<a class="headerlink" href="#d-visualization" title="Permalink to this headline"></a></h2>
+<div class="section" id="in-expression-space">
+<h3>In Expression Space<a class="headerlink" href="#in-expression-space" title="Permalink to this headline"></a></h3>
+<p><em>Visualization of expression space (e.g. UMAP) in 2D.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/dimPlot.html#dimplot"><span class="std std-ref">dimPlot()</span></a></p></td>
+<td><p>Visualize Cells By Coordinates</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/plotUMAP.html#plotumap"><span class="std std-ref">plotUMAP()</span></a></p></td>
+<td><p>UMAP Wrapper</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/plotTSNE.html#plottsne"><span class="std std-ref">plotTSNE()</span></a></p></td>
+<td><p>tSNE Wrapper</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/plotPCA.html#plotpca"><span class="std std-ref">plotPCA()</span></a></p></td>
+<td><p>PCA Wrapper</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/dimGenePlot.html#dimgeneplot"><span class="std std-ref">dimGenePlot()</span></a></p></td>
+<td><p>Visualize Gene Expression By Dimension Coordinates</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/dimCellPlot.html#dimcellplot"><span class="std std-ref">dimCellPlot()</span></a></p></td>
+<td><p>Visualize Cells Expression By Dimension Coordinates</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="in-spatial-space">
+<h3>In Spatial Space<a class="headerlink" href="#in-spatial-space" title="Permalink to this headline"></a></h3>
+<p><em>Visualization of expression space (e.g. UMAP) in 2D.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/spatPlot.html#spatplot"><span class="std std-ref">spatPlot()</span></a></p></td>
+<td><p>Visualize Cells By Spatial Coordinates</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/spatGenePlot.html#spatgeneplot"><span class="std std-ref">spatGenePlot()</span></a></p></td>
+<td><p>Visualize Cells and Genes By Spatial Coordinates</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/spatCellPlot.html#spatcellplot"><span class="std std-ref">spatCellPlot()</span></a></p></td>
+<td><p>Visualize Cells By Spatial Coordinates</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="in-both-spatial-and-expression-space">
+<h3>In Both Spatial And Expression Space<a class="headerlink" href="#in-both-spatial-and-expression-space" title="Permalink to this headline"></a></h3>
+<p><em>Visualization in both 2D spatial and expression space.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/spatDimPlot.html#spatdimplot"><span class="std std-ref">spatDimPlot()</span></a></p></td>
+<td><p>Visualize Cells By Spatial and Dimensional Coordinates</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/spatDimGenePlot.html#spatdimgeneplot"><span class="std std-ref">spatDimGenePlot()</span></a></p></td>
+<td><p>Visualize Genes By Spatial and Dimension Coordinates Via ggplot</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/spatDimCellPlot.html#spatdimcellplot"><span class="std std-ref">spatDimCellPlot()</span></a></p></td>
+<td><p>Visualize Cells By Spatial And Dimension Coordinates in 2D</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>3D Visualization<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
+<div class="section" id="id2">
+<h3>Dimension Reduction<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
+<p><em>Visualization in both 2D spatial and expression space.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/dimPlot2D.html#dimplot2d"><span class="std std-ref">dimPlot2D()</span></a></p></td>
+<td><p>Visualize Cells By Spatial Coordinates in 2D</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/dimPlot3D.html#dimplot3d"><span class="std std-ref">dimPlot3D()</span></a></p></td>
+<td><p>Visualize Cells By Spatial Coordinates in 3D</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/plotUMAP_3D.html#plotumap-3d"><span class="std std-ref">plotUMAP_3D()</span></a></p></td>
+<td><p>Visualize Cells By Spatial Coordinates in 3D</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/plotTSNE_3D.html#plottsne-3d"><span class="std std-ref">plotTSNE_3D()</span></a></p></td>
+<td><p>Visualize Cells By Dimension Reduction Coordinates in 3D</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/plotPCA_3D.html#plotpca-3d"><span class="std std-ref">plotPCA_3D()</span></a></p></td>
+<td><p>Visualize Cells By 3D PCA Dimension Reduction</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/dimGenePlot3D.html#dimgeneplot3d"><span class="std std-ref">dimGenePlot3D()</span></a></p></td>
+<td><p>Visualize Cells And Gene Expression By Dimension Reduction</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id3">
+<h3>In Spatial Space<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h3>
+<p><em>Visualization in both 2D spatial and expression space.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/spatPlot3D.html#spatplot3d"><span class="std std-ref">spatPlot3D()</span></a></p></td>
+<td><p>Visualize Cells By Spatial and Dimensional Coordinates in 3D</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/spatDimGenePlot3D.html#spatdimgeneplot3d"><span class="std std-ref">spatDimGenePlot3D()</span></a></p></td>
+<td><p>Visualize Cells By Spatial and Dimensional Coordinates Using Plotly</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="in-silico-cross-sections">
+<h2>In Silico Cross Sections<a class="headerlink" href="#in-silico-cross-sections" title="Permalink to this headline"></a></h2>
+<p><em>Functions to create an in silico 2D cross sections from 3D data.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/createCrossSection.html#createcrosssection"><span class="std std-ref">createCrossSection()</span></a></p></td>
+<td><p>Create a Virtual Cross Section</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/crossSectionGenePlot.html#crosssectiongeneplot"><span class="std std-ref">crossSectionGenePlot()</span></a></p></td>
+<td><p>Visualize Cells And Gene Expression Virtually</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/crossSectionPlot.html#crosssectionplot"><span class="std std-ref">crossSectionPlot()</span></a></p></td>
+<td><p>Visualize Cells In Virtual Cross Section</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/crossSectionGenePlot3D.html#crosssectiongeneplot3d"><span class="std std-ref">crossSectionGenePlot3D()</span></a></p></td>
+<td><p>Visualize Cells And Gene Expression Virtually (3D)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/crossSectionPlot3D.html#crosssectionplot3d"><span class="std std-ref">crossSectionPlot3D()</span></a></p></td>
+<td><p>Visualize Cells In A Virtual Cross Section (3D)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/insertCrossSectionSpatPlot3D.html#insertcrosssectionspatplot3d"><span class="std std-ref">insertCrossSectionSpatPlot3D()</span></a></p></td>
+<td><p>Visualize Mesh-Grid Lines With Cells</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/insertCrossSectionGenePlot3D.html#insertcrosssectiongeneplot3d"><span class="std std-ref">insertCrossSectionGenePlot3D()</span></a></p></td>
+<td><p>Visualize Cells And Gene Expression In A Virtual Cross Section</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="cell-neighborhood">
+<h2>Cell Neighborhood<a class="headerlink" href="#cell-neighborhood" title="Permalink to this headline"></a></h2>
+<div class="section" id="cell-type-cell-type-enrichment">
+<h3>Cell-Type/Cell-Type Enrichment<a class="headerlink" href="#cell-type-cell-type-enrichment" title="Permalink to this headline"></a></h3>
+<p><em>Functions to calculate and visualize cell-type/cell-type spatial enrichment or depletion.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/cellProximityEnrichment.html#cellproximityenrichment"><span class="std std-ref">cellProximityEnrichment()</span></a></p></td>
+<td><p>Calculate Cell-Cell Interaction Enrichment</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/cellProximityBarplot.html#cellproximitybarplot"><span class="std std-ref">cellProximityBarplot()</span></a></p></td>
+<td><p>Create Barplot from Cell-Cell Proximity Score</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/cellProximityHeatmap.html#cellproximityheatmap"><span class="std std-ref">cellProximityHeatmap()</span></a></p></td>
+<td><p>Create Heatmap from Cell-Cell Proximity Score</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/cellProximityNetwork.html#cellproximitynetwork"><span class="std std-ref">cellProximityNetwork()</span></a></p></td>
+<td><p>Create Network from Cell-Cell Proximity Score</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/cellProximitySpatPlot.html#cellproximityspatplot"><span class="std std-ref">cellProximitySpatPlot()</span></a></p></td>
+<td><p>Visualize Cell-Cell Interactions (2D)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/cellProximitySpatPlot3D.html#cellproximityspatplot3d"><span class="std std-ref">cellProximitySpatPlot3D()</span></a></p></td>
+<td><p>Visualize Cell-Cell Interactions (3D)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="spatial-interaction-changed-genes-icg">
+<h3>Spatial Interaction Changed Genes (ICG)<a class="headerlink" href="#spatial-interaction-changed-genes-icg" title="Permalink to this headline"></a></h3>
+<p><em>Identify and visualize genes that change in a source cell type due to interaction with another neighboring cell type.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/findInteractionChangedGenes.html#findinteractionchangedgenes"><span class="std std-ref">findInteractionChangedGenes()</span></a></p></td>
+<td><p>Identify Cell-Cell Interaction Changed Genes (ICGs)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/findICG.html#findicg"><span class="std std-ref">findICG()</span></a></p></td>
+<td><p>Identify Cell-Cell Interaction Changed Genes (ICGs)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/findCellProximityGenes.html#findcellproximitygenes"><span class="std std-ref">findCellProximityGenes()</span></a></p></td>
+<td><p>Identify Cell-Cell Interaction Changed Genes (ICGs)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/findCPG.html#findcpg"><span class="std std-ref">findCPG()</span></a></p></td>
+<td><p>Identify Cell-Cell Interaction Changed Genes (ICGs)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/filterCellProximityGenes.html#filtercellproximitygenes"><span class="std std-ref">filterCellProximityGenes()</span></a></p></td>
+<td><p>Identify Cell-Cell Interaction Changed Genes (ICGs)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/filterInteractionChangedGenes.html#filterinteractionchangedgenes"><span class="std std-ref">filterInteractionChangedGenes()</span></a></p></td>
+<td><p>Filter The Identified Cell-Cell Interaction Changed Genes (ICGs)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/filterICG.html#filtericg"><span class="std std-ref">filterICG()</span></a></p></td>
+<td><p>Filter ICGs</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/filterCPG.html#filtercpg"><span class="std std-ref">filterCPG()</span></a></p></td>
+<td><p>Filter ICGs</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/combineInteractionChangedGenes.html#combineinteractionchangedgenes"><span class="std std-ref">combineInteractionChangedGenes()</span></a></p></td>
+<td><p>Combine ICG Scores (Pairwise)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/combineICG.html#combineicg"><span class="std std-ref">combineICG()</span></a></p></td>
+<td><p>Combine ICG Scores (Pairwise)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/combineCellProximityGenes.html#combinecellproximitygenes"><span class="std std-ref">combineCellProximityGenes()</span></a></p></td>
+<td><p>Combine ICG Scores (Pairwise)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/combineCPG.html#combinecpg"><span class="std std-ref">combineCPG()</span></a></p></td>
+<td><p>Combine ICG Scores (Pairwise)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/plotInteractionChangedGenes.html#plotinteractionchangedgenes"><span class="std std-ref">plotInteractionChangedGenes()</span></a></p></td>
+<td><p>Visualize ICGs via Barplot</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/plotICG.html#ploticg"><span class="std std-ref">plotICG()</span></a></p></td>
+<td><p>Visualize ICGs via Barplot</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/plotCellProximityGenes.html#plotcellproximitygenes"><span class="std std-ref">plotCellProximityGenes()</span></a></p></td>
+<td><p>Visualize Cell Proximity Gene Scores</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/plotCPG.html#plotcpg"><span class="std std-ref">plotCPG()</span></a></p></td>
+<td><p>Visualize Cell Proximity Gene Scores</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/plotCombineInteractionChangedGenes.html#plotcombineinteractionchangedgenes"><span class="std std-ref">plotCombineInteractionChangedGenes()</span></a></p></td>
+<td><p>Visualize Combined ICG Scores</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/plotCombineICG.html#plotcombineicg"><span class="std std-ref">plotCombineICG()</span></a></p></td>
+<td><p>Visualize Combined ICG Scores</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/plotCombineCellProximityGenes.html#plotcombinecellproximitygenes"><span class="std std-ref">plotCombineCellProximityGenes()</span></a></p></td>
+<td><p>Visualize Combined ICG Scores</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/plotCombineCPG.html#plotcombinecpg"><span class="std std-ref">plotCombineCPG()</span></a></p></td>
+<td><p>Visualize Combined ICG Scores</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ligand-receptor-cell-communication">
+<h3>Ligand-Receptor Cell Communication<a class="headerlink" href="#ligand-receptor-cell-communication" title="Permalink to this headline"></a></h3>
+<p><em>Functions to calculate and visualize cell-type/cell-type spatial enrichment or depletion.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/exprCellCellcom.html#exprcellcellcom"><span class="std std-ref">exprCellCellcom()</span></a></p></td>
+<td><p>Calculate Cell-Cell Communication Scores</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/spatCellCellcom.html#spatcellcellcom"><span class="std std-ref">spatCellCellcom()</span></a></p></td>
+<td><p>Calculate Spatial Cell-Cell Communication Scores</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/plotCCcomDotplot.html#plotcccomdotplot"><span class="std std-ref">plotCCcomDotplot()</span></a></p></td>
+<td><p>Plot Ligand-Receptor Communication Scores</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subsections/documentation_functions/plotRankSpatvsExpr.html#plotrankspatvsexpr"><span class="std std-ref">plotRankSpatvsExpr()</span></a></p></td>
+<td><p>Plot Comparison of Ligand-Receptor Rankings</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/plotRecovery.html#plotrecovery"><span class="std std-ref">plotRecovery()</span></a></p></td>
+<td><p>Plot Comparison of Ligand-Receptor Rankings</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="export-from-giotto-analyzer-to-viewer">
+<h2>Export From Giotto Analyzer To Viewer<a class="headerlink" href="#export-from-giotto-analyzer-to-viewer" title="Permalink to this headline"></a></h2>
+<p><em>Export selected annotations to a folder that can be used as input for Giotto Viewer.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/exportGiottoViewer.html#exportgiottoviewer"><span class="std std-ref">exportGiottoViewer()</span></a></p></td>
+<td><p>Compute Highly Variable Genes</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="interoperability">
+<h2>Interoperability<a class="headerlink" href="#interoperability" title="Permalink to this headline"></a></h2>
+<p><em>Convert other type of objects into a Giotto object.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subsections/documentation_functions/anndataToGiotto.html#anndatatogiotto"><span class="std std-ref">anndataToGiotto()</span></a></p></td>
+<td><p>Compute Highly Variable Genes</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="gettingstarted.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="subsections/documentation_functions/createGiottoInstructions.html" class="btn btn-neutral float-right" title="Create Giotto Instructions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Ruben Dries, Qian Zhu, Huipeng Li, Rui Dong, Guo-Cheng Yuan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

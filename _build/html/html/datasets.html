@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examples &mdash; Giotto 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx-toolbox-code.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/sphinx-toolbox.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme_edits.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_toolbox_installation.css" type="text/css" />
+      <link rel="stylesheet" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme_edits.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/sphinx_toolbox_installation.js"></script>
+        <script src="_static/design-tabs.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="mini seqFISH" href="subsections/datasets/mini_seqFISH.html" />
+    <link rel="prev" title="Visualize Spatial Data with Voronoi Plots" href="subsections/tipsandtricks/visualizewithvoronoiplots.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html">
+            <img src="_static/GiottoLogo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://spatial.rc.fas.harvard.edu/giotto-viewer/">Giotto Viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tipsandtricks.html">HowTos</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dataset-information">Dataset Information</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dataset-availability">Dataset Availability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-automatically-download-tutorial-datasets">How to automatically download tutorial datasets?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#example-datasets">Example Datasets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mini-datasets">Mini Datasets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/datasets/mini_seqFISH.html">    Mini SeqFISH</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/datasets/mini_visium.html">Mini Visium</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/datasets/mini_3D_STARmap.html">Mini 3D STARmap</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#full-datasets">Full Datasets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subsections/datasets/seqFISH_cortex.html">    Mouse seqFISH Cortex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/datasets/merFISH_hypot_preopt_region.html">Mouse merFISH Hypoth. Preopt. Region</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/datasets/STARmap_mouse_cortex.html">Mouse STARmap Cortex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/datasets/mouse_visium_brain.html">    Mouse Visium Brain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/datasets/mouse_visium_kidney.html">    Mouse Visium Kidney</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/datasets/mouse_CODEX_spleen.html">    Mouse CODEX Spleen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/datasets/osmFISH_mouse_SS_cortex.html">    Mouse osmFISH SScortex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsections/datasets/human_CyCIF_PDAC.html">    Human CyCIF PDAC</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="trygiotto.html">Try Giotto</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Issues</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="errorsfaqsandtips.html">Common Errors and Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="github_issues.html">Report a Bug</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Giotto</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Examples</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/datasets.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="examples">
+<span id="datasets"></span><h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h1>
+<div class="section" id="dataset-information">
+<h2>Dataset Information<a class="headerlink" href="#dataset-information" title="Permalink to this headline"></a></h2>
+<p>See <a class="reference external" href="https://github.com/RubD/spatial-datasets">Spatial Datasets</a> to find raw and pre-processed input data and Giotto scripts (<em>work in progress</em>).</p>
+<p>The typical run time range for the different datasets on a personal computer is around 10~45 minutes.
+All of the examples are gradually updated to the latest Giotto version! Click on the images below to try out some of the example datasets.</p>
+<div class="section" id="dataset-availability">
+<h3>Dataset Availability<a class="headerlink" href="#dataset-availability" title="Permalink to this headline"></a></h3>
+<div class="admonition-where-to-find-seqfish-and-other-ready-to-use-datasets admonition">
+<p class="admonition-title">Where to find seqFISH+ and other ready-to-use datasets?</p>
+<p>Checkout <a class="reference external" href="https://github.com/RubD/spatial-datasets">https://github.com/RubD/spatial-datasets</a> to find already preprocessed datasets.</p>
+</div>
+<div class="admonition-where-to-find-other-spatial-datasets admonition">
+<p class="admonition-title">Where to find other spatial datasets?</p>
+<p>Checkout <a class="reference external" href="https://www.spatialomics.org/SpatialDB/">https://www.spatialomics.org/SpatialDB/</a> to download expression matrix and location information.</p>
+</div>
+</div>
+<div class="section" id="how-to-automatically-download-tutorial-datasets">
+<h3>How to automatically download tutorial datasets?<a class="headerlink" href="#how-to-automatically-download-tutorial-datasets" title="Permalink to this headline"></a></h3>
+<p>merFISH Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># choose your directory
+my_working_dir = getwd()
+
+# standardly download data to working directory
+getSpatialDataset(dataset = &#39;merfish_preoptic&#39;, directory = my_working_dir)
+
+# use wget to download data to working directory (much faster)
+getSpatialDataset(dataset = &#39;merfish_preoptic&#39;, directory = my_working_dir, method = &#39;wget&#39;)
+
+# avoid certification issues with wget
+getSpatialDataset(dataset = &#39;merfish_preoptic&#39;, directory = my_working_dir, method = &#39;wget&#39;, extra = &#39;--no-check-certificate&#39;)
+
+# see download.file for more options
+?download.file
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="example-datasets">
+<h2>Example Datasets<a class="headerlink" href="#example-datasets" title="Permalink to this headline"></a></h2>
+<div class="section" id="mini-datasets">
+<h3>Mini Datasets<a class="headerlink" href="#mini-datasets" title="Permalink to this headline"></a></h3>
+<div class="toctree-wrapper compound">
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<a class="reference external image-reference" href="../../build/html/subsections/datasets/mini_seqFISH.html"><img alt="_images/mini_seqFISH.png" src="_images/mini_seqFISH.png" /></a>
+<p class="sd-card-text"><span class="sd-d-grid"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-dark sd-stretched-link sd-shadow-sm reference internal" href="subsections/datasets/mini_seqFISH.html#mini-seqfish"><span class="std std-ref">Mini seqFISH</span></a></span></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<a class="reference external image-reference" href="../../build/html/subsections/datasets/mini_3D_STARmap.html"><img alt="_images/mini_STARmap.png" src="_images/mini_STARmap.png" /></a>
+<p class="sd-card-text"><span class="sd-d-grid"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-dark sd-stretched-link sd-shadow-sm reference internal" href="subsections/datasets/mini_3D_STARmap.html#mini-3d-starmap"><span class="std std-ref">Mini 3D STARmap</span></a></span></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<a class="reference external image-reference" href="../../build/html/subsections/datasets/mini_visium.html"><img alt="_images/mini_visium.png" src="_images/mini_visium.png" /></a>
+<p class="sd-card-text"><span class="sd-d-grid"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-dark sd-stretched-link sd-shadow-sm reference internal" href="subsections/datasets/mini_visium.html#mini-visium"><span class="std std-ref">Mini Visium</span></a></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="full-datasets">
+<h3>Full Datasets<a class="headerlink" href="#full-datasets" title="Permalink to this headline"></a></h3>
+<div class="toctree-wrapper compound">
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<a class="reference external image-reference" href="../../build/html/subsections/datasets/human_cyCIF_PDAC_image_summary.html"><img alt="_images/human_cyCIF_PDAC_image_summary.png" src="_images/human_cyCIF_PDAC_image_summary.png" /></a>
+<p class="sd-card-text"><span class="sd-d-grid"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-dark sd-stretched-link sd-shadow-sm reference internal" href="subsections/datasets/human_CyCIF_PDAC.html#human-cycif-pdac-image-summary"><span class="std std-ref">Human CyCIF PDAC</span></a></span></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<a class="reference external image-reference" href="../../build/html/subsections/datasets/merFISH_hypot_preopt_region.html"><img alt="_images/merFISH_hypoth_image_summary.png" src="_images/merFISH_hypoth_image_summary.png" /></a>
+<p class="sd-card-text"><span class="sd-d-grid"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-dark sd-stretched-link sd-shadow-sm reference internal" href="subsections/datasets/merFISH_hypot_preopt_region.html#merfish-hypot-preopt-region"><span class="std std-ref">merFISH Hypot Preopt Region</span></a></span></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<a class="reference external image-reference" href="../../build/html/subsections/datasets/mouse_CODEX_spleen.html"><img alt="_images/CODEX_spleen_image_summary.png" src="_images/CODEX_spleen_image_summary.png" /></a>
+<p class="sd-card-text"><span class="sd-d-grid"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-dark sd-stretched-link sd-shadow-sm reference internal" href="subsections/datasets/mouse_CODEX_spleen.html#mouse-codex-spleen"><span class="std std-ref">Mouse Codex Spleen</span></a></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<a class="reference external image-reference" href="../../build/html/subsections/datasets/mouse_visium_brain.html"><img alt="_images/visium_brain_image_summary.png" src="_images/visium_brain_image_summary.png" style="width: 300px;" /></a>
+<p class="sd-card-text"><span class="sd-d-grid"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-dark sd-stretched-link sd-shadow-sm reference internal" href="subsections/datasets/mouse_visium_brain.html#mouse-visium-brain"><span class="std std-ref">Mouse Visium Brain</span></a></span></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<a class="reference external image-reference" href="../../build/html/subsections/datasets/mouse_visium_kidney.html"><img alt="_images/visium_kidney_image_summary.png" src="_images/visium_kidney_image_summary.png" style="width: 300px;" /></a>
+<p class="sd-card-text"><span class="sd-d-grid"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-dark sd-stretched-link sd-shadow-sm reference internal" href="subsections/datasets/mouse_visium_kidney.html#mouse-visium-kidney"><span class="std std-ref">Mouse Visium Kidney</span></a></span></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<a class="reference external image-reference" href="../../build/html/subsections/datasets/osmFISH_mouse_SS_cortex.html"><img alt="_images/osmFISH_SS_cortex_image_summary.png" src="_images/osmFISH_SS_cortex_image_summary.png" style="width: 300px;" /></a>
+<p class="sd-card-text"><span class="sd-d-grid"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-dark sd-stretched-link sd-shadow-sm reference internal" href="subsections/datasets/osmFISH_mouse_SS_cortex.html#osmfish-mouse-ss-cortex"><span class="std std-ref">Mouse osmFISH SS Cortex</span></a></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<a class="reference external image-reference" href="../../build/html/subsections/datasets/seqFISH_cortex.html"><img alt="_images/mouse_SS_cortex_and_subventricular.png" src="_images/mouse_SS_cortex_and_subventricular.png" style="width: 300px;" /></a>
+<p class="sd-card-text"><span class="sd-d-grid"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-dark sd-stretched-link sd-shadow-sm reference internal" href="subsections/datasets/seqFISH_cortex.html#seqfish-cortex"><span class="std std-ref">seqFISh+ Cortex</span></a></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="subsections/tipsandtricks/visualizewithvoronoiplots.html" class="btn btn-neutral float-left" title="Visualize Spatial Data with Voronoi Plots" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="subsections/datasets/mini_seqFISH.html" class="btn btn-neutral float-right" title="mini seqFISH" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Ruben Dries, Qian Zhu, Huipeng Li, Rui Dong, Guo-Cheng Yuan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+	/*
+ * This stylesheet is applied after the theme's default one,
+ * and thus any overrides or additions can be added here.
+ *
+ * !! NOTES !!
+ * Order matters. If something is moved further down --> it gains priority.
+ */
+ .wy-side-nav-search, .wy-nav-top {
+    background: #000000;
+}
+
+.wy-side-nav-search input[type="text"] {
+    border-radius: 10px!important;
+    border-color: #000000;
+}
+
+/* header color above nav bar */
+.wy-side-nav-search, .wy-nav-top {
+    background: #000000;
+}
+
+/*navigation bar header color*/
+.wy-menu-vertical p.caption {
+    color: #185d1e;
+}
+
+/* Color of links -- not clicked */
+a {
+    color: #185d1e;
+}
+
+/* Color of already clicked links */
+a:visited {
+  color: #60040e;
+}
+
+/*navigation bar (non header) text*/
+.wy-menu-vertical a {
+    color: #eceef4;
+}
+
+/* Type of cursor that hovers above links */
+:link, :visited {cursor: pointer;}
+
+
+
+/* Copy buttons -- COPIED FROM: https://github.com/executablebooks/sphinx-copybutton/blob/master/sphinx_copybutton/_static/copybutton.css */
+button.copybtn {
+    position: absolute;
+    display: flex;
+    top: .3em;
+    right: .5em;
+    width: 1.7em;
+    height: 1.7em;
+	opacity: 0;
+    transition: opacity 0.3s, border .3s, background-color .3s;
+    user-select: none;
+    padding: 0;
+    border: none;
+    outline: none;
+    border-radius: 0.4em;
+    border: #e1e1e1 1px solid;
+    background-color: rgb(245, 245, 245);
+}
+
+button.copybtn.success {
+    border-color: #22863a;
+}
+
+button.copybtn img {
+    width: 100%;
+    padding: .2em;
+}
+
+div.highlight  {
+    position: relative;
+}
+
+.highlight:hover button.copybtn {
+	opacity: 1;
+}
+
+.highlight button.copybtn:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.highlight button.copybtn:active {
+    background-color: rgb(187, 187, 187);
+}
+
+/* change the width of the page */ 
+/* 
+This did not work
+.wy-nav-content {
+    max-width: 1200px !important;
+}*/
+.wy-nav-content {
+    max-width: none;
+}

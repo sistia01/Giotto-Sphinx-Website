@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create a Virtual Cross Section &mdash; Giotto 1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sphinx-toolbox-code.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx-toolbox.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sphinx_toolbox_installation.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/sphinx_toolbox_installation.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Visualize Cells And Gene Expression Virtually" href="crossSectionGenePlot.html" />
+    <link rel="prev" title="Visualize Cells By Spatial and Dimensional Coordinates Using ggplot" href="spatDimGenePlot3D.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html">
+            <img src="../../_static/GiottoLogo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../documentation.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-handing-functions">Giotto Handing Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#import-raw-data">Import Raw Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#adding-images">Adding Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#dimension-reduction">Dimension Reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#clustering">Clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#marker-genes">Marker Genes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#auxiliary-visualizations">Auxiliary Visualizations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#spatial">Spatial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#hidden-markov-random-field-hmrf">Hidden Markov Random Field (HMRF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#d-visualization">2D Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#id1">3D Visualization</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../documentation.html#in-silico-cross-sections">In Silico Cross Sections</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">createCrossSection</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#arguments">Arguments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#value">Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#details">Details</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="crossSectionGenePlot.html">crossSectionGenePlot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crossSectionPlot.html">crossSectionPlot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crossSectionGenePlot3D.html">crossSectionGenePlot3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crossSectionPlot3D.html">crossSectionPlot3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="insertCrossSectionSpatPlot3D.html">insertCrossSectionSpatPlot3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="insertCrossSectionGenePlot3D.html">insertCrossSectionGenePlot3D</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#cell-neighborhood">Cell Neighborhood</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#export-from-giotto-analyzer-to-viewer">Export From Giotto Analyzer To Viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#interoperability">Interoperability</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://spatial.rc.fas.harvard.edu/giotto-viewer/">Giotto Viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tipsandtricks.html">HowTos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../trygiotto.html">Try Giotto</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Issues</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../errorsfaqsandtips.html">Common Errors and Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github_issues.html">Report a Bug</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Giotto</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../documentation.html">Function Documentation</a> &raquo;</li>
+      <li>Create a Virtual Cross Section</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/subsections/documentation_functions/createCrossSection.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="create-a-virtual-cross-section">
+<span id="createcrosssection"></span><h1>Create a Virtual Cross Section<a class="headerlink" href="#create-a-virtual-cross-section" title="Permalink to this headline"></a></h1>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">createCrossSection()</span></span></dt>
+<dd></dd></dl>
+
+<p><em>Create a virtual 2D cross section.</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">createCrossSection</span><span class="p">(</span>
+    <span class="n">gobject</span><span class="p">,</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;cross_section&quot;</span><span class="p">,</span>
+    <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s2">&quot;Delaunay_network&quot;</span><span class="p">,</span>
+    <span class="n">thickness_unit</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;cell&quot;</span><span class="p">,</span> <span class="s2">&quot;natural&quot;</span><span class="p">),</span>
+    <span class="n">slice_thickness</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="n">cell_distance_estimate_method</span> <span class="o">=</span> <span class="s2">&quot;mean&quot;</span><span class="p">,</span>
+    <span class="n">extend_ratio</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span>
+    <span class="n">method</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;equation&quot;</span><span class="p">,</span> <span class="s2">&quot;3 points&quot;</span><span class="p">,</span> <span class="s2">&quot;point and norm vector&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;point and two plane vectors&quot;</span><span class="p">),</span>
+    <span class="n">equation</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">point1</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">point2</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">point3</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">normVector</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">planeVector1</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">planeVector2</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">mesh_grid_n</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="n">return_gobject</span> <span class="o">=</span> <span class="n">TRUE</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="arguments">
+<span id="arguments-createcrosssection"></span><h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>gobject</strong></p></td>
+<td><p>giotto object</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>name</strong></p></td>
+<td><p>name of cress section object. (default = cross_sectino)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>spatial_network_name</strong></p></td>
+<td><p>name of spatial network object. (default = Delaunay_network)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>thickness_unit</strong></p></td>
+<td><p>unit of the virtual section thickness. If “cell”, average size of the observed cells is used as length unit. If “natural”, the unit of cell location coordinates is used.(default = cell</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>slice_thickness</strong></p></td>
+<td><p>thickness of slice. default = 2</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>cell_distance_estimate_method</strong></p></td>
+<td><p>method to estimate average distance between neighboring cells. (default = mean)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>extend_ratio</strong></p></td>
+<td><p>deciding the span of the cross section mesh-grid, as a ratio of extension compared to the borders of the virtual tissue section. (default = 0.2)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>method</strong></p></td>
+<td><p>method to define the cross section plane. If equation, the plane is defined by a four element numerical vector (equation) in the form of c(A,B,C,D), corresponding to a plane with equation Ax+By+Cz=D. If 3 points, the plane is define by the coordinates of 3 points, as given by point1, point2, and point3. If point and norm vector, the plane is defined by the coordinates of one point (point1) in the plane and the coordinates of one norm vector (normVector) to the plane. If point and two plane vector, the plane is defined by the coordinates of one point (point1) in the plane and the coordinates of two vectors (planeVector1, planeVector2) in the plane. (default = equation)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>equation</strong></p></td>
+<td><p>equation required by method “equation”.equations needs to be a numerical vector of length 4, in the form of c(A,B,C,D), which defines plane Ax+By+Cz=D.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>point1</strong></p></td>
+<td><p>coordinates of the first point required by method “3 points”,”point and norm vector”, and “point and two plane vectors”.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>point2</strong></p></td>
+<td><p>coordinates of the second point required by method “3 points”</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>point3</strong></p></td>
+<td><p>coordinates of the third point required by method “3 points”</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>normVector</strong></p></td>
+<td><p>coordinates of the norm vector required by method “point and norm vector”</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>planeVector1</strong></p></td>
+<td><p>coordinates of the first plane vector required by method “point and two plane vectors”</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>planeVector2</strong></p></td>
+<td><p>coordinates of the second plane vector required by method “point and two plane vectors”</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>mesh_grid_n</strong></p></td>
+<td><p>number of mesh-grid lines to generate along both directions for the cross section plane.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>return_gobject</strong></p></td>
+<td><p>boolean: return Giotto object (default = TRUE)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="value">
+<h2>Value<a class="headerlink" href="#value" title="Permalink to this headline"></a></h2>
+<p>A giotto object with updated spatial network slot.</p>
+</div>
+<div class="section" id="details">
+<h2>Details<a class="headerlink" href="#details" title="Permalink to this headline"></a></h2>
+<p>Creates a virtual 2D cross section object for a given spatial network object. The users need to provide the definition of the cross section plane (See method in <a class="reference external" href="arguments_createCrossSection">Arguments Section</a> for more information).</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="spatDimGenePlot3D.html" class="btn btn-neutral float-left" title="Visualize Cells By Spatial and Dimensional Coordinates Using ggplot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="crossSectionGenePlot.html" class="btn btn-neutral float-right" title="Visualize Cells And Gene Expression Virtually" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Ruben Dries, Qian Zhu, Huipeng Li, Rui Dong, Guo-Cheng Yuan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plot Heatmap for Metadata &mdash; Giotto 1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sphinx-toolbox-code.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx-toolbox.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sphinx_toolbox_installation.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/sphinx_toolbox_installation.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Plot Heatmap for Cell Metdata" href="plotMetaDataCellsHeatmap.html" />
+    <link rel="prev" title="Plot Heatmap" href="plotHeatmap.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html">
+            <img src="../../_static/GiottoLogo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../documentation.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-handing-functions">Giotto Handing Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#import-raw-data">Import Raw Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#adding-images">Adding Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#dimension-reduction">Dimension Reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#clustering">Clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#marker-genes">Marker Genes</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../documentation.html#auxiliary-visualizations">Auxiliary Visualizations</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="showClusterHeatmap.html">showClusterHeatmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="showClusterDendrogram.html">showClusterDendrogram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plotHeatmap.html">plotHeatmap</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">plotMetaDataHeatmap</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#arguments">Arguments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#value">Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#details">Details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="plotMetaDataCellsHeatmap.html">plotMetaDataCellsHeatmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="violinPlot.html">violinPlot</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#spatial">Spatial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#hidden-markov-random-field-hmrf">Hidden Markov Random Field (HMRF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#d-visualization">2D Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#id1">3D Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#in-silico-cross-sections">In Silico Cross Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#cell-neighborhood">Cell Neighborhood</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#export-from-giotto-analyzer-to-viewer">Export From Giotto Analyzer To Viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#interoperability">Interoperability</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://spatial.rc.fas.harvard.edu/giotto-viewer/">Giotto Viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tipsandtricks.html">HowTos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../trygiotto.html">Try Giotto</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Issues</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../errorsfaqsandtips.html">Common Errors and Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github_issues.html">Report a Bug</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Giotto</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../documentation.html">Function Documentation</a> &raquo;</li>
+      <li>Plot Heatmap for Metadata</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/subsections/documentation_functions/plotMetaDataHeatmap.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="plot-heatmap-for-metadata">
+<span id="plotmetadataheatmap"></span><h1>Plot Heatmap for Metadata<a class="headerlink" href="#plot-heatmap-for-metadata" title="Permalink to this headline"></a></h1>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">plotMetaDataHeatmap()</span></span></dt>
+<dd></dd></dl>
+
+<p><em>Creates heatmap for genes within aggregated clusters.</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotMetaDataHeatmap</span><span class="p">(</span>
+    <span class="n">gobject</span><span class="p">,</span>
+    <span class="n">expression_values</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;normalized&quot;</span><span class="p">,</span> <span class="s2">&quot;scaled&quot;</span><span class="p">,</span> <span class="s2">&quot;custom&quot;</span><span class="p">),</span>
+    <span class="n">metadata_cols</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">selected_genes</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">first_meta_col</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">second_meta_col</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">show_values</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;zscores&quot;</span><span class="p">,</span> <span class="s2">&quot;original&quot;</span><span class="p">,</span> <span class="s2">&quot;zscores_rescaled&quot;</span><span class="p">),</span>
+    <span class="n">custom_cluster_order</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">clus_cor_method</span> <span class="o">=</span> <span class="s2">&quot;pearson&quot;</span><span class="p">,</span>
+    <span class="n">clus_cluster_method</span> <span class="o">=</span> <span class="s2">&quot;complete&quot;</span><span class="p">,</span>
+    <span class="n">custom_gene_order</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">gene_cor_method</span> <span class="o">=</span> <span class="s2">&quot;pearson&quot;</span><span class="p">,</span>
+    <span class="n">gene_cluster_method</span> <span class="o">=</span> <span class="s2">&quot;complete&quot;</span><span class="p">,</span>
+    <span class="n">gradient_color</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">),</span>
+    <span class="n">gradient_midpoint</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">gradient_limits</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">x_text_size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="n">x_text_angle</span> <span class="o">=</span> <span class="mi">45</span><span class="p">,</span>
+    <span class="n">y_text_size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="n">strip_text_size</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="n">show_plot</span> <span class="o">=</span> <span class="n">NA</span><span class="p">,</span>
+    <span class="n">return_plot</span> <span class="o">=</span> <span class="n">NA</span><span class="p">,</span>
+    <span class="n">save_plot</span> <span class="o">=</span> <span class="n">NA</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(),</span>
+    <span class="n">default_save_name</span> <span class="o">=</span> <span class="s2">&quot;plotMetaDataHeatmap&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>gobject</strong></p></td>
+<td><p>giotto object</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>expression_values</strong></p></td>
+<td><p>expression values to use</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>metadata_cols</strong></p></td>
+<td><p>annotation columns found in pDataDT(gobject)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>selected_genes</strong></p></td>
+<td><p>subset of genes to use</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>first_meta_col</strong></p></td>
+<td><p>if more than 1 metadata column, select the x-axis factor</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>second_meta_col</strong></p></td>
+<td><p>if more than 1 metadata column, select the facetting factor</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>show_values</strong></p></td>
+<td><p>which values to show on heatmap</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>custom_cluster_order</strong></p></td>
+<td><p>custom cluster order (default = NULL)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>clus_cor_method</strong></p></td>
+<td><p>correlation method for clusters</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>clus_cluster_method</strong></p></td>
+<td><p>hierarchical cluster method for the clusters</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>custom_gene_order</strong></p></td>
+<td><p>custom gene order (default = NULL)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>gene_cor_method</strong></p></td>
+<td><p>correlation method for genes</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>gene_cluster_method</strong></p></td>
+<td><p>hierarchical cluster method for the genes</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>gradient_color</strong></p></td>
+<td><p>vector with 3 colors for numeric data</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>gradient_midpoint</strong></p></td>
+<td><p>midpoint for color gradient</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>gradient_limits</strong></p></td>
+<td><p>vector with lower and upper limits</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>x_text_size</strong></p></td>
+<td><p>size of x-axis text</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>x_text_angle</strong></p></td>
+<td><p>angle of x-axis text</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>y_text_size</strong></p></td>
+<td><p>size of y-axis text</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>strip_text_size</strong></p></td>
+<td><p>size of strip text</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>show_plot</strong></p></td>
+<td><p>show plot</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>return_plot</strong></p></td>
+<td><p>return ggplot object</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>save_plot</strong></p></td>
+<td><p>directly save the plot [boolean]</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>save_param</strong></p></td>
+<td><p>list of saving parameters, see showSaveParameters</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>default_save_name</strong></p></td>
+<td><p>default save name</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="value">
+<h2>Value<a class="headerlink" href="#value" title="Permalink to this headline"></a></h2>
+<p>A ggplot or data.table value.</p>
+</div>
+<div class="section" id="details">
+<h2>Details<a class="headerlink" href="#details" title="Permalink to this headline"></a></h2>
+<p>Creates heatmap for the average expression of selected genes in the different annotation/cluster groups. Calculation of cluster or gene order is done on the provided expression values, but visualization is by default on the z-scores. Other options are the original values or z-scores rescaled per gene (-1 to 1).</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="plotMetaDataCellsHeatmap">plotMetaDataCellsHeatmap()</a> for numeric cell annotation instead of gene expression.</p>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">FALSE</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="n">data</span><span class="p">(</span><span class="n">mini_giotto_single_cell</span><span class="p">)</span>
+
+<span class="c1"># get all genes</span>
+<span class="n">all_genes</span> <span class="o">=</span> <span class="n">slot</span><span class="p">(</span><span class="n">mini_giotto_single_cell</span><span class="p">,</span> <span class="s1">&#39;gene_ID&#39;</span><span class="p">)</span>
+
+<span class="c1"># look at cell metadata</span>
+<span class="n">cell_metadata</span> <span class="o">=</span> <span class="n">pDataDT</span><span class="p">(</span><span class="n">mini_giotto_single_cell</span><span class="p">)</span>
+
+<span class="c1"># plot heatmap per cell type, a column name from cell_metadata</span>
+<span class="n">plotMetaDataHeatmap</span><span class="p">(</span><span class="n">mini_giotto_single_cell</span><span class="p">,</span>
+        <span class="n">selected_genes</span> <span class="o">=</span> <span class="n">all_genes</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">],</span>
+        <span class="n">metadata_cols</span> <span class="o">=</span> <span class="s1">&#39;cell_types&#39;</span><span class="p">)</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="plotHeatmap.html" class="btn btn-neutral float-left" title="Plot Heatmap" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="plotMetaDataCellsHeatmap.html" class="btn btn-neutral float-right" title="Plot Heatmap for Cell Metdata" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Ruben Dries, Qian Zhu, Huipeng Li, Rui Dong, Guo-Cheng Yuan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cluster Cells &mdash; Giotto 1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sphinx-toolbox-code.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx-toolbox.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sphinx_toolbox_installation.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/sphinx_toolbox_installation.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Cluster Cells Using NN-Network" href="doLeidenCluster.html" />
+    <link rel="prev" title="Calculate Gene Signature Enrichment Score" href="extractNearestNetwork.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html">
+            <img src="../../_static/GiottoLogo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../documentation.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-handing-functions">Giotto Handing Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#import-raw-data">Import Raw Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#adding-images">Adding Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#dimension-reduction">Dimension Reduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../documentation.html#clustering">Clustering</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="createNearestNetwork.html">createNearestNetwork</a></li>
+<li class="toctree-l3"><a class="reference internal" href="addNetworkLayout.html">addNetworkLayout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extractNearestNetwork.html">extractNearestNetwork</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">clusterCells</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#arguments">Arguments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#value">Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#details">Details</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="doLeidenCluster.html">doLeidenCluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doLouvainCluster.html">doLouvainCluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doKmeans.html">doKmeans</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doHclust.html">doHclust</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subClusterCells.html">subClusterCells</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doLeidenSubCluster.html">doLeidenSubCluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doLouvainSubCluster.html">doLouvainSubCluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getClusterSimilarity.html">getClusterSimilarity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mergeClusters.html">mergeClusters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getDendrogramSplits.html">getDendrogramSplits</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#marker-genes">Marker Genes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#auxiliary-visualizations">Auxiliary Visualizations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#spatial">Spatial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#hidden-markov-random-field-hmrf">Hidden Markov Random Field (HMRF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#d-visualization">2D Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#id1">3D Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#in-silico-cross-sections">In Silico Cross Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#cell-neighborhood">Cell Neighborhood</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#export-from-giotto-analyzer-to-viewer">Export From Giotto Analyzer To Viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#interoperability">Interoperability</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://spatial.rc.fas.harvard.edu/giotto-viewer/">Giotto Viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tipsandtricks.html">HowTos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../trygiotto.html">Try Giotto</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Issues</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../errorsfaqsandtips.html">Common Errors and Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github_issues.html">Report a Bug</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Giotto</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../documentation.html">Function Documentation</a> &raquo;</li>
+      <li>Cluster Cells</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/subsections/documentation_functions/clusterCells.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="cluster-cells">
+<span id="clustercells"></span><h1>Cluster Cells<a class="headerlink" href="#cluster-cells" title="Permalink to this headline"></a></h1>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">clusterCells()</span></span></dt>
+<dd></dd></dl>
+
+<p><em>Cluster cells using a variety of different methods.</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clusterCells</span><span class="p">(</span>
+    <span class="n">gobject</span><span class="p">,</span>
+    <span class="n">cluster_method</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;leiden&quot;</span><span class="p">,</span> <span class="s2">&quot;louvain_community&quot;</span><span class="p">,</span> <span class="s2">&quot;louvain_multinet&quot;</span><span class="p">,</span> <span class="s2">&quot;randomwalk&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sNNclust&quot;</span><span class="p">,</span> <span class="s2">&quot;kmeans&quot;</span><span class="p">,</span> <span class="s2">&quot;hierarchical&quot;</span><span class="p">),</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;cluster_name&quot;</span><span class="p">,</span>
+    <span class="n">nn_network_to_use</span> <span class="o">=</span> <span class="s2">&quot;sNN&quot;</span><span class="p">,</span>
+    <span class="n">network_name</span> <span class="o">=</span> <span class="s2">&quot;sNN.pca&quot;</span><span class="p">,</span>
+    <span class="n">pyth_leid_resolution</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">pyth_leid_weight_col</span> <span class="o">=</span> <span class="s2">&quot;weight&quot;</span><span class="p">,</span>
+    <span class="n">pyth_leid_part_type</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;RBConfigurationVertexPartition&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ModularityVertexPartition&quot;</span><span class="p">),</span>
+    <span class="n">pyth_leid_init_memb</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">pyth_leid_iterations</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+    <span class="n">pyth_louv_resolution</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">pyth_louv_weight_col</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">python_louv_random</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
+    <span class="n">python_path</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">louvain_gamma</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">louvain_omega</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">walk_steps</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="n">walk_clusters</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="n">walk_weights</span> <span class="o">=</span> <span class="n">NA</span><span class="p">,</span>
+    <span class="n">sNNclust_k</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="n">sNNclust_eps</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="n">sNNclust_minPts</span> <span class="o">=</span> <span class="mi">16</span><span class="p">,</span>
+    <span class="n">borderPoints</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">expression_values</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;normalized&quot;</span><span class="p">,</span> <span class="s2">&quot;scaled&quot;</span><span class="p">,</span> <span class="s2">&quot;custom&quot;</span><span class="p">),</span>
+    <span class="n">genes_to_use</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">dim_reduction_to_use</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;cells&quot;</span><span class="p">,</span> <span class="s2">&quot;pca&quot;</span><span class="p">,</span> <span class="s2">&quot;umap&quot;</span><span class="p">,</span> <span class="s2">&quot;tsne&quot;</span><span class="p">),</span>
+    <span class="n">dim_reduction_name</span> <span class="o">=</span> <span class="s2">&quot;pca&quot;</span><span class="p">,</span>
+    <span class="n">dimensions_to_use</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">distance_method</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;original&quot;</span><span class="p">,</span> <span class="s2">&quot;pearson&quot;</span><span class="p">,</span> <span class="s2">&quot;spearman&quot;</span><span class="p">,</span> <span class="s2">&quot;euclidean&quot;</span><span class="p">,</span> <span class="s2">&quot;maximum&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;manhattan&quot;</span><span class="p">,</span> <span class="s2">&quot;canberra&quot;</span><span class="p">,</span> <span class="s2">&quot;binary&quot;</span><span class="p">,</span> <span class="s2">&quot;minkowski&quot;</span><span class="p">),</span>
+    <span class="n">km_centers</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="n">km_iter_max</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="n">km_nstart</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+    <span class="n">km_algorithm</span> <span class="o">=</span> <span class="s2">&quot;Hartigan-Wong&quot;</span><span class="p">,</span>
+    <span class="n">hc_agglomeration_method</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;ward.D2&quot;</span><span class="p">,</span> <span class="s2">&quot;ward.D&quot;</span><span class="p">,</span> <span class="s2">&quot;single&quot;</span><span class="p">,</span> <span class="s2">&quot;complete&quot;</span><span class="p">,</span> <span class="s2">&quot;average&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;mcquitty&quot;</span><span class="p">,</span> <span class="s2">&quot;median&quot;</span><span class="p">,</span> <span class="s2">&quot;centroid&quot;</span><span class="p">),</span>
+    <span class="n">hc_k</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="n">hc_h</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">return_gobject</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">set_seed</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+    <span class="n">seed_number</span> <span class="o">=</span> <span class="mi">1234</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline"></a></h2>
+<p>Arguments passed on to <a class="reference external" href="select_NearestNetwork">select_NearestNetwork()</a>.</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>gobject</strong></p></td>
+<td><p>giotto object</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>cluster_method</strong></p></td>
+<td><p>community cluster method to use</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>name</strong></p></td>
+<td><p>name for new clustering result</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>nn_network_to_use</strong></p></td>
+<td><p>type of NN network to use (kNN vs sNN)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>network_name</strong></p></td>
+<td><p>name of NN network to use</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>pyth_leid_resolution</strong></p></td>
+<td><p>resolution for leiden</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>pyth_leid_weight_col</strong></p></td>
+<td><p>column to use for weights</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>pyth_leid_part_type</strong></p></td>
+<td><p>partition type to use</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>pyth_leid_init_memb</strong></p></td>
+<td><p>initial membership</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>pyth_leid_iterations</strong></p></td>
+<td><p>number of iterations</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>pyth_louv_resolution</strong></p></td>
+<td><p>resolution for louvain</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>pyth_louv_weight_col</strong></p></td>
+<td><p>python louvain param: weight column</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>python_louv_random</strong></p></td>
+<td><p>python louvain param: random</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>python_path</strong></p></td>
+<td><p>specify specific path to python if required</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>louvain_gamma</strong></p></td>
+<td><p>louvain param: gamma or resolution</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>louvain_omega</strong></p></td>
+<td><p>louvain param: omega</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>walk_steps</strong></p></td>
+<td><p>randomwalk: number of steps</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>walk_clusters</strong></p></td>
+<td><p>randomwalk: number of clusters</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>walk_weights</strong></p></td>
+<td><p>randomwalk: weight column</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>sNNclust_k</strong></p></td>
+<td><p>SNNclust: k neighbors to use</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>sNNclust_eps</strong></p></td>
+<td><p>SNNclust: epsilon</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>sNNclust_minPts</strong></p></td>
+<td><p>SNNclust: min points</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>borderPoints</strong></p></td>
+<td><p>SNNclust: border points</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>expression_values</strong></p></td>
+<td><p>expression values to use</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>genes_to_use</strong></p></td>
+<td><p>= NULL,</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>dim_reduction_to_use</strong></p></td>
+<td><p>dimension reduction to use</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>dim_reduction_name</strong></p></td>
+<td><p>name of reduction ‘pca’,</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>dimensions_to_use</strong></p></td>
+<td><p>dimensions to use</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>distance_method</strong></p></td>
+<td><p>distance method</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>km_centers</strong></p></td>
+<td><p>kmeans centers</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>km_iter_max</strong></p></td>
+<td><p>kmeans iterations</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>km_nstart</strong></p></td>
+<td><p>kmeans random starting points</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>km_algorithm</strong></p></td>
+<td><p>kmeans algorithm</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>hc_agglomeration_method</strong></p></td>
+<td><p>hierarchical clustering method</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>hc_k</strong></p></td>
+<td><p>hierachical number of clusters</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>hc_h</strong></p></td>
+<td><p>hierarchical tree cutoff</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>return_gobject</strong></p></td>
+<td><p>boolean: return giotto object (default = TRUE)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>set_seed</strong></p></td>
+<td><p>set seed</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>seed_number</strong></p></td>
+<td><p>number for seed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="value">
+<h2>Value<a class="headerlink" href="#value" title="Permalink to this headline"></a></h2>
+<p>Giotto object with new clusters appended to cell metadata</p>
+</div>
+<div class="section" id="details">
+<h2>Details<a class="headerlink" href="#details" title="Permalink to this headline"></a></h2>
+<p>Wrapper for the different clustering methods.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="doLeidenCluster">doLeidenCluster</a>, <a class="reference external" href="doLouvainCluster_community">doLouvainCluster_community</a>, <a class="reference external" href="doLouvainCluster_multinet">doLouvainCluster_multinet</a>, <a class="reference external" href="doLouvainCluster">doLouvainCluster</a>, <a class="reference external" href="doRandomWalkCluster">doRandomWalkCluster</a>, <a class="reference external" href="doSNNCluster">doSNNCluster</a>, <a class="reference external" href="doKmeans">doKmeans</a>, <a class="reference external" href="doHclust">doHclust</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="extractNearestNetwork.html" class="btn btn-neutral float-left" title="Calculate Gene Signature Enrichment Score" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="doLeidenCluster.html" class="btn btn-neutral float-right" title="Cluster Cells Using NN-Network" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Ruben Dries, Qian Zhu, Huipeng Li, Rui Dong, Guo-Cheng Yuan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

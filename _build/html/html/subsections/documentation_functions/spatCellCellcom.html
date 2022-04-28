@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculate Spatial Cell-Cell Communication Scores &mdash; Giotto 1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sphinx-toolbox-code.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx-toolbox.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sphinx_toolbox_installation.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/sphinx_toolbox_installation.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Plot Ligand-Receptor Communication Scores" href="plotCCcomDotplot.html" />
+    <link rel="prev" title="Calculate Cell-Cell Communication Scores" href="exprCellCellcom.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html">
+            <img src="../../_static/GiottoLogo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../documentation.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-handing-functions">Giotto Handing Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#import-raw-data">Import Raw Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#adding-images">Adding Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#dimension-reduction">Dimension Reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#clustering">Clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#marker-genes">Marker Genes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#auxiliary-visualizations">Auxiliary Visualizations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#spatial">Spatial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#hidden-markov-random-field-hmrf">Hidden Markov Random Field (HMRF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#d-visualization">2D Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#id1">3D Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#in-silico-cross-sections">In Silico Cross Sections</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../documentation.html#cell-neighborhood">Cell Neighborhood</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../documentation.html#cell-type-cell-type-enrichment">Cell-Type/Cell-Type Enrichment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../documentation.html#spatial-interaction-changed-genes-icg">Spatial Interaction Changed Genes (ICG)</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../documentation.html#ligand-receptor-cell-communication">Ligand-Receptor Cell Communication</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="exprCellCellcom.html">exprCellCellcom</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">spatCellCellcom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plotCCcomDotplot.html">plotCCcomDotplot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plotRankSpatvsExpr.html">plotRankSpatvsExpr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plotRecovery.html">plotRecovery</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#export-from-giotto-analyzer-to-viewer">Export From Giotto Analyzer To Viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#interoperability">Interoperability</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://spatial.rc.fas.harvard.edu/giotto-viewer/">Giotto Viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tipsandtricks.html">HowTos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../trygiotto.html">Try Giotto</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Issues</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../errorsfaqsandtips.html">Common Errors and Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github_issues.html">Report a Bug</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Giotto</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../documentation.html">Function Documentation</a> &raquo;</li>
+      <li>Calculate Spatial Cell-Cell Communication Scores</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/subsections/documentation_functions/spatCellCellcom.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="calculate-spatial-cell-cell-communication-scores">
+<span id="spatcellcellcom"></span><h1>Calculate Spatial Cell-Cell Communication Scores<a class="headerlink" href="#calculate-spatial-cell-cell-communication-scores" title="Permalink to this headline"></a></h1>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">spatCellCellcom()</span></span></dt>
+<dd></dd></dl>
+
+<p><em>Spatial Cell-Cell communication scores based on spatial expression of interacting cells.</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatCellCellcom</span><span class="p">(</span>
+    <span class="n">gobject</span><span class="p">,</span>
+    <span class="n">spatial_network_name</span> <span class="o">=</span> <span class="s2">&quot;Delaunay_network&quot;</span><span class="p">,</span>
+    <span class="n">cluster_column</span> <span class="o">=</span> <span class="s2">&quot;cell_types&quot;</span><span class="p">,</span>
+    <span class="n">random_iter</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+    <span class="n">gene_set_1</span><span class="p">,</span>
+    <span class="n">gene_set_2</span><span class="p">,</span>
+    <span class="n">log2FC_addendum</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+    <span class="n">min_observations</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="n">detailed</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span>
+    <span class="n">adjust_method</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;fdr&quot;</span><span class="p">,</span> <span class="s2">&quot;bonferroni&quot;</span><span class="p">,</span> <span class="s2">&quot;BH&quot;</span><span class="p">,</span> <span class="s2">&quot;holm&quot;</span><span class="p">,</span> <span class="s2">&quot;hochberg&quot;</span><span class="p">,</span> <span class="s2">&quot;hommel&quot;</span><span class="p">,</span> <span class="s2">&quot;BY&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;none&quot;</span><span class="p">),</span>
+    <span class="n">adjust_target</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;genes&quot;</span><span class="p">,</span> <span class="s2">&quot;cells&quot;</span><span class="p">),</span>
+    <span class="n">do_parallel</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">cores</span> <span class="o">=</span> <span class="n">NA</span><span class="p">,</span>
+    <span class="n">set_seed</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">seed_number</span> <span class="o">=</span> <span class="mi">1234</span><span class="p">,</span>
+    <span class="n">verbose</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;a little&quot;</span><span class="p">,</span> <span class="s2">&quot;a lot&quot;</span><span class="p">,</span> <span class="s2">&quot;none&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>gobject</p></td>
+<td><p>giotto object to use</p></td>
+</tr>
+<tr class="row-even"><td><p>spatial_network_name</p></td>
+<td><p>spatial network to use for identifying interacting cells</p></td>
+</tr>
+<tr class="row-odd"><td><p>cluster_column</p></td>
+<td><p>cluster column with cell type information</p></td>
+</tr>
+<tr class="row-even"><td><p>random_iter</p></td>
+<td><p>number of iterations</p></td>
+</tr>
+<tr class="row-odd"><td><p>gene_set_1</p></td>
+<td><p>first specific gene set from gene pairs</p></td>
+</tr>
+<tr class="row-even"><td><p>gene_set_2</p></td>
+<td><p>second specific gene set from gene pairs</p></td>
+</tr>
+<tr class="row-odd"><td><p>log2FC_addendum</p></td>
+<td><p>addendum to add when calculating log2FC</p></td>
+</tr>
+<tr class="row-even"><td><p>min_observations</p></td>
+<td><p>minimum number of interactions needed to be considered</p></td>
+</tr>
+<tr class="row-odd"><td><p>detailed</p></td>
+<td><p>provide more detailed information (random variance and z-score)</p></td>
+</tr>
+<tr class="row-even"><td><p>adjust_method</p></td>
+<td><p>which method to adjust p-values</p></td>
+</tr>
+<tr class="row-odd"><td><p>adjust_target</p></td>
+<td><p>adjust multiple hypotheses at the cell or gene level</p></td>
+</tr>
+<tr class="row-even"><td><p>do_parallel</p></td>
+<td><p>run calculations in parallel with mclapply</p></td>
+</tr>
+<tr class="row-odd"><td><p>cores</p></td>
+<td><p>number of cores to use if do_parallel = TRUE</p></td>
+</tr>
+<tr class="row-even"><td><p>set_seed</p></td>
+<td><p>set a seed for reproducibility</p></td>
+</tr>
+<tr class="row-odd"><td><p>seed_number</p></td>
+<td><p>seed number</p></td>
+</tr>
+<tr class="row-even"><td><p>verbose</p></td>
+<td><p>verbose</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="value">
+<h2>Value<a class="headerlink" href="#value" title="Permalink to this headline"></a></h2>
+<p>A cell-Cell communication score for gene pairs based on expression only.</p>
+</div>
+<div class="section" id="details">
+<h2>Details<a class="headerlink" href="#details" title="Permalink to this headline"></a></h2>
+<p>Statistical framework to identify if pairs of genes (such as ligand-receptor combinations) are expressed at higher levels than expected based on a reshuffled null distribution of gene expression values in cells that are spatially in proximity to each other.</p>
+<ul class="simple">
+<li><p>LR_comb:Pair of ligand and receptor</p></li>
+<li><p>lig_cell_type: cell type to assess expression level of ligand</p></li>
+<li><p>lig_expr: average expression of ligand in lig_cell_type</p></li>
+<li><p>ligand: ligand name</p></li>
+<li><p>rec_cell_type: cell type to assess expression level of receptor</p></li>
+<li><p>rec_expr: average expression of receptor in rec_cell_type</p></li>
+<li><p>receptor: receptor name</p></li>
+<li><p>LR_expr: combined average ligand and receptor expression</p></li>
+<li><p>lig_nr: total number of cells from lig_cell_type that spatially interact with cells from rec_cell_type</p></li>
+<li><p>rec_nr: total number of cells from rec_cell_type that spatially interact with cells from lig_cell_type</p></li>
+<li><p>rand_expr: average combined ligand and receptor expression from random spatial permutations</p></li>
+<li><p>av_diff: average difference between LR_expr and rand_expr over all random spatial permutations</p></li>
+<li><p>sd_diff: (optional) standard deviation of the difference between LR_expr and rand_expr over all random spatial permutations</p></li>
+<li><p>z_score: (optinal) z-score</p></li>
+<li><p>log2fc: log2 fold-change (LR_expr/rand_expr)</p></li>
+<li><p>pvalue: p-value</p></li>
+<li><p>LR_cell_comb: cell type pair combination</p></li>
+<li><p>p.adj: adjusted p-value</p></li>
+<li><p>PI: significance score: log2fc * -log10(p.adj)</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="exprCellCellcom.html" class="btn btn-neutral float-left" title="Calculate Cell-Cell Communication Scores" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="plotCCcomDotplot.html" class="btn btn-neutral float-right" title="Plot Ligand-Receptor Communication Scores" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Ruben Dries, Qian Zhu, Huipeng Li, Rui Dong, Guo-Cheng Yuan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

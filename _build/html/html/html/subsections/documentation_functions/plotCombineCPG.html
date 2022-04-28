@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visualize Combined ICG Scores &mdash; Giotto 1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sphinx-toolbox-code.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx-toolbox.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sphinx_toolbox_installation.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/sphinx_toolbox_installation.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Calculate Cell-Cell Communication Scores" href="exprCellCellcom.html" />
+    <link rel="prev" title="Visualize Combined ICG Scores" href="plotCombineCellProximityGenes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html">
+            <img src="../../_static/GiottoLogo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../documentation.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-handing-functions">Giotto Handing Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#import-raw-data">Import Raw Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#adding-images">Adding Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#dimension-reduction">Dimension Reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#clustering">Clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#marker-genes">Marker Genes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#auxiliary-visualizations">Auxiliary Visualizations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#spatial">Spatial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#hidden-markov-random-field-hmrf">Hidden Markov Random Field (HMRF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#d-visualization">2D Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#id1">3D Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#in-silico-cross-sections">In Silico Cross Sections</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../documentation.html#cell-neighborhood">Cell Neighborhood</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../documentation.html#cell-type-cell-type-enrichment">Cell-Type/Cell-Type Enrichment</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../documentation.html#spatial-interaction-changed-genes-icg">Spatial Interaction Changed Genes (ICG)</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="findInteractionChangedGenes.html">findInteractionChangedGenes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="findICG.html">findICG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="findCellProximityGenes.html">findCellProximityGenes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="findCPG.html">findCPG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="filterCellProximityGenes.html">filterCellProximityGenes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="filterInteractionChangedGenes.html">filterInteractionChangedGenes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="filterICG.html">filterICG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="filterCPG.html">filterCPG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="combineInteractionChangedGenes.html">Combine ICG Scores (Pairwise)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="combineInteractionChangedGenes.html#value">Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="combineICG.html">Combine ICG Scores (Pairwise)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="combineICG.html#value">Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="combineCellProximityGenes.html">combineCellProximityGenes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="combineCPG.html">combineCPG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plotInteractionChangedGenes.html">Visualize ICGs via Barplot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plotInteractionChangedGenes.html#value">Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plotICG.html">Visualize ICGs via Barplot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plotICG.html#value">Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plotCellProximityGenes.html">Visualize Cell Proximity Gene Scores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plotCellProximityGenes.html#value">Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plotCPG.html">Visualize Cell Proximity Gene Scores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plotCPG.html#value">Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plotCombineInteractionChangedGenes.html">Visualize Combined ICG Scores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plotCombineInteractionChangedGenes.html#value">Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plotCombineICG.html">Visualize Combined ICG Scores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plotCombineICG.html#value">Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plotCombineCellProximityGenes.html">plotCombineCellProximityGenes</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">plotCombineCPG</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../documentation.html#ligand-receptor-cell-communication">Ligand-Receptor Cell Communication</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#export-from-giotto-analyzer-to-viewer">Export From Giotto Analyzer To Viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#interoperability">Interoperability</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://spatial.rc.fas.harvard.edu/giotto-viewer/">Giotto Viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tipsandtricks.html">HowTos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../trygiotto.html">Try Giotto</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Issues</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../errorsfaqsandtips.html">Common Errors and Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github_issues.html">Report a Bug</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Giotto</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../documentation.html">Function Documentation</a> &raquo;</li>
+      <li>Visualize Combined ICG Scores</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/subsections/documentation_functions/plotCombineCPG.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="visualize-combined-icg-scores">
+<span id="plotcombinecpg"></span><h1>Visualize Combined ICG Scores<a class="headerlink" href="#visualize-combined-icg-scores" title="Permalink to this headline"></a></h1>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">plotCombineCPG()</span></span></dt>
+<dd></dd></dl>
+
+<p><em>Create visualization for combined (pairwise) ICG scores.</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotCombineCPG</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>…</p></th>
+<th class="head"><p>Arguments passed on to <a class="reference external" href="plotCombineICG">plotCombineICG()</a></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>gobject</strong></p></td>
+<td><p>giotto object</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>combCpgObject</strong></p></td>
+<td><p>ICGscores, output from combineInteractionChangedGenes()</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>selected_interactions</strong></p></td>
+<td><p>interactions to show</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>selected_gene_to_gene</strong></p></td>
+<td><p>pairwise gene combinations to show</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>detail_plot</strong></p></td>
+<td><p>show detailed info in both interacting cell types</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>simple_plot</strong></p></td>
+<td><p>show a simplified plot</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>simple_plot_facet</strong></p></td>
+<td><p>facet on interactions or genes with simple plot</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>facet_scales</strong></p></td>
+<td><p>ggplot facet scales paramter</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>facet_ncol</strong></p></td>
+<td><p>ggplot facet ncol parameter</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>facet_nrow</strong></p></td>
+<td><p>ggplot facet nrow parameter</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>colors</strong></p></td>
+<td><p>vector with two colors to use</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>show_plot</strong></p></td>
+<td><p>show plots</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>return_plot</strong></p></td>
+<td><p>return plotting object</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>save_plot</strong></p></td>
+<td><p>directly save the plot [boolean]</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>save_param</strong></p></td>
+<td><p>list of saving parameters from <a class="reference external" href="all_plots_save_function">all_plots_save_function()</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>default_save_name</strong></p></td>
+<td><p>default save name for saving, don’t change, change <code class="docutils literal notranslate"><span class="pre">save_name</span></code> in <code class="docutils literal notranslate"><span class="pre">save_param</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="plotCombineICG">plotCombineICG()</a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="plotCombineCellProximityGenes.html" class="btn btn-neutral float-left" title="Visualize Combined ICG Scores" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="exprCellCellcom.html" class="btn btn-neutral float-right" title="Calculate Cell-Cell Communication Scores" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Ruben Dries, Qian Zhu, Huipeng Li, Rui Dong, Guo-Cheng Yuan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

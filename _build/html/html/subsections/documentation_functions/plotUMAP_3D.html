@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visualize Cells By Spatial Coordinates in 3D &mdash; Giotto 1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sphinx-toolbox-code.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx-toolbox.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sphinx_toolbox_installation.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/sphinx_toolbox_installation.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Visualize Cells By Dimension Reduction Coordinates in 3D" href="plotTSNE_3D.html" />
+    <link rel="prev" title="Visualize Cells By Spatial Coordinates in 3D" href="dimPlot3D.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html">
+            <img src="../../_static/GiottoLogo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../documentation.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#giotto-handing-functions">Giotto Handing Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#import-raw-data">Import Raw Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#adding-images">Adding Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#dimension-reduction">Dimension Reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#clustering">Clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#marker-genes">Marker Genes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#auxiliary-visualizations">Auxiliary Visualizations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#spatial">Spatial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#hidden-markov-random-field-hmrf">Hidden Markov Random Field (HMRF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#d-visualization">2D Visualization</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../documentation.html#id1">3D Visualization</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../documentation.html#id2">Dimension Reduction</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="dimPlot2D.html">dimPlot2D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimPlot3D.html">dimPlot3D</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">plotUMAP_3D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plotTSNE_3D.html">plotTSNE_3D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plotPCA_3D.html">plotPCA_3D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimGenePlot3D.html">dimGenePlot3D</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../documentation.html#id3">In Spatial Space</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#in-silico-cross-sections">In Silico Cross Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#cell-neighborhood">Cell Neighborhood</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#export-from-giotto-analyzer-to-viewer">Export From Giotto Analyzer To Viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation.html#interoperability">Interoperability</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://spatial.rc.fas.harvard.edu/giotto-viewer/">Giotto Viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tipsandtricks.html">HowTos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../trygiotto.html">Try Giotto</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Issues</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../errorsfaqsandtips.html">Common Errors and Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github_issues.html">Report a Bug</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Giotto</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../documentation.html">Function Documentation</a> &raquo;</li>
+      <li>Visualize Cells By Spatial Coordinates in 3D</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/subsections/documentation_functions/plotUMAP_3D.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="visualize-cells-by-spatial-coordinates-in-3d">
+<span id="plotumap-3d"></span><h1>Visualize Cells By Spatial Coordinates in 3D<a class="headerlink" href="#visualize-cells-by-spatial-coordinates-in-3d" title="Permalink to this headline"></a></h1>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">plotUMAP_3D()</span></span></dt>
+<dd></dd></dl>
+
+<p><em>Visualize cells according to dimension reduction coordinates</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotUMAP_3D</span><span class="p">(</span>
+    <span class="n">gobject</span><span class="p">,</span>
+    <span class="n">dim_reduction_name</span> <span class="o">=</span> <span class="s2">&quot;umap&quot;</span><span class="p">,</span>
+    <span class="n">default_save_name</span> <span class="o">=</span> <span class="s2">&quot;UMAP_3D&quot;</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>gobject</strong></p></td>
+<td><p>giotto object</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>dim_reduction_name</strong></p></td>
+<td><p>name of UMAP</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>default_save_name</strong></p></td>
+<td><p>default save name of UMAP plot</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>…</strong></p></td>
+<td><p><strong>Arguments passed on to</strong> <a class="reference external" href="dimPlot3D">dimPlot3D()</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>dim1_to_use</strong></p></td>
+<td><p>dimension to use on x-axis</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>dim2_to_use</strong></p></td>
+<td><p>dimension to use on y-axis</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>dim3_to_use</strong></p></td>
+<td><p>dimension to use on z-axis</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>spat_enr_names</strong></p></td>
+<td><p>names of spatial enrichment results to include</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>select_cell_groups</strong></p></td>
+<td><p>select subset of cells/clusters based on cell_color parameter</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>select_cells</strong></p></td>
+<td><p>select subset of cells based on cell IDs</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>show_other_cells</strong></p></td>
+<td><p>display not selected cells</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>other_cell_color</strong></p></td>
+<td><p>color of not selected cells</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>other_point_size</strong></p></td>
+<td><p>size of not selected cells</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>show_NN_network</strong></p></td>
+<td><p>show underlying NN network</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>nn_network_to_use</strong></p></td>
+<td><p>type of NN network to use (kNN vs sNN)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>network_name</strong></p></td>
+<td><p>name of NN network to use, if show_NN_network = TRUE</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>color_as_factor</strong></p></td>
+<td><p>convert color column to factor</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>cell_color</strong></p></td>
+<td><p>color for cells (see details)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>cell_color_code</strong></p></td>
+<td><p>named vector with colors</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>show_cluster_center</strong></p></td>
+<td><p>plot center of selected clusters</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>show_center_label</strong></p></td>
+<td><p>plot label of selected clusters</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>center_point_size</strong></p></td>
+<td><p>size of center points</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>label_size</strong></p></td>
+<td><p>size of labels</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>edge_alpha</strong></p></td>
+<td><p>column to use for alpha of the edges</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>point_size</strong></p></td>
+<td><p>size of point (cell)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>show_plot</strong></p></td>
+<td><p>show plot</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>return_plot</strong></p></td>
+<td><p>return ggplot object</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>save_plot</strong></p></td>
+<td><p>directly save the plot [boolean]</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>save_param</strong></p></td>
+<td><p>list of saving parameters, see <a class="reference external" href="showSaveParameters">showSaveParameters()</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="value">
+<h2>Value<a class="headerlink" href="#value" title="Permalink to this headline"></a></h2>
+<p>A plotly.</p>
+</div>
+<div class="section" id="details">
+<h2>Details<a class="headerlink" href="#details" title="Permalink to this headline"></a></h2>
+<p>Short wrapper for UMAP 3D visualization.</p>
+<p>UMAP can accept as input the original gene expression matrix (set dim_reduction_to_use=NULL) or the dimension reduced matrix from PCA (default) (dim_reduction_to_use=”pca”).
+If principle components are analyzed, then one specifies the <code class="docutils literal notranslate"><span class="pre">dimensions_to_use</span></code>.</p>
+<p>It is possible to further define the number of neighbors (n_neighbors), number of epochs (n_epochs), and min_dist (see UMAP parameter guide <a class="reference external" href="https://umap-learn.readthedocs.io/en/latest/parameters.html">here</a>).
+The options set_seed and seed_number are helpful to fix the random number generation seed so that the same result is returned each time the function is run.</p>
+<p>A plot will be returned in the result.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Other reduced dimension visualizations: <a class="reference external" href="dimPlot2D">dimPlot2D()</a>, <a class="reference external" href="dimPlot">dimPlot()</a>, <a class="reference external" href="plotPCA_2D">plotPCA_2D()</a>, <a class="reference external" href="plotPCA_3D">plotPCA_3D()</a>, <a class="reference external" href="plotPCA">plotPCA()</a>, <a class="reference external" href="plotTSNE_2D">plotTSNE_2D()</a>, <a class="reference external" href="plotTSNE_3D">plotTSNE_3D()</a>, <a class="reference external" href="plotTSNE">plotTSNE()</a>, <a class="reference external" href="plotUMAP_2D">plotUMAP_2D()</a>, <a class="reference external" href="plotUMAP_3D">plotUMAP_3D()</a>, <a class="reference external" href="plotUMAP">plotUMAP()</a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dimPlot3D.html" class="btn btn-neutral float-left" title="Visualize Cells By Spatial Coordinates in 3D" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="plotTSNE_3D.html" class="btn btn-neutral float-right" title="Visualize Cells By Dimension Reduction Coordinates in 3D" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Ruben Dries, Qian Zhu, Huipeng Li, Rui Dong, Guo-Cheng Yuan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

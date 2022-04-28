@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mouse osmFISH SS Cortex &mdash; Giotto 1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sphinx-toolbox-code.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx-toolbox.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sphinx_toolbox_installation.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/sphinx_toolbox_installation.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Human CyCIF PDAC" href="human_CyCIF_PDAC.html" />
+    <link rel="prev" title="Mouse CODEX Spleen" href="mouse_CODEX_spleen.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html">
+            <img src="../../_static/GiottoLogo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../documentation.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://spatial.rc.fas.harvard.edu/giotto-viewer/">Giotto Viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../tipsandtricks.html">HowTos</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../datasets.html">Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../datasets.html#dataset-information">Dataset Information</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../datasets.html#example-datasets">Example Datasets</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../datasets.html#mini-datasets">Mini Datasets</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../datasets.html#full-datasets">Full Datasets</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="seqFISH_cortex.html">    Mouse seqFISH Cortex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="merFISH_hypot_preopt_region.html">Mouse merFISH Hypoth. Preopt. Region</a></li>
+<li class="toctree-l4"><a class="reference internal" href="STARmap_mouse_cortex.html">Mouse STARmap Cortex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mouse_visium_brain.html">    Mouse Visium Brain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mouse_visium_kidney.html">    Mouse Visium Kidney</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mouse_CODEX_spleen.html">    Mouse CODEX Spleen</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">    Mouse osmFISH SScortex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="human_CyCIF_PDAC.html">    Human CyCIF PDAC</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../trygiotto.html">Try Giotto</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Issues</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../errorsfaqsandtips.html">Common Errors and Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github_issues.html">Report a Bug</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Giotto</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../datasets.html">Examples</a> &raquo;</li>
+      <li>Mouse osmFISH SS Cortex</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/subsections/datasets/osmFISH_mouse_SS_cortex.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="mouse-osmfish-ss-cortex">
+<span id="osmfish-mouse-ss-cortex"></span><h1>Mouse osmFISH SS Cortex<a class="headerlink" href="#mouse-osmfish-ss-cortex" title="Permalink to this headline"></a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This tutorial was written with <strong>Giotto version 0.3.6.9046</strong>, your version is <strong>1.0.3</strong>. This is a more recent version and results should be reproducible.</p>
+</div>
+<div class="section" id="install-python-and-r-modules">
+<h2>Install Python and R Modules<a class="headerlink" href="#install-python-and-r-modules" title="Permalink to this headline"></a></h2>
+<p>To run this vignette you need to install <strong>all</strong> of the necessary Python modules.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Python module installation can be done either <strong>automatically</strong> via our installation tool (from within R) (see step 2.2A) or <strong>manually</strong> (see step 2.2B).</p>
+<p><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-eye" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.679 7.932c.412-.621 1.242-1.75 2.366-2.717C5.175 4.242 6.527 3.5 8 3.5c1.473 0 2.824.742 3.955 1.715 1.124.967 1.954 2.096 2.366 2.717a.119.119 0 010 .136c-.412.621-1.242 1.75-2.366 2.717C10.825 11.758 9.473 12.5 8 12.5c-1.473 0-2.824-.742-3.955-1.715C2.92 9.818 2.09 8.69 1.679 8.068a.119.119 0 010-.136zM8 2c-1.981 0-3.67.992-4.933 2.078C1.797 5.169.88 6.423.43 7.1a1.619 1.619 0 000 1.798c.45.678 1.367 1.932 2.637 3.024C4.329 13.008 6.019 14 8 14c1.981 0 3.67-.992 4.933-2.078 1.27-1.091 2.187-2.345 2.637-3.023a1.619 1.619 0 000-1.798c-.45-.678-1.367-1.932-2.637-3.023C11.671 2.992 9.981 2 8 2zm0 8a2 2 0 100-4 2 2 0 000 4z"></path></svg> See <a class="reference internal" href="../../gettingstarted.html#part2-python-giotto-requirements"><span class="std std-ref">Part 2.2 Giotto-Specific Python Packages</span></a> of our Giotto Installation section for step-by-step instructions.</p>
+</div>
+</div>
+<div class="section" id="set-up-giotto">
+<h2>Set-Up Giotto<a class="headerlink" href="#set-up-giotto" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">Giotto</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="set-a-working-directory">
+<h3>Set A Working Directory<a class="headerlink" href="#set-a-working-directory" title="Permalink to this headline"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#results_folder = &#39;/path/to/directory/&#39;</span>
+<span class="n">results_folder</span> <span class="o">=</span> <span class="s1">&#39;/Volumes/Ruben_Seagate/Dropbox (Personal)/Projects/GC_lab/Ruben_Dries/190225_spatial_package/Results/Visium/Brain/201226_results//&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="set-a-giotto-python-path">
+<h3>Set A Giotto Python Path<a class="headerlink" href="#set-a-giotto-python-path" title="Permalink to this headline"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># set python path to your preferred python version path</span>
+<span class="c1"># set python path to NULL if you want to automatically install (only the 1st time) and use the giotto miniconda environment</span>
+<span class="n">python_path</span> <span class="o">=</span> <span class="n">NULL</span>
+<span class="k">if</span><span class="p">(</span><span class="ow">is</span><span class="o">.</span><span class="n">null</span><span class="p">(</span><span class="n">python_path</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">installGiottoEnvironment</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="dataset-explanation">
+<h2>Dataset Explanation<a class="headerlink" href="#dataset-explanation" title="Permalink to this headline"></a></h2>
+<p><a class="reference external" href="https://www.nature.com/articles/s41592-018-0175-z">Codeluppi et al.</a> created a cyclic single-molecule fluorescence in situ hybridization (osmFISH) technology and define the cellular organization of the somatosensory cortex with the expression of 33 genes in 5,328 cells.</p>
+<a class="reference internal image-reference" href="../../_images/osmfish_image_demo.png"><img alt="osmfish_image_demo.png" src="../../_images/osmfish_image_demo.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="giotto-global-instructions-and-preparations">
+<h2>1. Giotto Global Instructions and Preparations<a class="headerlink" href="#giotto-global-instructions-and-preparations" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## instructions allow us to automatically save all plots into a chosen results folder</span>
+<span class="n">instrs</span> <span class="o">=</span> <span class="n">createGiottoInstructions</span><span class="p">(</span><span class="n">save_plot</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span>
+              <span class="n">show_plot</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span>
+              <span class="n">save_dir</span> <span class="o">=</span> <span class="n">results_folder</span><span class="p">,</span>
+              <span class="n">python_path</span> <span class="o">=</span> <span class="n">python_path</span><span class="p">)</span>
+
+<span class="n">expr_path</span> <span class="o">=</span> <span class="n">paste0</span><span class="p">(</span><span class="n">results_folder</span><span class="p">,</span> <span class="s2">&quot;osmFISH_prep_expression.txt&quot;</span><span class="p">)</span>
+<span class="n">loc_path</span> <span class="o">=</span> <span class="n">paste0</span><span class="p">(</span><span class="n">results_folder</span><span class="p">,</span> <span class="s2">&quot;osmFISH_prep_cell_coordinates.txt&quot;</span><span class="p">)</span>
+<span class="n">meta_path</span> <span class="o">=</span> <span class="n">paste0</span><span class="p">(</span><span class="n">results_folder</span><span class="p">,</span> <span class="s2">&quot;osmFISH_prep_cell_metadata.txt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-giotto-object-and-process-the-data">
+<h2>2. Create Giotto Object and Process The Data<a class="headerlink" href="#create-giotto-object-and-process-the-data" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## create</span>
+<span class="n">osm_test</span> <span class="o">&lt;-</span> <span class="n">createGiottoObject</span><span class="p">(</span><span class="n">raw_exprs</span> <span class="o">=</span> <span class="n">expr_path</span><span class="p">,</span>
+              <span class="n">spatial_locs</span> <span class="o">=</span> <span class="n">loc_path</span><span class="p">,</span>
+              <span class="n">instructions</span> <span class="o">=</span> <span class="n">instrs</span><span class="p">)</span>
+
+<span class="n">showGiottoInstructions</span><span class="p">(</span><span class="n">osm_test</span><span class="p">)</span>
+
+<span class="c1">## add field annotation</span>
+<span class="n">metadata</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">table</span><span class="p">::</span><span class="n">fread</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="n">meta_path</span><span class="p">)</span>
+<span class="n">osm_test</span> <span class="o">=</span> <span class="n">addCellMetadata</span><span class="p">(</span><span class="n">osm_test</span><span class="p">,</span> <span class="n">new_metadata</span> <span class="o">=</span> <span class="n">metadata</span><span class="p">,</span>
+           <span class="n">by_column</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">column_cell_ID</span> <span class="o">=</span> <span class="s1">&#39;CellID&#39;</span><span class="p">)</span>
+<span class="c1">## filter</span>
+<span class="n">osm_test</span> <span class="o">&lt;-</span> <span class="n">filterGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span>
+         <span class="n">expression_threshold</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+         <span class="n">gene_det_in_min_cells</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+         <span class="n">min_det_genes_per_cell</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+         <span class="n">expression_values</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;raw&#39;</span><span class="p">),</span>
+         <span class="n">verbose</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span>
+
+<span class="c1">## normalize</span>
+<span class="c1"># 1. standard z-score way</span>
+<span class="n">osm_test</span> <span class="o">&lt;-</span> <span class="n">normalizeGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">)</span>
+
+<span class="c1"># 2. osmFISH way</span>
+<span class="n">raw_expr_matrix</span> <span class="o">=</span> <span class="n">osm_test</span><span class="nd">@raw_exprs</span>
+<span class="n">norm_genes</span> <span class="o">=</span> <span class="p">(</span><span class="n">raw_expr_matrix</span><span class="o">/</span><span class="n">rowSums_giotto</span><span class="p">(</span><span class="n">raw_expr_matrix</span><span class="p">))</span> <span class="o">*</span> <span class="n">nrow</span><span class="p">(</span><span class="n">raw_expr_matrix</span><span class="p">)</span>
+<span class="n">norm_genes_cells</span> <span class="o">=</span> <span class="n">t_giotto</span><span class="p">((</span><span class="n">t_giotto</span><span class="p">(</span><span class="n">norm_genes</span><span class="p">)</span><span class="o">/</span><span class="n">colSums_giotto</span><span class="p">(</span><span class="n">norm_genes</span><span class="p">))</span> <span class="o">*</span> <span class="n">ncol</span><span class="p">(</span><span class="n">raw_expr_matrix</span><span class="p">))</span>
+<span class="n">osm_test</span><span class="nd">@custom_expr</span> <span class="o">=</span> <span class="n">norm_genes_cells</span>
+
+<span class="c1">## add gene &amp; cell statistics</span>
+<span class="n">osm_test</span> <span class="o">&lt;-</span> <span class="n">addStatistics</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">)</span>
+
+<span class="c1">## add gene &amp; cell statistics</span>
+<span class="n">osm_test</span> <span class="o">&lt;-</span> <span class="n">addStatistics</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">)</span>
+
+<span class="c1"># save according to giotto instructions</span>
+<span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;ClusterName&#39;</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;2_a_original_clusters&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/2_a_original_clusters.png"><img alt="2_a_original_clusters.png" src="../../_images/2_a_original_clusters.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;Region&#39;</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;2_b_original_regions&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/2_b_original_regions.png"><img alt="2_b_original_regions.png" src="../../_images/2_b_original_regions.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;ClusterID&#39;</span><span class="p">,</span>
+ <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;2_c_clusterID&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/2_c_clusterID.png"><img alt="2_c_clusterID.png" src="../../_images/2_c_clusterID.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;total_expr&#39;</span><span class="p">,</span> <span class="n">color_as_factor</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span> <span class="n">gradient_midpoint</span> <span class="o">=</span> <span class="mi">160</span><span class="p">,</span>
+    <span class="n">gradient_limits</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span><span class="mi">220</span><span class="p">),</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;2_d_total_expr_limits&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/2_d_total_expr_limits.png"><img alt="2_d_total_expr_limits.png" src="../../_images/2_d_total_expr_limits.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="dimension-reduction">
+<h2>3. Dimension Reduction<a class="headerlink" href="#dimension-reduction" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## highly variable genes (HVG)</span>
+<span class="c1"># only 33 genes so use all genes</span>
+
+<span class="c1">## run PCA on expression values (default)</span>
+<span class="n">osm_test</span> <span class="o">&lt;-</span> <span class="n">runPCA</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;custom&#39;</span><span class="p">,</span> <span class="n">scale_unit</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span> <span class="n">center</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+<span class="n">screePlot</span><span class="p">(</span><span class="n">osm_test</span><span class="p">,</span> <span class="n">ncp</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_a_screeplot&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/3_a_screeplot2.png"><img alt="3_a_screeplot.png" src="../../_images/3_a_screeplot2.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotPCA</span><span class="p">(</span><span class="n">osm_test</span><span class="p">,</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_b_PCA_reduction&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/3_b_PCA_reduction.png"><img alt="3_b_PCA_reduction.png" src="../../_images/3_b_PCA_reduction.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## run UMAP and tSNE on PCA space (default)</span>
+<span class="n">osm_test</span> <span class="o">&lt;-</span> <span class="n">runUMAP</span><span class="p">(</span><span class="n">osm_test</span><span class="p">,</span> <span class="n">dimensions_to_use</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">31</span><span class="p">,</span> <span class="n">n_threads</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">plotUMAP</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_c_UMAP_reduction.png&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/3_c_UMAP_reduction.png"><img alt="3_c_UMAP_reduction.png" src="../../_images/3_c_UMAP_reduction.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotUMAP</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span>
+    <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;total_expr&#39;</span><span class="p">,</span> <span class="n">color_as_factor</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span> <span class="n">gradient_midpoint</span> <span class="o">=</span> <span class="mi">180</span><span class="p">,</span> <span class="n">gradient_limits</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">220</span><span class="p">),</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_d_UMAP_reduction_expression.png&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/3_d_UMAP_reduction_expression.png"><img alt="3_d_UMAP_reduction_expression.png" src="../../_images/3_d_UMAP_reduction_expression.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">osm_test</span> <span class="o">&lt;-</span> <span class="n">runtSNE</span><span class="p">(</span><span class="n">osm_test</span><span class="p">,</span> <span class="n">dimensions_to_use</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">31</span><span class="p">,</span> <span class="n">perplexity</span> <span class="o">=</span> <span class="mi">70</span><span class="p">,</span> <span class="n">check_duplicates</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+<span class="n">plotTSNE</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span>  <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;3_e_tSNE_reduction&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/3_e_tSNE_reduction2.png"><img alt="3_e_tSNE_reduction.png" src="../../_images/3_e_tSNE_reduction2.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="clustering">
+<h2>4. Clustering<a class="headerlink" href="#clustering" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## hierarchical clustering</span>
+<span class="n">osm_test</span> <span class="o">=</span> <span class="n">doHclust</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;custom&#39;</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">36</span><span class="p">)</span>
+<span class="n">plotUMAP</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;hclust&#39;</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span>
+    <span class="n">show_NN_network</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span> <span class="n">edge_alpha</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_a_UMAP_hclust&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/4_a_UMAP_hclust.png"><img alt="4_a_UMAP_hclust.png" src="../../_images/4_a_UMAP_hclust.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## kmeans clustering</span>
+<span class="n">osm_test</span> <span class="o">=</span> <span class="n">doKmeans</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">dim_reduction_to_use</span> <span class="o">=</span> <span class="s1">&#39;pca&#39;</span><span class="p">,</span> <span class="n">dimensions_to_use</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span> <span class="n">centers</span> <span class="o">=</span> <span class="mi">36</span><span class="p">,</span> <span class="n">nstart</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">)</span>
+<span class="n">plotUMAP</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;kmeans&#39;</span><span class="p">,</span>
+    <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span> <span class="n">show_NN_network</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span> <span class="n">edge_alpha</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span>  <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_b_UMAP_kmeans&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/4_b_UMAP_kmeans.png"><img alt="4_b_UMAP_kmeans.png" src="../../_images/4_b_UMAP_kmeans.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## Leiden clustering strategy:</span>
+<span class="c1"># 1. overcluster</span>
+<span class="c1"># 2. merge small clusters that are highly similar</span>
+
+<span class="c1"># sNN network (default)</span>
+<span class="n">osm_test</span> <span class="o">&lt;-</span> <span class="n">createNearestNetwork</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">dimensions_to_use</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">31</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">12</span><span class="p">)</span>
+
+<span class="n">osm_test</span> <span class="o">&lt;-</span> <span class="n">doLeidenCluster</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">resolution</span> <span class="o">=</span> <span class="mf">0.09</span><span class="p">,</span> <span class="n">n_iterations</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">plotUMAP</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span>
+    <span class="n">show_NN_network</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span> <span class="n">edge_alpha</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_c_UMAP_leiden&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/4_c_UMAP_leiden.png"><img alt="4_c_UMAP_leiden.png" src="../../_images/4_c_UMAP_leiden.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># merge small groups based on similarity</span>
+<span class="n">leiden_similarities</span> <span class="o">=</span> <span class="n">getClusterSimilarity</span><span class="p">(</span><span class="n">osm_test</span><span class="p">,</span>
+                   <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;custom&#39;</span><span class="p">,</span>
+                   <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">)</span>
+
+<span class="n">osm_test</span> <span class="o">=</span> <span class="n">mergeClusters</span><span class="p">(</span><span class="n">osm_test</span><span class="p">,</span>
+         <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;custom&#39;</span><span class="p">,</span>
+         <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span>
+         <span class="n">new_cluster_name</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus_m&#39;</span><span class="p">,</span>
+         <span class="n">max_group_size</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
+         <span class="n">force_min_group_size</span> <span class="o">=</span> <span class="mi">25</span><span class="p">,</span>
+         <span class="n">max_sim_clusters</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+         <span class="n">min_cor_score</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">)</span>
+
+<span class="n">plotUMAP</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus_m&#39;</span><span class="p">,</span> <span class="n">point_size</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span>
+    <span class="n">show_NN_network</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span> <span class="n">edge_alpha</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_d_UMAP_leiden_merged&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/4_d_UMAP_leiden_merged.png"><img alt="4_d_UMAP_leiden_merged.png" src="../../_images/4_d_UMAP_leiden_merged.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## show cluster relationships</span>
+<span class="n">showClusterHeatmap</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;custom&#39;</span><span class="p">,</span> <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus_m&#39;</span><span class="p">,</span>
+       <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_e_heatmap&#39;</span><span class="p">,</span> <span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;cm&#39;</span><span class="p">),</span>
+       <span class="n">row_names_gp</span> <span class="o">=</span> <span class="n">grid</span><span class="p">::</span><span class="n">gpar</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">6</span><span class="p">),</span> <span class="n">column_names_gp</span> <span class="o">=</span> <span class="n">grid</span><span class="p">::</span><span class="n">gpar</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/4_e_heatmap.png"><img alt="4_e_heatmap.png" src="../../_images/4_e_heatmap.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">showClusterDendrogram</span><span class="p">(</span><span class="n">osm_test</span><span class="p">,</span> <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus_m&#39;</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">rotate</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+          <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;4_f_dendro&#39;</span><span class="p">,</span> <span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;cm&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/4_f_dendro.png"><img alt="4_f_dendro.png" src="../../_images/4_f_dendro.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="co-visualization">
+<h2>5. Co-Visualization<a class="headerlink" href="#co-visualization" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># expression and spatial</span>
+<span class="n">spatDimPlot2D</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus&#39;</span><span class="p">,</span> <span class="n">spat_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;5_a_covis_leiden&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/5_a_covis_leiden2.png"><img alt="5_a_covis_leiden.png" src="../../_images/5_a_covis_leiden2.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatDimPlot2D</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus_m&#39;</span><span class="p">,</span> <span class="n">spat_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;5_b_covis_leiden_m&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/5_b_covis_leiden_m.png"><img alt="5_b_covis_leiden_m.png" src="../../_images/5_b_covis_leiden_m.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatDimPlot2D</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus_m&#39;</span><span class="p">,</span>
+      <span class="n">dim_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">spat_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">select_cell_groups</span> <span class="o">=</span> <span class="s1">&#39;m_8&#39;</span><span class="p">,</span>
+      <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;5_c_covis_leiden_merged_selected&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/5_c_covis_leiden_merged_selected.png"><img alt="5_c_covis_leiden_merged_selected.png" src="../../_images/5_c_covis_leiden_merged_selected.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spatDimPlot2D</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;total_expr&#39;</span><span class="p">,</span> <span class="n">color_as_factor</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
+      <span class="n">gradient_midpoint</span> <span class="o">=</span> <span class="mi">160</span><span class="p">,</span> <span class="n">gradient_limits</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span><span class="mi">220</span><span class="p">),</span>
+      <span class="n">save_param</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;5_d_total_expr&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/5_d_total_expr.png"><img alt="5_d_total_expr.png" src="../../_images/5_d_total_expr.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="differential-expression">
+<h2>6. Differential Expression<a class="headerlink" href="#differential-expression" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>## split dendrogram nodes ##
+dendsplits = getDendrogramSplits(gobject = osm_test,
+             expression_values = &#39;custom&#39;,
+             cluster_column = &#39;leiden_clus_m&#39;)
+split_3_markers = findGiniMarkers(gobject = osm_test, expression_values = &#39;custom&#39;, cluster_column = &#39;leiden_clus_m&#39;,
+              group_1 = unlist(dendsplits[3]$tree_1), group_2 = unlist(dendsplits[3]$tree_2))
+
+## Individual populations ##
+markers = findMarkers_one_vs_all(gobject = osm_test,
+             method = &#39;scran&#39;,
+             expression_values = &#39;custom&#39;,
+             cluster_column = &#39;leiden_clus_m&#39;,
+             min_genes = 2, rank_score = 2)
+## violinplot
+topgenes = markers[, head(.SD, 1), by = &#39;cluster&#39;]$genes
+violinPlot(osm_test, genes = unique(topgenes), cluster_column = &#39;leiden_clus_m&#39;, expression_values = &#39;custom&#39;,
+    strip_text = 5, strip_position = &#39;right&#39;,
+    save_param = c(save_name = &#39;6_a_violinplot&#39;))
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/6_a_violinplot2.png"><img alt="6_a_violinplot.png" src="../../_images/6_a_violinplot2.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotMetaDataHeatmap</span><span class="p">(</span><span class="n">osm_test</span><span class="p">,</span> <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;custom&#39;</span><span class="p">,</span>
+        <span class="n">metadata_cols</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;leiden_clus_m&#39;</span><span class="p">),</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;6_b_metaheatmap&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/6_b_metaheatmap.png"><img alt="6_b_metaheatmap.png" src="../../_images/6_b_metaheatmap.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotMetaDataHeatmap</span><span class="p">(</span><span class="n">osm_test</span><span class="p">,</span> <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;custom&#39;</span><span class="p">,</span>
+        <span class="n">metadata_cols</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;leiden_clus_m&#39;</span><span class="p">),</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;6_e_metaheatmap_all_genes&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/6_e_metaheatmap_all_genes.png"><img alt="6_e_metaheatmap_all_genes.png" src="../../_images/6_e_metaheatmap_all_genes.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotMetaDataHeatmap</span><span class="p">(</span><span class="n">osm_test</span><span class="p">,</span> <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;custom&#39;</span><span class="p">,</span>
+        <span class="n">metadata_cols</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;ClusterName&#39;</span><span class="p">),</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;6_f_metaheatmap_all_genes_names&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/6_f_metaheatmap_all_genes_names.png"><img alt="6_f_metaheatmap_all_genes_names.png" src="../../_images/6_f_metaheatmap_all_genes_names.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="cell-type-annotation">
+<h2>7. Cell-Type Annotation<a class="headerlink" href="#cell-type-annotation" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## create vector with names</span>
+
+<span class="c1">## compare clusters with osmFISH paper</span>
+<span class="n">clusters_det_SS_cortex</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;Ependymal&#39;</span><span class="p">,</span> <span class="s1">&#39;Astro_Mfge8&#39;</span><span class="p">,</span> <span class="s1">&#39;Astro_Gfap&#39;</span><span class="p">,</span> <span class="s1">&#39;Pyr_L6&#39;</span><span class="p">,</span> <span class="s1">&#39;vSMC&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;Anln&#39;</span><span class="p">,</span> <span class="s1">&#39;Anln&#39;</span><span class="p">,</span> <span class="s1">&#39;Anln&#39;</span><span class="p">,</span> <span class="s1">&#39;OPC&#39;</span><span class="p">,</span> <span class="s1">&#39;Olig_COP&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;Olig_NF&#39;</span><span class="p">,</span> <span class="s1">&#39;Olig_mature&#39;</span><span class="p">,</span> <span class="s1">&#39;Olig_MF&#39;</span><span class="p">,</span> <span class="s1">&#39;Pericytes&#39;</span><span class="p">,</span> <span class="s1">&#39;Endothelial_Flt1&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;Endothelial_Flt1&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh_Kcnip2&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh_Vip&#39;</span><span class="p">,</span> <span class="s1">&#39;unknown&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh_Crh&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;Inh&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh_Crhbp&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh_CP&#39;</span><span class="p">,</span><span class="s1">&#39;Inh_CP&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh_IC&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;Inh_IC&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh_Cnr1&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh_Kcnip2&#39;</span><span class="p">,</span> <span class="s1">&#39;Pyr_L5&#39;</span><span class="p">,</span> <span class="s1">&#39;Pyr_L5&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;Endothelial_Apln&#39;</span><span class="p">,</span> <span class="s1">&#39;C.Plexus&#39;</span><span class="p">,</span> <span class="s1">&#39;Serpinf&#39;</span><span class="p">,</span> <span class="s1">&#39;Pyr_Cpne5&#39;</span><span class="p">,</span> <span class="s1">&#39;Pyr_L2-3-5&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;Microglia&#39;</span><span class="p">,</span> <span class="s1">&#39;Pyr_L4&#39;</span><span class="p">)</span>
+
+<span class="n">names</span><span class="p">(</span><span class="n">clusters_det_SS_cortex</span><span class="p">)</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;14&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="s1">&#39;m_2&#39;</span><span class="p">,</span> <span class="s1">&#39;42&#39;</span><span class="p">,</span> <span class="s1">&#39;m_24&#39;</span><span class="p">,</span> <span class="s1">&#39;m_21&#39;</span><span class="p">,</span> <span class="s1">&#39;m_3&#39;</span><span class="p">,</span> <span class="s1">&#39;m_6&#39;</span><span class="p">,</span> <span class="s1">&#39;m_8&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;m_19&#39;</span><span class="p">,</span> <span class="s1">&#39;m_12&#39;</span><span class="p">,</span> <span class="s1">&#39;m_9&#39;</span><span class="p">,</span> <span class="s1">&#39;m_16&#39;</span><span class="p">,</span> <span class="s1">&#39;m_18&#39;</span><span class="p">,</span> <span class="s1">&#39;m_7&#39;</span><span class="p">,</span> <span class="s1">&#39;m_14&#39;</span><span class="p">,</span> <span class="s1">&#39;m_22&#39;</span><span class="p">,</span> <span class="s1">&#39;15&#39;</span><span class="p">,</span> <span class="s1">&#39;m_11&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;21&#39;</span><span class="p">,</span> <span class="s1">&#39;m_23&#39;</span><span class="p">,</span> <span class="s1">&#39;20&#39;</span><span class="p">,</span> <span class="s1">&#39;m_17&#39;</span><span class="p">,</span> <span class="s1">&#39;27&#39;</span><span class="p">,</span> <span class="s1">&#39;36&#39;</span><span class="p">,</span> <span class="s1">&#39;m_15&#39;</span><span class="p">,</span> <span class="s1">&#39;m_13&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;40&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;m_20&#39;</span><span class="p">,</span> <span class="s1">&#39;m_10&#39;</span><span class="p">,</span>  <span class="s1">&#39;50&#39;</span><span class="p">,</span> <span class="s1">&#39;m_4&#39;</span><span class="p">,</span> <span class="s1">&#39;m_5&#39;</span><span class="p">,</span> <span class="s1">&#39;26&#39;</span><span class="p">,</span> <span class="s1">&#39;m_1&#39;</span><span class="p">)</span>
+
+<span class="n">osm_test</span> <span class="o">=</span> <span class="n">annotateGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">annotation_vector</span> <span class="o">=</span> <span class="n">clusters_det_SS_cortex</span><span class="p">,</span>
+          <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;leiden_clus_m&#39;</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;det_cell_types&#39;</span><span class="p">)</span>
+
+<span class="n">spatDimPlot2D</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;det_cell_types&#39;</span><span class="p">,</span><span class="n">dim_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">spat_point_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;7_a_annotation_leiden_merged_detailed&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/7_a_annotation_leiden_merged_detailed.png"><img alt="7_a_annotation_leiden_merged_detailed.png" src="../../_images/7_a_annotation_leiden_merged_detailed.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## coarse cell types</span>
+<span class="n">clusters_coarse_SS_cortex</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;Ependymal&#39;</span><span class="p">,</span> <span class="s1">&#39;Astro&#39;</span><span class="p">,</span> <span class="s1">&#39;Astro&#39;</span><span class="p">,</span> <span class="s1">&#39;Pyr&#39;</span><span class="p">,</span> <span class="s1">&#39;vSMC&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;Anln&#39;</span><span class="p">,</span> <span class="s1">&#39;Anln&#39;</span><span class="p">,</span> <span class="s1">&#39;Anln&#39;</span><span class="p">,</span> <span class="s1">&#39;OPC&#39;</span><span class="p">,</span> <span class="s1">&#39;Olig&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;Olig&#39;</span><span class="p">,</span> <span class="s1">&#39;Olig&#39;</span><span class="p">,</span> <span class="s1">&#39;Olig&#39;</span><span class="p">,</span> <span class="s1">&#39;Pericytes&#39;</span><span class="p">,</span> <span class="s1">&#39;Endothelial&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;Endothelial&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh&#39;</span><span class="p">,</span> <span class="s1">&#39;unknown&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;Inh&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;Inh&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh&#39;</span><span class="p">,</span> <span class="s1">&#39;Pyr&#39;</span><span class="p">,</span> <span class="s1">&#39;Pyr&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;Endothelial&#39;</span><span class="p">,</span> <span class="s1">&#39;C.Plexus&#39;</span><span class="p">,</span> <span class="s1">&#39;Serpinf&#39;</span><span class="p">,</span> <span class="s1">&#39;Pyr&#39;</span><span class="p">,</span> <span class="s1">&#39;Pyr&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;Microglia&#39;</span><span class="p">,</span> <span class="s1">&#39;Pyr&#39;</span><span class="p">)</span>
+
+<span class="n">names</span><span class="p">(</span><span class="n">clusters_coarse_SS_cortex</span><span class="p">)</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;Ependymal&#39;</span><span class="p">,</span> <span class="s1">&#39;Astro_Mfge8&#39;</span><span class="p">,</span> <span class="s1">&#39;Astro_Gfap&#39;</span><span class="p">,</span> <span class="s1">&#39;Pyr_L6&#39;</span><span class="p">,</span> <span class="s1">&#39;vSMC&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;Anln&#39;</span><span class="p">,</span> <span class="s1">&#39;Anln&#39;</span><span class="p">,</span> <span class="s1">&#39;Anln&#39;</span><span class="p">,</span> <span class="s1">&#39;OPC&#39;</span><span class="p">,</span> <span class="s1">&#39;Olig_COP&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;Olig_NF&#39;</span><span class="p">,</span> <span class="s1">&#39;Olig_mature&#39;</span><span class="p">,</span> <span class="s1">&#39;Olig_MF&#39;</span><span class="p">,</span> <span class="s1">&#39;Pericytes&#39;</span><span class="p">,</span> <span class="s1">&#39;Endothelial_Flt1&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;Endothelial_Flt1&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh_Kcnip2&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh_Vip&#39;</span><span class="p">,</span> <span class="s1">&#39;unknown&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh_Crh&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;Inh&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh_Crhbp&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh_CP&#39;</span><span class="p">,</span><span class="s1">&#39;Inh_CP&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh_IC&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;Inh_IC&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh_Cnr1&#39;</span><span class="p">,</span> <span class="s1">&#39;Inh_Kcnip2&#39;</span><span class="p">,</span> <span class="s1">&#39;Pyr_L5&#39;</span><span class="p">,</span> <span class="s1">&#39;Pyr_L5&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;Endothelial_Apln&#39;</span><span class="p">,</span> <span class="s1">&#39;C.Plexus&#39;</span><span class="p">,</span> <span class="s1">&#39;Serpinf&#39;</span><span class="p">,</span> <span class="s1">&#39;Pyr_Cpne5&#39;</span><span class="p">,</span> <span class="s1">&#39;Pyr_L2-3-5&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;Microglia&#39;</span><span class="p">,</span> <span class="s1">&#39;Pyr_L4&#39;</span><span class="p">)</span>
+
+<span class="n">osm_test</span> <span class="o">=</span> <span class="n">annotateGiotto</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">annotation_vector</span> <span class="o">=</span> <span class="n">clusters_coarse_SS_cortex</span><span class="p">,</span>
+          <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;det_cell_types&#39;</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;coarse_cell_types&#39;</span><span class="p">)</span>
+<span class="n">spatDimPlot2D</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;coarse_cell_types&#39;</span><span class="p">,</span><span class="n">dim_point_size</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n">spat_point_size</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;7_b_annotation_leiden_merged_coarse&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/7_b_annotation_leiden_merged_coarse.png"><img alt="7_b_annotation_leiden_merged_coarse.png" src="../../_images/7_b_annotation_leiden_merged_coarse.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># heatmaps #</span>
+<span class="n">showClusterHeatmap</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;det_cell_types&#39;</span><span class="p">,</span>
+       <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;7_c_clusterHeatmap_det_cell_types&#39;</span><span class="p">,</span> <span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;in&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/7_c_clusterHeatmap_det_cell_types.png"><img alt="7_c_clusterHeatmap_det_cell_types.png" src="../../_images/7_c_clusterHeatmap_det_cell_types.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotHeatmap</span><span class="p">(</span><span class="n">osm_test</span><span class="p">,</span> <span class="n">genes</span> <span class="o">=</span> <span class="n">osm_test</span><span class="nd">@gene_ID</span><span class="p">,</span> <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;det_cell_types&#39;</span><span class="p">,</span>
+    <span class="n">legend_nrows</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;custom&#39;</span><span class="p">,</span>
+    <span class="n">gene_order</span> <span class="o">=</span> <span class="s1">&#39;correlation&#39;</span><span class="p">,</span> <span class="n">cluster_order</span> <span class="o">=</span> <span class="s1">&#39;correlation&#39;</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;7_d_heatamp_det_cell_types&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/7_d_heatamp_det_cell_types.png"><img alt="7_d_heatamp_det_cell_types.png" src="../../_images/7_d_heatamp_det_cell_types.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotMetaDataHeatmap</span><span class="p">(</span><span class="n">osm_test</span><span class="p">,</span> <span class="n">expression_values</span> <span class="o">=</span> <span class="s1">&#39;custom&#39;</span><span class="p">,</span>
+        <span class="n">metadata_cols</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;det_cell_types&#39;</span><span class="p">),</span>
+        <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;7_e_metaheatmap&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/7_e_metaheatmap.png"><img alt="7_e_metaheatmap.png" src="../../_images/7_e_metaheatmap.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="spatial-grid">
+<h2>8. Spatial Grid<a class="headerlink" href="#spatial-grid" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">osm_test</span> <span class="o">&lt;-</span> <span class="n">createSpatialGrid</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span>
+              <span class="n">sdimx_stepsize</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">,</span>
+              <span class="n">sdimy_stepsize</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">,</span>
+              <span class="n">minimum_padding</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">spatPlot2D</span><span class="p">(</span><span class="n">osm_test</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;det_cell_types&#39;</span><span class="p">,</span> <span class="n">show_grid</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+    <span class="n">grid_color</span> <span class="o">=</span> <span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="n">spatial_grid_name</span> <span class="o">=</span> <span class="s1">&#39;spatial_grid&#39;</span><span class="p">,</span>
+    <span class="n">point_size</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span>
+    <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;8_grid_det_cell_types&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/8_grid_det_cell_types.png"><img alt="8_grid_det_cell_types.png" src="../../_images/8_grid_det_cell_types.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="spatial-network">
+<h2>9. Spatial Network<a class="headerlink" href="#spatial-network" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">osm_test</span> <span class="o">&lt;-</span> <span class="n">createSpatialNetwork</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">)</span>
+<span class="n">spatPlot2D</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">show_network</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+   <span class="n">network_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span>
+   <span class="n">point_size</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;det_cell_types&#39;</span><span class="p">,</span> <span class="n">legend_symbol_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+   <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;9_spatial_network_k10&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/9_spatial_network_k10.png"><img alt="9_spatial_network_k10.png" src="../../_images/9_spatial_network_k10.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="spatial-genes">
+<h2>10. Spatial Genes<a class="headerlink" href="#spatial-genes" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># km binarization
+kmtest = binSpect(osm_test, bin_method = &#39;kmeans&#39;)
+
+spatDimGenePlot2D(osm_test, expression_values = &#39;scaled&#39;,
+      genes = kmtest$genes[1:4],
+      plot_alignment = &#39;vertical&#39;, cow_n_col = 4,
+      save_param = c(save_name = &#39;10_a_spatial_genes_km&#39;, base_height = 5, base_width = 10))
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/10_a_spatial_genes_km2.png"><img alt="10_a_spatial_genes_km.png" src="../../_images/10_a_spatial_genes_km2.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="cell-cell-preferential-proximity">
+<h2>11. Cell-Cell Preferential Proximity<a class="headerlink" href="#cell-cell-preferential-proximity" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## calculate frequently seen proximities</span>
+<span class="n">cell_proximities</span> <span class="o">=</span> <span class="n">cellProximityEnrichment</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span>
+                   <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;det_cell_types&#39;</span><span class="p">,</span>
+                   <span class="n">number_of_simulations</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="c1">## barplot</span>
+<span class="n">cellProximityBarplot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span> <span class="n">min_orig_ints</span> <span class="o">=</span> <span class="mi">25</span><span class="p">,</span> <span class="n">min_sim_ints</span> <span class="o">=</span> <span class="mi">25</span><span class="p">,</span>
+         <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_a_barplot_cell_cell_enrichment&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/11_a_barplot_cell_cell_enrichment.png"><img alt="11_a_barplot_cell_cell_enrichment.png" src="../../_images/11_a_barplot_cell_cell_enrichment.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## heatmap</span>
+<span class="n">cellProximityHeatmap</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span> <span class="n">order_cell_types</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+         <span class="n">color_breaks</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">),</span> <span class="n">color_names</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">),</span>
+         <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_b_heatmap_cell_cell_enrichment&#39;</span><span class="p">,</span> <span class="n">unit</span> <span class="o">=</span> <span class="s1">&#39;in&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/11_b_heatmap_cell_cell_enrichment.png"><img alt="11_b_heatmap_cell_cell_enrichment.png" src="../../_images/11_b_heatmap_cell_cell_enrichment.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## network</span>
+<span class="n">cellProximityNetwork</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span> <span class="n">CPscore</span> <span class="o">=</span> <span class="n">cell_proximities</span><span class="p">,</span> <span class="n">remove_self_edges</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">only_show_enrichment_edges</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+         <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_c_network_cell_cell_enrichment&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/11_c_network_cell_cell_enrichment.png"><img alt="11_c_network_cell_cell_enrichment.png" src="../../_images/11_c_network_cell_cell_enrichment.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## visualization</span>
+<span class="n">spec_interaction</span> <span class="o">=</span> <span class="s2">&quot;Astro_Mfge8--OPC&quot;</span>
+<span class="n">cellProximitySpatPlot</span><span class="p">(</span><span class="n">gobject</span> <span class="o">=</span> <span class="n">osm_test</span><span class="p">,</span>
+          <span class="n">interaction_name</span> <span class="o">=</span> <span class="n">spec_interaction</span><span class="p">,</span>
+          <span class="n">cluster_column</span> <span class="o">=</span> <span class="s1">&#39;det_cell_types&#39;</span><span class="p">,</span>
+          <span class="n">cell_color</span> <span class="o">=</span> <span class="s1">&#39;det_cell_types&#39;</span><span class="p">,</span> <span class="n">cell_color_code</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s1">&#39;Astro_Mfge8&#39;</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;OPC&#39;</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">),</span>
+          <span class="n">coord_fix_ratio</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>  <span class="n">point_size_select</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">point_size_other</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span>
+          <span class="n">save_param</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;12_d_cell_cell_enrichment_selected&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/11_d_cell_cell_enrichment_selected.png"><img alt="11_d_cell_cell_enrichment_selected.png" src="../../_images/11_d_cell_cell_enrichment_selected.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mouse_CODEX_spleen.html" class="btn btn-neutral float-left" title="Mouse CODEX Spleen" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="human_CyCIF_PDAC.html" class="btn btn-neutral float-right" title="Human CyCIF PDAC" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Ruben Dries, Qian Zhu, Huipeng Li, Rui Dong, Guo-Cheng Yuan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

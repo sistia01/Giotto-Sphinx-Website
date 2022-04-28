@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Binder &mdash; Giotto 1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sphinx-toolbox-code.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx-toolbox.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sphinx_toolbox_installation.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_edits.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/sphinx_toolbox_installation.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Docker Image" href="docker.html" />
+    <link rel="prev" title="Try Giotto" href="../../trygiotto.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html">
+            <img src="../../_static/GiottoLogo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../documentation.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://spatial.rc.fas.harvard.edu/giotto-viewer/">Giotto Viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../tipsandtricks.html">HowTos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../trygiotto.html">Try Giotto</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Binder</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#about-binder">About Binder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#instructions">Instructions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#about-the-tutorial">About the Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#about-the-data-used">About the Data Used</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="docker.html">Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="terra.html">Terra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../trygiotto.html#example-of-running-a-binder-notebook">Example Of Running A Binder Notebook</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Issues</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../errorsfaqsandtips.html">Common Errors and Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github_issues.html">Report a Bug</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Giotto</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../trygiotto.html">Try Giotto</a> &raquo;</li>
+      <li>Binder</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/subsections/trygiotto/binder.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="binder">
+<span id="binderinformation"></span><h1>Binder<a class="headerlink" href="#binder" title="Permalink to this headline"></a></h1>
+<p>If you’d like to test out/learn more about how to use Giotto, you can use the Binder Tutorial that we have created. For more information on how this works and what you can do with Giotto, please go to this <a class="reference external" href="https://github.com/ndelrossi7/giotto-tutorial-binder">link</a>.</p>
+<div class="section" id="about-binder">
+<h2>About Binder<a class="headerlink" href="#about-binder" title="Permalink to this headline"></a></h2>
+<p>Binder utilizes <a class="reference external" href="https://jupyterhub.readthedocs.io/en/stable/">JupyterHub</a>, <a class="reference external" href="https://repo2docker.readthedocs.io/en/latest/">repo2docker</a>, and <a class="reference external" href="https://binderhub.readthedocs.io/en/latest/">BinderHub</a> to create a docker image built off of a GitHub repository.</p>
+</div>
+<div class="section" id="instructions">
+<h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline"></a></h2>
+<ol class="arabic simple">
+<li><p>Simply click this button <a class="reference external" href="https://mybinder.org/v2/gh/ndelrossi7/r-conda-binder/HEAD"><img alt="Binder" src="https://img.shields.io/badge/launch-binder-579ACA.svg?logo=data:image/png;base64,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" /></a> and a Docker image will be generated.</p></li>
+<li><p>Wait for your Docker image to be built (if you want to see how this is done, you can click <code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">logs</span></code> to display the running script).</p></li>
+<li><p>Navigate into the <code class="docutils literal notranslate"><span class="pre">Notebooks</span></code> folder and run whichever notebook you like!</p></li>
+<li><p>Alternatively, navigate into any of the pre-made scripts for a quick look at how some of these steps come together.</p></li>
+<li><p>If you run into any errors or have any questions about how the functions and scripts work, feel free to raise an <a class="reference external" href="https://github.com/ndelrossi7/giotto-tutorial-binder/issues">issue</a> with this repository.</p></li>
+<li><p>If you want to save any of your progress to work on locally, you can download files from the Jupyter notebook directory by clicking the box next to the file name(s) to select it and clicking the <code class="docutils literal notranslate"><span class="pre">Download</span></code> button on the top left.</p></li>
+</ol>
+<p>Once the image has been created, you will be redirected to a Jupyter notebook landing page. From there, you can navigate into any of the pre-made notebook tutorials and test it out.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ul class="simple">
+<li><p>The first time you build this Binder, it may take while. For some more information on why your session might be taking longer, please refer to this link.</p>
+<ul>
+<li><p>Below are some commmon messages that you might see when loading Binder. They are normal! Just give the Binder some more time to load.</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Your session is taking longer than usual to start! Check the log messages below to see what is happening.
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Launch</span> <span class="n">attempt</span> <span class="mi">1</span> <span class="n">failed</span><span class="p">,</span> <span class="n">retrying</span><span class="o">...</span> <span class="n">Launch</span> <span class="n">attempt</span> <span class="mi">2</span> <span class="n">failed</span><span class="p">,</span> <span class="n">retrying</span><span class="o">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>You will have access to 1-2 GB RAM. If you go over 2 GB of RAM the kernel may be restarted.</p>
+<ul>
+<li><p>Because we have set up this repo so that you can import pre-processing scripts, you’ll be able to start with any notebook. If your kernel restarts just launch the Binder again!</p></li>
+</ul>
+</li>
+<li><p>If you are inactive for 10 minutes, the session will shut down. Otherwise, you’ll have up to 6 hours of usage or 1 cpu-hour for more intensive runs.</p></li>
+<li><p>Any changes that you make will not be saved (<strong>please do not attempt to push your work back to this repository</strong>).</p>
+<ul>
+<li><p>If you would like to save your progress, please refer to #6 in the <a class="reference external" href="https://github.com/ndelrossi7/giotto-tutorial-binder#instructions">Instructions Section</a>.</p></li>
+</ul>
+</li>
+<li><p>Alternatively, if you would like to work on all of this solely locally, you can fork and clone the repository.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="about-the-tutorial">
+<h2>About the Tutorial<a class="headerlink" href="#about-the-tutorial" title="Permalink to this headline"></a></h2>
+<p>This binder is modeled after the code tutorials in the <a class="reference external" href="https://rubd.github.io/Giotto_site/articles/getting_started.html#howtos">HOWTO</a> section of the Giotto website.
+The goal was to go through the Giotto pipelines with both RNA expression and image (visium) data.
+This binder should provide a good overview for using Giotto to its fullest potential.</p>
+</div>
+<div class="section" id="about-the-data-used">
+<h2>About the Data Used<a class="headerlink" href="#about-the-data-used" title="Permalink to this headline"></a></h2>
+<p>If you want to do some more exploration with the data we used, you can find more information here:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="mini_seqfish">mini seqFISH</a></p></li>
+<li><p><a class="reference external" href="mini_visium">mini Visium</a></p></li>
+</ul>
+<p>Be sure to visit the <a class="reference external" href="https://github.com/ndelrossi7/giotto-tutorial-binder#instructions"><img alt="Giotto Tutorial Binder" src="../../_images/GitHub_Logo.png" style="width: 60px;" /></a> for the Giotto Binder Tutorial for more information.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../trygiotto.html" class="btn btn-neutral float-left" title="Try Giotto" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="docker.html" class="btn btn-neutral float-right" title="Docker Image" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Ruben Dries, Qian Zhu, Huipeng Li, Rui Dong, Guo-Cheng Yuan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
